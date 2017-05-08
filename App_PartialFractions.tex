@@ -1,0 +1,181 @@
+\chapter{Partial Fractions}
+In this appendix we explore the algebraic notion of partial fractions.  The idea is
+simple:\\ How do we undo the addition of fractions?
+
+Let's first consider some elementary arithmetic.
+\begin{flalign*}
+    \frac{1}{3} + \frac{2}{5} = ?
+\end{flalign*}
+To add the two fractions you need common denominators, in this case $15$.  We rewrite the
+fractions as 
+\[ \frac{1}{3} + \frac{2}{5} = \frac{5}{15} + \frac{6}{15} \]
+and now that we're comparing like parts we add the numerators to get
+\[ \frac{1}{3} + \frac{2}{5} = \frac{5}{15} + \frac{6}{15} = \frac{11}{15}. \]
+
+What if we wanted to go the other way?  That is, what if we have the fraction $11/15$ and
+we wanted to know where it came from.  If we consider the prime factorization of the
+denominator and conjecture that the fractions can be split up with these factors as the
+denominators of separate fractions then the problem becomes
+\[ \frac{11}{15} = \frac{11}{3 \cdot 5} = \frac{A}{3} + \frac{B}{5} \]
+where $A$ and $B$ are just numbers that we need to find.  Obviously there are many different answers to this
+inverse questions (since we can get infinitely many equivalent fractions).  If we multiply
+both sides of this new equation by $15$ we get
+\[ 11 = 5A + 3B \]
+and for each choice of one variable we get another.  In particular, if we choose $A = 1$
+then simple algebra tells us that $B=2$ and we have successfully split the fraction
+$11/15$ into the sum of $1/3$ and $2/5$.  
+
+
+% As you likely saw in the previous problem there is a handy algebraic technique that will
+% allow you to do the integrations required from separation of variables.  In these notes I
+% will give you a few examples of partial fractions.  It is up to the reader to seek outside
+% resources if these examples do not suffice.
+
+Now let's consider the algebraic problem of taking a fraction and splitting it into a sum
+of fractions.  The notion is still the same: conjecture that the factors of the
+denominator are the denominators of the separate fractions and then do some detective work
+to find the numerators.  In the remainder of this appendix we'll give several examples of
+this idea.  We leave it up to the reader to actually find the common denominators and do
+the algebra to verify that indeed the right-hand side from each example is equal to the
+left-hand side.
+
+\begin{example}
+    Use partial fractions to write $\frac{4}{x(x-3)}$ as a sum or difference of two
+    fractions. \\
+    {\bf Solution:} We start by writing the fraction as
+    \[ \frac{4}{x(x-3)} = \frac{A}{x} + \frac{B}{x-3}. \]
+    This choice is made since if we were to find the common denominator of the right-hand
+    side we would have the desired denominator on the left-hand side.  Next we clear all
+    of the fractions by multiplying the common denominator yielding
+    \[ 4 = A(x-3) + B(x). \]
+    At this point we know that the equal sign must be true for \underline{all} values of
+    $x$ so we can choose some convenient values to tease out $A$ and $B$.
+    \begin{itemize}
+        \item If $x = 3$ then $x-3=0$ and we get $4 = 3B$ which implies that $B =
+            \frac{4}{3}$.
+        \item If $x =0$ then we get $4 = -3A$ which implies that $A =
+            -\frac{4}{3}$
+    \end{itemize}
+    Therefore
+    \[ \frac{4}{x(x-3)} = -\frac{4}{3x} + \frac{4}{3(x-3)}. \]
+\end{example}
+
+\begin{example}
+    It can be shown that 
+    \[ \frac{6x}{(x-1)(x+1)(x+2)} = \frac{1}{x-1} + \frac{3}{x+1} - \frac{4}{x+2}. \]
+    {\bf Partial Justification:} Start by observing that the denominator of the left-hand
+    fraction is factored so we split into three fractions with the factors as the
+    denominators:
+    \[ \frac{6x}{(x-1)(x+1)(x+2)} = \frac{A}{x-1} + \frac{B}{x+1} + \frac{C}{x+2}. \]
+    Clearing the fractions gives
+    \[ 6x = A(x+1)(x+2) + B(x-1)(x+2) + C(x-1)(x+1). \]
+    Now consider convenient choices of $x$
+    \begin{itemize}
+        \item If $x=-1$ then:
+            \[ -6 = A(0)(1) + B(-2)(1) + C(-2)(0) \quad \implies \quad B = 3. \]
+        \item If $x=1$ then:
+            \[ 6 = A(2)(3) + B(0)(3) + C(0)(2) \quad \implies \quad A = 1. \]
+        \item If $x=-2$ then:
+            \[ -12 = A(-1)(0) + B(-3)(0) + C(-3)(-1) \quad \implies \quad C = -4. \]
+    \end{itemize}
+    Hence
+    \[ \frac{6x}{(x-1)(x+1)(x+2)} = \frac{1}{x-1} + \frac{3}{x+1} - \frac{4}{x+2}. \]
+\end{example}
+
+\begin{example}
+    In this problem we will see repeated linear factors.
+    \[ \frac{x^2 + 1}{x(x-1)^3} = \frac{A}{x} + \frac{B}{x-1} + \frac{C}{(x-1)^2} +
+    \frac{D}{(x-1)^3} \]
+    Notice that the repeated factor gets repeated for all powers.  Let's clear the
+    fractions just as before and see what we get
+    \[ x^2 + 1 = A(x-1)^3 + Bx(x-1)^2 + Cx(x-1) + Dx. \]
+    If we take $x=0$ then $A = -1$.  If we take $x=1$ then $D = 2$.  However, you'll
+    notice that these two choices do not allow us to easily find $B$ and $C$ so we expand
+    the polynomial on the right-hand side, gather like terms, and match coefficients.
+    That is
+    \begin{flalign*}
+        x^2 + 1 &= A\left( x^3 - 3x^2 + 3x - 1 \right) + B\left( x^3 - 2x^2 + x \right) +
+        C\left( x^2 - x \right) + Dx \\
+        \implies x^2 + 1 &= (A+B)x^3 + (-3A -2B+C) x^2 + (3A + B - C + D) x - A
+    \end{flalign*}
+    Matching the coefficients of like terms we get
+    \begin{flalign*}
+        A+B &= 0 \quad \text{(cubic terms)} \\
+        -3A - 2B + C &= 1 \quad \text{(quadratic terms)} \\
+        3A + B - C + D &= 0 \quad \text{(linear terms)} \\
+        -A &= 1 \quad \text{(constant terms)} \\
+    \end{flalign*}
+    Since $A = -1$ we must have $B = 1$ and therefore $C = 0$.  Therefore
+    \[ \frac{x^2 + 1}{x(x-1)^3} = -\frac{1}{x} + \frac{1}{x-1} + \frac{0}{(x-1)^2} +
+    \frac{2}{(x-1)^3} \]
+\end{example}
+
+\begin{example}
+    In this final example we'll show what happens with an irreducible quadratic.
+    \[ \frac{x-3}{x(x^2+3)} = \frac{A}{x} + \frac{Bx+C}{x^2+3}. \]
+    Notice that the numerator associated with the irreducible quadratic is a linear
+    function with unknown parameters.  Clearing the fractions we get
+    \[ x-3 = A(x^2 + 3) + (Bx+C)(x). \]
+    If we take $x=0$ then $-3 = 3A$ which implies that $A = -1$.  Expanding both sides of
+    the equation and matching like terms gives
+    \[ x-3 = (A+B)x^2 + Cx + 3A \]
+    which implies that $A+B=0$ and $C=1$.  Therefore $B = 1$ and
+    \[ \frac{x-3}{x(x^2+3)} = -\frac{1}{x} + \frac{x+1}{x^2+3}. \]
+\end{example}
+
+\begin{technique}[Partial Fractions Decomposition]
+    Below are several cases of fractions that require partial fractions along with their
+    separated forms.
+    \begin{flalign*}
+        \frac{px+q}{(x-a)(x-b)} &= \frac{A}{x-a} + \frac{B}{x-b} \quad \text{(for $a\ne
+        b$)} \\
+        \frac{px+q}{(x-a)^2} &= \frac{A}{x-a} + \frac{B}{(x-a)^2} \\
+        \frac{px+q}{(x-a)^3} &= \frac{A}{x-a} + \frac{B}{(x-a)^2} + \frac{C}{(x-a)^3}\\
+        \frac{px^2 + qz + r}{(x-a)(x-b)(x-c)} &= \frac{A}{x-a} + \frac{B}{x-b} +
+        \frac{C}{x-c} \\
+        \frac{px^2 + qz + r}{(x-a)^2(x-b)} &= \frac{A}{x-a} + \frac{B}{(x-a)^2} +
+        \frac{C}{x-b} \\
+        \frac{px^2 + qx + r}{(x-a)(x^2+bx+c)} &= \frac{A}{x-a} + \frac{Bx+C}{x^2+bx+c}
+        \quad \text{(where $x^2 + bx + c$ cannot be factored)}
+    \end{flalign*}
+\end{technique}
+
+\begin{problem}
+    Now let's use partial fractions to solve a separable differential equation.
+    Solve the logistic population equation
+    \[ \frac{dP}{dt} = 0.2 P \left( 1-\frac{P}{10} \right) \quad \text{with} \quad P(0) =
+        1 \]
+    Start by separating the variables (leaving the $0.2$ on the right) and then looking up
+    the appropriate partial fractions decomposition for splitting up the fraction that
+    appears.  After that you'll get to do a whole bunch of algebra \ldots have fun!!
+\end{problem}
+\solution{
+    \begin{flalign*}
+        \frac{dP}{dt} &= 0.2 P \left( 1-\frac{P}{10} \right) \\
+        \frac{dP}{P(1-P/10)} &= 0.2 dt \\
+        \int \frac{dP}{P(1-P/10)} &= \int 0.2 dt \\
+        \int \frac{dP}{P(1-P/10)} &= 0.2t + C \\
+    \end{flalign*}
+    Now we need to split the fraction on the left.
+    \[ \frac{1}{P(1-P/10)} = \frac{A}{P} + \frac{B}{1-P/10} \quad \implies \quad 1 =
+        A(1-P/10) + BP \]
+    If we take $P=0$ then $A=1$.  If we take $P=10$ then $B = 1/10$.  Therefore,
+    \[ \frac{1}{P(1-P/10)} = \frac{1}{P} + \frac{1}{10(1-P/10)} \]
+    and we can now integrate the left-hand side to get (with a little bit of
+    $u$-substitution)
+    \[ \int \frac{1}{P(1-P/10)}dP = \int \frac{1}{P} dP + \frac{1}{10} \int
+        \frac{1}{1-P/10}dP = \ln(P) - \ln(1-P/10) \]
+    Therefore,
+    \[ \ln(P)-\ln(1-P/10) = 0.2t+C \implies \ln \left( \frac{P}{1-P/10} \right) = 0.2t + C
+        \implies \frac{P}{1-P/10} = Ce^{0.2t} \]
+        \[ \implies P = Ce^{0.2t} \left( 1-\frac{P}{10} \right) \implies P + P
+            \frac{Ce^{0.2t}}{10} = Ce^{0.2t} \implies P\left( 1+\frac{Ce^{0.2t}}{10}
+            \right) = Ce^{0.2t} \]
+            \[ \implies \boxed{P(t) = \frac{Ce^{0.2t}}{1+(C/10)e^{0.2t}} } \]
+    Assuming now that $P(0) = 1$ we can take any of the algebraically equivalent forms of
+    the final answer to tease out the value of $C$.  In particular, 
+    \[ \frac{1}{1-1/10} = C e^{0.2(0)} \implies C = \frac{1}{9/10} = \frac{10}{9} \implies
+        P(t) = \frac{10e^{0.2t}}{9 + e^{0.2t}}\]
+}
+
+

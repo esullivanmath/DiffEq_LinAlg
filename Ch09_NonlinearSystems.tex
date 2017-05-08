@@ -1,0 +1,631 @@
+\setcounter{chapter}{8}
+\chapter{Nonlinear Systems of Differential Equations}
+The world is non-linear!  Well shoot. It might seem that this means that for {\it real}
+problems we can't use anything that we've done so far.   Wrong!  There are plenty of
+things that we can do with nonlinear problems.  For the most part we will rely on a basic
+premise from Calculus: up close, a nonlinear function looks linear. You did this back in
+calculus when you found tangent lines and tangent planes but now we're going to do the
+same for matrices and nonlinear differential equations.  For most of the problems in this
+chapter it will be helpful to have MATLAB up so you can plot phase planes and analyze
+equilibria graphically.
+
+
+\section{Trace-Determinant Plane}
+In this section we will briefly examine a technique for quickly determining
+the behavior of 2D linear systems.  This will play a major role in our nonlinear systems
+since each nonlinear system will eventually be linearized as we will see in a bit.  
+
+
+Recall that if $\bv_1$ and $\bv_2$ are the eigenvectors of $A$ with eigenvalues
+$\lambda_1$ and $\lambda_2$ then the solution to the first order linear system of
+equations $\bx' = A \bx$ is
+\[ \bx = c_1 e^{\lambda_1 t} \bv_1 + c_2 e^{\lambda_2 t} \bv_2 \]
+where $\bx_0 = c_1 \bv_1 + c_2 \bv_2$.  Furthermore we observe that $\bx = \bo$ is an
+equilibrium point of the system of differential equations.  Use these ideas to answer the
+following questions.
+\begin{problem}
+    Consider the $2\times 2$ linear system of differential equations $\bx'=A\bx$.  In each
+    of the following cases what is the expected behavior of the solution? The choices are:
+    spirals in to the origin, spirals out from the origin, decays in to the origin,
+    diverges out from the origin, decays toward the origin but then diverges out, or
+    circles the origin.
+            \begin{enumerate}
+                \item If $\lambda_1 \le \lambda_2 < 0$ then near the origin the
+                    solution \underline{\hspace{1in}}
+                    \solution{decays in}
+                \item If $\lambda_1 < 0 < \lambda_2$ then near the origin the
+                    solution \underline{\hspace{1in}}
+                    \solution{decays toward the origin but then divers out}
+                \item If $\lambda_1 \ge \lambda_2 > 0$ then near the origin the
+                    solution \underline{\hspace{1in}}
+                    \solution{diverges out from the origin}
+                \item If $\lambda_1, \lambda_2 = \alpha \pm \beta i \, (\alpha<0)$ then
+                    near the origin the solution \underline{\hspace{1in}}
+                    \solution{spirals in toward the origin}
+                \item If $\lambda_1, \lambda_2 = \alpha \pm \beta i \, (\alpha>0)$ then
+                    near the origin the solution \underline{\hspace{1in}}
+                    \solution{spirals out from the origin}
+                \item If $\lambda_1, \lambda_2 = \pm \beta i$ then near the origin
+                    the solution \underline{\hspace{1in}}
+                    \solution{circles the origin}
+            \end{enumerate}
+\end{problem}
+
+\begin{problem}
+    In the following plots the two eigenvectors for a matrix $A$ are plotted and the
+    eigenvalues are given.  Sketch the trajectory of the solution in the $xy$-plane
+    starting at the given points (use your answers from the previous problem to help).
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[very thick, <->, black] (-3,0) -- (3,0);
+            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
+            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
+            west]{$\lambda_1 = -2$}; 
+            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
+            east]{$\lambda_2 = -0.25$}; 
+            \draw[fill=black] (1.0,1.0) circle(0.075cm);
+            \draw[fill=black] (-1,-1) circle(0.075cm);
+            \draw[fill=black] (-1,1) circle(0.075cm);
+            \draw[fill=black] (1,-1) circle(0.075cm);
+        \end{tikzpicture}\hspace{0.4in}
+        \begin{tikzpicture}
+            \draw[very thick, <->, black] (-3,0) -- (3,0);
+            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
+            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
+            west]{$\lambda_1 = 2$}; 
+            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
+            east]{$\lambda_2 = -0.25$}; 
+            \draw[fill=black] (1.0,1.0) circle(0.075cm);
+            \draw[fill=black] (-1,-1) circle(0.075cm);
+            \draw[fill=black] (-1,1) circle(0.075cm);
+            \draw[fill=black] (1,-1) circle(0.075cm);
+        \end{tikzpicture}
+    \end{center}
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[very thick, <->, black] (-3,0) -- (3,0);
+            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
+            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
+            west]{$\lambda_1 = 2$}; 
+            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
+            east]{$\lambda_2 = 0.25$}; 
+            \draw[fill=black] (1.0,1.0) circle(0.075cm);
+            \draw[fill=black] (-1,-1) circle(0.075cm);
+            \draw[fill=black] (-1,1) circle(0.075cm);
+            \draw[fill=black] (1,-1) circle(0.075cm);
+        \end{tikzpicture}\hspace{0.4in}
+        \begin{tikzpicture}
+            \draw[very thick, <->, black] (-3,0) -- (3,0);
+            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
+            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
+            west]{$\lambda_1 = -2+i$}; 
+            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
+            east]{$\lambda_2 = -2-i$}; 
+            \draw[fill=black] (1.0,1.0) circle(0.075cm);
+            \draw[fill=black] (-1,-1) circle(0.075cm);
+            \draw[fill=black] (-1,1) circle(0.075cm);
+            \draw[fill=black] (1,-1) circle(0.075cm);
+        \end{tikzpicture}
+    \end{center}
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[very thick, <->, black] (-3,0) -- (3,0);
+            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
+            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
+            west]{$\lambda_1 = 2+i$}; 
+            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
+            east]{$\lambda_2 = 2-i$}; 
+            \draw[fill=black] (1.0,1.0) circle(0.075cm);
+            \draw[fill=black] (-1,-1) circle(0.075cm);
+            \draw[fill=black] (-1,1) circle(0.075cm);
+            \draw[fill=black] (1,-1) circle(0.075cm);
+        \end{tikzpicture}\hspace{0.4in}
+        \begin{tikzpicture}
+            \draw[very thick, <->, black] (-3,0) -- (3,0);
+            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
+            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
+            west]{$\lambda_1 = i$}; 
+            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
+            east]{$\lambda_2 = -i$}; 
+            \draw[fill=black] (1.0,1.0) circle(0.075cm);
+            \draw[fill=black] (-1,-1) circle(0.075cm);
+            \draw[fill=black] (-1,1) circle(0.075cm);
+            \draw[fill=black] (1,-1) circle(0.075cm);
+        \end{tikzpicture}
+    \end{center}
+\end{problem}
+
+Now that we know the general behavior of all $2 \times 2$ systems based on the
+eigen-structure let's get a faster way to make the determination.  That is, if we can
+avoid actually finding the eigenvalues that might save some time.
+\begin{problem}
+    Let the $2 \times 2$ linear system $\bx' = A \bx$ be written as
+    \[ \begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} a & b \\ c & d
+        \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} \]
+    Your Tasks:
+    \begin{enumerate}
+        \item What is the equilibrium of this system presuming that $A^{-1}$ exists?
+        \item Find the characteristic polynomial of the coefficient matrix
+        \item Simplify the characteristic polynomial to fill in the blanks:
+            \[ \lambda^2 + \underline{\hspace{0.5in}} \lambda + \underline{\hspace{0.5in}}
+                = 0
+                \]
+            The blanks should be familiar features of the matrix.
+    \end{enumerate}
+\end{problem}
+\solution{
+    The solution to the system is $\bx = \bo$ since we solve $\bo = A
+    \bx$ to find the equilibrium and if $A^{-1}$ exists then $\bx = \bo$.  
+
+    The characteristic polynomial is:
+$p(\lambda) = \lambda^2 - tr(A) \lambda + \det(A) $
+}
+
+
+
+\begin{problem}
+    In the previous problems you found that the characteristic polynomial for a 2D linear
+    system is $p(\lambda) = \lambda^2 - T \lambda + D$ where $T = \text{tr}(A)$ and $D=
+    \det(A)$.  Solving for $\lambda$ we see that
+    \[ \lambda = \frac{T \pm \sqrt{T^2 - 4 D}}{2}. \]
+    Clearly the behavior of the eigenvalues depends on the quantity $T^2 - 4D$.  To
+    visualize this we create the {\it trace-determinant} plane as seen in the figure
+    immediately below.  Fill in the question marks in the figure with the type of behavior
+    you expect to see for each region of the {\it trace-determinant} plane?
+
+    To illustrate what we mean condsider the furthest right question mark.  In that
+    question mark the determinant, $D$, is greater than zero, the trace, $T$, is greater
+    than zero and $D < T^2 / 4$.  Hence $T^2 - 4D>0$ so we expect the behavior of the
+    system to be a nodal source since both eigenvalues will be real and positive.
+
+    Use the following words to fill in the question marks: nodal source, nodal sink,
+    spiral source, spiral sink, center, and saddle.
+\end{problem}
+    \vspace{-0.1in}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[xlabel={$T=tr(A)$},ylabel={$D=\det(A)$}, ymin=-0.5,
+                        ymax=0.5, xmin=-2, xmax=2, xtick=\empty, ytick=\empty, legend pos=outer
+                    north east]
+                    \addplot[smooth,blue, very thick, domain=-2:2] {(1/4)*x^2};
+                    \addlegendentry{$D = T^2/4$};
+                    \addplot[smooth, black, thick] {0*x};
+                    \draw[black,thick] (axis cs:0,-0.5) -- (axis cs:0,0.5);
+                    \node at (axis cs:1.5,0.1) {?};
+                    \node at (axis cs:-1.5,0.1) {?};
+                    \node at (axis cs:-.5,0.25) {?};
+                    \node at (axis cs:.5,0.25) {?};
+                    \node at (axis cs:0,0.3) {?};
+                    \node at (axis cs:0.5,-0.25) {?};
+                    \node at (axis cs:-0.5,-0.25) {?};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+
+\solution{
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[xlabel={$T=tr(A)$},ylabel={$D=\det(A)$}, ymin=-0.5,
+                        ymax=0.5, xmin=-2, xmax=2, xtick=\empty, ytick=\empty, legend pos=outer
+                    north east]
+                    \addplot[smooth,blue, very thick, domain=-2:2] {(1/4)*x^2};
+                    \addlegendentry{$D = T^2/4$};
+                    \addplot[smooth, black, thick] {0*x};
+                    \draw[black,thick] (axis cs:0,-0.5) -- (axis cs:0,0.5);
+                    \node at (axis cs:1.5,0.1) {\tiny{nodal source}};
+                    \node at (axis cs:-1.5,0.1) {\tiny{nodal sink}};
+                    \node at (axis cs:-.5,0.25) {\tiny{spiral sink}};
+                    \node at (axis cs:.5,0.25) {\tiny{spiral source}};
+                    \node at (axis cs:0,0.3) {\tiny{center}};
+                    \node at (axis cs:0.5,-0.25) {\tiny{saddle}};
+                    \node at (axis cs:-0.5,-0.25) {\tiny{saddle}};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+    }
+
+% \begin{problem}
+%     Modeling a bungee jumper is much like modeling a 1-dimensional spring mass system
+%     except for the fact that
+%     the air resistance plays a major role.  According to Newton's second law as well as
+%     Hooke's law
+%     \[ m x'' = -kx + F_{drag} \quad \text{where} \quad F_{drag} = -a x' \]
+%     Hence, the model for the motion of the bungee jumper is
+%     \[ mx'' + ax' + kx = 0 \]
+%     Dividing by mass we get
+%     \[ x'' + \alpha x' + \kappa x = 0 \]
+%     Turn this into a system of differential equations with an appropriate substitution,
+%     discuss equilibria and stability, and explore it graphically.
+% \end{problem}
+% \solution{This is a straight foward linear system
+%     \[ \left\{ \begin{array}{ll} x' &= y \\ y' &= - \alpha y - \kappa x \end{array}
+%     \right. \]
+%     Equlibrium: $(0,0)$.  Stable.
+%     \[ A = \begin{pmatrix} 1 & 0 \\ -\kappa & -\alpha \end{pmatrix} \]
+%     so 
+%     \[ \lambda_{1,2} = \frac{-\alpha \pm \sqrt{\alpha^2 - 4 \kappa}}{2} \]
+%     The real part is negative so the equilibrium is stable.
+% 
+% }
+
+Now we'll finally look at some nonlinear systems.
+\begin{problem}\label{prob:competin_species}
+    Suppose that $x$ and $y$ are the population of two distinct species that compete for the
+    same resources. For example, two species of fish may compete for the same food in a
+    lake or sheep and cattle competing for the same grazing land. We can model two
+    competing species using the following system of first-order differential equations, 
+    \begin{flalign*}
+        x' &= 2x\left( 1-\frac{x}{2} \right) - xy \\
+        y' &= 3y\left( 1-\frac{y}{3} \right) - 2xy.
+    \end{flalign*}
+    It is reasonably easy to show that the four equilibrium solutions are $(0,0)$,
+    $(0,3)$, $(2,0)$, and $(1,1)$.  Use the \texttt{pplane} software (linked from Moodle)
+    to analyze what happens near the equilibrium $(1,1)$.
+\end{problem}
+
+
+Now we'll build up the analytic tools necessary to analyze the competing species model in
+problem \ref{prob:competin_species}.
+\begin{definition}[Nullclines and Equilibria]
+    The {\bf nullclines} for a linear system 
+    \begin{flalign*}
+        x'(t) &= f(x,y) \\
+        y'(t) &= g(x,y)
+    \end{flalign*}
+    are the curves where $f(x,y)=0$ and $g(x,y)=0$.  When two nullclines intersect there
+    is and equilibrium solution.
+\end{definition}
+\begin{problem}
+    Use a graphing tool to sketch the nullclines of the system and use your graph to
+    verify the location of the equilibrium points.
+    \begin{flalign*}
+        x' &= 2x\left( 1-\frac{x}{2} \right) - xy \\
+        y' &= 3y\left( 1-\frac{y}{3} \right) - 2xy.
+    \end{flalign*}
+\end{problem}
+\solution{
+    The nullclines are $2x(1-x/2)-xy=0$ and $3y(1-y/3)-2xy = 0$.  In the first one we
+    either have the vertical line $x=0$ or the line $y=2(1-x/2)$.  In the second one we
+    either have the horizontal line $y=0$ of the line $2x = 3(1-y/3)$.  Plotting all four
+    of these lines together we see that the intersections are $(0,0)$, $(0,3)$, $(2,0)$,
+    and $(1,1)$.
+}
+
+\begin{definition}[Jacobian Matrix]
+    Consider the system of equations
+    \begin{flalign*}
+        f(x,y) &= 0 \\
+        g(x,y) &= 0.
+    \end{flalign*}
+    The {\bf Jacobian matrix} for this system is defined as
+    \[ J(x,y) = \begin{pmatrix} f_x & f_y \\ g_x & g_y \end{pmatrix} \]
+    where subscripts mean partial dervatives.
+\end{definition}
+
+\begin{problem}
+    Find the Jacobian matrix $J(x,y)$ for the system 
+    \begin{flalign*}
+        x' &= 2x\left( 1-\frac{x}{2} \right) - xy = 2x - x^2 - xy \\
+        y' &= 3y\left( 1-\frac{y}{3} \right) - 2xy = 3y - y^2 - 2xy.
+    \end{flalign*}
+\end{problem}
+\solution{
+    \[ J(x,y) = \begin{pmatrix} 2-2x-y & -x \\ -2y & 3-2y-2x \end{pmatrix} \]
+}
+
+The Jacobian describes the local linear behavior of the system near an equilibrium.  That
+is to say that if we substitute the values $(x_*,y_*)$ from an equilibrium point into the Jacobian
+then {\it near} the equilibrium point will behave like the linear system $\bx' =
+J(x_*,y_*) \bx$ centered at the equilibrium.  
+
+\begin{problem}
+    Verify the behavior of the system 
+    \begin{flalign*}
+        x' &= 2x\left( 1-\frac{x}{2} \right) - xy \\
+        y' &= 3y\left( 1-\frac{y}{3} \right) - 2xy
+    \end{flalign*}
+    near the equilibrium $(1,1)$ (you already discussed this in Problem
+    \ref{prob:competin_species}).  Then use the Jacobian matrix to discuss the behavior of
+    the system near the other three equilibria.
+\end{problem}
+\solution{
+    At $(1,1)$ we have $J(1,1) = \begin{pmatrix} -1 & -1 \\ -2 & -1 \end{pmatrix}$.
+        Observe that $\text{tr}(J(1,1)) = -2$ and $\det(J(1,1)) = 1 - 2 = -1$.  From the
+        trace-determinant plane we should have a saddle near $(1,1)$.
+}
+
+
+
+\begin{technique}[Equilibria and Stability of Nonlinear Systems]
+    Consider the nonlinear system of differential equations
+    \begin{flalign*}
+        x'(t) &= f(x,y) \\
+        y'(t) &= g(x,y).
+    \end{flalign*}
+    To find and analyze the equilibria for the system:
+    \begin{enumerate}
+        \item Find the equilibria by setting \underline{\hspace{0.5in}} to zero and
+            solving for $x$ and $y$.  It may be necessary to use technology to solve this
+            system of nonlinear equations.
+        \item Find the Jacobian matrix at each of the equilibrium points.
+        \item Investigate the \underline{\hspace{0.5in}} for each Jacobian matrix.  Based
+            on this investigate you can make a claim about local stability.
+    \end{enumerate}
+\end{technique}
+
+\begin{example}
+    Consider the system 
+    \begin{flalign*}
+        x'(t) &= x-3y+xy^2 \\
+        y'(t) &=  2x-4y-x^2y.
+    \end{flalign*}
+    Find the nullclines, equilibria, the Jacobian, and classify the equilibrium solutions.
+    \\ {\bf Solution:} \\
+    The nullclines are the curves $f(x,y) = 0$ and $g(x,y) = 0$ called the $x$-nullcline
+    and the $y$-nullcline respectively since if $f=0$ the $x$-variable stops changing and
+    if $g=0$ the $y$-variable stops changing.  
+    \begin{flalign*}
+        \text{$x$-nullcline: } 0&= x-3y+xy^2\\
+        \text{$y$-nullcline: } 0&= 2x - 4y - x^2y
+    \end{flalign*}
+    These are rather complicated curves in the $xy$-plane.
+
+    Using a computer algebra system the approximate equilibria are $(-1.06, -0.41)$, $(1.06,
+    0.41)$, and $(0,0)$ (along with a few imaginary equilibria).
+
+    The Jacobian is $J(x,y) = \begin{pmatrix} 1+y^2 & -3 + 2xy \\ 2-2xy & -4-x^2
+    \end{pmatrix}$ 
+    and at $(0,0)$ we have $J(0,0) = \begin{pmatrix} 1 & -3 \\ 2 & -4 \end{pmatrix}$.  For
+    this equilibrium point, $T(0,0) = -3$ and $D(0,0) = (-4) - (-6) = 2$.  Hence $T^2/4 =
+    9/4 = 2.25 > D$ so according to the trace-determinant plane we much have a spiral
+    sink at $(0,0)$.
+\end{example}
+
+
+
+
+\section{Applied Nonlinear Systems}
+Let's get started with a nonlinear system.  This system will be familiar in a lot of ways
+but we will added a small wrinkle: air resistance.
+
+
+
+
+
+\begin{problem}
+    Modeling a bungee jumper is much like modeling a 1-dimensional spring mass system
+    except for the fact that
+    the air resistance plays a major role.  According to Newton's second law as well as
+    Hooke's law
+    \[ m x'' = -kx + F_d \quad \text{where} \quad F_d = -a x' -b \left( x' \right)^2 \]
+    Hence, the model for the motion of the bungee jumper is
+    \[ mx'' + ax' + b\left( x' \right)^2 + ky = 0 \]
+    Dividing by mass we get
+    \[ x'' + \alpha x' + \beta \left( x' \right)^2 + \kappa x = 0 \]
+    Turn this into a system of differential equations with an appropriate substitution,
+    discuss equilibria and stability, and explore it graphically.
+\end{problem}
+\solution{
+    Let $x'=y$ and get the following:
+    \[ \left\{ \begin{array}{ll} x'&= y \\ y' &= -\alpha y - \beta y^2 - \kappa x
+    \end{array} \right. \]
+    This is a nonlinear system!!
+
+    Equlibria: Set $x'=y'=0$
+    \[ \left\{ \begin{array}{ll} 0&= y \\ 0 &= -\alpha y - \beta y^2 - \kappa x
+    \end{array} \right. \]
+    Therefore, $x=y=0$ is the equilibrium.
+
+    Local stability: Find the Jacobian:
+    \[ J(x,y) = \begin{pmatrix} f_x & f_y \\ g_x & g_y \end{pmatrix} = \begin{pmatrix} 0 &
+        1 \\ -\kappa & -\alpha - 2\beta y \end{pmatrix} \]
+    \[ \implies J(0,0) = \begin{pmatrix} 0 & 1 \\ -\kappa & -\alpha \end{pmatrix} \]
+    and we are locally back at the same spot as the linear problem. Hence the equilibrium
+    is locally stable.
+}
+
+
+\begin{problem}
+    Suppose that we have a predator-prey system consisting of a population of foxes ($F$)
+    and rabbits ($R$)
+    \begin{flalign*}
+        R'(t) &= 2R - RF \\
+        F'(t) &= -5F + RF.
+    \end{flalign*}
+    It is easy to check that have equilibrium at $R=5$ and $F=2$.  Fully analyze the
+    dynamics of the population assuming that it doesn't start with $(R,F) = (5,2)$.  In
+    particular, make a phase plot and determine the stability of the equilibrium.
+\end{problem}
+\solution{(Modified from \cite{Judson}) 
+}
+
+\begin{problem}
+    In the previous problem, modify the rabbit population so that it follows logistic
+    growth
+    \[ R'(t) = 2R\left( 1-\frac{R}{10} \right) - RF. \]
+    Fully analyze this new system.
+\end{problem}
+\solution{spiral sink at $(5,1)$}
+
+\begin{problem}
+    Romeo and Juliet's love can be quantified as
+    \begin{center}
+        \begin{tabular}{|c|c|}
+            \hline
+            Hysterical Hatred & $-5$ \\
+            Disgust & $-2.5$ \\
+            Indifference & $0$ \\
+            Sweet Affection & $2.5$ \\
+            Ecstatic Love & $5$ \\ \hline
+        \end{tabular}
+    \end{center}
+    The characters struggle with frustrated love due to the lack of reciprocity of their
+    feelings.
+    \begin{description}
+        \item[Romeo:] ``My feelings for Juliet decrease in proportion to her love for
+            me.''
+        \item[Juliet:] ``My love for Romeo grows in proportion to his love for me.''
+    \end{description}
+    Write a mathematical model for the ill-fated love of Romeo and Juliet.  Discuss
+    equilibria and stability. Explore graphically. \\Assume $R(0) = 2$ and $J(0)=0$.  What do these initial
+    conditions mean? Start your explorations with $\alpha = 0.2$ and $\beta = 0.8$.
+\end{problem}
+\solution{
+    \[ \left\{ \begin{array}{ll} R' &= -\alpha J \\ J' &= \beta R \end{array} \right. \]
+    Linear, so
+    \[ \begin{pmatrix} 0 & -\alpha \\ \beta & 0 \end{pmatrix} \]
+    \[ \implies \lambda_{1,2} = \pm \sqrt{-\alpha \beta} \]
+    so there will be oscillations so long as $\alpha,\beta > 0$.
+
+    Take $\alpha = 0.2$ and $\beta = 0.8$ for an interesting exploration.
+}
+
+
+
+\begin{problem}
+    Romeo and Juliet's love can be quantified as
+    \begin{center}
+        \begin{tabular}{|c|c|}
+            \hline
+            Hysterical Hatred & $-5$ \\
+            Disgust & $-2.5$ \\
+            Indifference & $0$ \\
+            Sweet Affection & $2.5$ \\
+            Ecstatic Love & $5$ \\ \hline
+        \end{tabular}
+    \end{center}
+    The characters struggle with frustrated love due to the lack of reciprocity of their
+    feelings.
+    \begin{description}
+        \item[Romeo:] ``My feelings for Juliet decrease in proportion to her love for
+            me.''
+        \item[Juliet:] ``My love for Romeo grows in proportion to his love for me.''
+            But, her emotional swings lead to sleepless nights which consequently
+            dampen her emotions.
+    \end{description}
+    Write a mathematical model for the ill-fated love of Romeo and Juliet.  Discuss
+    equilibria and stability. Explore graphically. 
+\end{problem}
+\solution{
+    \[ \left\{ \begin{array}{ll} R' &= -\alpha J \\ J' &= \beta R - \kappa J^r\end{array} \right. \]
+    If $r=1$ then this is linear, so
+    \[ \begin{pmatrix} 0 & -\alpha \\ \beta & \kappa \end{pmatrix} \]
+    \[ \implies \lambda_{1,2} = \frac{-\kappa \pm \sqrt{\kappa^2 - 4 \alpha \beta }}{2} \]
+    So there could be oscillations but since the real part is negative there will be an
+    overall damping and the end result will be a stable equilibrium at $(R,J) = (0,0)$.
+
+    If $r \ne 1$ then:\\
+    \[ J(x,y) = \begin{pmatrix} 0 & -\alpha \\ \beta & r \kappa J^{r-1} \end{pmatrix} \]
+    You will still have the same local stability.
+
+}
+
+
+\begin{problem}
+    In historical battles where hand-to-hand combat was common, a mathematical model
+    for the survival of the various forces is:
+    \begin{itemize}
+        \item The rate at which the {\color{red} RED} army loses troops is
+            proportional to the product of the sizes of the two armies
+        \item The rate at which the {\color{blue} BLUE} army loses troops is
+            proportional to the product of the sizes of the two armies
+    \end{itemize}
+    Write a mathematical model for the size of each army.  Discuss equilibria, stability,
+    and explore graphically. What is wrong with this model?
+\end{problem}
+\solution{
+    \[ \left\{ \begin{array}{ll} R' &= -\alpha RB \\ B' &= -\beta RB \end{array} \right.
+    \]
+    Clearly if either $R=0$ OR if $B=0$ then there is an equilibrium.
+    \[ J(R,B) = \begin{pmatrix} -\alpha B & -\alpha R \\ -\beta B & \beta R \end{pmatrix}
+    \]
+    If $R=0$ then $J(0,B) = \begin{pmatrix} -\alpha B & 0 \\ -\beta B & 0 \end{pmatrix}$
+    and locally
+    \[ \begin{pmatrix} R \\ B \end{pmatrix} = c_1 \begin{pmatrix} 0\\1\end{pmatrix} + c_2
+    e^{-\beta t} \begin{pmatrix}1\\1\end{pmatrix} \]
+    and any of the equilibrium points will be stable.  Similar for $B=0$.
+}
+
+\begin{problem}
+    In historical battles where hand-to-hand combat was common, a mathematical model
+    for the survival of the various forces is:
+    \begin{itemize}
+        \item The rate at which the {\color{red} RED} army loses troops is
+            proportional to the product of the sizes of the two armies
+        \item The rate at which the {\color{blue} BLUE} army loses troops is
+            proportional to the product of the sizes of the two armies
+        \item The rate at which the {\color{red} RED} army gains recruits is
+            proportional to the size of the {\color{red} RED} army.
+    \end{itemize}
+    Write a mathematical model for the size of each army.  Discuss equilibria, stability,
+    and explore graphically. How do you prove stability?
+\end{problem}
+    \solution{
+        \[ \left\{ \begin{array}{ll} R' &= -\alpha RB + \kappa R \\ B' &= -\beta RB \end{array} \right. \]
+
+    }
+
+
+\begin{problem}
+    The Van der Pol oscillator equation arose in the 1920's when Balthasar Van der Pol was
+    working with oscillator circuits for radios.  The equation is
+    \[ x'' + \mu (x^2-1) x' + x = 0 \]
+    where $x$ is related to the current in an RLC-circuit.  Write the Van der Pol equation
+    as a non-linear first order system and completely investigate the behaviour of the system using
+    $\mu = 1$.  Use \texttt{pplane} plots to aid in your analysis.
+\end{problem}
+\solution{
+The first order nonlinear system is
+\begin{flalign*}
+    x'(t) &= y \\
+    y'(t) &= -x - \mu(x^2-1)y
+\end{flalign*}
+The only equilibrium point is $(x,y) = (0,0)$ and the Jacobian is
+\[ J(x,y)  \begin{pmatrix} 0 & 1 \\ -1-2\mu x y & -\mu(x^2-1) \end{pmatrix} \]
+so at $(0,0)$ we have
+\[ J(0,0) = \begin{pmatrix} 0 & 1 \\ -1 & \mu \end{pmatrix}. \]
+Since the trace is $\mu$ and the determinant is 1 we know that the origin is a spiral
+source.
+}
+
+\begin{problem}
+    A virus spreads through a dorm.  Assume that there are three types of people in the
+    dormitory population: $S$ is the number of people susceptible to the virus, $I$ is the
+    number of infectious people, and $R$ is the number of recovered people.  Assume that
+    $S+I+R=N$ is the total number of people in the dorm (and $N$ is fixed).  Build a
+    differential equation model for the rates at which $S$, $I$, and $R$ change assuming
+    that
+    \begin{itemize}
+        \item The susceptible people get sick at a rate proportional to the interactions
+            with infectious people.
+        \item Infectious people recover at a fixed rate.
+    \end{itemize}
+    Once you have your model explore it graphically (using \texttt{pplane}) and analyze
+    any equilibrium points. (Hint: you really only need 2 equations)
+\end{problem}
+
+
+\begin{problem}
+    The {\bf Western Grasslands Model}: This is a model of the competition between
+    ``good'' grass and weeds on a fixed area of rangeland where cattle are
+    allowed to graze.  The two dependent variables $g(t)$ and $w(t)$ represent,
+    respectively, the fraction of the area colonized by the good grass and the
+    weeds at time $t$. Hence, $0 \le g
+    \le 1$ and $0 \le w \le 1\}$.  The model is given by
+    \begin{flalign*}
+        \frac{dg}{dt} &= R_1 g \left(  1 - g - 0.6 w \frac{E + g}{0.31 E + g} \right) \\
+        \frac{dw}{dt} &= R_2 g \left(  1 - w - 1.07 g \frac{0.31E + g}{E + g} \right).
+    \end{flalign*}
+    The parameters $R_1$ and $R_2$ represent the intrinsic growth rates of the grass and
+    weeds respectively.  The cattle stocking rate is introduced through the parameter $E$.
+    For this problem assume that $R_1 = 0.27$, $R_2 = 0.4$, and $E = 0.3$.  There are
+    several equilibrium points that we need to analyze.
+    \begin{itemize}
+        \item There is an equilibrium at $(0,0)$.  What does it mean physically and what
+            type of behavior do we see near this point?
+        \item There is an equilibrium at $(0,1)$.  What does it mean physically and what
+            type of behavior do we see near this point?
+        \item There are two equilibria inside the domain where both weeds and grass can
+            coexist.  Find them and describe the behavior of the system near them.
+    \end{itemize}
+\end{problem}

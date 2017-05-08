@@ -1,0 +1,85 @@
+\BOOKMARK [0][-]{chapter.0}{To the Student and the Instructor}{}% 1
+\BOOKMARK [1][-]{section.0.1}{An Inquiry Based Approach}{chapter.0}% 2
+\BOOKMARK [1][-]{section.0.2}{Online Texts and Other Resources}{chapter.0}% 3
+\BOOKMARK [1][-]{section.0.3}{To the Instructor}{chapter.0}% 4
+\BOOKMARK [0][-]{chapter.1}{First Order Differential Equations}{}% 5
+\BOOKMARK [1][-]{section.1.1}{Differential Equation Terminology}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.2}{Solution Technique: Integration}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.3}{Solution Technique: Separation of Variables}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.4}{Solution Technique: Undetermined Coefficients}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.5}{Solution Technique: Integrating Factor}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.6}{Mixing Problems}{chapter.1}% 11
+\BOOKMARK [1][-]{section.1.7}{Existence and Uniqueness of Solutions \(INCOMPLETE\)}{chapter.1}% 12
+\BOOKMARK [0][-]{chapter.2}{Qualitative Methods, Numerical Methods, and Bifurcations}{}% 13
+\BOOKMARK [1][-]{section.2.1}{Equilibrium Points and Stability}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.2}{Numerical Methods}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.1}{Euler's Method}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.2}{Runge-Kutta Method}{section.2.2}% 17
+\BOOKMARK [1][-]{section.2.3}{Bifurcations \(INCOMPLETE\)}{chapter.2}% 18
+\BOOKMARK [0][-]{chapter.3}{Linear Systems and Matrices}{}% 19
+\BOOKMARK [1][-]{section.3.1}{Matrix Operations and Definitions}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.2}{Gaussian Elimination: Reduced Row Eschelon Form}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.3}{Linear Combinations}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.4}{Inverses and Determinants}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.5}{Applications of Linear Systems}{chapter.3}% 24
+\BOOKMARK [0][-]{chapter.4}{Vector Spaces}{}% 25
+\BOOKMARK [1][-]{section.4.1}{What is a Vector Space}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.2}{Linear Independence and Linear Dependence}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.3}{Span}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.4}{Subspaces}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.5}{Basis}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.6}{Row, Column, and Null Spaces in Rn}{chapter.4}% 31
+\BOOKMARK [0][-]{chapter.5}{The Geometry of Vector Spaces}{}% 32
+\BOOKMARK [1][-]{section.5.1}{The Geometry of Rn}{chapter.5}% 33
+\BOOKMARK [2][-]{subsection.5.1.1}{The Dot Product}{section.5.1}% 34
+\BOOKMARK [2][-]{subsection.5.1.2}{Projections}{section.5.1}% 35
+\BOOKMARK [2][-]{subsection.5.1.3}{The Gram-Schmidt Process: Making Orthogonal Sets}{section.5.1}% 36
+\BOOKMARK [1][-]{section.5.2}{Inner Product Spaces}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.3}{Practice Problems for Vector Spaces}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.4}{Linear Transformations}{chapter.5}% 39
+\BOOKMARK [0][-]{chapter.6}{The Eigenvalue Eigenvector Problem}{}% 40
+\BOOKMARK [1][-]{section.6.1}{Introduction To Eigenvalues}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.2}{Diagonlization of Matrices}{chapter.6}% 42
+\BOOKMARK [1][-]{section.6.3}{Powers of Matrices}{chapter.6}% 43
+\BOOKMARK [1][-]{section.6.4}{The Google Page Rank Algorithm}{chapter.6}% 44
+\BOOKMARK [0][-]{chapter.7}{Second Order Differential Equations}{}% 45
+\BOOKMARK [1][-]{section.7.1}{Intro to Second Order Differential Equations}{chapter.7}% 46
+\BOOKMARK [1][-]{section.7.2}{Mechanical Vibrations}{chapter.7}% 47
+\BOOKMARK [1][-]{section.7.3}{Undetermined Coefficients}{chapter.7}% 48
+\BOOKMARK [1][-]{section.7.4}{Resonance and Beats}{chapter.7}% 49
+\BOOKMARK [0][-]{chapter.8}{Systems of Differential Equations}{}% 50
+\BOOKMARK [1][-]{section.8.1}{Matrices and Linear Systems}{chapter.8}% 51
+\BOOKMARK [1][-]{section.8.2}{The Eigenvalue Method for Linear Systems}{chapter.8}% 52
+\BOOKMARK [1][-]{section.8.3}{The Matrix Exponential}{chapter.8}% 53
+\BOOKMARK [1][-]{section.8.4}{Complex Eigenvalues}{chapter.8}% 54
+\BOOKMARK [0][-]{chapter.9}{Nonlinear Systems of Differential Equations}{}% 55
+\BOOKMARK [1][-]{section.9.1}{Trace-Determinant Plane}{chapter.9}% 56
+\BOOKMARK [1][-]{section.9.2}{Applied Nonlinear Systems}{chapter.9}% 57
+\BOOKMARK [0][-]{chapter.10}{Laplace Transforms}{}% 58
+\BOOKMARK [1][-]{section.10.1}{Introduction to Laplace Transforms}{chapter.10}% 59
+\BOOKMARK [2][-]{subsection.10.1.1}{Where Laplace Transforms Come From}{section.10.1}% 60
+\BOOKMARK [2][-]{subsection.10.1.2}{Basic Laplace Transforms and Basic Properties}{section.10.1}% 61
+\BOOKMARK [2][-]{subsection.10.1.3}{Some Important Theorems}{section.10.1}% 62
+\BOOKMARK [2][-]{subsection.10.1.4}{Common Laplace Transforms}{section.10.1}% 63
+\BOOKMARK [1][-]{section.10.2}{Solving Differential Equations with Laplace Transforms}{chapter.10}% 64
+\BOOKMARK [1][-]{section.10.3}{The Heaviside Function and Delayed Forcing Terms}{chapter.10}% 65
+\BOOKMARK [1][-]{section.10.4}{Impulses and The Delta Function}{chapter.10}% 66
+\BOOKMARK [1][-]{section.10.5}{Convolutions \(INCOMPLETE\)}{chapter.10}% 67
+\BOOKMARK [0][-]{chapter.11}{Power Series Method: The Ultimate Guess}{}% 68
+\BOOKMARK [1][-]{section.11.1}{Taylor Series Solutions to Diff. Equations}{chapter.11}% 69
+\BOOKMARK [1][-]{section.11.2}{Radius of Convergence for Power Series \(INCOMPLETE\)}{chapter.11}% 70
+\BOOKMARK [1][-]{section.11.3}{Power Series Solutions to Diff. Equations}{chapter.11}% 71
+\BOOKMARK [0][-]{chapter.12}{Partial Differential Equations}{}% 72
+\BOOKMARK [1][-]{section.12.1}{Some Reminders from Multivariable Calculus}{chapter.12}% 73
+\BOOKMARK [1][-]{section.12.2}{Where to PDEs Come From?}{chapter.12}% 74
+\BOOKMARK [2][-]{subsection.12.2.1}{Derivation of General Balance Law}{section.12.2}% 75
+\BOOKMARK [2][-]{subsection.12.2.2}{Simplifications of the Local Balance Law}{section.12.2}% 76
+\BOOKMARK [2][-]{subsection.12.2.3}{Laplace's Equation and Poisson's Equation}{section.12.2}% 77
+\BOOKMARK [1][-]{section.12.3}{The 1D Heat Equation}{chapter.12}% 78
+\BOOKMARK [2][-]{subsection.12.3.1}{1D Heat Equation with Zero Temperature Ends}{section.12.3}% 79
+\BOOKMARK [2][-]{subsection.12.3.2}{1D Heat Equation with Insulated Ends}{section.12.3}% 80
+\BOOKMARK [2][-]{subsection.12.3.3}{Heat Equation on a Thin Ring}{section.12.3}% 81
+\BOOKMARK [1][-]{section.12.4}{The Wave Equation \(INCOMPLETE\)}{chapter.12}% 82
+\BOOKMARK [1][-]{section.12.5}{1D Traveling Waves \(INCOMPLETE\)}{chapter.12}% 83
+\BOOKMARK [0][-]{section*.20}{Appendices}{}% 84
+\BOOKMARK [0][-]{Appendix.a.A}{Partial Fractions}{}% 85
