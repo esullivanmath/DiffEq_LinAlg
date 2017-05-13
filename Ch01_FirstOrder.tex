@@ -1,4 +1,5 @@
 \chapter{First Order Differential Equations}
+\section{What is a Differential Equation?}
 You may recall that in an algebraic equation you are seeking to find a number,
 usually\footnote{See the TED Talk
     \href{https://www.ted.com/talks/terry_moore_why_is_x_the_unknown}{https://www.ted.com/talks/terry\_moore\_why\_is\_x\_the\_unknown}
@@ -21,6 +22,12 @@ cosines: $y(t) = C_1 \sin(t) + C_2 \cos(t)$. Our goal throughout this course is 
 differential equations and find techniques to analyze them. As you might imagine based on
 the complexity of the derivative rules in calculus, the techniques to find solutions to
 differential equations can sometimes be quite complicated.
+
+\begin{definition}[Differential Equation]
+    A {\bf differential equation} is an equation that relates a function to its
+    derivative(s).  The goal in solving a differential equation is to find the function
+    that satisfies the given relationship.
+\end{definition}
 
 Let's begin by examining a few modeling-type problems where you need to write the
 differential equation.  After we have a few differential equations we will spend some time
@@ -828,7 +835,7 @@ Using the initial condition we get
 }
 
 
-\section{Existence and Uniqueness of Solutions (INCOMPLETE)}
+\section{Existence and Uniqueness of Solutions}
 Here are a few fundamental questions about differential equations:
 \begin{itemize}
     \item When does the solution to a differential equation exist?
@@ -842,7 +849,7 @@ method is only giving us computational garbage.
 In this section we present two fundamental theorems discussing these questions for first
 order differential equations.  
 
-\begin{thm}[Existence Theorem]
+\begin{thm}[Existence Theorem]\label{thm:existence_uniqueness}
     Suppose that $f(t,y)$ is a continuous function in a rectangle of the form
     \[ \{ (t,y) \, : \, a < t < b \, , \, c < y < d \} \]
     in the $ty$-plane.  If $(t_0,y_0)$ is a point in the rectangle then there exists a
@@ -851,11 +858,11 @@ order differential equations.
     \[ \frac{dy}{dt} = f(t,y) \quad y(t_0) = y_0 . \]
 \end{thm}
 \begin{problem}
-    What does this theorem mean?
+    What does theorem \ref{thm:existence_uniqueness} mean?
 \end{problem}
 
 
-\begin{thm}[Uniqueness Theorem]
+\begin{thm}[Uniqueness Theorem]\label{thm:uniqueness}
     Suppose that $f(t,y)$ and $\partial f/\partial y$ are continuous function in a
     rectangle of  the form 
     \[ \{ (t,y) \, : \, a < t < b \, , \, c < y < d \} \]
@@ -869,7 +876,7 @@ order differential equations.
     identical
 \end{thm}
 \begin{problem}
-    What does this theorem mean?
+    What does theorem \ref{thm:uniqueness} mean?
 \end{problem}
 
 

@@ -9,6 +9,78 @@ same for matrices and nonlinear differential equations.  For most of the problem
 chapter it will be helpful to have MATLAB up so you can plot phase planes and analyze
 equilibria graphically.
 
+\section{Modeling a Nonlinear System}
+\begin{problem}
+    We're going to try a social experiment.  
+    \begin{enumerate}
+        \item[(a)] Everyone in the class get a random number between 1 and 5. 
+        \item[(b)] I'm sorry, but if your random number is ``1'' then you just got infected
+            with the horribly contagious disease ODEbola.  Raise your hand if you are
+            infected.
+        \item[(c)] For the next 15 seconds everyone needs to walk aimlessly around the
+            classroom (move the tables out of the way and don't be afraid to bump into
+            each other).  This step is supposed to simulate {\it homogeneous mixing} so
+            \ldots mix homogeneously!
+        \item[(d)] At the end of the 15 seconds stop and stand still.  Reach your arms
+            out.  If someone within arm's reach is infected with ODEbola then you now are
+            too!  Raise your hand if you are infected.
+        \item[(e)] Repeat steps (c) and (d) again. At the end of every step 10\% of the
+            infected people that are infected will recover and are removed from the
+            experiment.  Keep track of the number of
+            people that are infected and recovered at each step.  Run the experiment for
+            several iterations
+    \end{enumerate}
+\end{problem}
+
+\begin{problem}\label{prob:SIR_outbreak_simulation}
+    Watch the video \href{https://youtu.be/NSNWDUXN2p4}{https://youtu.be/NSNWDUXN2p4} to
+    see a simulation where a 150 person population has an outbreak and the virus is spread
+    via close proximity contact.  Notice, in particular,
+    the homogeneous mixing.
+\end{problem}
+
+\begin{challenge}
+    Write computer code to produce a simulation similar to what you see in Problem
+    \ref{prob:SIR_outbreak_simulation}.
+\end{challenge}
+
+\begin{problem}
+    In the previous problems there were three distinct populations: Susceptible ($S$),
+    Infected ($I$), and Recovered ($R$).  Write a system of differential equations for the
+    experiment that we ran and remember to keep in mind that we were homogeneously mixing
+    the population the entire time. Think very carefully about how a susceptible person is
+    actually infected.
+    \begin{flalign*}
+        \frac{dS}{dt}&= \underline{\hspace{2in}} \quad \text{with} \quad S(0) =
+        \underline{\hspace{1in}} \\
+        \frac{dI}{dt}&= \underline{\hspace{2in}} \quad \text{with} \quad I(0) = 
+        \underline{\hspace{1in}} \\
+        \frac{dR}{dt}&= \underline{\hspace{2in}}  \quad \text{with} \quad R(0) = 
+        \underline{\hspace{1in}} \\
+    \end{flalign*}
+\end{problem}
+\solution{
+    The system should be a standard SIR model where the recovered people can also get
+    infected.
+    \begin{flalign*}
+        S' &= -\alpha SI \\
+        I' &= \alpha SI - \beta I \\
+        R' &= \beta I
+    \end{flalign*}
+    where $\alpha$ is a parameter related to the likelihood that someone will get infected
+    (subject to the homogeneous mixing) and $\beta = 0.1$ is the recovery rate.
+}
+
+
+\begin{problem}
+    Consider the system from the previous problem.
+    \begin{enumerate}
+%         \item[(a)] How did you take the homogeneous mixing into account?
+        \item[(a)] Is the system linear or nonlinear?  Why?
+        \item[(b)] What is the expected long-term behavior of this system?  Why?
+    \end{enumerate}
+\end{problem}
+
 
 \section{Trace-Determinant Plane}
 In this section we will briefly examine a technique for quickly determining

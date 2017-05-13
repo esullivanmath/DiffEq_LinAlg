@@ -329,6 +329,18 @@ region where the series converges.  Consider the next problem.
     \end{itemize}
 \end{thm}
 
+\begin{problem}
+    Devise a power series that has a domain of convergence of $|x|<2$.
+\end{problem}
+
+\begin{problem}
+    What are the radii of convergence for the Taylor series of the exponential function,
+    the sine function, and the cosine function?
+\end{problem}
+\solution{
+All three have an infinite radius of convergence.
+}
+
 
 \section{Power Series Solutions to Diff. Equations}
 Using Taylor series as we did in Section \ref{sec:Taylor_ODE} is one technique for finding
@@ -362,12 +374,12 @@ are blessed with the following theorem from mathematical analysis.
     \end{enumerate}
 \end{thm}
 \begin{proof}
-    Really, the full proof of this theorem is beyond the scope of this text.  Instead,
+    The full proof of this theorem is beyond the scope of this text.  Instead,
     convince yourself that this theorem is true for finite sums (this should be obvious)
     and trust the author that it holds within the radius of convergence for infinite sums.
 \end{proof}
 
-Really, Theorem \ref{thm:series_term_by_term} says that so long as you are within the
+Theorem \ref{thm:series_term_by_term} says that so long as you are within the
 radius of convergence of the power series then the series can be differentiated or
 integrated term by term.  This has an impact on the use of power series for approximating
 solutions to differential equations.  We simply assume that we are within the radius of
@@ -554,3 +566,8 @@ t^{k-2} + \cdots \]
     which implies that $a_2 = 3$, $a_3 = \frac{5}{3}$, and $a_4 = 3$.  Therefore
     \[ y(t) \approx 1 + t + 3t^2 + \frac{5}{3} t^3 + 3t^4 + \cdots . \]
 }
+
+\begin{problem}
+    Determine the radius of convergence for the solutions to each of the previous power
+    series problems.
+\end{problem}
