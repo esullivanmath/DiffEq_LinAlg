@@ -509,8 +509,9 @@ angles between matrices!! AWESOME!!
 %         j=k \\ 0 & j \ne k \end{array} \right. \]
 % }
 
+\section{Fourier Series}
 OK.  I admit it.  Inner product spaces are pretty darn abstract and at first glance they
-seem to have no purpose.  To finish this section we will consider a non-abstract
+seem to have no purpose.  In this section we will consider a non-abstract
 application of the inner product space that has changed the modern world in uncountably
 many ways.  This application, which will arise later in these notes (in the PDE's
 chapter), is one of the most stunningly beautiful applications out there for everyone to
@@ -590,6 +591,12 @@ soundsc(MySound)
     for $x \in [0,2\pi]$ and extended periodically outside the domain.
 \end{problem}
 
+The study of Fourier series began with Joseph Fourier around the 1820's.  The notion of
+expanding periodic functions in terms of an infinite series of sines and cosines
+subsequently changed the world.  He gave birth to the mathematical field of harmonic
+analysis and is still used today in digital and analog signal processing.  We will return
+to this idea in Chapter \ref{ch:PDEs} where we'll use Fourier series to solve problems in
+heat conduction and wave propagation.  
 
 \section{Practice Problems for Vector Spaces}
 
@@ -1013,4 +1020,177 @@ conditions.}
         &= \begin{pmatrix} c & b \\ b & 2a \end{pmatrix}
     \end{flalign*}
 }
+
+
+\section{Higher Dimensions are Geometrically {\it Weird}}
+At this point you have likely come to the conclusion that linear algebra is beautiful but
+possibly very hard to visualize.  This is especially true in more than three dimensions.
+In this brief section we'll explore a few strange facts about geometry in higher
+dimensions.
+
+\begin{problem}
+    Let's first recall some basic geometry but in each of the following problems we'll
+    intentionally the language of vector spaces.
+    \begin{enumerate}
+        \item[(a)] If you are standing at the origin on a 1-dimensional Euclidean vector
+            space and you reach out $R$ units in each direction, how much {\it volume} do
+            you capture? 
+            \solution{You are essentially standing on a number line and you're asked to
+                find the amount of the number line from $-R$ to $+R$.  Hence, $V_1 = 2R$
+            }
+        \item[(b)] If you are standing at the origin of a 2-dimensional Euclidean vector
+            space and you reach out $R$ units in every direction, how much {\it volume} do
+            you capture?
+            \solution{You are now on a plane so the geometric object that you form is a
+                circle in the plane.  The {\it volume} of the circle is what we would
+                typically call the area: $V_2 = \pi R^2$
+            }
+        \item[(c)] If you are standing at the origin of a 3-dimensional Euclidean vector
+            space and you reach out $R$ units in every direction, how much {\it volume} do
+            you capture?
+            \solution{You are now in the typical 3 dimensions in which we live so the
+                geometric object that you form is a sphere.  The {\it volume} of the
+                sphere is: $V_3 =\frac{4}{3} \pi R^3$
+            }
+
+    \end{enumerate}
+\end{problem}
+
+\begin{problem}
+    Now let's make a few conjectures.  Let $V_{n,ball}(R)$ be the volume an
+    $n$-dimensional ball of radius $R$ and let $V_{n,cube}(R)$ be the volume of an
+    $n$-dimensional cube of side length $2R$.  To make this more concrete, in 2D
+    $V_{2,ball}(R)$ is the area of a circle of radius $R$ and $V_{2,cube}(R)$ is the area
+    of a square with side length $2R$.  In 3D, $V_{3,ball}(R)$ is the volume of a sphere
+    with radius $R$ and $V_{3,cube}(R)$ is the volume of a cube with side length $2R$.
+    \begin{enumerate}
+        \item[(a)] Without any formal computation, approximately how much area does a
+            circle inscribed in a square take up?  In other words, what is $V_{2,ball}(R) /
+            V_{2,cube}(R)$?  Verify your conjecture with formal computation.
+            \begin{figure}[ht!]
+                \begin{center}
+                    \begin{tikzpicture}
+                        \draw[thick, black] (-1,-1) -- (1,-1) -- (1,1) -- (-1,1) -- cycle;
+                        \draw[thick, fill = red, color=red] (0,0) circle(1cm);
+                    \end{tikzpicture}
+                \end{center}
+                \caption{A circle inscribed in a square.  The ratio of the area of the
+                    square to the area of the circle is $V_{2,ball}/V_{2,cube}$.}
+                \label{fig:circle_square}
+            \end{figure}
+        \item[(b)] Without any formal computation, approximately how much area does a
+            sphere inscribed in a cube take up?  In other words, what is $V_{3,ball}(R) /
+            V_{3,cube}(R)$?  Verify your conjecture with formal computation.
+        \item[(c)] Make a conjecture for the value of the limit:
+            \[ \lim_{n\to\infty} \frac{V_{n,ball}(R)}{V_{n,cube}(R)}. \]
+    \end{enumerate}
+\end{problem}
+
+
+In higher dimensions (4D and up) we have a hard time visualizing anything without using
+tricks such as color or time-like variables.  
+\begin{definition}[Volume of an $n$-Dimensional Ball]
+    For the volume of an $n$-dimensional ball we
+    have the recursive formula 
+    \begin{flalign}
+        V_n(R) = \frac{2\pi R^2}{n} V_{n-2}(R)
+        \label{eqn:n_ball_volume}
+    \end{flalign}
+    where $n$ is the dimension and $R$ is the radius.  
+\end{definition}
+
+\begin{problem}
+    Given that $V_1 = 2R$ and $V_2 = \pi R^2$, use the recursive formula
+    \eqref{eqn:n_ball_volume} to verify the formula for the volume of a
+    sphere of radius $R$.
+    \[ V_3(R) = \underline{\hspace{1in}} \]
+\end{problem}
+\solution{
+    \[ V_3(R) = \frac{2 \pi R^2}{3} \cdot V_1(R) = \frac{2\pi R^2}{3} \cdot \left( 2R
+        \right) = \frac{4}{3} \pi R^3 \]
+}
+
+\begin{definition}[Volume of an $n$-Dimensional Cube]
+    For a cube of $n$ dimensions with side length $2R$ we always have the simple formula
+    \begin{flalign}
+        V_n(R) = (2R)^n = 2^n R^n.
+        \label{eqn:n_cube_volume}
+    \end{flalign}
+\end{definition}
+A moment's reflection reveals that in a one dimension Euclidean vector space the volume of a
+cube and the volume of the sphere are the same: $V_{1,ball} = V_{1,cube} = 2R$.  In two dimensions we have 
+\begin{flalign*}
+    V_{2,square} &= (2R)^2 = 4R^2 \quad \text{and} \\
+    V_{2,circle} &= \pi R^2,
+\end{flalign*}
+which implies that the fraction of the volume of the square filled by the inscribed circle
+is
+\[ \frac{V_{2,circle}}{V_{2,square}} = \frac{\pi R^2}{4 R^2} =\frac{\pi}{4} \approx 0.785 \]
+so the circle fills approximately 78.5\% of the square. Examining Figure
+\ref{fig:circle_square} visually should verify that this {\it appears to be} correct.
+
+In three spatial dimension we have
+\begin{flalign*}
+    V_{3,cube} &= (2R)^3 = 8R^3 \quad \text{and} \\
+    V_{3,sphere} &= \frac{4}{3} \pi R^3,
+\end{flalign*}
+which implies that 
+\[ \frac{V_{3,sphere}}{V_{3,cube}} = \frac{\frac{4}{3} \pi R^3}{8 R^3} =
+    \frac{\frac{4}{3} \pi}{8} = \frac{\pi}{6} \approx 0.524 \]
+so we see that a sphere inscribed in a cube fills up about 52.4\% of the available volume.
+These results are summarized in the table below.
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Dimension ($n$) & Volume of a Ball & Volume of a Cube & Ratio: ($V_{n,ball} /
+        V_{n,cube}$) \\ \hline \hline
+        1 & $2R$ & $2R$ & $1$ \\ \hline
+        2 & $\pi R^2$ & $4R^2$ & $\frac{\pi}{4} \approx 0.785$ \\ \hline
+        3 & $\frac{4}{3} \pi R^3$ & $8R^3$ & $\frac{\pi}{6} \approx 0.524$ \\ \hline
+        4 & $\frac{2\pi R^2}{4} \cdot \left( \pi R^2 \right) = \frac{\pi^2 R^4}{2} $ &
+        $16R^4$ & $\frac{\pi^2}{32} \approx 0.308$ \\ \hline
+        5 & $\frac{2\pi R^2}{5} \cdot \frac{4}{3} \pi R^3 = \frac{8 \pi^2 R^5}{15}$ &
+        $32R^5$ & $\frac{\pi^2}{60} \approx 0.164$ \\ \hline
+        6 &  &  &  \\ \hline
+        7 &  &  &  \\ \hline
+        8 &  &  &  \\ \hline
+        $\vdots$ &  &  &  \\ \hline
+    \end{tabular}
+\end{center}
+
+\begin{problem}
+    The previous table shows the ratio $V_{n,ball} / V_{n,cube}$ for dimensions $1$
+    through $5$.  Use equations \eqref{eqn:n_ball_volume} and \eqref{eqn:n_cube_volume} to
+    complete the computation for dimensions $6$ - $8$ and conjecture the
+    value of 
+    \[ \lim_{n \to \infty} \frac{V_{n,ball}(R)}{V_{n,cube}(R)}. \]
+    Explain the meaning of the limit geometrically (however counterintuitive it is).
+\end{problem}
+\solution{
+    In the limit, the ratio $V_{n,ball}/V_{n,cube}$ goes to zero.  Geometrically this
+    means that a ball of radius $R$ takes up less and less space in a cube of side length
+    $2R$ as the dimension increases.  In an infinite dimensional space, a ball of radius
+    $R$ takes up zero volume.
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Dimension ($n$) & Volume of a Ball & Volume of a Cube & Ratio: ($V_{n,ball} /
+        V_{n,cube}$) \\ \hline \hline
+        1 & $2R$ & $2R$ & $1$ \\ \hline
+        2 & $\pi R^2$ & $4R^2$ & $\frac{\pi}{4} \approx 0.785$ \\ \hline
+        3 & $\frac{4}{3} \pi R^3$ & $8R^3$ & $\frac{\pi}{6} \approx 0.524$ \\ \hline
+        4 & $\frac{2\pi R^2}{4} \cdot \left( \pi R^2 \right) = \frac{\pi^2 R^4}{2} $ &
+        $16R^4$ & $\frac{\pi^2}{32} \approx 0.308$ \\ \hline
+        5 & $\frac{2\pi R^2}{5} \cdot \frac{4}{3} \pi R^3 = \frac{8 \pi^2 R^5}{15}$ &
+        $32R^5$ & $\frac{\pi^2}{60} \approx 0.164$ \\ \hline
+        6 & $\frac{\pi^3}{6} R^6$ & $64R^6$ & $\frac{pi^3}{384} \approx 0.0807$  \\ \hline
+        7 & $\frac{16 \pi^3}{105} R^7$ & $128 R^7$  & $\frac{16 \pi^3}{13440} \approx
+        0.0369$  \\ \hline
+        8 & $\frac{\pi^4}{24} R^8$ & $256 R^8$  & $\frac{\pi^4}{6144} \approx 0.0159$ \\ \hline
+        $\vdots$ &  &  &  \\ \hline
+    \end{tabular}
+\end{center}
+}   
+
 
