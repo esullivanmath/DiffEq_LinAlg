@@ -118,38 +118,6 @@ Show a slope field with $T(0)=0$ and various values of $k$.
 }
 
 
-\begin{problem}[The Oil Slick Problem]%www.simiode.org Problem 1-5-T-OilSlick
-    An oil slick spreads at sea. From time to time, but irregularly, a helicopter is
-    dispatched to photograph the oil slick. On each trip, the helicopter arrives over the
-    slick, the pilot takes a picture, waits 10 minutes, takes another, and heads home. On
-    each of seven trips the size (in area) of the slick is measured from both photographs.
-    The data is given below.
-    \begin{center}
-        \begin{tabular}{|c|c|}
-            \hline
-            Size at Initial Observation (sq. mi.)  & Size 10 Minutes Later (sq. mi.) \\ \hline \hline
-            1.047. & 1.139 \\
-            2.005. & 2.087 \\
-            3.348. & 3.413 \\
-            5.719. & 5.765 \\
-            7.273. & 7.304 \\
-            8.410. & 8.426 \\
-            9.117. & 9.127 \\ \hline
-        \end{tabular}
-    \end{center}
-    Work with your partner to create a differential equation model for the size of the oil
-    slick.  Note well that we do NOT know the time between helicopter arrivals. \\Hint:
-    What can you learn about the differential equation from a plot that shows the initial
-    observation on the horizontal axis and the rate of change on the vertical axis?  
-\end{problem}
-\solution{
-    The best way to tackle this problem is first to plot the change vs the amount.
-    Students will find that this is a linear function with a negative slope.  Doing a
-    regression on this data gives the right-hand side of the differential equation.  This
-    leads to
-    \[ \frac{ds}{dt} = -0.00100087 s + 0.0101644 \]
-    where $s(t)$ is the size of the oil slick.
-}
 
 \section{Differential Equation Terminology}
 In this chapter we will look at a few techniques for solving first-order differential
@@ -875,40 +843,6 @@ Extension.  What if the rates are not the same and $V = V(t)$? Must use integrat
 factors.
 
 }
-\begin{problem}
-    A fishing pond currently has 1000 rainbow trout ($R$) but the Department of Fish,
-    Wildlife, and Parks (FWP) has decided to institute a restocking plan with a mix of rainbow
-    trout and brown trout ($B$) to diversify the species in the pond.  Assume that the
-    fishermen from the pond remove 50 fish per week and FWP restocks with 30 mature
-    rainbows and 25 mature browns every week.  Model the population of rainbow trout with
-    a differential equation.  Solve the differential equation using appropriate
-    techniques and plot both populations together.
-\end{problem}
-\solution{
-We have $R(0) = 1000$ but we also observe that the number of fish in the pond is actually
-increasing by 5 fish per week.  Therefore, the total population can be modeled as $P(t) =
-1000 + 5t$.
-\[ \text{rate of rainbows in: } 30 \]
-\[ \text{rate of rainbows out: } \frac{50\text{(fish/wk)} \cdot R
-\text{(rainbows)}}{P(t)\text{total fish}} =  \frac{50R}{1000+5t} \]
-Therefore,
-\[ \frac{dR}{dt} = 30 - \frac{50R}{1000+5t} \quad \text{ or } \quad  \frac{dR}{dt} +
-\frac{50}{1000+5t} R = 30 \]
-This is a job for integrating factors.
-Let $\rho(t) = \text{exp}\left( \int \frac{50}{1000+5t} \right) = \text{exp} \left( 10
-\ln(1000+5t) \right)$ and therefor
-\[ \rho(t) = (1000+5t)^{10} \]
-Multiplying and recognizing the product rule gives
-\[ \frac{d}{dt} \left[ (1000+5t)^{10} R \right] = 30(1000+5t)^{10} \implies (1000+5t)^{10}
-R = \frac{30}{55} (1000+5t)^{11} + C \implies \]
-\[ R(t) = \frac{30}{55}(1000+5t) + \frac{C}{(1000+5t)^{10}} \]
-Using the initial condition we get
-\[ 1000 = \frac{30}{55}(1000) + \frac{C}{1000^{10}} \implies C = \frac{25}{55}(1000)^{11}
-= \frac{25}{55} \times 10^{33}\]
-\[ R(t) = \frac{30}{55}(1000+5t) + \frac{25}{55}\frac{10^{33}}{(1000+5t)^{10}} \quad
-\text{and} \quad B(t) = P(t) - R(t) = (1000+5t) - R(t) \]
-}
-
 
 
 
@@ -992,4 +926,77 @@ Can't tell since the solution isn't guaranteed to exist when $h=0$
     \end{enumerate}
 \end{problem}
 \solution{No.  If so it would violate uniqueness}
+
+
+\section{Additional Exercises}
+
+\begin{problem}[The Oil Slick Problem]%www.simiode.org Problem 1-5-T-OilSlick
+    An oil slick spreads at sea. From time to time, but irregularly, a helicopter is
+    dispatched to photograph the oil slick. On each trip, the helicopter arrives over the
+    slick, the pilot takes a picture, waits 10 minutes, takes another, and heads home. On
+    each of seven trips the size (in area) of the slick is measured from both photographs.
+    The data is given below.
+    \begin{center}
+        \begin{tabular}{|c|c|}
+            \hline
+            Size at Initial Observation (sq. mi.)  & Size 10 Minutes Later (sq. mi.) \\ \hline \hline
+            1.047. & 1.139 \\
+            2.005. & 2.087 \\
+            3.348. & 3.413 \\
+            5.719. & 5.765 \\
+            7.273. & 7.304 \\
+            8.410. & 8.426 \\
+            9.117. & 9.127 \\ \hline
+        \end{tabular}
+    \end{center}
+    Work with your partner to create a differential equation model for the size of the oil
+    slick.  Note well that we do NOT know the time between helicopter arrivals. \\Hint:
+    What can you learn about the differential equation from a plot that shows the initial
+    observation on the horizontal axis and the rate of change on the vertical axis?  
+\end{problem}
+\solution{
+    The best way to tackle this problem is first to plot the change vs the amount.
+    Students will find that this is a linear function with a negative slope.  Doing a
+    regression on this data gives the right-hand side of the differential equation.  This
+    leads to
+    \[ \frac{ds}{dt} = -0.00100087 s + 0.0101644 \]
+    where $s(t)$ is the size of the oil slick.
+}
+
+
+\begin{problem}
+    A fishing pond currently has 1000 rainbow trout ($R$) but the Department of Fish,
+    Wildlife, and Parks (FWP) has decided to institute a restocking plan with a mix of rainbow
+    trout and brown trout ($B$) to diversify the species in the pond.  Assume that the
+    fishermen from the pond remove 50 fish per week and FWP restocks with 30 mature
+    rainbows and 25 mature browns every week.  Model the population of rainbow trout with
+    a differential equation.  Solve the differential equation using appropriate
+    techniques and plot both populations together.
+\end{problem}
+\solution{
+We have $R(0) = 1000$ but we also observe that the number of fish in the pond is actually
+increasing by 5 fish per week.  Therefore, the total population can be modeled as $P(t) =
+1000 + 5t$.
+\[ \text{rate of rainbows in: } 30 \]
+\[ \text{rate of rainbows out: } \frac{50\text{(fish/wk)} \cdot R
+\text{(rainbows)}}{P(t)\text{total fish}} =  \frac{50R}{1000+5t} \]
+Therefore,
+\[ \frac{dR}{dt} = 30 - \frac{50R}{1000+5t} \quad \text{ or } \quad  \frac{dR}{dt} +
+\frac{50}{1000+5t} R = 30 \]
+This is a job for integrating factors.
+Let $\rho(t) = \text{exp}\left( \int \frac{50}{1000+5t} \right) = \text{exp} \left( 10
+\ln(1000+5t) \right)$ and therefor
+\[ \rho(t) = (1000+5t)^{10} \]
+Multiplying and recognizing the product rule gives
+\[ \frac{d}{dt} \left[ (1000+5t)^{10} R \right] = 30(1000+5t)^{10} \implies (1000+5t)^{10}
+R = \frac{30}{55} (1000+5t)^{11} + C \implies \]
+\[ R(t) = \frac{30}{55}(1000+5t) + \frac{C}{(1000+5t)^{10}} \]
+Using the initial condition we get
+\[ 1000 = \frac{30}{55}(1000) + \frac{C}{1000^{10}} \implies C = \frac{25}{55}(1000)^{11}
+= \frac{25}{55} \times 10^{33}\]
+\[ R(t) = \frac{30}{55}(1000+5t) + \frac{25}{55}\frac{10^{33}}{(1000+5t)^{10}} \quad
+\text{and} \quad B(t) = P(t) - R(t) = (1000+5t) - R(t) \]
+}
+
+
 

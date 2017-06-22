@@ -4,13 +4,14 @@
 \contentsline {section}{\numberline {0.3}To the Instructor}{7}{section.0.3}
 \contentsline {chapter}{\numberline {1}First Order Differential Equations}{8}{chapter.1}
 \contentsline {section}{\numberline {1.1}Modeling and Differential Equations}{8}{section.1.1}
-\contentsline {section}{\numberline {1.2}Differential Equation Terminology}{11}{section.1.2}
-\contentsline {section}{\numberline {1.3}Solution Technique: Integration}{13}{section.1.3}
-\contentsline {section}{\numberline {1.4}Solution Technique: Separation of Variables}{15}{section.1.4}
+\contentsline {section}{\numberline {1.2}Differential Equation Terminology}{10}{section.1.2}
+\contentsline {section}{\numberline {1.3}Solution Technique: Integration}{12}{section.1.3}
+\contentsline {section}{\numberline {1.4}Solution Technique: Separation of Variables}{14}{section.1.4}
 \contentsline {section}{\numberline {1.5}Solution Technique: Undetermined Coefficients}{17}{section.1.5}
 \contentsline {section}{\numberline {1.6}Solution Technique: Integrating Factor}{20}{section.1.6}
-\contentsline {section}{\numberline {1.7}Mixing Problems}{26}{section.1.7}
-\contentsline {section}{\numberline {1.8}Existence and Uniqueness of Solutions}{29}{section.1.8}
+\contentsline {section}{\numberline {1.7}Mixing Problems}{25}{section.1.7}
+\contentsline {section}{\numberline {1.8}Existence and Uniqueness of Solutions}{27}{section.1.8}
+\contentsline {section}{\numberline {1.9}Additional Exercises}{29}{section.1.9}
 \contentsline {chapter}{\numberline {2}Qualitative Methods, Numerical Methods, and Bifurcations}{31}{chapter.2}
 \contentsline {section}{\numberline {2.1}Equilibrium Points and Stability}{31}{section.2.1}
 \contentsline {section}{\numberline {2.2}Numerical Methods}{37}{section.2.2}
