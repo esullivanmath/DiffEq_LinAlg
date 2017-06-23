@@ -358,12 +358,86 @@ True.  $h(t) = 2f(t) + g(t) = 2(1+2t+t^2) + (2-t-2t^2) = 4 + 3t$
 
 
 \section{Span}
+The following sequence of problems is modified from \cite{carpet}.
+\begin{problem}[The Magic Carpet Ride 1]
+    You are a young traveler leaving home for the first time.  Your parents want to help
+    you on your journey, so just before your departure they give you two gifts.
+    Specifically, they give you two forms of transportation: a hover board and a magic
+    carpet.  Your parents inform you that both the hover board and the magic carpet have
+    restrictions in how they operate:
+    \begin{itemize}
+        \item If you traveled ``forward'' on the hover board for one hour it wold move along a
+            diagonal path that would result in a displacement of 3 miles East and 1 mile
+            North of the starting location.  Mathematically, the hover board's motion is
+            restricted to the vector $\bv_1 = \begin{pmatrix} 3\\1\end{pmatrix}$
+        \item If you traveled ``forward'' on the magic carpet for one hour it wold move along a
+            diagonal path that would result in a displacement of 1 mile East and 2 miles
+            North of the starting location.  Mathematically, the magic carpet's motion is
+            restricted to the vector $\bv_1 = \begin{pmatrix} 1\\2\end{pmatrix}$
+    \end{itemize}
+    Your Uncle Euler suggests that your first adventure should be to go visit the wise
+    man, Old Man Gauss.  Uncle Euler tells you that Old Man Gauss lives in a cabin that is
+    107 miles East and 64 miles North of your home.  Can you use the hover board and the
+    magic carpet to get to Old Man Gauss' cabin?  Be able to defend your answer.
+\end{problem}
 
+\begin{problem}[Magic Carpet Ride 2]
+    Old Man Gauss wants to move to a cabin in a different location.  You are not sure
+    whether Gauss is just trying to test your wits at finding him or if he actually wants
+    to hide somewhere that you can't visit him.  
+
+    Are there some locations that he can hide and you cannot reach him with using the
+    hover board and the magic carpet?  Describe the places that you can reach using a
+    combination of the hover board and the magic carpet and those you cannot.  Be able to
+    support your answers.
+\end{problem}
+\solution{
+    you can get anywhere with these two modes of transportation.  Note well that traveling
+    backward is allowed.
+}
+
+\begin{problem}[Magic Carpet Ride 3]
+    Suppose now that you get a third mode of transporation: a jet pack!.  In this new
+    scenario assume that your three modes of transportation work as follows:
+    \begin{itemize}
+        \item The hover board's motion is restricted to the vector $\bv_1 =
+            \begin{pmatrix} 1\\1\\1\end{pmatrix}$.
+        \item The magic carpet's motion is restricted to the vector $\bv_2 =
+            \begin{pmatrix} 4\\1\\6\end{pmatrix}$.
+        \item The jet pack's motion is restricted to the vector $\bv_3 =
+            \begin{pmatrix} 6\\3\\8\end{pmatrix}$.
+    \end{itemize}
+    You are allowed to use each mode of transportation {\bf EXACTLY ONCE} (in the forward or
+    backward direction) for a fixed amount of time ($c_1$ on $\bv_1$, $c_2$ on $\bv_2$,
+    and $c_3$ on $\bv_3$).  Find the amounts of time on each mode of transportation ($c_1,
+    c_2,$ and $c_3$ respectively) need t to go on a journey that starts and ends at home
+    $(0,0,0)$ OR explain why it is not possible to do so.
+\end{problem}
+\solution{
+    The three vectors are linearly dependent since $2 \bv_1 + 1 \bv_2 - 1 \bv_3 = \bo$.
+}
+
+\begin{problem}[Magic Carpet Ride 4]
+    Modify the jet pack's restriction so that it is not possible to ride each mode of
+    transportation exactly once and end up back at home.
+\end{problem}
+
+Now let's formalize a few of the ideas that we just ran into.
 \begin{definition}
     The {\bf span} of a collection of vectors $\{\bu_1,\bu_2,\ldots,\bu_n\}$ is the set \[
     \{ c_1 \bu_1 + c_2 \bu_2 + \cdots c_n \bu_n \, : \, c_j \in \mathbb{R} \} \] This is
     the set of all linear combinations of the vectors $\bu_1, \ldots, \bu_n$.
 \end{definition}
+
+\begin{problem}
+    Explain the definition of the span of a set of vectors in the context of the magic
+    carpet ride problems.
+\end{problem}
+
+\begin{problem}
+    Explain the definition of the linear independence of a setet of vectors in the context
+    of the magic carpet ride problems.
+\end{problem}
 
 \begin{problem}\label{prob:MATLAB_span}
     Span is the collection of all linear combinations of a collection of vectors.  Let's
