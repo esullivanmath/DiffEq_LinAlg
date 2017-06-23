@@ -1,4 +1,3 @@
-% \setcounter{chapter}{4}
 \chapter{Second Order Differential Equations}
 In this brief chapter we will transition back to our discussion of differential equations.
 In Chapter 1 we discussed first order linear and nonlinear differential equations and in
@@ -118,6 +117,7 @@ context for most students.
             \[ e^{i\theta} =\cos(\theta) + i\sin(\theta) \]
     \end{itemize}
 \end{technique}
+
 
 It is worth it here to take a side step and discuss Euler's formula in more detail.  To
 understand the roots of Euler's formula we first need to recall the definition of a Taylor
@@ -459,69 +459,6 @@ Plot 1: critically damped, Plot 2: over damped, Plot 3: under damped
 }
 
 
-\begin{problem}
-\item Consider a floating cylindrical buoy with radius $r$, height $h$, and uniform
-    density $\rho \le 0.5$ grams/cm$^3$.  The buoy is initially suspended at rest with
-    its bottom at the top surface of the water and is released at $t=0$.  Thereafter
-    it is acted on by two forces: 
-    \begin{enumerate}
-        \item a downward gravitational force equal to its weight: $mg = \left( \pi r^2 h
-            \rho \right) g$, and
-        \item an upward force due to buoyancy equal to the weight of the displaced water:
-            $\left( \pi r^2 x\right) g$
-    \end{enumerate}
-    where $x$ is the depth of the bottom of the buoy beneath the surface at time $t$.
-    (recall that the density of water is 1 gram/cm$^3$)
-    \begin{itemize}
-        \item[(a)] Write a differential equation modeling the depth of the buoy.
-        \item[(b)] What type of motion does the buoy undergo?
-        \item[(c)] What is the equilibrium of the oscillation?
-        \item[(d)] What is the period of the oscillation?
-    \end{itemize}
-\end{problem}
-\solution{
-    \[ mx'' = \text{weight} - \text{buoyancy} \implies \rho \pi r^2 h x'' = \pi r^2 h
-    \rho g - \pi r^2 g x \]
-    \[ \implies x'' = g - \frac{g}{\rho h} x \implies x''=\frac{g}{\rho h} \left( \rho
-        h - x
-    \right) \]
-    Substitute $y = \rho h -x$ so we see that $y''=-x''$ and we get
-    \[ y'' + \frac{g}{\rho h} y = 0 \implies k^2 + \frac{g}{\rho h} = 0 \implies k =
-    \pm \sqrt{\frac{g}{\rho h}} i \]
-    \[ \implies y(t) = C_1 \cos\left( \sqrt{\frac{g}{\rho h}} t \right) + C_2 \sin
-    \left( \sqrt{\frac{g}{\rho h}} t \right) \]
-    \[ \implies x(t) = \rho h - \left[ C_1 \cos\left( \sqrt{\frac{g}{\rho h}} t \right) + C_2 \sin
-    \left( \sqrt{\frac{g}{\rho h}} t \right) \right] \]
-
-    Harmonic motion, period = $2\pi / \sqrt{g/(\rho h)} = 2\pi
-    \sqrt{\frac{\rho h}{g}}$.  equilibrium = $\rho h$
-}
-
-
-\begin{problem}
-    The previous problem does not account for the water's viscosity.  We can reframe the
-    differential equation as 
-    \[ mx'' = \text{weight} - \text{viscosity} - \text{buoyancy} \]
-    and assume that the retarding force due to viscosity is proportional to the
-    velocity of the buoy.
-    \begin{itemize}
-        \item[(a)] Write the resulting differential equation.
-        \item[(b)] If $b$ represents the viscosity then what is the period of oscillation?
-    \end{itemize}
-\end{problem}
-\solution{
-    \[ \rho \pi r^2 h x'' = \pi r^2 h \rho g - b x' - \pi r^2 g x \implies x'' =
-        \frac{g}{\rho h} \left( \rho h - x \right) - \frac{b}{\rho \pi r^2 h} x' 
-    \]
-    \[ \implies y'' + \frac{b}{\rho \pi r^2 h} y' + \frac{g}{\rho h} y = 0 \]
-    \[ \implies k = \frac{-B \pm \sqrt{B^2 - 4 \frac{g}{\rho h}}}{2} =
-        \frac{\frac{b}{\rho \pi r^2 h} \pm \sqrt{\frac{b^2}{\rho^2 \pi^2 r^4 h^2} -
-    \frac{4g}{\rho h}   } }{2} \]
-    \[ \implies \text{frequency} =\frac{1}{2} \sqrt{\frac{b^2}{\rho^2 \pi^2 r^4 h^2} -
-    \frac{4g}{\rho h}} \]
-
-}
-
 
 \section{Undetermined Coefficients}
 In the previous section we were dealing with un-driven oscillators.  That is, the
@@ -858,4 +795,72 @@ equations that you should know at this point.
 \end{center}
 \end{problem}
 
+
+
+
+\section{Additional Exercises}
+
+
+\begin{problem}
+\item Consider a floating cylindrical buoy with radius $r$, height $h$, and uniform
+    density $\rho \le 0.5$ grams/cm$^3$.  The buoy is initially suspended at rest with
+    its bottom at the top surface of the water and is released at $t=0$.  Thereafter
+    it is acted on by two forces: 
+    \begin{enumerate}
+        \item a downward gravitational force equal to its weight: $mg = \left( \pi r^2 h
+            \rho \right) g$, and
+        \item an upward force due to buoyancy equal to the weight of the displaced water:
+            $\left( \pi r^2 x\right) g$
+    \end{enumerate}
+    where $x$ is the depth of the bottom of the buoy beneath the surface at time $t$.
+    (recall that the density of water is 1 gram/cm$^3$)
+    \begin{itemize}
+        \item[(a)] Write a differential equation modeling the depth of the buoy.
+        \item[(b)] What type of motion does the buoy undergo?
+        \item[(c)] What is the equilibrium of the oscillation?
+        \item[(d)] What is the period of the oscillation?
+    \end{itemize}
+\end{problem}
+\solution{
+    \[ mx'' = \text{weight} - \text{buoyancy} \implies \rho \pi r^2 h x'' = \pi r^2 h
+    \rho g - \pi r^2 g x \]
+    \[ \implies x'' = g - \frac{g}{\rho h} x \implies x''=\frac{g}{\rho h} \left( \rho
+        h - x
+    \right) \]
+    Substitute $y = \rho h -x$ so we see that $y''=-x''$ and we get
+    \[ y'' + \frac{g}{\rho h} y = 0 \implies k^2 + \frac{g}{\rho h} = 0 \implies k =
+    \pm \sqrt{\frac{g}{\rho h}} i \]
+    \[ \implies y(t) = C_1 \cos\left( \sqrt{\frac{g}{\rho h}} t \right) + C_2 \sin
+    \left( \sqrt{\frac{g}{\rho h}} t \right) \]
+    \[ \implies x(t) = \rho h - \left[ C_1 \cos\left( \sqrt{\frac{g}{\rho h}} t \right) + C_2 \sin
+    \left( \sqrt{\frac{g}{\rho h}} t \right) \right] \]
+
+    Harmonic motion, period = $2\pi / \sqrt{g/(\rho h)} = 2\pi
+    \sqrt{\frac{\rho h}{g}}$.  equilibrium = $\rho h$
+}
+
+
+\begin{problem}
+    The previous problem does not account for the water's viscosity.  We can reframe the
+    differential equation as 
+    \[ mx'' = \text{weight} - \text{viscosity} - \text{buoyancy} \]
+    and assume that the retarding force due to viscosity is proportional to the
+    velocity of the buoy.
+    \begin{itemize}
+        \item[(a)] Write the resulting differential equation.
+        \item[(b)] If $b$ represents the viscosity then what is the period of oscillation?
+    \end{itemize}
+\end{problem}
+\solution{
+    \[ \rho \pi r^2 h x'' = \pi r^2 h \rho g - b x' - \pi r^2 g x \implies x'' =
+        \frac{g}{\rho h} \left( \rho h - x \right) - \frac{b}{\rho \pi r^2 h} x' 
+    \]
+    \[ \implies y'' + \frac{b}{\rho \pi r^2 h} y' + \frac{g}{\rho h} y = 0 \]
+    \[ \implies k = \frac{-B \pm \sqrt{B^2 - 4 \frac{g}{\rho h}}}{2} =
+        \frac{\frac{b}{\rho \pi r^2 h} \pm \sqrt{\frac{b^2}{\rho^2 \pi^2 r^4 h^2} -
+    \frac{4g}{\rho h}   } }{2} \]
+    \[ \implies \text{frequency} =\frac{1}{2} \sqrt{\frac{b^2}{\rho^2 \pi^2 r^4 h^2} -
+    \frac{4g}{\rho h}} \]
+
+}
 

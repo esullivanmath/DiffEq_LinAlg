@@ -1,5 +1,14 @@
 \chapter{The Geometry of Vector Spaces}
-In this chapter we do stuff.
+In this chapter we finally tackle the issues of angle and distance in general vector
+spaces.  These notions are likely second nature in our familiar friends $\mathbb{R}^2$ and
+$\mathbb{R}^3$, but what about in spaces of matrices? spaces of functions? spaces of
+polynomials?  The notion of distance can be abstracted in a natural and beautiful way so
+that our intuititive ideas still hold, but we also get something mathematically meaningful
+in the more abstract spaces.  We'll start with an idea that is probably familiar to you:
+the dot product\footnote{If you haven't had multivariable calculus or calculus-based
+    physics then maybe the idea of a dot product will be new to you.  Don't worry.  We'll
+introduce everything from scratch here.}.
+
 \section{The Geometry of $\mathbb{R}^n$}
 At this point we have talked almost exclusively about linear combinations and the spaces
 associated with them.  We have not, however, discussed the geometry of vector spaces.  So
@@ -30,6 +39,7 @@ Now let's summarize our results in the following definitions and theorems.
 \solution{
 $\bu \cdot \bv = \|\bu\| \|\bv\| \cos \theta$
 }
+
 
 \begin{thm}[Orthogonal Vectors in $\mathbb{R}^n$]
     If $\bu,\bv\in\mathbb{R}^n$ then $\bu$ is orthogonal (perpendicular) to $\bv$ if and
@@ -467,31 +477,6 @@ angles between matrices!! AWESOME!!
 
 
 
-\begin{problem}[Legendre Polynomials]
-   Consider the vector space  
-   \[ \mathcal{V} = \{a_0 + a_1 x + a_2 x^2 \, : \, a_0, a_1, a_2 \in
-       \mathbb{R} \text{ and } x \in [-1,1] \} \]
-    along with the inner product 
-    \[ \left< f,g\right> = \int_{-1}^1 f(x) g(x) dx \]
-    Consider the basis $\mathcal{B} = \{1,x,\frac{1}{2}(3x^2-1)\}$.  
-    \begin{enumerate}
-        \item[(a)] Is this basis an orthogonal basis?
-        \item[(b)] Set up the necessary calculus to write $h(x) = 3x^2+2$ as a linear
-            combination of vectors in $\mathcal{B}$.
-    \end{enumerate}
-\end{problem}
-\solution{This is an orthogonal basis.  We need to consider that
-    \[ c_1 (1) + c_2 ( x) + c_3 ( \frac{1}{2} (3x^2-1) ) = h(x) \]
-    Since this is an orthogonal basis we can get each $c_j$ by doing
-    inner products:
-    \begin{flalign*}
-        c_1 &= \frac{\left<h(x),1\right>}{\left<1,1\right>}=3 \\
-        c_2 &= \frac{\left<h(x),x\right>}{\left<x,x\right>}=0 \\
-        c_3 &=
-        \frac{\left<h(x),\frac{1}{2}(3x^2-1)\right>}{\left<\frac{1}{2}(3x^2-1),\frac{1}{2}(3x^2-1)\right>}=2 \\
-    \end{flalign*}
-}                    
-
 
 % \begin{problem}[Geometry on Periodic Functions]
 %     Consider the vector space 
@@ -565,7 +550,7 @@ idea.
     We want to build a Fourier Series for this function (called the {\it square wave}).
     Open MATLAB and complete the following partial code to plot an approximation to the
     Fourier series of the square wave.
-\begin{verbatim}
+\begin{lstlisting}
 clear; clc;
 syms x
 f(x) = 0*x; % this gives a placeholder for the function
@@ -575,13 +560,13 @@ for k=1:N
   f(x) = f(x) + C(k) * sin(k*x);
 end
 ezplot(f(x) , [0,2*pi])
-\end{verbatim}
+\end{lstlisting}
 Once you have the plot working, append the code
-\begin{verbatim}
+\begin{lstlisting}
 x = 0:0.01:150;
 MySound = double(f(x));
 soundsc(MySound)
-\end{verbatim}
+\end{lstlisting}
 \ldots and turn the volume up.
 \end{problem}
 
@@ -597,85 +582,6 @@ subsequently changed the world.  He gave birth to the mathematical field of harm
 analysis and is still used today in digital and analog signal processing.  We will return
 to this idea in Chapter \ref{ch:PDEs} where we'll use Fourier series to solve problems in
 heat conduction and wave propagation.  
-
-\section{Practice Problems for Vector Spaces}
-
-\begin{problem}
-    Let $\mathcal{V}$ be the set of all ordered triples $(x,y,z)$ such that $x+y+z=3$.
-    Show that $\mathcal{V}$ is not a subspace of $\mathbb{R}^3$.
-\end{problem}
-\solution{
-    $\bo \not\in \mathcal{V}$
-}
-
-\begin{problem}
-    Show that every subspace $\mathcal{W}$ of a vector space $\mathcal{V}$ contains the
-    zero vector.
-\end{problem}
-\solution{
-Subspaces are closed under linear combinations so taking the zero combination puts you
-back in the subspace.  Hence $\bo \in \mathcal{W}$ for all $\mathcal{W}$.
-}
-
-\begin{problem}
-    Assume that the set $\{ \bv_1, \bv_2, \bv_3 \}$ is linearly independent.  Show that
-    the set $\{ \bu_1, \bu_2, \bu_3\}$ is linearly independent given that
-    \[ \bu_1 = \bv_2 + \bv_3, \quad \bu_2 = \bv_1 + \bv_3, \quad \bu_3 = \bv_1 + \bv_2. \]
-\end{problem}
-\solution{
-Consider the linear combination 
-\[ \bo = c_1 \bu_1 + c_2 \bu_2 + c_3 \bu_3 = c_1 (\bv_2 + \bv_3) + c_2 (\bv_1 + \bv_3) +
-c_3(\bv_1 + \bv_2) = (c_2 + c_3) \bv_1 + (c_1 + c_3)\bv_2 + (c_1 + c_2)\bv_3 \]
-and hence $c_1 = c_2 = c_3 = 0$.
-}
-
-\begin{problem}
-    Suppose that $S$ is a set of $n$ vectors that span the $n$-dimensional vector space
-    $\mathcal{V}$.  Prove that $S$ is a basis for $\mathcal{V}$.
-\end{problem}
-\solution{
-    If $\mathcal{V}$ is $n$-dimensional then any set of $n$ vectors that spans
-    $\mathcal{V}$ must also be linearly independent.  Hence, $S$ is a basis for
-    $\mathcal{V}$.
-}
-
-\begin{problem}
-    Explain why the $n \times n$ matrix $A$ is invertible if and only if its rank is $n$.
-\end{problem}
-\solution{
-    If $\text{rank}(A) = n$ then $A$ has $n$ linearly independent columns and hence $A$ is
-    invertible.  If $A$ is invertible then $A$ must have $n$ linearly independent columns
-    meaning that the rank must be $n$.
-}
-
-\begin{problem}
-    Let $\mathcal{F}$ be the space of all real-valued functions on $\mathbb{R}$.  Determine
-    if the set of all functions $f$ such that $f(-x) = -f(x)$ for all $x$ is a subspace of
-    $\mathcal{F}$.
-\end{problem}
-\solution{
-    Let $f,g$ be odd functions and let $c_1,c_2 \in \mathbb{R}$.  Define $h(x) = c_1 f(x)
-    + c_2 g(x)$ and consider that $h(-x) = c_1 f(-x) = c_2 g(-x) = -c_1 f(x) - c_2 g(x) =
-    -h(x)$ so the set of all odd functions is a subspace of $\mathcal{F}$.
-}
-
-\begin{problem}
-    Let $M_{3 \times 3}$ be the set of all $3 \times 3$ matrices.  Determine if the
-    following subsets of $M_{3 \times 3}$ are subspaces
-    \begin{enumerate}
-        \item[(a)] The set of all diagonal $3\times 3$ matrices.
-            \solution{Yes }
-        \item[(b)] The set of all symmetric $3 \times 3$ matrices.
-            \solution{Yes }
-        \item[(c)] The set of all singular (non-invertible) $3 \times 3$ matrices
-            \solution{No. For Example if we define $A$ and $B$ as
-                \[ A = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}
-                    \quad \text{and} \begin{pmatrix} 0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1
-                \end{pmatrix} \]
-                then $A$ and $B$ are singular but $A+B$ is not.
-            }
-    \end{enumerate}
-\end{problem}
 
 
 
@@ -1193,4 +1099,111 @@ These results are summarized in the table below.
 \end{center}
 }   
 
+
+
+\section{Additional Exercises}
+
+
+\begin{problem}[Legendre Polynomials]
+   Consider the vector space  
+   \[ \mathcal{V} = \{a_0 + a_1 x + a_2 x^2 \, : \, a_0, a_1, a_2 \in
+       \mathbb{R} \text{ and } x \in [-1,1] \} \]
+    along with the inner product 
+    \[ \left< f,g\right> = \int_{-1}^1 f(x) g(x) dx \]
+    Consider the basis $\mathcal{B} = \{1,x,\frac{1}{2}(3x^2-1)\}$.  
+    \begin{enumerate}
+        \item[(a)] Is this basis an orthogonal basis?
+        \item[(b)] Set up the necessary calculus to write $h(x) = 3x^2+2$ as a linear
+            combination of vectors in $\mathcal{B}$.
+    \end{enumerate}
+\end{problem}
+\solution{This is an orthogonal basis.  We need to consider that
+    \[ c_1 (1) + c_2 ( x) + c_3 ( \frac{1}{2} (3x^2-1) ) = h(x) \]
+    Since this is an orthogonal basis we can get each $c_j$ by doing
+    inner products:
+    \begin{flalign*}
+        c_1 &= \frac{\left<h(x),1\right>}{\left<1,1\right>}=3 \\
+        c_2 &= \frac{\left<h(x),x\right>}{\left<x,x\right>}=0 \\
+        c_3 &=
+        \frac{\left<h(x),\frac{1}{2}(3x^2-1)\right>}{\left<\frac{1}{2}(3x^2-1),\frac{1}{2}(3x^2-1)\right>}=2 \\
+    \end{flalign*}
+}                    
+
+
+\begin{problem}
+    Let $\mathcal{V}$ be the set of all ordered triples $(x,y,z)$ such that $x+y+z=3$.
+    Show that $\mathcal{V}$ is not a subspace of $\mathbb{R}^3$.
+\end{problem}
+\solution{
+    $\bo \not\in \mathcal{V}$
+}
+
+\begin{problem}
+    Show that every subspace $\mathcal{W}$ of a vector space $\mathcal{V}$ contains the
+    zero vector.
+\end{problem}
+\solution{
+Subspaces are closed under linear combinations so taking the zero combination puts you
+back in the subspace.  Hence $\bo \in \mathcal{W}$ for all $\mathcal{W}$.
+}
+
+\begin{problem}
+    Assume that the set $\{ \bv_1, \bv_2, \bv_3 \}$ is linearly independent.  Show that
+    the set $\{ \bu_1, \bu_2, \bu_3\}$ is linearly independent given that
+    \[ \bu_1 = \bv_2 + \bv_3, \quad \bu_2 = \bv_1 + \bv_3, \quad \bu_3 = \bv_1 + \bv_2. \]
+\end{problem}
+\solution{
+Consider the linear combination 
+\[ \bo = c_1 \bu_1 + c_2 \bu_2 + c_3 \bu_3 = c_1 (\bv_2 + \bv_3) + c_2 (\bv_1 + \bv_3) +
+c_3(\bv_1 + \bv_2) = (c_2 + c_3) \bv_1 + (c_1 + c_3)\bv_2 + (c_1 + c_2)\bv_3 \]
+and hence $c_1 = c_2 = c_3 = 0$.
+}
+
+\begin{problem}
+    Suppose that $S$ is a set of $n$ vectors that span the $n$-dimensional vector space
+    $\mathcal{V}$.  Prove that $S$ is a basis for $\mathcal{V}$.
+\end{problem}
+\solution{
+    If $\mathcal{V}$ is $n$-dimensional then any set of $n$ vectors that spans
+    $\mathcal{V}$ must also be linearly independent.  Hence, $S$ is a basis for
+    $\mathcal{V}$.
+}
+
+\begin{problem}
+    Explain why the $n \times n$ matrix $A$ is invertible if and only if its rank is $n$.
+\end{problem}
+\solution{
+    If $\text{rank}(A) = n$ then $A$ has $n$ linearly independent columns and hence $A$ is
+    invertible.  If $A$ is invertible then $A$ must have $n$ linearly independent columns
+    meaning that the rank must be $n$.
+}
+
+\begin{problem}
+    Let $\mathcal{F}$ be the space of all real-valued functions on $\mathbb{R}$.  Determine
+    if the set of all functions $f$ such that $f(-x) = -f(x)$ for all $x$ is a subspace of
+    $\mathcal{F}$.
+\end{problem}
+\solution{
+    Let $f,g$ be odd functions and let $c_1,c_2 \in \mathbb{R}$.  Define $h(x) = c_1 f(x)
+    + c_2 g(x)$ and consider that $h(-x) = c_1 f(-x) = c_2 g(-x) = -c_1 f(x) - c_2 g(x) =
+    -h(x)$ so the set of all odd functions is a subspace of $\mathcal{F}$.
+}
+
+\begin{problem}
+    Let $M_{3 \times 3}$ be the set of all $3 \times 3$ matrices.  Determine if the
+    following subsets of $M_{3 \times 3}$ are subspaces
+    \begin{enumerate}
+        \item[(a)] The set of all diagonal $3\times 3$ matrices.
+            \solution{Yes }
+        \item[(b)] The set of all symmetric $3 \times 3$ matrices.
+            \solution{Yes }
+        \item[(c)] The set of all singular (non-invertible) $3 \times 3$ matrices
+            \solution{No. For Example if we define $A$ and $B$ as
+                \[ A = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}
+                    \quad \text{and} \begin{pmatrix} 0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1
+                \end{pmatrix} \]
+                then $A$ and $B$ are singular but $A+B$ is not.
+            }
+    \end{enumerate}
+\end{problem}
 

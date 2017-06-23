@@ -641,28 +641,6 @@ Let's first start with a simple exercise.
 % 
 % 
 
-\begin{problem}
-    Write $d = (3,-5,10)$ as a linear combination of the vectors $a = (-1,0,3)$,
-    $b = (0,1,5),$ and $c = (4,-2,0)$. \\
-    Choose from:
-    \begin{enumerate}
-        \item[(a)] $d = -3a - 5b + c$
-        \item[(b)] $d = 5a - b + 2c$
-        \item[(c)] $d = (10/3)a + (5/2)c$
-        \item[(d)] $d$ cannot be written as a linear combination of $a, b$, and $c$.
-    \end{enumerate}
-\end{problem}
-\solution{b}
-
-% \begin{problem}
-%     \begin{itemize}
-%             \input{ClickerQuestions/LA.00.18.010}
-%     \end{itemize}
-% \end{problem}
-% \solution{
-% 2
-% }
-% 
 
 
 \section{Inverses and Determinants}
@@ -745,7 +723,7 @@ Augment with the identity and row reduce.
 
 \begin{problem}
     When we put a matrix $A$ into row reduced echelon form, we get the following matrix.
-    What dose this mean?
+    What does this mean?
     \[ A \to \begin{pmatrix} 1 & 2 \\ 0 & 0 \end{pmatrix} \]
     \begin{enumerate}
         \item[(a)] Matrix $A$ has no inverse
@@ -1105,7 +1083,7 @@ there are 6 data points and 6 unknowns.
 }
 
 
-\begin{problem}
+\begin{problem}\label{prob:heated_rod_lin_alg}
     Imagine that we have a 1 meter long thin metal rod that has been heated to 100$^\circ$
     on the left-hand side and cooled to 0$^\circ$ on the right-hand side.  We want to know
     the temperature every 10 cm from left to right on the rod.
@@ -1146,12 +1124,39 @@ there are 6 data points and 6 unknowns.
 }
 
 
-\begin{challenge}
+\section{Additional Exercises}
+
+
+\begin{problem}
     Now imagine that we are finding the temperature on a flat (2D) metal plate that
     measured 1m
-    by 1m (broken into 10cm by 10cm squares).  Extend the idea from the previous problem to find the temperature at each of
+    by 1m (broken into 10cm by 10cm squares).  Extend the idea from Problem
+    \ref{prob:heated_rod_lin_alg} to find the temperature at each of
     the interior points if the left and bottom sides are heated to $100^\circ$ and the top
     and right sides are cooled to $0^\circ$.  You will likely need write computer code to
     solve this problem and the best possible output would be a surface (or contour) plot
     showing the temperature.
-\end{challenge}
+\end{problem}
+
+\begin{problem}
+    Write $d = (3,-5,10)$ as a linear combination of the vectors $a = (-1,0,3)$,
+    $b = (0,1,5),$ and $c = (4,-2,0)$. \\
+    Choose from:
+    \begin{enumerate}
+        \item[(a)] $d = -3a - 5b + c$
+        \item[(b)] $d = 5a - b + 2c$
+        \item[(c)] $d = (10/3)a + (5/2)c$
+        \item[(d)] $d$ cannot be written as a linear combination of $a, b$, and $c$.
+    \end{enumerate}
+\end{problem}
+\solution{b}
+
+% \begin{problem}
+%     \begin{itemize}
+%             \input{ClickerQuestions/LA.00.18.010}
+%     \end{itemize}
+% \end{problem}
+% \solution{
+% 2
+% }
+% 

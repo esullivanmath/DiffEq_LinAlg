@@ -200,53 +200,6 @@ $y' = (y-1)(y-2)(y-3)$ will be unstable at $y=1$ and $y=3$ but stable at $y=2$.
 
 \newpage
 
-\begin{problem}[The Combustion Problem]
-    Let $T$ be the temperature of a combustible material (e.g. oily rags, dry hay, etc.).
-    The conservation of energy equation states that 
-    \[ \rho c_p \frac{dT}{dt} = A_1 e^{-B/(T-T_0)} - h\left( T - T_a \right) \]
-    where 
-    \begin{itemize}
-        \item $T$ is temperature in Kelvin,
-        \item $T_0$ is a reference temperature above which the fuel starts oxidizing,
-        \item $T_a$ is the ambient temperature of the surrounding air,
-        \item $\rho$ is the density of the fuel,
-        \item $c_p$ is the specific heat of the fuel source, 
-        \item $h$ is a measure of the power per volume per degree Kelvin,
-        \item $A_1$ is a measure of the power per unit volume, and
-        \item $B$ is a rate constant measured in degrees Kelvin.
-    \end{itemize}
-    If we divide both sides of the differential equation by $\rho c_p$ we arrive at the
-    first order non-homogeneous differential equation
-    \[ \frac{dT}{dt} = A e^{-B/(T-T_0)} - C \left( T - T_a \right). \]  
-    Assume that $A, B,$ and $C$ are all positive coefficients.
-    \\{\bf Your Tasks:}
-    \begin{enumerate}
-        \item[(a)] Why must $T > T_0$ in order for the equation to make sense physically?
-        \item[(b)] Let's suppose that $T_a = 300^\circ K$ and that $T_0$ is also at the
-            ambient temperature.  Let $A = 20$, $B = 600$, and $C = 0.01$.  Analyze the
-            differential equation graphically plotting the phase portrait, identifying
-            equilibrium points, and discussing stability of each point.
-        \item[(c)] Discuss the physical interpretation of each equilibrium point.
-        \item[(d)] Suppose we don't know what $A$, $B$, and $C$a re, but we do know from
-            experiments that the three fixed points are $T_1 = T_a = 300^\circ K$, $T_2 =
-            670^\circ K$, and $T_3 = 1200^\circ K$.  What can you say about the
-            coefficients $A$, $B$, and $C$?
-    \end{enumerate}
-\end{problem}
-\solution{
-    \begin{center}
-        \begin{tikzpicture}
-            \begin{axis}[axis lines=center, grid, xmin=0, xmax=2000, ymin=-3, ymax=3,
-                domain=300:2000]
-                \addplot[smooth, very thick, blue, samples=100] {20*exp(-600/(x-300)) - 0.01*(x-300)};
-            \end{axis}
-        \end{tikzpicture}
-    \end{center}
-    The fixed points are $T_1 = 300^\circ K$, $T_2 \approx 636.8^\circ K$, and $T_3
-    \approx 1526^\circ K$.  $T_1$ is stable from the right, $T_2$ is unstable (above which
-    a combustion occurs), and $T_3$ is stable (stable combustion).
-}
-
 
 \section{Numerical Methods}
 
@@ -515,3 +468,54 @@ term.
 
 
 \ldots more about bifurcations when I get around to it \ldots
+
+
+\section{Additional Exercises}
+
+\begin{problem}[The Combustion Problem]
+    Let $T$ be the temperature of a combustible material (e.g. oily rags, dry hay, etc.).
+    The conservation of energy equation states that 
+    \[ \rho c_p \frac{dT}{dt} = A_1 e^{-B/(T-T_0)} - h\left( T - T_a \right) \]
+    where 
+    \begin{itemize}
+        \item $T$ is temperature in Kelvin,
+        \item $T_0$ is a reference temperature above which the fuel starts oxidizing,
+        \item $T_a$ is the ambient temperature of the surrounding air,
+        \item $\rho$ is the density of the fuel,
+        \item $c_p$ is the specific heat of the fuel source, 
+        \item $h$ is a measure of the power per volume per degree Kelvin,
+        \item $A_1$ is a measure of the power per unit volume, and
+        \item $B$ is a rate constant measured in degrees Kelvin.
+    \end{itemize}
+    If we divide both sides of the differential equation by $\rho c_p$ we arrive at the
+    first order non-homogeneous differential equation
+    \[ \frac{dT}{dt} = A e^{-B/(T-T_0)} - C \left( T - T_a \right). \]  
+    Assume that $A, B,$ and $C$ are all positive coefficients.
+    \\{\bf Your Tasks:}
+    \begin{enumerate}
+        \item[(a)] Why must $T > T_0$ in order for the equation to make sense physically?
+        \item[(b)] Let's suppose that $T_a = 300^\circ K$ and that $T_0$ is also at the
+            ambient temperature.  Let $A = 20$, $B = 600$, and $C = 0.01$.  Analyze the
+            differential equation graphically plotting the phase portrait, identifying
+            equilibrium points, and discussing stability of each point.
+        \item[(c)] Discuss the physical interpretation of each equilibrium point.
+        \item[(d)] Suppose we don't know what $A$, $B$, and $C$a re, but we do know from
+            experiments that the three fixed points are $T_1 = T_a = 300^\circ K$, $T_2 =
+            670^\circ K$, and $T_3 = 1200^\circ K$.  What can you say about the
+            coefficients $A$, $B$, and $C$?
+    \end{enumerate}
+\end{problem}
+\solution{
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[axis lines=center, grid, xmin=0, xmax=2000, ymin=-3, ymax=3,
+                domain=300:2000]
+                \addplot[smooth, very thick, blue, samples=100] {20*exp(-600/(x-300)) - 0.01*(x-300)};
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+    The fixed points are $T_1 = 300^\circ K$, $T_2 \approx 636.8^\circ K$, and $T_3
+    \approx 1526^\circ K$.  $T_1$ is stable from the right, $T_2$ is unstable (above which
+    a combustion occurs), and $T_3$ is stable (stable combustion).
+}
+

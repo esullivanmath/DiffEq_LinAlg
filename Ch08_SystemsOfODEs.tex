@@ -609,7 +609,7 @@ solution to a linear homogeneous system of differential equations of the form $\
 The computation of the matrix exponential in Theorem \ref{thm:system_soln_matrix_exp} is
 potentially really obnoxious by hand, but thankfully there are built-in tools for
 performing the computation in the most scientific computing software.  For example, in
-MATLAB you can use the command \verb|expm(A)| to find the matrix exponential of the matrix
+MATLAB you can use the command \mcode{expm(A)} to find the matrix exponential of the matrix
 $A$.
 
 \begin{example}
@@ -618,29 +618,29 @@ $A$.
         \quad \begin{pmatrix} x_1(0) \\ x_2(0) \end{pmatrix} = \begin{pmatrix} 2 \\ -3
     \end{pmatrix} \]
     {\bf Solution:} The following MATLAB code finds the matrix exponential
-    \begin{verbatim}
-    clear; clc;
-    syms t
-    A = [2 , 0 ; 1 , 2];
-    x0 = [2;-3];
-    x = expm(A*t) * x0   % this is the solution to the system of ODEs
-    \end{verbatim}
+\begin{lstlisting}
+clear; clc;
+syms t
+A = [2 , 0 ; 1 , 2];
+x0 = [2;-3];
+x = expm(A*t) * x0   % this is the solution to the system of ODEs
+\end{lstlisting}
     which results in the solution 
     \[ \begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} e^{2t} & 0 \\
         te^{2t} & e^{2t} \end{pmatrix} \begin{pmatrix} 2 \\ -3 \end{pmatrix}. \]
     pulling this out of matrix form we have
     \[ x_1(t) = 2e^{2t} \quad \text{and} \quad x_2(t) = 2te^{2t} - 3e^{2t}. \]
     Finally we can plot the solution with the following code.
-    \begin{verbatim}
-    tmax = 1;
-    ezplot(x(1),[0,tmax])
-    hold on
-    ezplot(x(2),[0,tmax])
-    axis([0,1,-10,10])
-    \end{verbatim}
+\begin{lstlisting}
+tmax = 1;
+ezplot(x(1),[0,tmax])
+hold on
+ezplot(x(2),[0,tmax])
+axis([0,1,-10,10])
+\end{lstlisting}
 \end{example}
 Hint: You can use
-the command \verb|latex(simplify(x))| to take your symbolic answer for $\bx(t)$ from MATLAB and get it into \LaTeX.
+the command \mcode{latex(simplify(x))} to take your symbolic answer for $\bx(t)$ from MATLAB and get it into \LaTeX.
 
 The following two problems give you a chance to practice using the matrix exponential to
 solve applied systems of differential equations problems.  Have fun!!
@@ -860,3 +860,6 @@ cosine and sine terms in the solution.
     \caption{Solution curves for Example \ref{ex:linear_system_oscillation}}
     \label{fig:linear_system_oscillation}
 \end{figure}
+
+
+\section{Additional Exercises}

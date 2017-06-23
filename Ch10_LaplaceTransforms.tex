@@ -529,17 +529,6 @@ Solve with Laplace transforms:
     \[ x(t) = e^{-3t} \left( 2 \cos(4t) + \frac{9}{4} \sin(4t) \right) \]
 \end{problem}
 
-\begin{problem}
-    Use Laplace transforms to show that the solution to the differential equation
-    \[ x'' + 6x' + 18x = \cos(2t) \quad \text{with} \quad x(0) = 1 \quad \text{and} \quad x'(0) =
-    -1 \]
-    is
-    \[ x(t) = \frac{7}{170} \cos(2t) + \frac{3}{85} \sin(2t) + e^{-3t} \left(
-        \frac{163}{170} \cos(3t) + \frac{307}{510} \sin(3t)
-    \right) \]
-\end{problem}
-
-
 
 
 \section{The Heaviside Function and Delayed Forcing Terms}
@@ -648,7 +637,7 @@ Let's look at step functions and shifted step functions graphically.
 
 
 \begin{problem}
-    Find the laplace transform of the function 
+    Find the Laplace transform of the function 
     \[ f(t) = -4 u_3(t) - 5 u_5(t) + 2 u_6(t) \]
     and sketch the resulting function.
 \end{problem}
@@ -892,7 +881,7 @@ of this expression is
             The third term inverts to $-2u_3(t) e^{-(1/2)(t-2)}$
             }
         \item[(d)] Use MATLAB to create a plot of the solution.  \\ Hint: the Heaviside
-            function is the \texttt{heaviside} command in MATLAB.
+            function is the \mcode{heaviside} command in MATLAB.
             \solution{\\
                 \texttt{t = 0:0.001:15;}\\
                 \texttt{x1 = 5*exp(-(1/2)*t);}\\
@@ -961,4 +950,21 @@ of this expression is
 
 \section{Convolutions (INCOMPLETE)}
 \ldots in this section we talk about convolutions \ldots later
+
+
+
+\section{Additional Exercises}
+
+
+
+\begin{problem}
+    Use Laplace transforms to show that the solution to the differential equation
+    \[ x'' + 6x' + 18x = \cos(2t) \quad \text{with} \quad x(0) = 1 \quad \text{and} \quad x'(0) =
+    -1 \]
+    is
+    \[ x(t) = \frac{7}{170} \cos(2t) + \frac{3}{85} \sin(2t) + e^{-3t} \left(
+        \frac{163}{170} \cos(3t) + \frac{307}{510} \sin(3t)
+    \right) \]
+\end{problem}
+
 

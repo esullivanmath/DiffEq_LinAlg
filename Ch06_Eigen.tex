@@ -1,4 +1,3 @@
-% \setcounter{chapter}{5}
 \chapter{The Eigenvalue Eigenvector Problem}
 In this chapter we look at the important eigenvalue-eigenvector question.  In this
 question we wish to find vectors $\bx$ and values $\lambda$ such that $A \bx = \lambda
@@ -617,34 +616,6 @@ the proof comes straight from matrix multiplication
     \end{enumerate}
 }
 
-\begin{problem}
-    Long ago, in a galaxy far, far away \dots there are two cell-phone companies serving a
-    town: the Evil Empire and the Rebel Alliance. The Evil Empire has terrible service, so
-    each week 25\% of their customers switch to the Rebel Alliance and 2\% give up their
-    cell phone service entirely. The Rebel Alliance loses only 5\% of their customers to
-    the Evil Empire every week due to the advertising.  If there are currently 100
-    customers in the Evil Empire and 75 customers in the Rebel Alliance, what is the
-    long-term enrollment in the two plans?
-
-    Write a system of difference equations and use the ideas of eigenvalues and
-    eigenvectors to discuss the long-term behavior of the system.
-\end{problem}
-\solution{
-    \begin{flalign*}
-        \begin{pmatrix} E_{n+1} \\ R_{n+1} \end{pmatrix} &=\begin{pmatrix} E_n \\ R_n
-        \end{pmatrix} +  \begin{pmatrix} -0.27 & 0.05 \\ 0.25 & -0.05  \end{pmatrix}
-        \begin{pmatrix} E_n \\ R_n \end{pmatrix} \\
-        \implies 
-        \begin{pmatrix} E_{n+1} \\ R_{n+1} \end{pmatrix} &=\begin{pmatrix} 0.73 & 0.05 \\
-            0.25 & 0.95  \end{pmatrix}
-        \begin{pmatrix} E_n \\ R_n \end{pmatrix} \\
-    \end{flalign*}
-    The eigenvalues of the coefficient matrix are $\lambda_1 \approx 0.68$ and $\lambda_2
-    \approx 0.9968$.  Since both of these are less than 1 we know that the eventual
-    behavior is that both companies will lose their customers although the Evil Empire
-    will lose at a faster rate.
-}
-
 
 \begin{thm}[Solving a System of Difference Equations]
     Assume that you have a linear system of difference equations $\bx_{n+1} = A \bx_n$
@@ -927,3 +898,38 @@ answer.
     \caption{Graph of a web with eight pages.}
     \label{fig:graph2}
 \end{figure}
+
+
+
+
+\section{Additional Exercises}
+
+
+\begin{problem}
+    Long ago, in a galaxy far, far away \dots there are two cell-phone companies serving a
+    town: the Evil Empire and the Rebel Alliance. The Evil Empire has terrible service, so
+    each week 25\% of their customers switch to the Rebel Alliance and 2\% give up their
+    cell phone service entirely. The Rebel Alliance loses only 5\% of their customers to
+    the Evil Empire every week due to the advertising.  If there are currently 100
+    customers in the Evil Empire and 75 customers in the Rebel Alliance, what is the
+    long-term enrollment in the two plans?
+
+    Write a system of difference equations and use the ideas of eigenvalues and
+    eigenvectors to discuss the long-term behavior of the system.
+\end{problem}
+\solution{
+    \begin{flalign*}
+        \begin{pmatrix} E_{n+1} \\ R_{n+1} \end{pmatrix} &=\begin{pmatrix} E_n \\ R_n
+        \end{pmatrix} +  \begin{pmatrix} -0.27 & 0.05 \\ 0.25 & -0.05  \end{pmatrix}
+        \begin{pmatrix} E_n \\ R_n \end{pmatrix} \\
+        \implies 
+        \begin{pmatrix} E_{n+1} \\ R_{n+1} \end{pmatrix} &=\begin{pmatrix} 0.73 & 0.05 \\
+            0.25 & 0.95  \end{pmatrix}
+        \begin{pmatrix} E_n \\ R_n \end{pmatrix} \\
+    \end{flalign*}
+    The eigenvalues of the coefficient matrix are $\lambda_1 \approx 0.68$ and $\lambda_2
+    \approx 0.9968$.  Since both of these are less than 1 we know that the eventual
+    behavior is that both companies will lose their customers although the Evil Empire
+    will lose at a faster rate.
+}
+
