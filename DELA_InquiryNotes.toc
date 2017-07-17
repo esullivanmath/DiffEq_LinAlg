@@ -80,7 +80,7 @@
 \contentsline {section}{\numberline {10.6}Additional Exercises}{166}{section.10.6}
 \contentsline {chapter}{\numberline {11}Power Series Method: The Ultimate Guess}{167}{chapter.11}
 \contentsline {section}{\numberline {11.1}Taylor Series Solutions to Diff. Equations}{167}{section.11.1}
-\contentsline {section}{\numberline {11.2}Radius of Convergence for Power Series (INCOMPLETE)}{168}{section.11.2}
+\contentsline {section}{\numberline {11.2}Radius of Convergence for Power Series}{168}{section.11.2}
 \contentsline {section}{\numberline {11.3}Power Series Solutions to Diff. Equations}{172}{section.11.3}
 \contentsline {section}{\numberline {11.4}Additional Exercises}{174}{section.11.4}
 \contentsline {chapter}{\numberline {12}Partial Differential Equations}{175}{chapter.12}
