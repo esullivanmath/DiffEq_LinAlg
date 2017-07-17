@@ -472,6 +472,126 @@ term.
 
 \section{Additional Exercises}
 
+\begin{problem}
+    Write a differential equation that has four equilibrium points: 2 unstable,
+1 stable, and 1 semi-stable.  Support your answer with a plot of
+$y'$ vs $y$.
+
+\begin{minipage}{0.5\columnwidth}
+    \begin{tikzpicture}
+        \draw[<->, thick, black] (-4.5,0) -- (4.5,0) node[anchor=west]{$y$};
+        \draw[<->, thick, black] (0,-3) -- (0,3) node[anchor=south]{$dy/dt$};
+    \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\columnwidth}
+    \[ \frac{dy}{dt} = \underline{\hspace{1.5in}} \]
+\end{minipage}
+\end{problem}
+\solution{
+    \[ y' = (y-1)(y-2)(y-3)^2(y-4) \]
+}
+
+\begin{problem}
+    Consider the differential equation $y' = -7(y+3)(y-4)$.  What are the equilibrium
+    values of this equation and are they stable, unstable, or semistable? What happens to
+    the equilibrium points if
+    the $-7$ were changed to $7$ in the differential equation?
+\end{problem}
+\solution{Hint: Make a plot with $y'$ on the vertical axis and $y$ on the horizontal axis.
+}
+
+\begin{problem}
+    Newton's Law of Cooling states that the rate of change of the temperature of a cooling
+    body (like a coffee in a cup) is proportional to the difference between the current
+    temperature and the ambient room temperature.  Write the differential equation
+    associated with Newton's Law of Cooling and sketch several solution plots.  Some of
+    your plots should be drawn assuming that the initial temperature is greater than the
+    ambient temperature and some should be drawn assuming that the initial temperature is
+    less than the ambient temperature.
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[axis lines=center, xlabel={Time}, ylabel={Temp},
+                    xtick=\empty, ytick=\empty, xmin=-1.1, ymin=0, ymax=5, xmax=6]
+                    \addplot[smooth] {0*x};
+                    \draw (axis cs:0.1,3) -- (axis cs:-0.1,3)
+                    node[anchor=east]{$T_{amb}$};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+\end{problem}
+\solution{
+    \[ \frac{dT}{dt} = -k(T-T_{amb}) \]
+}
+
+
+\begin{problem}
+A skydiver falls out of a plane and free falls toward the ground.
+Newton's second law states that the product of the mass and the acceleration
+must be equal to the sum of the forces acting on the sky diver.  The two primary forces acting
+on the falling sky diver are gravity and air resistance.  A sensor measures the
+distance from the plane where it is dropped (positive distance is {\it down} from the
+sensor). See the free body diagram below.
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (-1,0.1) -- (-1,0) -- (1,0) -- (1,0.1);
+        \draw (0,0) node[anchor=south]{plane};
+        \draw[fill=black!30] (0,-2) circle(0.4cm);
+        \draw[<-] (0.5,-2) -- (1.5,-2) node[anchor=west]{sky diver};
+        \draw[->] (0,-1.5) -- (0,-1) node[anchor=west]{resistance};
+        \draw[->] (0,-2.5) -- (0,-3) node[anchor=west]{gravity};
+        \draw (-1.3,0) -- (-1.1,0);
+        \draw[->] (-1.2,0) node[anchor=east]{$y=0$} -- (-1.2,-1) node[anchor=east]{$y>0$};
+    \end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+    \item[(a)] It can be shown experimentally that the air resistance is proportional to the
+    square of the velocity.  What differential equation models the \underline{velocity} of
+    the falling sky diver? \\(Hints: (1) Recall that if $y(t)$ is the position of the
+    falling sky diver then $v(t) = y'(t)$ is the velocity and $a(t) = v'(t) = y''(t)$
+    is the acceleration.  \\(2) be sure to get the signs correct!)
+    \[ m \cdot \underline{\hspace{0.5in}} = \underline{\hspace{1in}} +
+        \underline{\hspace{1in}} \]
+        \solution{$mv' = mg - bv^2$}
+
+    \item[(b)] What is the equilibrium solution to the differential equation that you
+    proposed in part (a). Discuss the meaning of this equilibrium in the context of the
+    problem. Is it stable or unstable? 
+    \solution{
+        \[ 0 = mg - bv^2 \quad \implies \quad v_{eq} = \sqrt{mg/b} \]
+        This is the terminal velocity of the falling sky diver.  This is a stable
+        equilibrium.
+    }
+
+
+\item[(c)] Sketch a plot of the velocity and the position functions vs time.  (You do
+    not need to solve the differential equation.)
+    \begin{center}
+        \begin{tikzpicture}[scale=1]
+            \begin{axis}[axis lines=center, grid, xmin=0, xmax=2, ymin=0, ymax=4,
+                title={Velocity vs. Time}, xlabel={$t$}, ylabel={$v(t)$}, xtick=\empty,
+            ytick=\empty]
+                \addplot[smooth, black, domain=0:2] {0*x};
+%                 \ipa{\addplot[smooth, very thick, red, domain=0:2] {1.96- 1.96*exp(-5*x)};}
+            \end{axis}
+        \end{tikzpicture}\hspace{0.2in}
+        \begin{tikzpicture}[scale=1]
+            \begin{axis}[axis lines=center, grid, xmin=0, xmax=2, ymin=0, ymax=4,
+                title={Position vs. Time}, xlabel={$t$}, ylabel={$y(t)$}, xtick=\empty,
+            ytick=\empty]
+                \addplot[smooth, black, domain=0:2] {0*x};
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+
+
+\end{enumerate}
+\end{problem}
+
+
+
+
 \begin{problem}[The Combustion Problem]
     Let $T$ be the temperature of a combustible material (e.g. oily rags, dry hay, etc.).
     The conservation of energy equation states that 
@@ -518,4 +638,6 @@ term.
     \approx 1526^\circ K$.  $T_1$ is stable from the right, $T_2$ is unstable (above which
     a combustion occurs), and $T_3$ is stable (stable combustion).
 }
+
+
 

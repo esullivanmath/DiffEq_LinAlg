@@ -1160,3 +1160,156 @@ there are 6 data points and 6 unknowns.
 % 2
 % }
 % 
+
+
+\begin{problem}
+    Consider the system of 2 equations and two unknowns below: 
+\[ \left\{ \begin{array}{rl} x+y &= 3 \\ -3x+ky &= 2 \end{array}
+    \right. \]
+    \begin{enumerate}
+        \item[(a)] Determine the value of $k$ for which the system has no solutions.
+        \solution{
+    \begin{flalign*}
+        \left( \begin{array}{cc|c} 1 & 1 & 3 \\ -3 & k & 2 \end{array} \right) &\to
+        \left( \begin{array}{cc|c} 1 & 1 & 3 \\ 0 & k+3 & 11 \end{array} \right)
+    \end{flalign*}
+    If $k=-3$ then the bottom row of the augmented matrix would be read as $0=1$ which is
+    always false.
+}
+    
+\item[(b)] If $k$ were to have the value that you indicated  from part (a), what would you
+see if you plotted both linear functions on the same coordinate plane?
+\solution{
+    You will see two parallel lines.
+}
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Consider the matrix $A$ given below.  It can be shown that $\det(A) = 0$.  For
+each of the following true or false questions please circle the correct choice AND provide
+a short explanation.
+\[ A = \begin{pmatrix} -3 & 0 & 0 & 0 \\ 7 & -1 & 0 & 0 \\ 7 & 1 & 0 & 0 \\ -4 & -8 & 8 &
+    1 \end{pmatrix} \quad \text{and we know that} \quad \det(A) = 0 \]
+    \begin{enumerate}
+        \item[(a)] TRUE or FALSE: \quad The matrix $A$ has an inverse.
+    \solution{
+        False.  If $\det(A) = 0$ then $A^{-1}$ doesn't exist.
+    }
+
+\item[(b)] TRUE or FALSE: \quad Let $B$ be a $4 \times 4$ matrix and let the matrix $C$
+    be defined as $C = AB$.  Assume further that $\det(B) = 7$.  Based on all of this, the
+    matrix $C$ does not have an inverse.
+    \solution{
+        True.  $\det(C) = \det(AB) = \det(A) \cdot \det(B) = 0 \cdot 7 = 0$ so $C$ does
+        not have an inverse.
+    }
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+    Bonnie and Clyde, two mathematics students from the
+    1930's, are solving the same system of three equations in two unknowns.  Bonnie is a more
+    visual thinker so she graphs the system.  Her graph is given below on the left.  Clyde
+    prefers to follow the mathematical algorithms (sometimes without much thought) and
+    arrives at the row-reduced augmented system shown below on the right.  
+
+    \begin{minipage}{0.5\columnwidth}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[axis lines=center, xlabel={$x$}, ylabel={$y$}, title={Bonnie's
+                    Graph}, grid, ymin=-5, ymax=5]
+                    \addplot[smooth, red, very thick, domain=-1:5] {2*x-4};
+                    \addplot[smooth, blue, very thick, domain=-1:5] {-3*x+11};
+                    \addplot[smooth, black, very thick, domain=-1:5] {0.2*x-3};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\columnwidth}
+        \begin{center}
+            Clyde's reduced augmented system 
+        \end{center}
+        \[ \left( \begin{array}{cc|c} 1 & 0 & 3 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{array} \right) \]
+    \end{minipage}
+
+    \begin{enumerate}
+        \item[(a)] What is Bonnie's conclusion about the system of three equations in two
+        unknowns?  Explain in a sentence or two.
+        \solution{
+            Bonnie should conclude that there are no solutions to the system since there
+            is no single point where all three lines cross.
+        }
+
+    \item[(b)] What is Clyde's conclusion about the system of three equations in two
+        unknowns?  Explain in a sentence or two.
+        \solution{
+            $x=3$ and $y=2$
+        }
+
+    \item[(c)] It should be clear (hint hint) that Bonnie and Clyde have different
+        solutions to the system of equations.  Give a possible row-reduced matrix for
+        Bonnie's graphical solution. 
+        \solution{
+            \[ \left( \begin{array}{cc|c} 1 & 0 & * \\ 0 & 1 & * \\ 0 & 0 & 1 \end{array} \right) \]
+            }
+    \end{enumerate}
+\end{problem}
+
+\begin{problem}
+    For each of the following row reduced systems of equations indicate the number of
+    solutions AND
+    \begin{itemize}
+        \item if there is only 1 solution then given it.  
+        \item if there are infinitely many solutions then write an expression that gives
+            all of them.
+        \item if there are no solutions then explain why not.
+    \end{itemize}
+    \begin{enumerate}
+        \item[(a)] \[ \left( \begin{array}{ccc|c} 1 & 0 & 1 & 4 \\ 0 & 1 & -3 & 2 \\ 0 & 0
+                & 0 & 0 \end{array} \right) \]
+                \solution{
+                    \[ \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} 4
+                            \\ 2 \\ 0 \end{pmatrix} + \begin{pmatrix} -1 \\ 3 \\ 1
+                            \end{pmatrix} t \quad \text{for} \quad t\in\mathbb{R} \]
+                        }
+            \item[(b)]  \[ \left( \begin{array}{ccc|c} 1 & 0 & 0 & 4 \\ 0 & 1 & 0 & 2 \\ 0 & 0
+                & 1 & 0 \end{array} \right) \]
+                \solution{
+                    \[ \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} 4
+                            \\ 2 \\ 0 \end{pmatrix} \]
+                        }
+            \item[(c)]  \[ \left( \begin{array}{ccc|c} 1 & 0 & 1 & 4 \\ 0 & 1 & 0 & 2 \\ 0 & 0
+                & 0 & 1 \end{array} \right) \]
+                \solution{
+                    No solution
+                }
+    \end{enumerate}
+\end{problem}
+
+\begin{problem}
+    Find a $2 \times 2$ matrix $B$ such that 
+    \[ \begin{pmatrix} 1 & 5 \\ 2 & 0 \end{pmatrix} \begin{pmatrix}
+            \underline{\hspace{0.25in}} & \underline{\hspace{0.25in}} \\
+            \underline{\hspace{0.25in}} & \underline{\hspace{0.25in}} \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1
+        \end{pmatrix} \]
+\end{problem}
+\solution{
+    Hint: If you multiply the left-hand matrix by $B$ you get the identity.  What does
+    that mean about $B$ and the left-hand matrix?
+}
+
+\begin{problem}
+    If $A$ and $B$ are $4 \times 4$ matrices with $\det(A) = 2$ and $\det(B) = 5$ then
+    evaluate the following.
+    \begin{flalign*}
+        & \det(AB) = \underline{\hspace{1in}} \\
+        & \det(3A) = \underline{\hspace{1in}} \\
+        & \det(A^T) = \underline{\hspace{1in}} \\
+        & \det(B^{-1}) = \underline{\hspace{1in}} \\
+        & \det(B^4) = \underline{\hspace{1in}} \\
+    \end{flalign*}
+\end{problem}
+\solution{
+    Hint: Check out the rules of determinants in this chapter.
+}

@@ -940,13 +940,13 @@ Can't tell since the solution isn't guaranteed to exist when $h=0$
         \begin{tabular}{|c|c|}
             \hline
             Size at Initial Observation (sq. mi.)  & Size 10 Minutes Later (sq. mi.) \\ \hline \hline
-            1.047. & 1.139 \\
-            2.005. & 2.087 \\
-            3.348. & 3.413 \\
-            5.719. & 5.765 \\
-            7.273. & 7.304 \\
-            8.410. & 8.426 \\
-            9.117. & 9.127 \\ \hline
+            1.047 & 1.139 \\
+            2.005 & 2.087 \\
+            3.348 & 3.413 \\
+            5.719 & 5.765 \\
+            7.273 & 7.304 \\
+            8.410 & 8.426 \\
+            9.117 & 9.127 \\ \hline
         \end{tabular}
     \end{center}
     Work with your partner to create a differential equation model for the size of the oil
@@ -999,4 +999,193 @@ Using the initial condition we get
 }
 
 
+\begin{problem}
+    In this problem you will be given a differential equation with a proposed solution.
+    For each, (i) test the proposed solution to make sure that it is indeed a solution to
+    the differential equation, (ii) use the differential equation and given information to
+    find the value(s) of the constants.
+    \begin{enumerate}
+        \item[(a)] Consider the differential equation $3y - ty' = 18$ and the proposed
+            solution $y(t) = C t^3 + k$.  Find a value of $k$ that allows the function to
+            be a solution.  
+        \item[(b)] Consider the differential equation $y'' - 6y' + 8y = 0$ and the
+            proposed solution $y(t) = e^{kt}$.  In this problem there are two values of
+            $k$ that should make the differential equation true.
+    \end{enumerate}
+\end{problem}
+\solution{
+(Hint):  To test the solution substitute $y(t)$ into the
+differential equation.  See what value of $k$ makes a true statement in the differential
+equation.  
+}
 
+
+\begin{problem}
+    Newton's law of cooling states that the temperature of an object changes at a rate
+    proportional to the difference between its temperature and that of its surroundings.
+    Suppose that the temperature of a cup of coffee obeys Newton's law of cooling. If the
+    coffee has a temperature of 185 degrees Fahrenheit when freshly poured, and 2 minutes
+    later has cooled to 166 degrees in a room at 72 degrees, determine when the coffee
+    reaches a temperature of 141 degrees. 
+\end{problem}
+\solution{
+(Hint:) If the rate of change of temperature is proportional to the difference between $T$
+and $T_{environment}$ then 
+\[ \frac{dT}{dt} = k \left( T - T_{env} \right). \]
+This differential equation can be solved using separation of variables.
+}
+
+
+\begin{problem}
+    The amount of water in a pond varies over time.  Water flows in steadily so that 200
+    gallons flow in each day while 2\% of the water evaporates each day.  As a result we
+    can model this system with the differential equation $y' = -0.02y + 200$ and this
+    equation has a solution $y(t) = -5000 e^{-0.02t} + 10000$.  What are the units on $y$,
+    $t$, $y'$, $-0.02$, $200$, $-5000$, $-0.02t$, and $10000$?
+\end{problem}
+\solution{
+(Hint): Keep in mind that the units of individual terms need to be the same and that the
+arguments of exponential functions need to be unitless.
+}
+
+\begin{problem}
+    Match each of the differential equations to its solution.
+
+    \begin{minipage}{0.5\columnwidth}
+        \begin{flalign*}
+           &\text{Diff. Eq. \#1: } \quad y'' + y = 0 \\
+           &\text{Diff. Eq. \#2: } \quad ty' - y = t^2 \\
+           &\text{Diff. Eq. \#3: } \quad 2t^2 y'' + 3ty' = y \\
+           &\text{Diff. Eq. \#4: } \quad y''+8y'+16y = 0 
+        \end{flalign*}
+    \end{minipage}
+    \begin{minipage}{0.5\columnwidth}
+    \begin{flalign*}
+       &\text{Soln \#1: } \quad y = \sin(t) \\
+       &\text{Soln \#2: } \quad y = \sqrt{t} \\
+       &\text{Soln \#3: } \quad y = e^{-4t} \\
+       &\text{Soln \#4: } \quad y = 3t+t^2
+    \end{flalign*}
+    \end{minipage}
+\end{problem}
+\solution{
+(Hint): The straight forward way to do this problem is to substitute the solution into
+each differential equation until you find the one that makes a true statement.
+}
+
+
+\begin{problem}
+    Match the differential equations below to the solution plots further below.
+There should be no need to actually solve the differential equations, but I won't stop you
+if that is what you really want to do. 
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Differential Equation & Initial Conditions & Matches to Plot \# \\ \hline \hline
+        $y'-0.2y=0$ & $y(0)=1$ &  \\ \hline
+        $y'=0.2y(5-y)$ & $y(0)=1$ &  \\ \hline
+        $y'=-2y+10$ & $y(0)=1$ &  \\ \hline
+        $y'+0.2t=0$ & $y(0)=1$ &  \\ \hline
+    \end{tabular}
+\end{center}
+\def\scl{0.8}
+\begin{center}
+    \begin{tikzpicture}[scale=\scl]
+        \begin{axis}[axis lines=center, xlabel={$t$}, xmin=0, xmax=10, ymin=-6, ymax=6,
+                grid, title={Plot \#1}]
+                \addplot[very thick, domain=0:10, samples=100] {-4*exp(-2*x)+5};
+        \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=\scl]
+        \begin{axis}[axis lines=center, xlabel={$t$}, xmin=0, xmax=10, ymin=-6, ymax=6,
+                grid, title={Plot \#2}]
+                \addplot[very thick, domain=0:10, samples=150, color=red]
+                {(5*exp(1.1*x))/(4+1*exp(1.1*x))};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\begin{center}
+    \begin{tikzpicture}[scale=\scl]
+        \begin{axis}[axis lines=center, xlabel={$t$}, xmin=0, xmax=10, ymin=-6, ymax=6,
+                grid, title={Plot \#3}]
+                \addplot[very thick, domain=0:10, samples=100, color=blue] {exp(0.2*x)};
+        \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=\scl]
+        \begin{axis}[axis lines=center, xlabel={$t$}, xmin=0, xmax=10, ymin=-6, ymax=6,
+                grid, title={Plot \#4}]
+                \addplot[very thick, domain=0:10, samples=100, color=green!40!black] {-0.1*x^2+1};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+\end{problem}
+\solution{
+3,2,1,4. \\
+Hint: Use what you know about the dynamics of the differential equations without solving
+them.  For example, is there a steady state?  are there multiple steady states? etc.
+}
+
+
+\begin{problem}
+    For each of the following scenarios write a differential equation and give an
+appropriate initial condition.  Do not solve these differential
+equations.
+\begin{enumerate}
+    \item[(a)] A tank contains 10kg of salt and 2000L of water.  Pure water enters the tank
+    at a rate of 4L/min, the solution is thoroughly mixed, and solution is drained at 3
+    L/min.  Let $S(t)$ be the amount of salt in the tank at time $t$.  Write a
+    differential equation describing the amount of salt in the tank.
+    \[ \frac{dS}{dt} = \underline{\hspace{2in}} \quad \text{with} \quad S(0) =
+        \underline{\hspace{0.75in}} \]
+        \solution{
+            \[ \frac{dS}{dt} = -\frac{3S}{2000+1t} \quad \text{with} \quad S(0) = 10 \]
+        }
+
+    \item[(b)] Oil is pumped continuously from a well at a rate proportional to the amount
+    of oil left in the well.  Initially there were 2 million barrels of oil in the well.
+    Let $y(t)$ be the number is barrels left in the well (measured in millions of
+    barrels).
+    \vspace{0.1in} 
+    \[ y' = \underline{\hspace{2in}} \quad \text{with} \quad y(0) =
+        \underline{\hspace{0.75in}} \]
+        \solution{
+            $y'=-ky$ with $y(0) = 2$
+        }
+    \item[(c)] Newton's Law of Cooling states that the rate of change of the temperature
+        of a cooling body (like tea in a cup) is proportional to the difference
+        between the current temperature and the ambient room temperature.  Assume that the
+        tea starts at 160$^\circ$F and cools, eventually, to 66$^\circ$F.  Write the
+        differential equation associated with Newton's Law of Cooling.
+        \[ \frac{dT}{dt} = \underline{\hspace{2in}} \quad \text{with} \quad T(0) =
+            \underline{\hspace{0.75in}} \]
+        \solution{
+            \[ \frac{dT}{dt} = -k(T-66) \quad \text{with} \quad
+                T(0) = 160 \]
+        }
+    \item[(d)] A pair of turtles, let's call them Adam and Eve, start a turtle colony in a
+    small Montana pond (let's just ignore the lack of genetic diversity here).  The
+    population of turtles in the pond follows these simple rules:  (1) If there
+    are no turtles then the population clearly doesn't change, (2) the pond can support
+    roughly 100 turtles, and (3) when the population is growing and is far away from the
+    carrying capacity the growth rate is roughly proportional to the size of the
+    population.  Let $P(t)$ be the size of the turtle population at time $t$.
+    \[ \frac{dP}{dt} = \underline{\hspace{2in}} \quad \text{with} \quad S(0) =
+        \underline{\hspace{0.75in}} \]
+        \solution{
+            \[ \frac{dP}{dt} = -kP\left( 1-\frac{P}{100} \right) \quad \text{with} \quad
+                P(0) = 2 \]
+        }
+
+    \item[(e)] A 120-gallon tank initially contains 90 pounds of salt dissolved in 100
+    gallons of water. Brine containing 2 pounds per gallon of salt flows into the tank at
+    a rate of 4 gallons per minute and the well stirred mixture flows out of the tank at a
+    rate of 3 gallons per minute (so the tank is filling up). Write a differential
+    equation for the amount of salt in the tank.
+    \[ \frac{dS}{dt} = \underline{\hspace{2in}} \quad \text{with} \quad S(0) =
+        \underline{\hspace{0.75in}} \]
+        \solution{
+            \[ \frac{dS}{dt} = 8  -\frac{3S}{100+t} \quad \text{with} \quad y(0) = 10 \]
+        }
+\end{enumerate}
+\end{problem}
