@@ -1131,79 +1131,126 @@ These results are summarized in the table below.
 
 
 \begin{problem}
-    Let $\mathcal{V}$ be the set of all ordered triples $(x,y,z)$ such that $x+y+z=3$.
-    Show that $\mathcal{V}$ is not a subspace of $\mathbb{R}^3$.
+        The set $S$ below contains three linearly independent mutually orthogonal vectors
+        and as such we know that $\text{span}(S) = \mathbb{R}^3$
+        \[ S = \left\{ \begin{pmatrix} 3 \\ 1 \\ 1 \end{pmatrix} \, , \, \begin{pmatrix}
+                -1 \\ 2 \\ 1 \end{pmatrix} \, , \, \begin{pmatrix} -1 \\ -4 \\ 7
+        \end{pmatrix} \right\} \]
+        Write the vector $\bu = \begin{pmatrix} 3 \\ 0 \\ 5 \end{pmatrix}$ as a linear
+        combination of the vectors in $S$.
 \end{problem}
 \solution{
-    $\bo \not\in \mathcal{V}$
+    \[ \bu = c_1 \bv_1 + c_2 \bv_2 + c_3 \bv_3 \]
+    where $\bv_1, \bv_2, \bv_3 \in S$.  Since the vectors in $S$ are mutually
+    orthogonal we have
+    \begin{flalign*}
+        c_1 &= \frac{\bu \cdot \bv_1 }{\bv_1 \cdot \bv_1} = \frac{14}{11} \\
+        c_2 &= \frac{\bu\cdot \bv_2}{\bv_2 \cdot \bv_2} = \frac{2}{6} =
+        \frac{1}{3} \\
+        c_3 &= \frac{\bu\cdot \bv_3}{\bv_3 \cdot \bv_3} = \frac{32}{66}
+        =\frac{16}{33}
+    \end{flalign*}
+    Therefore
+    \[ \bu = \frac{14}{11} \begin{pmatrix} 3 \\ 1 \\ 1 \end{pmatrix} +
+            \frac{1}{3} \begin{pmatrix} -1 \\ 2 \\ 1 \end{pmatrix} +
+                \frac{16}{33} \begin{pmatrix} -1 \\ -4 \\ 7 \end{pmatrix} \]
+                }
+
+\begin{problem}
+Let $\mathcal{V} = C[-1,1]$ be the vector space of continuous functions on the closed
+interval $[-1,1]$.  An inner product on this vector space is $\left< f,g\right> =
+\int_{-1}^1 f(x) g(x) dx$.  
+
+        Let $f(x) = x^2 + 1$ and $g(x) = x$.  Set up (\underline{but do not evaluate}) the
+        integrals to find the angle between these two functions in $C[-1,1]$.  
+\end{problem}
+\solution{
+    \begin{flalign*}
+        \| f \| &= \sqrt{ \int_{-1}^1 (x^2+1)^2 dx} \\
+        \| g \| &= \sqrt{ \int_{-1}^1 x^2 dx } \\
+        \left< f , g\right> &= \int_{-1}^1 (x^2+1)(x) dx \\
+        \cos(\theta) &= \frac{\left< f , g \right> }{\|x^2+1\| \|x\|}
+    \end{flalign*}
 }
 
 \begin{problem}
-    Show that every subspace $\mathcal{W}$ of a vector space $\mathcal{V}$ contains the
-    zero vector.
+    If $A$ and $B$ are arbitrary $m \times n$ matrices, then the mapping $\left<
+    A,B\right> = \text{trace}(A^TB)$ defines an inner product in $\mathbb{R}^{m\times n}$.
+    Use this inner product to find $\left<A,B\right>$, the norms, $\|A\|$ and $\|B\|$, and
+    the angle between $A$ and $B$ for
+    \[ A = \begin{pmatrix} -2 & 3 \\ -1 & 3 \\ 1 & -2 \end{pmatrix} \quad \text{and} \quad
+            B = \begin{pmatrix} -2 & 1 \\ 1 & 2 \\ 1 & 1 \end{pmatrix}. \]
 \end{problem}
 \solution{
-Subspaces are closed under linear combinations so taking the zero combination puts you
-back in the subspace.  Hence $\bo \in \mathcal{W}$ for all $\mathcal{W}$.
+    Hint: Recall that for $\bv \in \mathcal{V}$ we have $\|\bv\| = \left< \bv,\bv\right>$
+    and if $\bw \in \mathcal{V}$ then the angle between $\bv$ and $\bw$ is defined as
+$\left< \bv,\bw\right> = \|\bv\| \|\bw\| \cos\theta$.
 }
 
 \begin{problem}
-    Assume that the set $\{ \bv_1, \bv_2, \bv_3 \}$ is linearly independent.  Show that
-    the set $\{ \bu_1, \bu_2, \bu_3\}$ is linearly independent given that
-    \[ \bu_1 = \bv_2 + \bv_3, \quad \bu_2 = \bv_1 + \bv_3, \quad \bu_3 = \bv_1 + \bv_2. \]
+    Find a non-trivial vector that is perpendicular to both $\bv$ and $\bu$ where
+    \[ \bv = \begin{pmatrix} 2 \\ 5 \\ 3 \end{pmatrix} \quad \text{ and } \quad \bu =
+            \begin{pmatrix} -1 \\ -2 \\ -2 \end{pmatrix} \]
 \end{problem}
 \solution{
-Consider the linear combination 
-\[ \bo = c_1 \bu_1 + c_2 \bu_2 + c_3 \bu_3 = c_1 (\bv_2 + \bv_3) + c_2 (\bv_1 + \bv_3) +
-c_3(\bv_1 + \bv_2) = (c_2 + c_3) \bv_1 + (c_1 + c_3)\bv_2 + (c_1 + c_2)\bv_3 \]
-and hence $c_1 = c_2 = c_3 = 0$.
+    Hint: Use the Gram-Schmidt process.
 }
 
 \begin{problem}
-    Suppose that $S$ is a set of $n$ vectors that span the $n$-dimensional vector space
-    $\mathcal{V}$.  Prove that $S$ is a basis for $\mathcal{V}$.
+    Determine which of the following transformations are linear transformations.
+    \begin{flalign*}
+        T_1(x,y,z) &= (x,y,-z) \\
+        T_2(x,y) &= (2x-3y,x+4,5y) \\
+        T_3(x,y,z) &= (1,y,-z) \\
+        T_4(x,y) &= (4x-2y,3|y|) \\
+        T_5(x,y,z) &= (x,0,z) 
+    \end{flalign*}
 \end{problem}
 \solution{
-    If $\mathcal{V}$ is $n$-dimensional then any set of $n$ vectors that spans
-    $\mathcal{V}$ must also be linearly independent.  Hence, $S$ is a basis for
-    $\mathcal{V}$.
+    Hint: check out the exact definition of a linear transformation.
 }
 
 \begin{problem}
-    Explain why the $n \times n$ matrix $A$ is invertible if and only if its rank is $n$.
-\end{problem}
-\solution{
-    If $\text{rank}(A) = n$ then $A$ has $n$ linearly independent columns and hence $A$ is
-    invertible.  If $A$ is invertible then $A$ must have $n$ linearly independent columns
-    meaning that the rank must be $n$.
-}
-
-\begin{problem}
-    Let $\mathcal{F}$ be the space of all real-valued functions on $\mathbb{R}$.  Determine
-    if the set of all functions $f$ such that $f(-x) = -f(x)$ for all $x$ is a subspace of
-    $\mathcal{F}$.
-\end{problem}
-\solution{
-    Let $f,g$ be odd functions and let $c_1,c_2 \in \mathbb{R}$.  Define $h(x) = c_1 f(x)
-    + c_2 g(x)$ and consider that $h(-x) = c_1 f(-x) = c_2 g(-x) = -c_1 f(x) - c_2 g(x) =
-    -h(x)$ so the set of all odd functions is a subspace of $\mathcal{F}$.
-}
-
-\begin{problem}
-    Let $M_{3 \times 3}$ be the set of all $3 \times 3$ matrices.  Determine if the
-    following subsets of $M_{3 \times 3}$ are subspaces
+    Let $T: \mathbb{R}^2 \to \mathbb{R}^2$ be a linear transformation that sends the
+    vector $\bu = \begin{pmatrix} 5\\2\end{pmatrix}$ to $\begin{pmatrix}
+        2\\1\end{pmatrix}$ and maps $\bv = \begin{pmatrix}1\\3\end{pmatrix}$ to
+            $\begin{pmatrix} -1\\3\end{pmatrix}$.  Use properties of linear
+                transformations to calculate the following.
     \begin{enumerate}
-        \item[(a)] The set of all diagonal $3\times 3$ matrices.
-            \solution{Yes }
-        \item[(b)] The set of all symmetric $3 \times 3$ matrices.
-            \solution{Yes }
-        \item[(c)] The set of all singular (non-invertible) $3 \times 3$ matrices
-            \solution{No. For Example if we define $A$ and $B$ as
-                \[ A = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}
-                    \quad \text{and} \begin{pmatrix} 0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1
-                \end{pmatrix} \]
-                then $A$ and $B$ are singular but $A+B$ is not.
-            }
+        \item[(a)] $T(-3\bu)$
+        \item[(b)] $T(8\bv)$
+        \item[(c)] $T(-3\bu + 8\bv)$
     \end{enumerate}
 \end{problem}
+\solution{
+    Hint: recall that in a linear transformation, $T(a\bv) = aT(\bv)$ and $T(\bv+\bu) =
+    T(\bv) + T(\bu)$.
+}
 
+
+\begin{problem}
+    Let $e_1 = \begin{pmatrix}1\\0\end{pmatrix}$ and $e_2 =
+        \begin{pmatrix}0\\1\end{pmatrix}$.  Let $\bv = \begin{pmatrix}-3\\9\end{pmatrix}$ and let $\bu =
+            \begin{pmatrix}-5\\-8\end{pmatrix}$.
+    If $T:\mathbb{R}^2 \to \mathbb{R}^2$ is a linear transformation that sends $e_1$ to
+    $\bv$ and $e_2$ to $\bu$.  Where does $T$ send $\begin{pmatrix}-4\\6\end{pmatrix}$?
+\end{problem}
+\solution{
+    Hint: Start by writing $(-4,6)$ as a linear combination of $e_1$ and $e_2$.
+}
+
+
+\begin{problem}
+    Let $T:\mathcal{P}_2 \to \mathcal{P}_2$ be a linear transformation mapping quadratic
+    functions to quadratic functions.  Assume that 
+    \[ T(1) = 4x^2 + 4, \quad T(x) = 4x+3, \quad \text{and} \quad T(x^2) = 4x^2 + x + 3.
+        \]
+    Find the image of an arbitrary quadratic polynomial $ax^2 + bx + c$ under $T$.  That
+    is, find $T(ax^2 + bx + c)$.
+\end{problem}
+\solution{
+    Hint: Apply the fact that $T$ is a linear transformation to $T(ax^2 + bx + c)$ to
+    first get 
+    \[ T(ax^2 + bx + c) = aT(x^) + bT(x) + cT(1). \]
+    Then apply the transformation given above and simplify.
+}
