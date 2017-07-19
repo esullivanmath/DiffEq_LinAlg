@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 JUL 2017 17:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 JUL 2017 11:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1838,53 +1838,53 @@ File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.0 (rcs-revision 1.1)
 )) (./DELA_InquiryNotes.aux)
 \openout1 = `DELA_InquiryNotes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 163.
-LaTeX Font Info:    Try loading font information for OML+jkp on input line 163.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 164.
+LaTeX Font Info:    Try loading font information for OML+jkp on input line 164.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/kpfonts/omljkp.fd
 File: omljkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 163.
-LaTeX Font Info:    Try loading font information for OMS+jkp on input line 163.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 164.
+LaTeX Font Info:    Try loading font information for OMS+jkp on input line 164.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/kpfonts/omsjkp.fd
 File: omsjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 163.
-LaTeX Font Info:    Try loading font information for OMX+jkp on input line 163.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 164.
+LaTeX Font Info:    Try loading font information for OMX+jkp on input line 164.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/kpfonts/omxjkp.fd
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 163.
-LaTeX Font Info:    Try loading font information for U+jkpexa on input line 163
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 164.
+LaTeX Font Info:    Try loading font information for U+jkpexa on input line 164
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/kpfonts/ujkpexa.fd
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 163.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 163.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 164.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 164.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Try loading font information for OT1+jkp on input line 163.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Try loading font information for OT1+jkp on input line 164.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/kpfonts/ot1jkp.fd
@@ -1931,7 +1931,7 @@ e
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.12} into 
 your preamble.
- on input line 163.
+ on input line 164.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1968,7 +1968,7 @@ your preamble.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box118
-Package hyperref Info: Link coloring ON on input line 163.
+Package hyperref Info: Link coloring ON on input line 164.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1977,48 +1977,48 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count222
 )
-LaTeX Info: Redefining \ref on input line 163.
-LaTeX Info: Redefining \pageref on input line 163.
-LaTeX Info: Redefining \nameref on input line 163.
+LaTeX Info: Redefining \ref on input line 164.
+LaTeX Info: Redefining \pageref on input line 164.
+LaTeX Info: Redefining \nameref on input line 164.
 
 (./DELA_InquiryNotes.out) (./DELA_InquiryNotes.out)
 \@outlinefile=\write4
 \openout4 = `DELA_InquiryNotes.out'.
 
 \c@lstlisting=\count223
-LaTeX Font Info:    Try loading font information for U+jkpmia on input line 175
+LaTeX Font Info:    Try loading font information for U+jkpmia on input line 176
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/kpfonts/ujkpmia.fd
 File: ujkpmia.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 175.
+LaTeX Font Info:    Try loading font information for U+msa on input line 176.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 175.
+LaTeX Font Info:    Try loading font information for U+msb on input line 176.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+jkpsyc on input line 175
+LaTeX Font Info:    Try loading font information for U+jkpsyc on input line 176
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/kpfonts/ujkpsyc.fd
 File: ujkpsyc.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 175.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 176.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-LaTeX Font Info:    Try loading font information for U+wasy on input line 175.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 176.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Try loading font information for OT1+jkptt on input line 17
-5.
+6.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/kpfonts/ot1jkptt.fd
 File: ot1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for OT1/jkptt.
@@ -2026,7 +2026,7 @@ File: ot1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for OT1/jkptt.
 <CreativeCommons.png, id=409, 88.33pt x 31.11626pt>
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 175.
+Package pdftex.def Info: CreativeCommons.png used on input line 176.
 (pdftex.def)             Requested size: 88.32977pt x 31.11617pt.
 
 [1
@@ -2034,13 +2034,13 @@ Package pdftex.def Info: CreativeCommons.png used on input line 175.
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Creat
 iveCommons.png>]
-LaTeX Font Info:    Try loading font information for TS1+jkp on input line 176.
+LaTeX Font Info:    Try loading font information for TS1+jkp on input line 177.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/kpfonts/ts1jkp.fd
 File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
 )
-Overfull \hbox (21.38939pt too wide) in paragraph at lines 179--189
+Overfull \hbox (21.38939pt too wide) in paragraph at lines 180--190
 []\OT1/jkp/m/n/12 This work is li-censed un-der a Cre-ative Com-mons Attributio
 n-NonCommercial-ShareAlike
  []
@@ -2053,13 +2053,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 189.
+Package pdftex.def Info: CreativeCommons.png used on input line 190.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.189 \tableofcontents
+l.190 \tableofcontents
                        [1] (./DELA_InquiryNotes.toc [2
 
 ]
@@ -4152,16 +4152,16 @@ Package pdftex.def Info: CreativeCommons.png used on input line 147.
  [196])
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 211.
+Package pdftex.def Info: CreativeCommons.png used on input line 212.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [197]
-Underfull \hbox (badness 10000) in paragraph at lines 216--218
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
 []\OT1/jkp/m/n/12 T. Jud-son. \OT1/jkp/m/it/12 The Or-di-nary Dif-fer-en-tial E
 qua-tions Project\OT1/jkp/m/n/12 . [][]fac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--223
+Underfull \hbox (badness 10000) in paragraph at lines 221--224
 [][]\OT1/jkp/m/n/12 https://content.byui.edu/file/664390b8-e9cc-43a4-9f3c-70362
 f8b9735/1/316-
  []
@@ -4169,20 +4169,20 @@ f8b9735/1/316-
 [198
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 230.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 230.
  (./DELA_InquiryNotes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 230.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 230.
 Package rerunfilecheck Info: File `DELA_InquiryNotes.out' has not changed.
 (rerunfilecheck)             Checksum: 753DBD3D9F52D4517D03AA78C1D5AF0C;7507.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 230.
  ) 
 Here is how much of TeX's memory you used:
- 42646 strings out of 493089
- 933672 string characters out of 6134842
- 1165678 words of memory out of 5000000
- 44240 multiletter control sequences out of 15000+600000
+ 42647 strings out of 493089
+ 933676 string characters out of 6134842
+ 1165707 words of memory out of 5000000
+ 44241 multiletter control sequences out of 15000+600000
  78712 words of font info for 191 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,19n,100p,10440b,2237s stack positions out of 5000i,500n,10000p,200000b,80000s
