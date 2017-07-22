@@ -900,10 +900,36 @@ answer.
 \end{figure}
 
 
+\begin{problem}
+    One thing that we didn't consider in this version of the Google Page Rank algorithm is
+    the random behavior of humans.  One, admittedly slightly naive, modification that we
+    can make to the present algorithm is to assume that the person surfing the web will
+    randomly jump to any other page in the web at any time.  For example, if someone is on
+    page 1 in Figure \ref{fig:graph2} then they could randomly jump to any page 2 - 8.
+    They also have links to pages 2, 3, and 7.  That is a total of 10 possible next steps
+    for the web surfer.  There is a $2/10$ chance of heading to page 2.  One of those is
+    following the link from page 1 to page 2 and the other is a random jump to page 2
+    without following the link.  Similarly, there is a $2/10$ chance of
+    heading to page 3, $2/10$ chance of heading to page 7, and a $1/10$ chance of randomly
+    heading to any other page.
+
+    Implement this new algorithm, called the {\it random surfer algorithm}, on the web in
+    Figure \ref{fig:graph2}.  Compare your ranking to the non-random surfer results from
+    the previous problem.
+\end{problem}
 
 
 \section{Additional Exercises}
-
+\begin{problem}
+    Let $\bv_1 = \begin{pmatrix} 5\\1\end{pmatrix}$ and $\bv_2 =
+    \begin{pmatrix}1\\-1\end{pmatrix}$ be eigenvectors of a matrix $A$ corresponding to
+    eigenvalues $\lambda_1 = -2$ and $\lambda_2 = 5$ respectively.  Compute $A(\bv_1 +
+    \bv_2)$ and $A(3\bv_1)$.
+\end{problem}
+\hint{
+    Recall that if $A$ has eigenvector $\bv$ and eigenvalue $\lambda$ then $A\bv = \lambda
+    \bv$.
+}
 
 \begin{problem}
     Long ago, in a galaxy far, far away \dots there are two cell-phone companies serving a
@@ -932,4 +958,82 @@ answer.
     behavior is that both companies will lose their customers although the Evil Empire
     will lose at a faster rate.
 }
+
+
+\begin{problem}
+    Find a $2 \times 2$ matrix such that $\bv_1 = \begin{pmatrix}-2\\-3\end{pmatrix}$ and
+    $\bv_2=\begin{pmatrix}0\\1\end{pmatrix}$ are eigenvectors of $A$ with eigenvalues $5$
+    and $-1$ respectively.
+\end{problem}
+\hint{
+    Recall that if $A$ has a full collection of eigenvalues and eigenvectors then $A =
+    PDP^{-1}$.  Build the matrices $P$ and $D$ and you can build $A$.
+}
+
+
+\begin{problem}
+    The Cayley-Hamilton Theorem states that a matrix will satisfy its own characteristic
+    polynomial.  Recall that for a matrix $A$ the characteristic polynomial is $p(\lambda)
+    = \det(A - \lambda I)$ and to find the eigenvalues $\lambda$ we solve the equation
+    $p(\lambda) = 0$.  The Cayley-Hamilton Theorem states that $p(A) = 0$ where the ``0''
+    here means that zero matrix.  
+    \begin{enumerate}
+        \item[(a)] Let $A = \begin{pmatrix} -4 & 4 \\ -4 & -3 \end{pmatrix}$.  Use the
+            Cayley-Hamilton Theorem to find a quadratic polynomial $p$ such that $p(A) =
+            0$.
+        \item[(b)] For a matrix $A$ assume that $(A - 2I)(A+3I) = 0$.  There are
+            infinitely many matrices $A$ for which this algebraic equation is true.  What
+            characteristics do all of the matrices have?
+    \end{enumerate}
+\end{problem}
+\hint{
+    \begin{enumerate}
+        \item[(a)] Find the characteristic polynomial for $A$.
+        \item[(b)] The expression $(A-2I)(A+3I)=0$ implicitly gives the characteristic
+            polynomial for $A$ and hence you can find the eigenvalues.  
+    \end{enumerate}
+}
+
+
+\begin{thm}\label{thm:eigenstructure1}
+    Let $A$ be an $n\times n$ matrix.  For every positive integer $k$, $A^k$ will have the
+    same eigenvectors as $A$.
+\end{thm}
+\begin{problem}
+    \begin{enumerate}
+        \item[(a)] Prove Theorem \ref{thm:eigenstructure1}.
+        \item[(b)] If $\bv$ is an eigenvector of the matrix $A$ with eigenvalue $\lambda$
+            then what is the eigenvalue of $\bv$ associated with $A^k$ for some positive
+            integer $k$?
+    \end{enumerate}
+\end{problem}
+
+
+\begin{thm}\label{thm:eigenstructure2}
+    Let $A$ be an $n\times n$ matrix.  For every real number $c$ the matrices $(A + cI)$ and
+    $cA$ will have the same eigenvectors as $A$.
+\end{thm}
+\begin{problem}
+    \begin{enumerate}
+        \item[(a)] Prove Theorem \ref{thm:eigenstructure2}.
+        \item[(b)] If $\bv$ is an eigenvector of the matrix $A$ with eigenvalue $\lambda$
+            then what are the eigenvalues of $\bv$ associated with $(A+cI)$ and $cA$ for some
+            integer $c$?
+    \end{enumerate}
+\end{problem}
+
+
+% \begin{thm}\label{thm:eigenstructure3}
+%     Let $A$ be an $n\times n$ invertible matrix.  The matrix $A^{-1}$ has the same
+%     eigenvectors as $A$.
+% \end{thm}
+% \begin{problem}
+%     \begin{enumerate}
+%         \item[(a)] Prove Theorem \ref{thm:eigenstructure3}.
+%         \item[(b)] If $\bv$ is an eigenvector of the matrix $A$ with eigenvalue $\lambda
+%             \neq 0$
+%             then what is the eigenvalue of $\bv$ associated with $A^{-1}$?
+%     \end{enumerate}
+% \end{problem}
+
 
