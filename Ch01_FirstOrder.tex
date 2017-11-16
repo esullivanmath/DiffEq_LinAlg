@@ -56,6 +56,46 @@ move to fast then go to the appropriate linked texts in Section \ref{pref:resour
     \end{enumerate}
 }
 
+\begin{problem}\label{prob:ice_balls}
+    Did you know that you could make spherical ice cubes \ldots wait, that name seems
+    wrong \ldots whatever, check out
+    \href{https://www.amazon.com/Tovolo-Sphere-Ice-Molds-Set/dp/B007ACTN54}{THIS LINK}.
+    I have several questions.
+    \begin{enumerate}
+        \item[(a)] Finish this sentence: 
+            \begin{quote}
+                The rate of change of the volume of the ice ball is proportional to
+                \underline{\hspace{1in}}
+            \end{quote}
+        \item[(b)] Write your answer from part (a) as a differential equation.  Be sure
+            that the left-hand and right-hand sides of your differential equation refer to
+            the same variables.
+        \item[(c)] I want to know which type of ice will keep my drink cold longer:
+            sphere-shaped or cube-shaped.  Assume that both chunks of ice start with
+            exactly the same volume.  What differential equations would you need to solve
+            to answer this question?
+    \end{enumerate}
+\end{problem}
+\solution{
+    \begin{enumerate}
+        \item[(a)] The rate of change of the volume of the ice ball is proporitonal to the
+            surface area of the ice ball.
+        \item[(b)] At first we could write $\frac{dV}{dt} = k S$ where $S$ is the surface
+            area, but knowing that the surface area of a sphere is $S = 4\pir^2$ and the
+            volume is $V = \frac{4}{3} \pi r^3$ we can solve for $r$ in the volume formula
+            and substitute into the surface area to get
+            \[ r = \sqrt[3]{\frac{3}{4\pi} V} \quad \implies \quad S = 4 \pi \left(
+            \frac{3}{4\pi} V
+        \right)^{2/3}. \]
+        Therefore the differential equation is
+        \[ \frac{dV}{dt} = 4 \pi k \left( \frac{3}{4\pi} V \right)^{2/3}. \]
+    \item[(c)] Finally, the differential equation for the cube is simpler (since the
+        geometry is simpler) so $S = 6 x^2$ and $V = x^3$ where $x$ is the length of a
+        side of the cube.  Therefore, $x = V^{1/3}$ and $S = 6 V^{2/3}$ and 
+        \[ \frac{dV}{dt} = 6 V^{2/3}. \]
+    \end{enumerate}
+}
+
 \begin{problem}
 An ant is building a tunnel.  We want to create a differential equation model for the
 total time that it takes for the ant to build the tunnel as a function of the length of
@@ -1188,4 +1228,11 @@ equations.
             \[ \frac{dS}{dt} = 8  -\frac{3S}{100+t} \quad \text{with} \quad y(0) = 10 \]
         }
 \end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+    In Problem \ref{prob:ice_balls} we built models for the melting of ice cubes.  Solve
+    both of the differential equations resulting from those models and answer the
+    question: which type of ice cube will keep my drink colder longer.
 \end{problem}
