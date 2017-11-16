@@ -42,8 +42,9 @@
 \contentsline {section}{\numberline {5.2}Inner Product Spaces}{93}{section.5.2}
 \contentsline {section}{\numberline {5.3}Fourier Series}{95}{section.5.3}
 \contentsline {section}{\numberline {5.4}Linear Transformations}{97}{section.5.4}
-\contentsline {section}{\numberline {5.5}Higher Dimensions are Geometrically {\it Weird}}{102}{section.5.5}
-\contentsline {section}{\numberline {5.6}Additional Exercises}{104}{section.5.6}
+\contentsline {section}{\numberline {5.5}Linear Transformations and Change of Basis (INCOMPLETE)}{102}{section.5.5}
+\contentsline {section}{\numberline {5.6}Higher Dimensions are Geometrically {\it Weird}}{102}{section.5.6}
+\contentsline {section}{\numberline {5.7}Additional Exercises}{105}{section.5.7}
 \contentsline {chapter}{\numberline {6}The Eigenvalue Eigenvector Problem}{107}{chapter.6}
 \contentsline {section}{\numberline {6.1}Introduction To Eigenvalues}{107}{section.6.1}
 \contentsline {section}{\numberline {6.2}Diagonlization of Matrices}{111}{section.6.2}
