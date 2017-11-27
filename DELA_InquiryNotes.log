@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  16 NOV 2017 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 NOV 2017 12:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4245,8 +4245,8 @@ Package rerunfilecheck Info: File `DELA_InquiryNotes.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 230.
  ) 
 Here is how much of TeX's memory you used:
- 42667 strings out of 493089
- 933905 string characters out of 6134842
+ 42668 strings out of 493089
+ 933917 string characters out of 6134842
  1165798 words of memory out of 5000000
  44246 multiletter control sequences out of 15000+600000
  78712 words of font info for 191 fonts, out of 8000000 for 9000
@@ -4271,10 +4271,10 @@ fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/kpfonts/jkpttmn8a.pfb
 .pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
-Output written on DELA_InquiryNotes.pdf (202 pages, 749062 bytes).
+Output written on DELA_InquiryNotes.pdf (202 pages, 749742 bytes).
 PDF statistics:
- 2725 PDF objects out of 2984 (max. 8388607)
- 2470 compressed objects within 25 object streams
- 1175 named destinations out of 1200 (max. 500000)
+ 2726 PDF objects out of 2984 (max. 8388607)
+ 2471 compressed objects within 25 object streams
+ 1176 named destinations out of 1200 (max. 500000)
  830 words of extra memory for PDF output out of 10000 (max. 10000000)
 
