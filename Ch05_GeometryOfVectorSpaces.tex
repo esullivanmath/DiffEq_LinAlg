@@ -1,5 +1,7 @@
-\chapter{The Geometry of Vector Spaces}
-In this chapter we finally tackle the issues of angle and distance in general vector
+\chapter{Geometry in Vector Spaces}
+Vector spaces give a rich environment to explore the relationships between geometric
+objects and gives natural abstractsions to other types of {\it vectors} (e.g. functions,
+matrices, polynimials, etc).  In this chapter we finally tackle the issues of angle and distance in general vector
 spaces.  These notions are likely second nature in our familiar friends $\mathbb{R}^2$ and
 $\mathbb{R}^3$, but what about in spaces of matrices? spaces of functions? spaces of
 polynomials?  The notion of distance can be abstracted in a natural and beautiful way so
@@ -202,11 +204,17 @@ Now summarize the process that you built in the previous problem into the follow
 theorem.
 \begin{thm}[Building Vectors from an Orthogonal Basis]\label{thm:orthogonal_basis}
     If $\mathcal{B} = \{\bv_1, \bv_2, \ldots, \bv_n\}$ is an orthogonal basis for a vector
-    space $\mathcal{V}$ then for $\bx \in \mathcal{V}$
-    \[ \bx = \underline{\hspace{0.25in}} \bv_1 + \underline{\hspace{0.25in}} \bv_2 +
-    \underline{\hspace{0.25in}} \bv_3 + \cdots + \underline{\hspace{0.25in}} \bv_n \]
-    (Fill in the blanks)
+    space $\mathcal{V}$ then for any vector $\bx \in \mathcal{V}$ we can write
+    \[ \bx = C_1 \bv_1 + C_2 \bv_2 + \cdots + C_n \bv_n \]
+    where
+    \[ C_k = \underline{\hspace{1in}}. \]
+%     \[ \bx = \underline{\hspace{0.25in}} \bv_1 + \underline{\hspace{0.25in}} \bv_2 +
+%     \underline{\hspace{0.25in}} \bv_3 + \cdots + \underline{\hspace{0.25in}} \bv_n \]
+%     (Fill in the blanks)
 \end{thm}
+\begin{proof}
+    (prove this theorem by leveraging the fact that we have an orthogonal basis)
+\end{proof}
 \solution{
     $c_j = \frac{\bx \cdot \bv_j}{\bv_j \cdot \bv_j}$
 }
@@ -495,19 +503,29 @@ angles between matrices!! AWESOME!!
 % }
 
 \section{Fourier Series}
-OK.  I admit it.  Inner product spaces are pretty darn abstract and at first glance they
-seem to have no purpose.  In this section we will consider a non-abstract
-application of the inner product space that has changed the modern world in uncountably
+In this section we will consider one of the most beautiful and useful
+applications of inner product spaces.  This application has, quite literally, changed the modern world in uncountably
 many ways.  This application, which will arise later in these notes (in the PDE's
 chapter), is one of the most stunningly beautiful applications out there for everyone to
 see: The Fourier Series.  
 
-Consider the vector space spanned by an infinite basis of sine functions 
+Fourier series were first developed by Joseph Fourier (ca 1800) as part of the development
+of the theory of heat transport.  Since then the field of Fourier Analysis has taken over
+physics, engineering, signal processing, computer science, \ldots and the list goes on and
+on and on. Every signal that we transmit is touched in some way by the ideas developed by
+Fourier in the 1800's.  It is no exaggeration that every person in our technological world is impacted
+daily by Fourier Analysis. 
+
+Let's get into it.  Consider the vector space spanned by an infinite basis of sine functions 
 \[ \mathcal{B} = \left\{ \sin\left( k x\right) \, : \, k \in \mathbb{N} \right\} \]
 equipped with the inner product 
-\[ \left< f , g \right> = \frac{1}{\pi} \int_0^{2\pi} f(x) g(x) dx. \]
+\begin{flalign}
+    \left< f , g \right> = \frac{1}{\pi} \int_0^{2\pi} f(x) g(x) dx.
+    \label{eqn:fourier_ip}
+\end{flalign}
 This particular basis is infinite dimensional since the natural numbers, $\mathbb{N}$, are
-(countably) infinite, and if we consider the span we can build any periodic function as a
+(countably) infinite, and if we consider the span we can build any periodic function
+$f(x)$ where $f(0) = 0$ as a
 linear combination of sine functions of different frequencies.
 More specifically, since every periodic function can be written as a linear combination of the
 basis functions we have the infinite sum
@@ -516,22 +534,95 @@ basis functions we have the infinite sum
 \end{flalign}
 for all period functions $f$. The most important part of the basis $\mathcal{B}$ is that
 it is an othonormal basis under the inner product: an orthogonal basis made entirely of
-unit vectors.
+unit vectors.  
+\begin{thm}\label{thm:fourier_sine_ip}
+    If $j,k \in \mathbb{N}$ then
+    \begin{flalign}
+        \left< \sin(kx) \,,\, \sin(jx) \right> = \frac{1}{\pi} \int_0^{2\pi} \sin(kx)
+        \sin(jx) dx = \left\{ \begin{array}{ll} 0, & j \ne k \\ 1, & j=k \end{array}
+        \right.
+        \label{eqn:fourier_ip_1}
+    \end{flalign}
+\end{thm}
+\begin{problem}
+    What does Theorem \ref{thm:fourier_sine_ip} say about the functions $\sin(kx)$ and
+    $\sin(jx)$ under the inner product
+    \[ \left< f(x) \, , \, g(x) \right> = \frac{1}{\pi} \int_0^{2\pi} f(x) g(x) dx? \]
+\end{problem}
 
-The Fourier Series plays an incredibly important role in the theory and practice of signal
-analysis.  The applications that we'll look at in the next few problems explores this
-idea.  
+\begin{proof}
+    Let's prove Theorem \ref{thm:fourier_sine_ip}.  Notice that in Theorem
+    \ref{thm:fourier_sine_ip} if we let $k=j$ then the inner product shows that 
+    \[ \| \sin(kx) \| = \sqrt{ \left< \sin(kx) \, , \, \sin(kx) \right>} =
+    \sqrt{\frac{1}{\pi} \int_0^{2\pi} \sin^2(kx) dx } = 1 \]
+    which implies that each of the sine functions is a unit vector in this inner product
+    space.  Furthermore, if $j \ne k$ then $\left< \sin(kx) \,,\, \sin(jx)\right> = 0$,
+    which shows that $\sin(kx)$ and $\sin(jx)$ are orthogonal in this space.
+    
+    Let's integrate directly to verify this.  First, if recall the trig identity
+    \[ 2\sin(\theta)\sin(\phi) = \cos(\theta - \phi) - \cos(\theta + \phi) \]
+    we can rewrite \eqref{eqn:fourier_ip_1} as
+    \[ \left< \sin(kx) , \sin(jx) \right> = \frac{1}{\pi} \left[ \frac{1}{2} \int_0^{2\pi}
+    \cos\left( (k-j)x \right) - \cos\left( (k+j)x  \right) dx  \right]. \]
+
+    There are clearly two cases: when $k=j$ and when $k\ne j$. 
+    In the case that $k=j$ we observe that $k-j=0$ so the integral becomes 
+    \[ \frac{1}{2\pi} \int_0^{2\pi} 1 - \cos(2kx) dx \]
+    which we can integrate to 
+    \[ \frac{1}{2\pi} \int_0^{2\pi} 1-\cos(2kx) dx = \frac{1}{2\pi} \left[ x -
+        \frac{1}{2k}\sin(2kx)
+    \right]_0^{2\pi} = \frac{1}{2\pi} \left[ 2\pi - \frac{\sin(4k\pi)}{2k} +
+    \frac{\sin(0)}{2k} \right] = 1 \]
+    since the sine of integer multiples of $\pi$ is zero.  
+
+    In the case that $k \ne j$ we have
+    \[ \left< \sin(kx) \, , \, \sin(jx) \right> = \frac{1}{2\pi} \left[ \int_0^{2\pi} \cos\left(
+    (k-j)x \right) dx - \int_0^{2\pi} \cos\left( (k+j)x \right) dx \right] \]
+    which can be integrated to
+    \[ \frac{1}{2\pi} \left[ \frac{\sin\left( (k-j)x \right)}{k-j} - \frac{\sin\left(
+    (k+j)x \right)}{k+j} \right]_0^{2\pi} = \frac{1}{2\pi} \left[ \frac{\sin\left(2\pi (k-j) \right)}{k-j} - \frac{\sin\left(
+    2\pi(k+j) \right)}{k+j} \right] = 0 \] 
+    where we again have used the fact that the sine of an integer multiple of $\pi$ is
+    zero along with the fact that $\sin(0) = 0$.
+
+    This concludes the proof and we see that the set $\mathcal{B} = \left\{ \sin(kx) \, : \, k
+        \in \mathbb{N} \right\}$ is indeed an orthonormal basis of functions under
+        inner product \eqref{eqn:fourier_ip}.
+\end{proof}
+
+
+If you aren't happy with the analytical proof you can at least {\it convince} yourself
+that indeed Theorem \ref{thm:fourier_sine_ip} is true.
 \begin{problem}
     Open MATLAB (or any other symbolic calculus package) and verify that the basis
 \[ \mathcal{B} = \left\{ \sin\left( k x\right) \, : \, k \in \mathbb{N} \right\} \]
     is indeed an orthogonal basis.  That is, compute 
     \[ \left< \sin\left( k x\right) \, , \, \sin\left( j x \right)
-        \right> =  \frac{1}{\pi} \int_0^{\pi} \sin\left( k x\right) \sin\left( j x\right) dx \]
+        \right> =  \frac{1}{\pi} \int_0^{2\pi} \sin\left( k x\right) \sin\left( j x\right) dx \]
     for various values of $j$ and $k$ and verify that 
     \begin{itemize}
         \item if $j=k$ then the inner produce is identically 1.
         \item if $j \neq k$ then the inner product is zero.
     \end{itemize}
+\end{problem}
+
+It is worth it to note that we could have defined the inner product for this space as an
+integral from $-\pi$ to $\pi$ instead of $0$ to $2\pi$ and all of these results would
+still hold.  After all, the functions are periodic with period $2\pi$ so any domain with
+length $2\pi$ would work just fine.
+
+\begin{thm}
+    Any periodic function $f(x)$ with period $2\pi$ and $f(0) = 0$ can be written as a
+    linear combination of sine functions $\sin(kx)$.  That is,
+    \[ f(x) = C_1 \sin(1x) + C_2 \sin(2x) + C_3 \sin(3x) + \cdots = \sum_{k=1}^\infty C_k
+    \sin(kx). \]
+\end{thm}
+
+\begin{problem}
+    Go to
+    \href{http://mathlets.org/mathlets/fourier-coefficients/}{http://mathlets.org/mathlets/fourier-coefficients/},
+    choose ``Target A'', ``Sine'', and ``All terms''.  Then use the sliders on the right
+    to closely match the square wave with a Fourier sine series.
 \end{problem}
 
 \begin{problem}
@@ -543,47 +634,96 @@ idea.
     \ref{thm:orthogonal_basis}.
 \end{problem}
 
+
 \begin{problem}
     Consider the function 
-    \[ f(x) = \left\{ \begin{array}{cc} 1 & \text{ if } 0 < x < \pi \\ -1 & \text{ if }
+    \[ f(x) = \left\{ \begin{array}{cl} 1 & \text{ if } 0 < x < \pi \\ -1 & \text{ if }
             \pi < x < 2\pi \end{array} \right..\]
-    We want to build a Fourier Series for this function (called the {\it square wave}).
-    Open MATLAB and complete the following partial code to plot an approximation to the
-    Fourier series of the square wave.
-\begin{lstlisting}
-clear; clc;
-syms x
-f(x) = 0*x; % this gives a placeholder for the function
-N = 20; % the top end of the finite Fourier series
-for k=1:N
-  C(k) = ... some code to find C(k) ...
-  f(x) = f(x) + C(k) * sin(k*x);
-end
-ezplot(f(x) , [0,2*pi])
-\end{lstlisting}
-Once you have the plot working, append the code
-\begin{lstlisting}
-x = 0:0.01:150;
-MySound = double(f(x));
-soundsc(MySound)
-\end{lstlisting}
-\ldots and turn the volume up.
+    We'll define $f(x)$ to have the value 0 at $0, \pm \pi, \pm 2\pi, \cdots$ and extend
+    the function periodically with period $2\pi$ forever.  This way $f(x)$ is defined on
+    all real numbers. 
+    We want to build a Fourier Series for this function (called the {\it square wave})
+    \[ f(x) = \sum_{k=1}^\infty C_k \sin(kx). \]
+    \begin{enumerate}
+        \item[(a)] From the previous problem you should have found that taking the inner
+            product of $f(x)$ and $\sin(kx)$ for every value of $k$ will result in the
+            value of $C_k$.  Use this idea to find $C_1$. 
+            \[ C_1 = \left< f(x) \, , \, \sin(1x) \right> = \frac{1}{\pi} \int_0^{2\pi}
+            f(x) \sin(1x) dx = \underline{\hspace{0.5in}} \]
+            (Hint: The integral can be broken into two relatively easy integrals if you think carefully about
+            $f(x)$.)
+        \item[(b)] Now find a general formula for $C_k$ by examining the inner product
+            \[ C_k = \left< f(x) \, , \, \sin(kx) \right> = \frac{1}{\pi} \int_0^{2\pi} f(x)
+            \sin(kx) dx = \underline{\hspace{0.5in}} \]
+        \item[(c)] Write the first several terms of the Fourier sine series for the square
+            wave.
+        \item[(d)] Use MATLAB to build a plot showing successive approximations of the
+            square wave.
+    \end{enumerate}
 \end{problem}
 
 \begin{problem}
-    Now find the Fourier series the function 
+    Repeat the previous problem to find the Fourier series for the function 
     \[ f(x) = -\frac{1}{\pi}x + 1 \]
     for $x \in [0,2\pi]$ and extended periodically outside the domain.
 \end{problem}
 
-The study of Fourier series began with Joseph Fourier around the 1820's.  The notion of
-expanding periodic functions in terms of an infinite series of sines and cosines
-subsequently changed the world.  He gave birth to the mathematical field of harmonic
-analysis and is still used today in digital and analog signal processing.  We will return
-to this idea in Chapter \ref{ch:PDEs} where we'll use Fourier series to solve problems in
-heat conduction and wave propagation.  
+\begin{thm}[Fourier Sine Series Coefficients]
+    If $f(x)$ is a $2\pi$ periodic function with $f(0) =0$ then we can expand $f(x)$ as
+    the series 
+    \[ f(x) = \sum_{k=1}^\infty C_k \sin(kx) \]
+    where 
+    \[ C_k = \left< f(x) \, , \, \sin(kx) \right> = \frac{1}{\pi} \int_0^{2\pi} f(x)
+    \sin(kx) dx. \]
+\end{thm}
+\begin{proof}
+    This theorem is a special case of Theorem \ref{thm:orthogonal_basis}.
+\end{proof}
 
+% The notion of
+% expanding periodic functions in terms of an infinite series of sines and cosines
+% subsequently changed the world.  He gave birth to the mathematical field of harmonic
+% analysis and is still used today in digital and analog signal processing.  
+We will return to the idea of Fourier series in Chapter \ref{ch:PDEs} where we'll use Fourier series to
+solve problems in heat conduction and wave propagation. We have also presented a bit of a
+limited view in this section in that we have only allowed for Fourier {\it sine} series.
+We can generalize the idea to a general Fourier series,
+\[ f(x) = a_0 + \sum_{k=1}^\infty a_k \cos(kx) + \sum_{k=0}^\infty b_k \sin(kx), \]
+where using both sine and cosine functions allows for more flexibility in the types of
+functions we can model.  The choice of inner product doesn't change and the cosine terms
+have all of the wonderful properties as we had before with the sine functions.  
 
+% For now it seems as if it is an
+% exercise in inner products and may even still seem a bit esoteric.  Let's do one more
+% problem to illustrate how cool the Fourier series really is!
+% 
+% \begin{problem}
+%     
+% \end{problem}<++>
+% 
+% 
+%     Open MATLAB and complete the following partial code to plot an approximation to the
+%     Fourier series of the square wave.
+% \begin{lstlisting}
+% clear; clc;
+% syms x
+% f(x) = 0*x; % this gives a placeholder for the function
+% N = 20; % the top end of the finite Fourier series
+% for k=1:N
+%   C(k) = ... some code to find C(k) ...
+%   f(x) = f(x) + C(k) * sin(k*x);
+% end
+% ezplot(f(x) , [0,2*pi])
+% \end{lstlisting}
+% Once you have the plot working, append the code
+% \begin{lstlisting}
+% x = 0:0.01:150;
+% MySound = double(f(x));
+% soundsc(MySound)
+% \end{lstlisting}
+% \ldots and turn the volume up.
+% \end{problem}
+% 
 
 
 \section{Linear Transformations}
@@ -1111,6 +1251,11 @@ These results are summarized in the table below.
 }   
 
 
+\begin{problem}
+    If you want to see a cool video about higher dimensional visualization, check out this
+    one by {\it 3 Blue 1 Brown:}
+    \href{https://youtu.be/zwAD6dRSVyI}{https://youtu.be/zwAD6dRSVyI}.
+\end{problem}
 
 \section{Additional Exercises}
 
