@@ -79,27 +79,32 @@
 \contentsline {section}{\numberline {10.4}Impulses and The Delta Function}{185}{section.10.4}
 \contentsline {section}{\numberline {10.5}Convolutions (INCOMPLETE)}{189}{section.10.5}
 \contentsline {section}{\numberline {10.6}Additional Exercises}{190}{section.10.6}
-\contentsline {chapter}{\numberline {11}Power Series Method: The Ultimate Guess}{191}{chapter.11}
-\contentsline {section}{\numberline {11.1}Taylor Series Solutions to Diff. Equations}{191}{section.11.1}
-\contentsline {section}{\numberline {11.2}Radius of Convergence for Power Series}{193}{section.11.2}
-\contentsline {section}{\numberline {11.3}Power Series Solutions to Diff. Equations}{197}{section.11.3}
-\contentsline {section}{\numberline {11.4}Additional Exercises}{200}{section.11.4}
-\contentsline {chapter}{\numberline {12}Partial Differential Equations}{201}{chapter.12}
-\contentsline {section}{\numberline {12.1}Some Reminders from Multivariable Calculus}{201}{section.12.1}
-\contentsline {section}{\numberline {12.2}Where to PDEs Come From?}{203}{section.12.2}
-\contentsline {subsection}{\numberline {12.2.1}Derivation of General Balance Law}{203}{subsection.12.2.1}
-\contentsline {subsection}{\numberline {12.2.2}Simplifications of the Local Balance Law}{204}{subsection.12.2.2}
-\contentsline {subsubsection}{Mass Balance}{204}{section*.12}
-\contentsline {subsubsection}{Energy Balance}{204}{section*.13}
-\contentsline {subsection}{\numberline {12.2.3}Laplace's Equation and Poisson's Equation}{205}{subsection.12.2.3}
-\contentsline {section}{\numberline {12.3}The 1D Heat Equation}{207}{section.12.3}
-\contentsline {subsection}{\numberline {12.3.1}1D Heat Equation with Zero Temperature Ends}{207}{subsection.12.3.1}
-\contentsline {subsubsection}{Separation of Variables}{208}{section*.16}
-\contentsline {subsubsection}{Summary of Separation of Variables}{211}{section*.18}
-\contentsline {subsection}{\numberline {12.3.2}1D Heat Equation with Insulated Ends}{213}{subsection.12.3.2}
-\contentsline {subsection}{\numberline {12.3.3}Heat Equation on a Thin Ring}{214}{subsection.12.3.3}
-\contentsline {section}{\numberline {12.4}The Wave Equation (INCOMPLETE)}{217}{section.12.4}
-\contentsline {section}{\numberline {12.5}1D Traveling Waves (INCOMPLETE)}{218}{section.12.5}
-\contentsline {section}{\numberline {12.6}Additional Exercises}{219}{section.12.6}
-\contentsline {chapter}{Appendices}{221}{section*.21}
-\contentsline {chapter}{\numberline {A}Partial Fractions}{222}{Appendix.a.A}
+\contentsline {chapter}{\numberline {11}Fourier Transforms (INCOMPLETE)}{191}{chapter.11}
+\contentsline {section}{\numberline {11.1}Introduction to Fourier Transforms}{191}{section.11.1}
+\contentsline {section}{\numberline {11.2}Fourier Filters}{192}{section.11.2}
+\contentsline {section}{\numberline {11.3}The Fast Fourier Transform}{193}{section.11.3}
+\contentsline {section}{\numberline {11.4}Additional Exercises}{194}{section.11.4}
+\contentsline {chapter}{\numberline {12}Power Series Method: The Ultimate Guess}{195}{chapter.12}
+\contentsline {section}{\numberline {12.1}Taylor Series Solutions to Diff. Equations}{195}{section.12.1}
+\contentsline {section}{\numberline {12.2}Radius of Convergence for Power Series}{197}{section.12.2}
+\contentsline {section}{\numberline {12.3}Power Series Solutions to Diff. Equations}{201}{section.12.3}
+\contentsline {section}{\numberline {12.4}Additional Exercises}{204}{section.12.4}
+\contentsline {chapter}{\numberline {13}Partial Differential Equations}{205}{chapter.13}
+\contentsline {section}{\numberline {13.1}Some Reminders from Multivariable Calculus}{205}{section.13.1}
+\contentsline {section}{\numberline {13.2}Where to PDEs Come From?}{207}{section.13.2}
+\contentsline {subsection}{\numberline {13.2.1}Derivation of General Balance Law}{207}{subsection.13.2.1}
+\contentsline {subsection}{\numberline {13.2.2}Simplifications of the Local Balance Law}{208}{subsection.13.2.2}
+\contentsline {subsubsection}{Mass Balance}{208}{section*.12}
+\contentsline {subsubsection}{Energy Balance}{208}{section*.13}
+\contentsline {subsection}{\numberline {13.2.3}Laplace's Equation and Poisson's Equation}{209}{subsection.13.2.3}
+\contentsline {section}{\numberline {13.3}The 1D Heat Equation}{211}{section.13.3}
+\contentsline {subsection}{\numberline {13.3.1}1D Heat Equation with Zero Temperature Ends}{211}{subsection.13.3.1}
+\contentsline {subsubsection}{Separation of Variables}{212}{section*.16}
+\contentsline {subsubsection}{Summary of Separation of Variables}{215}{section*.18}
+\contentsline {subsection}{\numberline {13.3.2}1D Heat Equation with Insulated Ends}{217}{subsection.13.3.2}
+\contentsline {subsection}{\numberline {13.3.3}Heat Equation on a Thin Ring}{218}{subsection.13.3.3}
+\contentsline {section}{\numberline {13.4}The Wave Equation (INCOMPLETE)}{221}{section.13.4}
+\contentsline {section}{\numberline {13.5}1D Traveling Waves (INCOMPLETE)}{222}{section.13.5}
+\contentsline {section}{\numberline {13.6}Additional Exercises}{223}{section.13.6}
+\contentsline {chapter}{Appendices}{225}{section*.21}
+\contentsline {chapter}{\numberline {A}Partial Fractions}{226}{Appendix.a.A}

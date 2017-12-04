@@ -79,23 +79,28 @@
 \BOOKMARK [1][-]{section.10.4}{Impulses and The Delta Function}{chapter.10}% 79
 \BOOKMARK [1][-]{section.10.5}{Convolutions \(INCOMPLETE\)}{chapter.10}% 80
 \BOOKMARK [1][-]{section.10.6}{Additional Exercises}{chapter.10}% 81
-\BOOKMARK [0][-]{chapter.11}{Power Series Method: The Ultimate Guess}{}% 82
-\BOOKMARK [1][-]{section.11.1}{Taylor Series Solutions to Diff. Equations}{chapter.11}% 83
-\BOOKMARK [1][-]{section.11.2}{Radius of Convergence for Power Series}{chapter.11}% 84
-\BOOKMARK [1][-]{section.11.3}{Power Series Solutions to Diff. Equations}{chapter.11}% 85
+\BOOKMARK [0][-]{chapter.11}{Fourier Transforms \(INCOMPLETE\)}{}% 82
+\BOOKMARK [1][-]{section.11.1}{Introduction to Fourier Transforms}{chapter.11}% 83
+\BOOKMARK [1][-]{section.11.2}{Fourier Filters}{chapter.11}% 84
+\BOOKMARK [1][-]{section.11.3}{The Fast Fourier Transform}{chapter.11}% 85
 \BOOKMARK [1][-]{section.11.4}{Additional Exercises}{chapter.11}% 86
-\BOOKMARK [0][-]{chapter.12}{Partial Differential Equations}{}% 87
-\BOOKMARK [1][-]{section.12.1}{Some Reminders from Multivariable Calculus}{chapter.12}% 88
-\BOOKMARK [1][-]{section.12.2}{Where to PDEs Come From?}{chapter.12}% 89
-\BOOKMARK [2][-]{subsection.12.2.1}{Derivation of General Balance Law}{section.12.2}% 90
-\BOOKMARK [2][-]{subsection.12.2.2}{Simplifications of the Local Balance Law}{section.12.2}% 91
-\BOOKMARK [2][-]{subsection.12.2.3}{Laplace's Equation and Poisson's Equation}{section.12.2}% 92
-\BOOKMARK [1][-]{section.12.3}{The 1D Heat Equation}{chapter.12}% 93
-\BOOKMARK [2][-]{subsection.12.3.1}{1D Heat Equation with Zero Temperature Ends}{section.12.3}% 94
-\BOOKMARK [2][-]{subsection.12.3.2}{1D Heat Equation with Insulated Ends}{section.12.3}% 95
-\BOOKMARK [2][-]{subsection.12.3.3}{Heat Equation on a Thin Ring}{section.12.3}% 96
-\BOOKMARK [1][-]{section.12.4}{The Wave Equation \(INCOMPLETE\)}{chapter.12}% 97
-\BOOKMARK [1][-]{section.12.5}{1D Traveling Waves \(INCOMPLETE\)}{chapter.12}% 98
-\BOOKMARK [1][-]{section.12.6}{Additional Exercises}{chapter.12}% 99
-\BOOKMARK [0][-]{section*.21}{Appendices}{}% 100
-\BOOKMARK [0][-]{Appendix.a.A}{Partial Fractions}{}% 101
+\BOOKMARK [0][-]{chapter.12}{Power Series Method: The Ultimate Guess}{}% 87
+\BOOKMARK [1][-]{section.12.1}{Taylor Series Solutions to Diff. Equations}{chapter.12}% 88
+\BOOKMARK [1][-]{section.12.2}{Radius of Convergence for Power Series}{chapter.12}% 89
+\BOOKMARK [1][-]{section.12.3}{Power Series Solutions to Diff. Equations}{chapter.12}% 90
+\BOOKMARK [1][-]{section.12.4}{Additional Exercises}{chapter.12}% 91
+\BOOKMARK [0][-]{chapter.13}{Partial Differential Equations}{}% 92
+\BOOKMARK [1][-]{section.13.1}{Some Reminders from Multivariable Calculus}{chapter.13}% 93
+\BOOKMARK [1][-]{section.13.2}{Where to PDEs Come From?}{chapter.13}% 94
+\BOOKMARK [2][-]{subsection.13.2.1}{Derivation of General Balance Law}{section.13.2}% 95
+\BOOKMARK [2][-]{subsection.13.2.2}{Simplifications of the Local Balance Law}{section.13.2}% 96
+\BOOKMARK [2][-]{subsection.13.2.3}{Laplace's Equation and Poisson's Equation}{section.13.2}% 97
+\BOOKMARK [1][-]{section.13.3}{The 1D Heat Equation}{chapter.13}% 98
+\BOOKMARK [2][-]{subsection.13.3.1}{1D Heat Equation with Zero Temperature Ends}{section.13.3}% 99
+\BOOKMARK [2][-]{subsection.13.3.2}{1D Heat Equation with Insulated Ends}{section.13.3}% 100
+\BOOKMARK [2][-]{subsection.13.3.3}{Heat Equation on a Thin Ring}{section.13.3}% 101
+\BOOKMARK [1][-]{section.13.4}{The Wave Equation \(INCOMPLETE\)}{chapter.13}% 102
+\BOOKMARK [1][-]{section.13.5}{1D Traveling Waves \(INCOMPLETE\)}{chapter.13}% 103
+\BOOKMARK [1][-]{section.13.6}{Additional Exercises}{chapter.13}% 104
+\BOOKMARK [0][-]{section*.21}{Appendices}{}% 105
+\BOOKMARK [0][-]{Appendix.a.A}{Partial Fractions}{}% 106
