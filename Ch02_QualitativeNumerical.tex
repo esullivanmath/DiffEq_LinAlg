@@ -1,7 +1,61 @@
 \chapter{Qualitative Methods, Numerical Methods, and Bifurcations}
-\section{Equilibrium Points and Stability}
+Let's think about the by-hand calculus techniques for differentiation and integration for
+a minute.  If you were to ask someone for a function then so long as the person gave you
+the algebraic form of the function you could always differentiate it.  Always! By hand
+derivatives, in some sense, are easy.  We have
+differentiation techniques to take care of every algebraic function.  Integration, on the
+other hand, is a different beast.  If you are handed some random algebraic function then
+you would find that it is very rare that an antiderivative exists.  Of course we have the
+ideas of $u$ substitution, integration by parts, trig substitution, partial fractions,
+etc. to take care of the most common cases, but most algebraic functions simply don't have
+antiderivatives.  What do you do in the cases where an antiderivative doesn't exist?
+Well, if you're trying to use the fundamental theorem of calculus to get a definite
+integral you can always revert to Riemann sums and use a computer. You could also use the
+trapezoidal rule or some other approximation technique, but that is about it;
+approximation is the only recourse in most instances.
+
+The same types of troubles arise with differential equations.  We saw in the first chapter that if
+we have a first order differential equation then we have a few techniques at our disposal
+to get an analytic solution,
+but we most certainly can't solve every differential equation.  Take for example the
+differential equation $y' = \ln(\sin(\ln(xy)))\sin(x^2)$ \ldots good luck getting an
+analytic solution.  The analytic solution to a
+differential equation might be the gold standard goal of differential equations, but it
+may come as a surprise that analytic solutions are actually rare and special unicorns.
+What we build in this chapter is a collection of techniques designed to find qualitative
+or approximate solutions to differential equations without actually trying to get analytic
+solutions.  We will rely heavily on graphical intuition and at times we will rely on
+computers to do the heavy lifting. By the end of this chapter you'll see that we often
+times don't even need the analytic solution since our qualitative analysis can tell us a
+wealth of information about the differential equation.
+
+
+\newpage \section{Equilibrium Points and Stability}
+\begin{definition}[Equilibrium Point(s)]
+    A point $y=p$ is said to be an {\bf equilibrium point} of a differential equation if
+    $y'=0$ for all time when $y=p$.  That is to say that when $y=p$ the rate of change of $y$ is zero
+    and as such cannot change with time.
+\end{definition}
+
+\begin{definition}[Stability]
+    An equilibrium point $y=p$ of a differential equation can be classified as either {\bf
+    stable}, {\bf unstable}, or {\bf semi-stable}.  
+    \begin{itemize}
+        \item At a {\bf stable equilibrium}, small deviations from $y=p$ will result in the
+            system converging back to $y=p$ over time.
+        \item At a {\bf unstable equilibrium}, small deviations from $y=p$ will result in the
+            system diverging away from $y=p$ over time.
+        \item At a {\bf semi-stable equilibrium}, small deviation in one direction from
+            $y=p$ will result in the system converging back to $y=p$ over time, and small
+            deviations in the other direction will result in the system diverging away
+            from $y=p$ over time.  We can think of a semi-stable equilibrium as being
+            stable from one direction and unstable from another.
+    \end{itemize}
+\end{definition}
+
+
 A first order autonomous differential equation may have an equilibrium point where the
-change simply stops.  In this section we will build (or remind you about) the tools to
+change simply stops.  In this section we will build the tools necessary to
 find and analyze equilibrium points for autonomous first order differential equations.
 
 \begin{problem}
@@ -14,6 +68,10 @@ find and analyze equilibrium points for autonomous first order differential equa
         \item[(c)] Make a plot with $y'$ on the vertical axis on $y$ on the horizontal axis for
             the previous differential equation.  Use this plot to determine whether the
             equilibrium point is stable or unstable.
+        \item[(d)] Now consider the slightly different differential equation $y' = 0.2 y^2
+            + 3$.  Make a plot with $y'$ on the vertical axis and $y$ on the horizontal
+            axis.  Use this plot to determine whether the equilibrium is stable or
+            unstable.
     \end{itemize}
 \end{problem}
 \solution{
@@ -60,15 +118,15 @@ $y' = (y-1)(y-2)(y-3)$ will be unstable at $y=1$ and $y=3$ but stable at $y=2$.
     where $k$ is the intrinsic growth rate of the population.  For the sake of simplicity
     in this model let's assume that $k = 0.5$ (for now).  
     \begin{enumerate}
-        \item[(a)] The coordinate axes below have $dP/dt$ on the vertical axis and $P$ on
+        \item[(a)] Make a plot with $dP/dt$ on the vertical axis and $P$ on
             the horizontal axis.  Use the differential equation to sketch this plot.
-            \begin{center}
-                \begin{tikzpicture}
-                    \draw[->,thick, black] (0,0) -- (5,0) node[anchor=west]{$P$};
-                    \draw[->,thick, black] (0,-1) -- (0,3)
-                    node[anchor=south]{$\frac{dP}{dt}$};
-                \end{tikzpicture}
-            \end{center}
+%             \begin{center}
+%                 \begin{tikzpicture}
+%                     \draw[->,thick, black] (0,0) -- (5,0) node[anchor=west]{$P$};
+%                     \draw[->,thick, black] (0,-1) -- (0,3)
+%                     node[anchor=south]{$\frac{dP}{dt}$};
+%                 \end{tikzpicture}
+%             \end{center}
         \item[(b)] Mark the intercepts on the horizontal axis in the plot above.  What do
             they represent in the context of this problem?
         \item[(c)] What does it mean about the rate of change of the population if  the
@@ -99,6 +157,8 @@ $y' = (y-1)(y-2)(y-3)$ will be unstable at $y=1$ and $y=3$ but stable at $y=2$.
 1 is stable, 2 is unstable and 3 is semi-stable
 }
 
+\newpage
+
 \begin{technique}[Phase Line Analysis]
     It is often very helpful to draw a {\it phase diagram} (sometimes called a phase line)
     to analyze the equilibrium points of an autonomous differential equation.  There are
@@ -121,27 +181,27 @@ $y' = (y-1)(y-2)(y-3)$ will be unstable at $y=1$ and $y=3$ but stable at $y=2$.
     \end{itemize}
 }
 
-\begin{figure}
+\begin{figure}[h]
     \begin{center}
-        \begin{tikzpicture}
+        \begin{tikzpicture}[scale=0.8]
             \begin{axis}[axis lines=center, grid, domain=0:5, xlabel={$y$},
                     ylabel={$dy/dt$}, title={Case \#1}, xmin=0, xmax=5, ymin=-2, ymax=2]
                     \addplot[blue, domain=1.2:3.2, very thick, smooth] {-0.5*(x-2)*(x-5)};
             \end{axis}
         \end{tikzpicture}
-        \begin{tikzpicture}
+        \begin{tikzpicture}[scale=0.8]
             \begin{axis}[axis lines=center, grid, domain=0:5, xlabel={$y$},
                     ylabel={$dy/dt$}, title={Case \#2}, xmin=0, xmax=5, ymin=-2, ymax=2]
                     \addplot[blue, domain=1.2:3.2, very thick, smooth] {-0.2*(x-2)^2*(x-5)};
             \end{axis}
         \end{tikzpicture}
-        \begin{tikzpicture}
+        \begin{tikzpicture}[scale=0.8]
             \begin{axis}[axis lines=center, grid, domain=0:5, xlabel={$y$},
                     ylabel={$dy/dt$}, title={Case \#3}, xmin=0, xmax=5, ymin=-2, ymax=2]
                     \addplot[blue, domain=1.2:3.2, very thick, smooth] {0.5*(x-2)*(x-5)};
             \end{axis}
         \end{tikzpicture}
-        \begin{tikzpicture}
+        \begin{tikzpicture}[scale=0.8]
             \begin{axis}[axis lines=center, grid, domain=0:5, xlabel={$y$},
                     ylabel={$dy/dt$}, title={Case \#4}, xmin=0, xmax=5, ymin=-2, ymax=2]
                     \addplot[blue, domain=1.2:3.2, very thick, smooth] {0.2*(x-2)^2*(x-5)};
@@ -154,6 +214,8 @@ $y' = (y-1)(y-2)(y-3)$ will be unstable at $y=1$ and $y=3$ but stable at $y=2$.
     \label{fig:phaseline}
 \end{figure}
 
+\newpage
+
 
 \begin{problem}
     For each of the phase plots in Figure \ref{fig:phase2} sketch a plot on the  $y$ vs
@@ -162,15 +224,15 @@ $y' = (y-1)(y-2)(y-3)$ will be unstable at $y=1$ and $y=3$ but stable at $y=2$.
     you in the first plot.
 \end{problem}
 
-\begin{figure}
+\begin{figure}[h]
     \begin{center}
-        \begin{tikzpicture}
+        \begin{tikzpicture}[scale=0.9]
             \begin{axis}[axis lines=center, xlabel={$y$}, ylabel={$dy/dt$}, grid, xmin=-1,
                 xmax=5, ymin=-2, ymax=2, title={Phase Plot a}]
                 \addplot[smooth, very thick, blue, domain=-1:5] {0.5*x*(x-1)^2*(x-3)};
             \end{axis}
         \end{tikzpicture}
-        \begin{tikzpicture}
+        \begin{tikzpicture}[scale=0.9]
             \begin{axis}[axis lines=center, xlabel={$t$}, ylabel={$y$}, grid, xmin=0,
                 xmax=10, ymin=-1, ymax=5, title={Solution Plot a}, ytick={1,2,3,4},
             xtick={1,2,3,4,5,6,7,8,9,10}]
@@ -179,13 +241,13 @@ $y' = (y-1)(y-2)(y-3)$ will be unstable at $y=1$ and $y=3$ but stable at $y=2$.
                 \addplot[dashed, domain=0:10] {0*x+3};
             \end{axis}
         \end{tikzpicture}
-        \begin{tikzpicture}
+        \begin{tikzpicture}[scale=0.9]
             \begin{axis}[axis lines=center, xlabel={$y$}, ylabel={$dy/dt$}, grid, xmin=-1,
                 xmax=5, ymin=-2, ymax=2, title={Phase Plot b}]
                 \addplot[smooth, very thick, blue, domain=-1:5] {-0.3*(x-0.25)*(x-1)*(x-4)};
             \end{axis}
         \end{tikzpicture}
-        \begin{tikzpicture}
+        \begin{tikzpicture}[scale=0.9]
             \begin{axis}[axis lines=center, xlabel={$t$}, ylabel={$y$}, grid, xmin=0,
                 xmax=10, ymin=-1, ymax=5, title={Solution Plot b}, ytick={1,2,3,4},
             xtick={1,2,3,4,5,6,7,8,9,10}]
@@ -210,17 +272,33 @@ approximate solutions to the differential equation
 \end{flalign}
 for a given initial condition.  In the problems that follow you will be creating several
 \texttt{MATLAB} files that you will use throughout the course, so please save them in a
-meaningful place and share them with your group mates.
+meaningful place and share them with your group mates. Numerical solutions are used when
+all else fails.  If you have an analytic solution to your differential equation then there
+is no need to make a numerical solution since every numerical solution is only a means of
+approximating solutions -- why approximate if you have the exact answer? That being said,
+analytic solutions to differential equations are rare so we'll have to approximate more
+times than not.
+
+There are MANY approximation techniques for differential equations.  Some are tailored to
+specific physics or engineering problems, some are tailored to specific types of initial
+or boundary conditions, and others are meant to be more general purpose.  The two
+techniques that we build here are both general purpose and relatively easy to program in
+any programming language.  The fact that they are general purpose, however, means that you
+can get better performance out of other methods on problems of specific types. To learn
+more I encourage you to take a course on numerical analysis.
 
 \subsection{Euler's Method}
-Euler's method is the simplest numerical method for solving the differential equation
+Euler's method is the simplest numerical method for solving the first-order differential equation
 $y'=f(t,y)$, and hence it is the best place to start!  You should be familiar with Euler's
 method from pre-requisite courses, but this time we are not going to be using Excel (since
 we usually need something FAR more powerful!).  
 
-Euler's method is simple: approximate the derivative in the most naive possible way:
-\[ \frac{dy}{dt} \approx \frac{y_{new} - y_{old}}{\Delta t} \]
-and then rewrite the differential equation \eqref{eqn:ode} as
+Euler's method is simple: approximate the derivative in the most naive possible way.  That
+is, use the definition of the derivative from calculus,
+\[ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}, \]
+and just drop the limit.  Therefore we can approximate $y'(t)$ as
+\[ \frac{dy}{dt} \approx \frac{y_{new} - y_{old}}{\Delta t}. \]
+Then rewrite the differential equation $y' = f(t,y)$ as
 \[ \frac{y_{new} - y_{old}}{\Delta t} \approx f(t_{old},y_{old}). \]
 After some rearrangement and relabeling we get the difference equation
 \[ y_{n+1} = y_n + \Delta t f(t_n,y_n). \]
@@ -231,7 +309,7 @@ After some rearrangement and relabeling we get the difference equation
     \[ y_{n+1} + y_n + \Delta t f(t_n,y_n) \]
     using appropriate computer software. 
 \end{technique}
-Remember that the only reasonble choice for
+Remember that the only reasonable choice for
 $\Delta t$ is to make it {\it very small}.  The trade off to choosing $\Delta t$ small
 is that it will take more computer memory to approximate the problem.
 
@@ -243,12 +321,12 @@ long run!
 \begin{enumerate}
     \item[(a)] Open \texttt{MATLAB} and create a new \underline{function}.  
     \item[(b)] Change the first line of the function so that it reads \\
-        \texttt{function [t,y] = MyEuler(f,tmin,tmax,numpoints,IC)}
+        \mcode{function [t,y] = MyEuler(f,tmin,tmax,numpoints,IC)}
     \item[(c)] After the commented lines (which we'll come back to) you should complete the following
         code.  Explain what each line of code does using comments. Some of the lines of
         code are likely new to you so I suggest you either use the help command or you do
         some basic experimentation.
-\begin{verbatim}
+\begin{lstlisting}
 function [t,y] = MyEuler(f,tmin,tmax,numpoints,IC)
 t=linspace(tmin,tmax,numpoints);  % what does this line do?
 dt=t(2)-t(1); % what does this line do?
@@ -257,10 +335,10 @@ y(1) = IC; % what does this line do?
 for n=1:length(t)-1 % what does this line do?
     y(n+1) = ... some code for Euler's method ...
 end
-\end{verbatim}
-    \item[(d)] Now.  Save this code in the working directory for this lab.  You also need to
+\end{lstlisting}
+    \item[(d)] Save this code in the working directory for this project.  You also need to
         get \texttt{MATLAB} to look in that working directory.  The simplest way to do
-        that is to press F5 while you're in the MyEuler function (and then ignore all of
+        that is to press F5 while you're in the \mcode{MyEuler} function (and then ignore all of
         the errors that occur).  
 
         The code you just created works for ALL of the times that you ever need Euler's
@@ -276,17 +354,17 @@ end
             y(0)=2 \]
             Open a new \underline{script} in \texttt{MATLAB} and complete the following code to get your
         plot.
-\begin{verbatim}
+\begin{lstlisting}
 clear; clc; clf;
 f = @(t,y) -y*(1-y/5)+0.1*t;
 [t,y] = MyEuler(f, ..., ..., ..., ...)
 plot(t,y)
-\end{verbatim}
+\end{lstlisting}
     \item[(f)] Run your code for several different initial conditions and overlay the plots to
         explore the dynamics of the differential equation. Be sure to properly label your
         plot. It is probably best to do this step within a loop in MATLAB.  To get a
         legend to appear for each new plot you can use the following:
-\begin{verbatim}
+\begin{lstlisting}
 clear; clc; clf;
 f = @(t,y) -y*(1-y/5)+0.1*t;
 LegendItems = { }; % initialize the storage for the legend entries
@@ -298,7 +376,7 @@ for IC= ... : ... : ...
   counter = counter+1; % what does this line do?
 end
 legend(LegendItems)
-\end{verbatim}
+\end{lstlisting}
 \end{enumerate}
 \end{problem}
 
@@ -369,16 +447,16 @@ Then we build the difference equation as a weighted sum of the $k_j's$:
             all of your code from your \texttt{MyEuler} function.
         \item[(b)] Modify the loop from the Euler code so that you perform the Runge-Kutta
             iteration.  The skeleton code should get you going:
-            \begin{verbatim}
-            ...
-            for n=1:length(t)-1
-            k1 = ...
-            k2 = ...
-            k3 = ...
-            k4 = ...
-            y(n+1) = y(n) + ...
-            end
-            \end{verbatim}
+\begin{lstlisting}
+...
+for n=1:length(t)-1
+k1 = ...
+k2 = ...
+k3 = ...
+k4 = ...
+y(n+1) = y(n) + ...
+end
+\end{lstlisting}
         \item[(c)] Run your Runge-Kutta code the same way that you did your Euler code.  Test it
             out on the same two problems as before, and be sure that you get the same
             qualitative solutions.
@@ -619,7 +697,9 @@ sensor). See the free body diagram below.
             differential equation graphically plotting the phase portrait, identifying
             equilibrium points, and discussing stability of each point.
         \item[(c)] Discuss the physical interpretation of each equilibrium point.
-        \item[(d)] Suppose we don't know what $A$, $B$, and $C$a re, but we do know from
+        \item[(d)] Use a numerical solver to get a graphical solution to the differential
+            equation under the conditions listed in part (b).
+        \item[(e)] Suppose we don't know what $A$, $B$, and $C$ are, but we do know from
             experiments that the three fixed points are $T_1 = T_a = 300^\circ K$, $T_2 =
             670^\circ K$, and $T_3 = 1200^\circ K$.  What can you say about the
             coefficients $A$, $B$, and $C$?
