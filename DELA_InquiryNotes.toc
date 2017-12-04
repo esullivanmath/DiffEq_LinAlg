@@ -36,75 +36,75 @@
 \contentsline {section}{\numberline {4.7}Additional Exercises}{99}{section.4.7}
 \contentsline {chapter}{\numberline {5}Geometry in Vector Spaces}{103}{chapter.5}
 \contentsline {section}{\numberline {5.1}The Geometry of $\mathbb {R}^n$}{103}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}The Dot Product}{103}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Projections}{104}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}The Gram-Schmidt Process: Making Orthogonal Sets}{107}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}Inner Product Spaces}{109}{section.5.2}
-\contentsline {section}{\numberline {5.3}Fourier Series}{111}{section.5.3}
-\contentsline {section}{\numberline {5.4}Linear Transformations}{115}{section.5.4}
-\contentsline {section}{\numberline {5.5}Linear Transformations and Change of Basis (INCOMPLETE)}{121}{section.5.5}
-\contentsline {section}{\numberline {5.6}Higher Dimensions are Geometrically {\it Weird}}{122}{section.5.6}
-\contentsline {section}{\numberline {5.7}Additional Exercises}{125}{section.5.7}
-\contentsline {chapter}{\numberline {6}The Eigenvalue Eigenvector Problem}{127}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction To Eigenvalues}{127}{section.6.1}
-\contentsline {section}{\numberline {6.2}Diagonlization of Matrices}{132}{section.6.2}
-\contentsline {section}{\numberline {6.3}Powers of Matrices}{135}{section.6.3}
-\contentsline {section}{\numberline {6.4}The Google Page Rank Algorithm}{138}{section.6.4}
-\contentsline {section}{\numberline {6.5}Additional Exercises}{143}{section.6.5}
-\contentsline {chapter}{\numberline {7}Second Order Differential Equations}{145}{chapter.7}
-\contentsline {section}{\numberline {7.1}Intro to Second Order Differential Equations}{145}{section.7.1}
-\contentsline {section}{\numberline {7.2}Mechanical Vibrations}{150}{section.7.2}
-\contentsline {section}{\numberline {7.3}Undetermined Coefficients}{153}{section.7.3}
-\contentsline {section}{\numberline {7.4}Resonance and Beats}{154}{section.7.4}
-\contentsline {section}{\numberline {7.5}Additional Exercises}{157}{section.7.5}
-\contentsline {chapter}{\numberline {8}Systems of Differential Equations}{158}{chapter.8}
-\contentsline {section}{\numberline {8.1}Matrices and Linear Systems}{158}{section.8.1}
-\contentsline {section}{\numberline {8.2}The Eigenvalue Method for Linear Systems}{161}{section.8.2}
-\contentsline {section}{\numberline {8.3}The Matrix Exponential}{165}{section.8.3}
-\contentsline {section}{\numberline {8.4}Complex Eigenvalues}{169}{section.8.4}
-\contentsline {section}{\numberline {8.5}Additional Exercises}{171}{section.8.5}
-\contentsline {chapter}{\numberline {9}Nonlinear Systems of Differential Equations}{172}{chapter.9}
-\contentsline {section}{\numberline {9.1}Modeling a Nonlinear System}{172}{section.9.1}
-\contentsline {section}{\numberline {9.2}Trace-Determinant Plane}{174}{section.9.2}
-\contentsline {section}{\numberline {9.3}Applied Nonlinear Systems}{180}{section.9.3}
-\contentsline {section}{\numberline {9.4}Additional Exercises}{182}{section.9.4}
-\contentsline {chapter}{\numberline {10}Laplace Transforms}{183}{chapter.10}
-\contentsline {section}{\numberline {10.1}Introduction to Laplace Transforms}{183}{section.10.1}
-\contentsline {subsection}{\numberline {10.1.1}Where Laplace Transforms Come From}{184}{subsection.10.1.1}
-\contentsline {subsection}{\numberline {10.1.2}Basic Laplace Transforms and Basic Properties}{186}{subsection.10.1.2}
-\contentsline {subsection}{\numberline {10.1.3}Some Important Theorems}{188}{subsection.10.1.3}
-\contentsline {subsection}{\numberline {10.1.4}Common Laplace Transforms}{188}{subsection.10.1.4}
-\contentsline {section}{\numberline {10.2}Solving Differential Equations with Laplace Transforms}{191}{section.10.2}
-\contentsline {section}{\numberline {10.3}The Heaviside Function and Delayed Forcing Terms}{193}{section.10.3}
-\contentsline {section}{\numberline {10.4}Impulses and The Delta Function}{195}{section.10.4}
-\contentsline {section}{\numberline {10.5}Convolutions (INCOMPLETE)}{199}{section.10.5}
-\contentsline {section}{\numberline {10.6}Additional Exercises}{200}{section.10.6}
-\contentsline {chapter}{\numberline {11}Fourier Transforms (INCOMPLETE)}{201}{chapter.11}
-\contentsline {section}{\numberline {11.1}Introduction to Fourier Transforms}{201}{section.11.1}
-\contentsline {section}{\numberline {11.2}Fourier Filters}{202}{section.11.2}
-\contentsline {section}{\numberline {11.3}The Fast Fourier Transform}{203}{section.11.3}
-\contentsline {section}{\numberline {11.4}Additional Exercises}{204}{section.11.4}
-\contentsline {chapter}{\numberline {12}Power Series Method: The Ultimate Guess}{205}{chapter.12}
-\contentsline {section}{\numberline {12.1}Taylor Series Solutions to Diff. Equations}{205}{section.12.1}
-\contentsline {section}{\numberline {12.2}Radius of Convergence for Power Series}{207}{section.12.2}
-\contentsline {section}{\numberline {12.3}Power Series Solutions to Diff. Equations}{211}{section.12.3}
-\contentsline {section}{\numberline {12.4}Additional Exercises}{214}{section.12.4}
-\contentsline {chapter}{\numberline {13}Partial Differential Equations}{215}{chapter.13}
-\contentsline {section}{\numberline {13.1}Some Reminders from Multivariable Calculus}{215}{section.13.1}
-\contentsline {section}{\numberline {13.2}Where to PDEs Come From?}{217}{section.13.2}
-\contentsline {subsection}{\numberline {13.2.1}Derivation of General Balance Law}{217}{subsection.13.2.1}
-\contentsline {subsection}{\numberline {13.2.2}Simplifications of the Local Balance Law}{218}{subsection.13.2.2}
-\contentsline {subsubsection}{Mass Balance}{218}{section*.12}
-\contentsline {subsubsection}{Energy Balance}{218}{section*.13}
-\contentsline {subsection}{\numberline {13.2.3}Laplace's Equation and Poisson's Equation}{219}{subsection.13.2.3}
-\contentsline {section}{\numberline {13.3}The 1D Heat Equation}{221}{section.13.3}
-\contentsline {subsection}{\numberline {13.3.1}1D Heat Equation with Zero Temperature Ends}{221}{subsection.13.3.1}
-\contentsline {subsubsection}{Separation of Variables}{222}{section*.16}
-\contentsline {subsubsection}{Summary of Separation of Variables}{225}{section*.18}
-\contentsline {subsection}{\numberline {13.3.2}1D Heat Equation with Insulated Ends}{227}{subsection.13.3.2}
-\contentsline {subsection}{\numberline {13.3.3}Heat Equation on a Thin Ring}{228}{subsection.13.3.3}
-\contentsline {section}{\numberline {13.4}The Wave Equation (INCOMPLETE)}{231}{section.13.4}
-\contentsline {section}{\numberline {13.5}1D Traveling Waves (INCOMPLETE)}{232}{section.13.5}
-\contentsline {section}{\numberline {13.6}Additional Exercises}{233}{section.13.6}
-\contentsline {chapter}{Appendices}{235}{section*.21}
-\contentsline {chapter}{\numberline {A}Partial Fractions}{236}{Appendix.a.A}
+\contentsline {subsection}{\numberline {5.1.1}The Dot Product}{104}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Projections}{106}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}The Gram-Schmidt Process: Making Orthogonal Sets}{108}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}Inner Product Spaces}{111}{section.5.2}
+\contentsline {section}{\numberline {5.3}Fourier Series}{113}{section.5.3}
+\contentsline {section}{\numberline {5.4}Linear Transformations}{117}{section.5.4}
+\contentsline {section}{\numberline {5.5}Linear Transformations and Change of Basis (INCOMPLETE)}{123}{section.5.5}
+\contentsline {section}{\numberline {5.6}Higher Dimensions are Geometrically {\it Weird}}{124}{section.5.6}
+\contentsline {section}{\numberline {5.7}Additional Exercises}{127}{section.5.7}
+\contentsline {chapter}{\numberline {6}The Eigenvalue Eigenvector Problem}{129}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction To Eigenvalues}{129}{section.6.1}
+\contentsline {section}{\numberline {6.2}Diagonlization of Matrices}{134}{section.6.2}
+\contentsline {section}{\numberline {6.3}Powers of Matrices}{137}{section.6.3}
+\contentsline {section}{\numberline {6.4}The Google Page Rank Algorithm}{140}{section.6.4}
+\contentsline {section}{\numberline {6.5}Additional Exercises}{145}{section.6.5}
+\contentsline {chapter}{\numberline {7}Second Order Differential Equations}{147}{chapter.7}
+\contentsline {section}{\numberline {7.1}Intro to Second Order Differential Equations}{147}{section.7.1}
+\contentsline {section}{\numberline {7.2}Mechanical Vibrations}{152}{section.7.2}
+\contentsline {section}{\numberline {7.3}Undetermined Coefficients}{155}{section.7.3}
+\contentsline {section}{\numberline {7.4}Resonance and Beats}{156}{section.7.4}
+\contentsline {section}{\numberline {7.5}Additional Exercises}{159}{section.7.5}
+\contentsline {chapter}{\numberline {8}Systems of Differential Equations}{160}{chapter.8}
+\contentsline {section}{\numberline {8.1}Matrices and Linear Systems}{160}{section.8.1}
+\contentsline {section}{\numberline {8.2}The Eigenvalue Method for Linear Systems}{163}{section.8.2}
+\contentsline {section}{\numberline {8.3}The Matrix Exponential}{167}{section.8.3}
+\contentsline {section}{\numberline {8.4}Complex Eigenvalues}{171}{section.8.4}
+\contentsline {section}{\numberline {8.5}Additional Exercises}{173}{section.8.5}
+\contentsline {chapter}{\numberline {9}Nonlinear Systems of Differential Equations}{174}{chapter.9}
+\contentsline {section}{\numberline {9.1}Modeling a Nonlinear System}{174}{section.9.1}
+\contentsline {section}{\numberline {9.2}Trace-Determinant Plane}{176}{section.9.2}
+\contentsline {section}{\numberline {9.3}Applied Nonlinear Systems}{182}{section.9.3}
+\contentsline {section}{\numberline {9.4}Additional Exercises}{184}{section.9.4}
+\contentsline {chapter}{\numberline {10}Laplace Transforms}{185}{chapter.10}
+\contentsline {section}{\numberline {10.1}Introduction to Laplace Transforms}{185}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Where Laplace Transforms Come From}{186}{subsection.10.1.1}
+\contentsline {subsection}{\numberline {10.1.2}Basic Laplace Transforms and Basic Properties}{188}{subsection.10.1.2}
+\contentsline {subsection}{\numberline {10.1.3}Some Important Theorems}{190}{subsection.10.1.3}
+\contentsline {subsection}{\numberline {10.1.4}Common Laplace Transforms}{190}{subsection.10.1.4}
+\contentsline {section}{\numberline {10.2}Solving Differential Equations with Laplace Transforms}{193}{section.10.2}
+\contentsline {section}{\numberline {10.3}The Heaviside Function and Delayed Forcing Terms}{195}{section.10.3}
+\contentsline {section}{\numberline {10.4}Impulses and The Delta Function}{197}{section.10.4}
+\contentsline {section}{\numberline {10.5}Convolutions (INCOMPLETE)}{201}{section.10.5}
+\contentsline {section}{\numberline {10.6}Additional Exercises}{202}{section.10.6}
+\contentsline {chapter}{\numberline {11}Fourier Transforms (INCOMPLETE)}{203}{chapter.11}
+\contentsline {section}{\numberline {11.1}Introduction to Fourier Transforms}{203}{section.11.1}
+\contentsline {section}{\numberline {11.2}Fourier Filters}{204}{section.11.2}
+\contentsline {section}{\numberline {11.3}The Fast Fourier Transform}{205}{section.11.3}
+\contentsline {section}{\numberline {11.4}Additional Exercises}{206}{section.11.4}
+\contentsline {chapter}{\numberline {12}Power Series Method: The Ultimate Guess}{207}{chapter.12}
+\contentsline {section}{\numberline {12.1}Taylor Series Solutions to Diff. Equations}{207}{section.12.1}
+\contentsline {section}{\numberline {12.2}Radius of Convergence for Power Series}{209}{section.12.2}
+\contentsline {section}{\numberline {12.3}Power Series Solutions to Diff. Equations}{213}{section.12.3}
+\contentsline {section}{\numberline {12.4}Additional Exercises}{216}{section.12.4}
+\contentsline {chapter}{\numberline {13}Partial Differential Equations}{217}{chapter.13}
+\contentsline {section}{\numberline {13.1}Some Reminders from Multivariable Calculus}{217}{section.13.1}
+\contentsline {section}{\numberline {13.2}Where to PDEs Come From?}{219}{section.13.2}
+\contentsline {subsection}{\numberline {13.2.1}Derivation of General Balance Law}{219}{subsection.13.2.1}
+\contentsline {subsection}{\numberline {13.2.2}Simplifications of the Local Balance Law}{220}{subsection.13.2.2}
+\contentsline {subsubsection}{Mass Balance}{220}{section*.12}
+\contentsline {subsubsection}{Energy Balance}{220}{section*.13}
+\contentsline {subsection}{\numberline {13.2.3}Laplace's Equation and Poisson's Equation}{221}{subsection.13.2.3}
+\contentsline {section}{\numberline {13.3}The 1D Heat Equation}{223}{section.13.3}
+\contentsline {subsection}{\numberline {13.3.1}1D Heat Equation with Zero Temperature Ends}{223}{subsection.13.3.1}
+\contentsline {subsubsection}{Separation of Variables}{224}{section*.16}
+\contentsline {subsubsection}{Summary of Separation of Variables}{227}{section*.18}
+\contentsline {subsection}{\numberline {13.3.2}1D Heat Equation with Insulated Ends}{229}{subsection.13.3.2}
+\contentsline {subsection}{\numberline {13.3.3}Heat Equation on a Thin Ring}{230}{subsection.13.3.3}
+\contentsline {section}{\numberline {13.4}The Wave Equation (INCOMPLETE)}{233}{section.13.4}
+\contentsline {section}{\numberline {13.5}1D Traveling Waves (INCOMPLETE)}{234}{section.13.5}
+\contentsline {section}{\numberline {13.6}Additional Exercises}{235}{section.13.6}
+\contentsline {chapter}{Appendices}{237}{section*.21}
+\contentsline {chapter}{\numberline {A}Partial Fractions}{238}{Appendix.a.A}

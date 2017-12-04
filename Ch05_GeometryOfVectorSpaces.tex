@@ -1,15 +1,27 @@
 \chapter{Geometry in Vector Spaces}
-Vector spaces give a rich environment to explore the relationships between geometric
-objects and gives natural abstractsions to other types of {\it vectors} (e.g. functions,
-matrices, polynimials, etc).  In this chapter we finally tackle the issues of angle and distance in general vector
-spaces.  These notions are likely second nature in our familiar friends $\mathbb{R}^2$ and
-$\mathbb{R}^3$, but what about in spaces of matrices? spaces of functions? spaces of
-polynomials?  The notion of distance can be abstracted in a natural and beautiful way so
-that our intuititive ideas still hold, but we also get something mathematically meaningful
-in the more abstract spaces.  We'll start with an idea that is probably familiar to you:
-the dot product\footnote{If you haven't had multivariable calculus or calculus-based
-    physics then maybe the idea of a dot product will be new to you.  Don't worry.  We'll
-introduce everything from scratch here.}.
+Vector spaces give a rich environment to explore the relationships between objects
+objects and gives natural abstractions to other types of {\it vectors} (e.g. functions,
+matrices, polynimials, etc).  Most of the study of vector spaces involves abstraction
+and making precise ideas that spanned many decades, or centuries, in many different fields
+of science and mathematics.  In this sense, the study of vector spaces leans heavily on
+past mathematical results and seeks to give them order and structure.  You
+have seen that the study of vector spaces really acts as a unifying language to talk about
+a wide variety of mathematical objects.
+
+In this chapter we layer the language of abstract vector spaces and the language of
+geometry.  In particular, we will build and abstract the familiar ideas of angle,
+othogonality, lengths of vectors, and distance in general vector spaces.  We will make
+precise the ideas of the {\it size of a function} or the {\it distance between two
+matrices or polynomials}.  These notions are likely second nature in our familiar friends
+$\mathbb{R}^2$ and $\mathbb{R}^3$, but what about in spaces of matrices? spaces of
+functions? spaces of polynomials?  The notions of angle and  distance can be abstracted in
+a natural and beautiful way so that our intuitive ideas still hold, but we also get
+something mathematically meaningful in the more abstract spaces.  We'll start with an idea
+that is probably familiar to you: the dot product\footnote{If you haven't had
+multivariable calculus or calculus-based physics then maybe the idea of a dot product will
+be new to you.  Don't worry.  We'll introduce everything from scratch here.}.  From the
+dot product we will build a similar idea is more general vector spaces so that the ideas
+of angle and perpendicularity come along for the ride.  Here we go!
 
 \section{The Geometry of $\mathbb{R}^n$}
 At this point we have talked almost exclusively about linear combinations and the spaces
@@ -22,57 +34,137 @@ Let's jump right in by filling in some definitions and theorems that you likely 
 know
 
 \subsection{The Dot Product}
-Now let's summarize our results in the following definitions and theorems.
-\begin{definition}[Dot Product in $\mathbb{R}^n$]
+The following are two different familiar definitions of the dot product.  The first gives
+a purely algebraic formula for the dot product and the second gives a more geometric
+definition.  They are indeed equivalent definitions.
+\begin{definition}[Algebraic Dot Product in $\mathbb{R}^n$]
     Let $\bu, \bv \in \mathbb{R}^n$.  The {\bf dot product} of $\bu$ and $\bv$ is defined
     algebraically as
-    \[ \bu \cdot \bv = \underline{\hspace{2in}} \]
-    (this definition doesn't explicitly mention the angle between the vectors)
+    \[ \bu \cdot \bv = u_1 v_1 + u_2 v_2 + \cdots + u_n v_n = \sum_{j=1}^n u_j v_j. \]
+    Notice that this definition doesn't explicitly mention the angle between the vectors.
 \end{definition}
-\solution{
-    $\bu \cdot \bv = \sum_{j=1}^n u_j v_j$
-}
+% \solution{
+%     $\bu \cdot \bv = \sum_{j=1}^n u_j v_j$
+% }
 
-\begin{definition}[Dot Product and Vector Angles]
+\begin{definition}[Geometric Dot Product in $\mathbb{R}^n$]
     If $\bu,\bv\in\mathbb{R}^n$ then the relationship between the dot product of the
     vectors and the angle between the vectors is
-    \[ \bu \cdot \bv = \underline{\hspace{2in}} \]
+    \[ \bu \cdot \bv = \|\bu\| \|\bv\| \cos \theta. \]
+    Notice that if you want the angle between two vectors then 
+    \[ \theta = \cos^{-1} \left( \frac{\bu \cdot \bv}{\| \bu \| \|\bv\|} \right). \]
 \end{definition}
-\solution{
-$\bu \cdot \bv = \|\bu\| \|\bv\| \cos \theta$
-}
+One should note that the angle formula only holds if both $\|\bu\|\ne0$ and $\|\bv\|\ne0$.
 
-
-\begin{thm}[Orthogonal Vectors in $\mathbb{R}^n$]
-    If $\bu,\bv\in\mathbb{R}^n$ then $\bu$ is orthogonal (perpendicular) to $\bv$ if and
-    only if \underline{\hspace{1in}}.
-\end{thm}
+Now we build the mathematical notation for orthogonality and length of vectors in
+$\mathbb{R}^n$.  Both of these geometric concepts are build upon the dot product.
+\begin{definition}[Orthogonal Vectors]
+    Two vectors are said to be orthogonal (perpendicular) if their dot product is zero.
+\end{definition}
+\begin{problem}
+    Use the geometric definition of the dot product to prove that statements 
+    \begin{itemize}
+        \item ``the dot product of two vectors is zero'', and 
+        \item ``the vectors are perpendicular'' 
+    \end{itemize}
+    are indeed the same based on your familiar understanding of what ``perpendicular''
+    means.
+\end{problem}
+% \begin{thm}[Orthogonal Vectors in $\mathbb{R}^n$]
+%     If $\bu,\bv\in\mathbb{R}^n$ then $\bu$ is orthogonal (perpendicular) to $\bv$ if and
+%     only if \underline{\hspace{1in}}.
+% \end{thm}
+% \solution{
+% $\bu \cdot \bv = 0$
+% }
+% \begin{proof}
+%     (prove this theorem)
+% \end{proof}
 \solution{
-$\bu \cdot \bv = 0$
-}
-\begin{proof}
-    (prove this theorem)
-\end{proof}
-\solution{
-$\bu \cdot \bv = \|\bv \| \|\bu\| \cos \theta$ and since $\theta = \pi/2$ we know that
+$\bu \cdot \bv = \|\bv \| \|\bu\| \cos \theta$ and if $\theta = \pi/2$ we know that
 $\cos \theta = 0$.  Hence $\bu \cdot \bv = 0$.
 }
 
 \begin{definition}[Length of Vectors in $\mathbb{R}^n$]
     Let $\bu \in \mathbb{R}^n$.  The {\bf length (norm)} of $\bu$ is
     \[ \| \bu \| = \sqrt{\bu \cdot \bu} = \underline{\hspace{2in}} \]
+    (fill in the blank using the algebraic definition of the dot product)
 \end{definition}
 \solution{
     $\|\bu\| = \sum_{j=1}^n u_j^2$
 }
 
+\begin{problem}
+    If $\bu,\bv \in \mathbb{R}^2$ then what familiar theorem do you see in the definition
+    of the length of a vector?  Another way to put this is: the definition of the length
+    of a vector in $\mathbb{R}^n$ is a generalization of what familiar theorem?
+\end{problem}
+\solution{
+    This is just Pythagorean Theorem.
+}
+
 \begin{definition}[Distance Between Vectors in $\mathbb{R}^n$]
     Let $\bu,\bv\in\mathbb{R}^n$.  The {\bf distance between} $\bu$ and $\bv$ is
-    \[ \text{dist}(\bu,\bv) = \underline{\hspace{1in}} \]
+    \[ \text{dist}(\bu,\bv) = \| \bu - \bv\| = \underline{\hspace{1in}} \]
+    (fill in the blank)
 \end{definition}
 \solution{
     $\text{dist}(\bu,\bv) = \|\bu-\bv\|$
 }
+
+\begin{definition}[Unit Vectors in $\mathbb{R}^n$]
+    Let $\bv \in \mathbb{R}^n$.  We say that $\bv$ is a unit vector if $\|\bv\| = 1$.  If
+    you have a vector $\bv$ that is not a unit vector (has length other than 1) then you
+    can scale it to become a unit vector by dividing by its length
+    \[ (\text{unit vector in the direction of $\bv$}) = \bu = \frac{\bv}{\|\bv\|}. \]
+\end{definition}
+
+OK.  Most of the geometric players are on the table: angle, distance, length, and
+perpendicularity.  Here we give a straight forward example showing how to use these ideas
+in $\mathbb{R}^3$.
+
+
+\begin{problem}
+    Let $\bu$ and $\bv$ be defined as.  Find $\bu \cdot \bv$, $\|\bu\|$, $\|\bv\|$, and
+    the angle between them.
+    \[ \bu = \left( \begin{array}{c} 0 \\ 1 \\ -1 \end{array} \right) \]
+    \[ \bv = \left( \begin{array}{c} 4 \\ 2 \\ -3 \end{array} \right) \]
+% 
+% \begin{enumerate}
+%     \item[(a)] 
+% $\left( \begin{array}{c} 0 \\ 2 \\ 3 \end{array} \right)$
+% \item[(b)] 5
+% \item[(c)] 0
+% \item[(d)] The dot product cannot be computed for these vectors.
+% \end{enumerate}
+\end{problem}
+% \begin{problem}
+%     \begin{itemize}
+%             \input{ClickerQuestions/LA.00.22.010}
+%     \end{itemize}
+% \end{problem}
+\solution{
+The dot product is $(0)(4) + (1)(2) + (-1)(-3) = 2+3 = 5$
+}
+\begin{example}
+    Let $\bu, \bv \in \mathbb{R}^3$ be defined as
+    \[ \bu = \begin{pmatrix} 2 \\ -1 \\ 4 \end{pmatrix} \quad \text{and} \quad \bv =
+    \begin{pmatrix} 0 \\ 9 \\ -3 \end{pmatrix} \]
+    What are $\bu \cdot \bv$, $\|\bu\|$, $\|\bv\|$, and $\text{dist}(\bu,\bv)$?  Are the
+    two vectors orthogonal?   What is the angle between them? \\ {\bf
+    Solution:} 
+    \begin{flalign*}
+        \bu \cdot \bv &= (2)(0) + (-1)(9) + (4)(-3) = -9 - 12 = -21 \\
+        \|\bu\| &= 2^2 + (-1)^1 + 4^2 = 4 + 1 + 16 = 21 \\
+        \|\bv\| &= 0^2 + 9^2 + (-3)^2 = 81 + 9 = 90 \\
+        \text{dist}(\bu,\bv) &= \| \bu - \bv\| = \| \begin{pmatrix} 2 \\ -10 \\ 7
+        \end{pmatrix} \| = 4+100+49 = 153.
+    \end{flalign*}
+    The vectors are not orthogonal since $\bu \cdot \bv \ne 0$.  The angle between the
+    vectors is 
+    \[ \theta = \cos^{-1} \left( \frac{\bu \cdot \bv}{\|\bu\| \|\bv\|} \right) =
+    \cos^{-1}\left( \frac{-21}{(21)(90)} \right) \]
+\end{example}
 
 
 \subsection{Projections}
@@ -126,42 +218,18 @@ gave works generally in $\mathbb{R}^n$.
 
 
 
-
-\begin{problem}
-    What is the dot product of 
-    $\left( \begin{array}{c} 0 \\ 1 \\ -1 \end{array} \right)$ and 
-    $\left( \begin{array}{c} 4 \\ 2 \\ -3 \end{array} \right)$?
-
-\begin{enumerate}
-    \item[(a)] 
-$\left( \begin{array}{c} 0 \\ 2 \\ 3 \end{array} \right)$
-\item[(b)] 5
-\item[(c)] 0
-\item[(d)] The dot product cannot be computed for these vectors.
-\end{enumerate}
-\end{problem}
-% \begin{problem}
-%     \begin{itemize}
-%             \input{ClickerQuestions/LA.00.22.010}
-%     \end{itemize}
-% \end{problem}
-\solution{
-$(0)(4) + (1)(2) + (-1)(-3) = 2+3 = 5$
-}
-
-
 \begin{problem}
     If $\bb = \left( \begin{array}{c} 3 \\ -1  \end{array} \right)$ and $y = \left(
-    \begin{array}{c} 2 \\ 1  \end{array} \right),$ then the orthogonal projection of $\bb$
-    onto $\by$ is
-
-\begin{enumerate}
-    \item[(a)] $\left( \begin{array}{c} 2 \\ 1  \end{array} \right)$
-    \item[(b)] $\left( \begin{array}{c} 3/2 \\ -1/2 \end{array} \right)$
-    \item[(c)] $\left( \begin{array}{c} 10 \\ 5  \end{array} \right)$
-    \item[(d)] $\left( \begin{array}{c} 1/10 \\ 3/10  \end{array} \right)$
-\end{enumerate}
-
+    \begin{array}{c} 2 \\ 1  \end{array} \right),$ then what it the orthogonal projection of $\bb$
+    onto $\by$?  Find your solution analytically and draw of graph depicting your answer.
+% 
+% \begin{enumerate}
+%     \item[(a)] $\left( \begin{array}{c} 2 \\ 1  \end{array} \right)$
+%     \item[(b)] $\left( \begin{array}{c} 3/2 \\ -1/2 \end{array} \right)$
+%     \item[(c)] $\left( \begin{array}{c} 10 \\ 5  \end{array} \right)$
+%     \item[(d)] $\left( \begin{array}{c} 1/10 \\ 3/10  \end{array} \right)$
+% \end{enumerate}
+% 
 \end{problem}
 % \begin{problem}
 %     \begin{itemize}
@@ -174,6 +242,11 @@ $(0)(4) + (1)(2) + (-1)(-3) = 2+3 = 5$
     \right) \begin{pmatrix} 2 \\ 1 \end{pmatrix} = \begin{pmatrix}2\\1\end{pmatrix}$
 }
 
+We know what a basis is and what know what orthogonal vectors are.  If you think carefully
+about it, all of your mathematical life you have been dealing with coordinate systems that have
+orthogonal bases.  Every time you graph in $\mathbb{R}^2$ or $\mathbb{R}^3$ you've used
+the idea of othogonality without thinking much about it.  Let's see why this is so
+incredibly useful.
 
 \begin{problem}
     If $\mathcal{B} = \{\bv_1, \bv_2, \ldots, \bv_n\}$ is an orthogonal basis for a vector
@@ -190,7 +263,8 @@ $(0)(4) + (1)(2) + (-1)(-3) = 2+3 = 5$
     Implement your idea on the subspace spanned by the basis
     \[ \mathcal{B} = \left\{ \begin{pmatrix} 1\\4\\-3 \end{pmatrix}\, , \, \begin{pmatrix}
             3 \\ 0 \\ 1 \end{pmatrix} \right\} \]
-    where $\bx$ is in the subspace of $\mathbb{R}^3$ spanned by $\mathcal{B}$
+    where $\bx$ is in the subspace of $\mathbb{R}^3$ spanned by $\mathcal{B}$.
+    Specifically, let $\bx$ be defined as
     \[ \bx = \begin{pmatrix} 2 \\ -4\\ 1 \end{pmatrix} \]
 \end{problem}
 \solution{
@@ -699,7 +773,7 @@ have all of the wonderful properties as we had before with the sine functions.
 % 
 % \begin{problem}
 %     
-% \end{problem}<++>
+% \end{problem}
 % 
 % 
 %     Open MATLAB and complete the following partial code to plot an approximation to the
