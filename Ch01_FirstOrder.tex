@@ -21,7 +21,8 @@ cosines: $y(t) = C_1 \sin(t) + C_2 \cos(t)$. Our goal throughout this course is 
 differential equations and find techniques to analyze them. As you might imagine based on
 the complexity of the derivative rules in calculus, the techniques to find solutions to
 differential equations can sometimes be quite complicated.
-\section{Modeling and Differential Equations}
+
+\newpage \section{Modeling and Differential Equations}
 
 \begin{definition}[Differential Equation]
     A {\bf differential equation} is an equation that relates a function to its
@@ -33,7 +34,8 @@ Let's begin by examining a few modeling-type problems where you need to write th
 differential equation.  After we have a few differential equations we will spend some time
 building up the basic solution techniques. \\
 Note: You are expected to have seen several of these techniques already.  If these notes
-move to fast then go to the appropriate linked texts in Section \ref{pref:resources}.
+move to fast then go to the appropriate linked texts in Section \ref{pref:resources} or
+consult your notes from your previous course on differential equations.
 
 \begin{problem}%www.simiode.org Problem 1-001pgf-T-BirthDeathImmigration
     Write a differential equation for each of the following situations.  Let $P(t)$ be a
@@ -55,6 +57,25 @@ move to fast then go to the appropriate linked texts in Section \ref{pref:resour
         \item[(c)] $P'(t) = 0.15\left( -0.5P + 10 \right)$
     \end{enumerate}
 }
+
+\begin{problem}\label{prob:sugar_cube_1}
+    When dissolving a sugar cube in tea the sugar is being pulled from every face of the
+    cube.  The rate at which the sugar cube dissolves is a differential equation.  Which
+    of the following descriptions of differential equations makes the most sense
+    physically?  Assume that the temperature in the tea is roughly constant during this time.
+    \begin{enumerate}
+        \item[(a)] The rate of change of the volume of the sugar cube is proportional to
+            the current volume of the sugar cube.
+        \item[(b)] The rate of change of the volume of the sugar cube is proportional to
+            the current surface area of the sugar cube.
+        \item[(c)] The rate of change of the volume of the sugar cube is proportional to
+            the current lengths of the edges of the sugar cube.
+        \item[(d)] The rate of change of the volume of the sugar cube is constant.
+        \item[(e)] The rate of change of the volume of the sugar cube is zero.
+    \end{enumerate}
+    Once you have a physically reasonable choice from the list above write the associated
+    differential equation in terms of volume.  
+\end{problem}
 
 \begin{problem}\label{prob:ice_balls}
     Did you know that you could make spherical ice cubes \ldots wait, that name seems
@@ -78,10 +99,10 @@ move to fast then go to the appropriate linked texts in Section \ref{pref:resour
 \end{problem}
 \solution{
     \begin{enumerate}
-        \item[(a)] The rate of change of the volume of the ice ball is proporitonal to the
+        \item[(a)] The rate of change of the volume of the ice ball is proportional to the
             surface area of the ice ball.
         \item[(b)] At first we could write $\frac{dV}{dt} = k S$ where $S$ is the surface
-            area, but knowing that the surface area of a sphere is $S = 4\pir^2$ and the
+            area, but knowing that the surface area of a sphere is $S = 4\pi r^2$ and the
             volume is $V = \frac{4}{3} \pi r^3$ we can solve for $r$ in the volume formula
             and substitute into the surface area to get
             \[ r = \sqrt[3]{\frac{3}{4\pi} V} \quad \implies \quad S = 4 \pi \left(
@@ -161,10 +182,10 @@ Show a slope field with $T(0)=0$ and various values of $k$.
 \newpage
 \section{Differential Equation Terminology}
 In this chapter we will look at a few techniques for solving first-order differential
-equations.  Before launching to the techniques let's get a little bit of terminology on
+equations.  Before launching into the techniques let's get a little bit of terminology on
 the table.  I am expecting that much of this terminology is familiar to you already from
 previous classes. We are going to cover this very quickly and we will be leaving some of
-the reading and remembering up to you.
+the reading and reviewing up to you.
 
 \begin{definition}[First Order Differential Equation]
     A {\bf first order differential equation} is a differential equation of the form 
@@ -174,6 +195,28 @@ the reading and remembering up to you.
     and it depends on both $y(t)$ and maybe $t$ explicitly.
 \end{definition}
 
+When we encounter new definitions in this class we will always stop and write several
+examples associated with that definition.  It is usually most informative to give
+examples of some things that {\it are} the definition and some that {\it aren't} the
+definition.  I'll get us started.
+\begin{example}
+    Write several examples of first order differential equations and several examples of
+    differential equations that are not first order. \\ {\bf Solution:} \\
+    Examples of first order differential equations:
+    \begin{flalign*}
+        \frac{dy}{dt} &= yt+\sin(y) \\ 
+        x'(t) &= x \\ 
+        \frac{dP}{dx} &= rP(1-P) + h(x) \\
+        y'(t) &= y\sin(t)
+    \end{flalign*}
+    Example of differential equations that are \underline{not} first order:
+    \begin{flalign*}
+        y''(t) &= 2yt + 5y' \\
+        \frac{d^7y}{dt^7} &= \cos(y) + y'' \\
+        R^{(4)}(t) &= R'''(t) + R''(t) - R'(t) + 17R(t)
+    \end{flalign*}
+\end{example}
+
 \begin{definition}[Autonomous Differential Equation]
     An {\bf autonomous differential equation} is a differential equation of the form
     \[ y'(t) = f(y) \]
@@ -181,11 +224,15 @@ the reading and remembering up to you.
     right-hand side of the equation. A differential equation that has explicit dependence
     on $t$ is called {\bf non-autonomous}.  
 \end{definition}
-To clarify this point consider the following examples:
-\begin{flalign}
-    \text{first order autonomous D.E:} \quad & y'(t) = -0.2y(t) + 4 \\
-    \text{first order non-autonomous D.E:} \quad & y'(t) = -0.2y(t) + 4t 
-\end{flalign}
+% To clarify this point consider the following examples:
+% \begin{flalign}
+%     \text{first order autonomous D.E:} \quad & y'(t) = -0.2y(t) + 4 \\
+%     \text{first order non-autonomous D.E:} \quad & y'(t) = -0.2y(t) + 4t 
+% \end{flalign}
+\begin{problem}
+    Write three examples of autonomous first order differential equations and three
+    examples of non-autonomous first order differential equations.
+\end{problem}
 
 \begin{definition}[Linear First Order Differential Equation]
     A {\bf linear} first order differential equation has the form
@@ -194,6 +241,11 @@ To clarify this point consider the following examples:
     literally a linear function of $y$.  Hence the differential equation can be written as
     $y' = f(y)$ where $f(y) = -Py + Q.$
 \end{definition}
+\begin{problem}
+    Write three examples of linear first order differential equations and three
+    examples of nonlinear first order differential equations.  In each case identify the
+    ``$P$'' and the ``$Q$'' functions.
+\end{problem}
 
 \begin{definition}[Homogenous Differential Equations]
     A differential equation is called {\bf homogeneous} if, loosely speaking, no terms appear
@@ -202,11 +254,15 @@ To clarify this point consider the following examples:
     derivatives.  A differential equation that is not homogeneous is called {\bf
     non-homogeneous}.
 \end{definition}
+% \begin{problem}
+%     It is often a good exercise to make examples associated with new definitions.  For
+%     each of the above definitions create an example of a differential equation that {\it
+%     is} described by the definition and a differential equation that {\it is not}
+%     described by the definition.
+% \end{problem}
 \begin{problem}
-    It is often a good exercise to make examples associated with new definitions.  For
-    each of the above definitions create an example of a differential equation that {\it
-    is} described by the definition and a differential equation that {\it is not}
-    described by the definition.
+    Write three examples of homogeneous first order differential equations and three
+    examples of non-homogeneous first order differential equations.
 \end{problem}
 
 \begin{problem}
@@ -232,13 +288,14 @@ To clarify this point consider the following examples:
     \end{enumerate}
 }
 \begin{example}
-    Here are a few examples of homogeneous and non-homogeneous differential equations.
+    Here are a few examples of homogeneous and non-homogeneous differential equations. The
+    first four differential equations are linear and the fifth is nonlinear.
     \begin{itemize}
-        \item The differential equation $y' = -0.2y$ is homogeneous.
-        \item The differential equation $y' = -0.2y + 3$ is non-homogeneous.
-        \item The differential equation $y'' + 3y' - 5y = 0$ is homogeneous.
-        \item The differential equation $y'' + 3y' - 5y = 2$ is non-homogeneous.
-        \item The differential equation $v' = g - c v^2$ is non-homogeneous (and
+        \item The differential equation $y' = -0.2y$ is first order homogeneous.
+        \item The differential equation $y' = -0.2y + 3$ is first order non-homogeneous.
+        \item The differential equation $y'' + 3y' - 5y = 0$ is second order homogeneous.
+        \item The differential equation $y'' + 3y' - 5y = 2$ is second order non-homogeneous.
+        \item The differential equation $v' = g - c v^2$ is second order non-homogeneous (and
             nonlinear).
     \end{itemize}
 \end{example}
@@ -249,6 +306,14 @@ In the sections that follow we will review (or introduce) some of the primary so
 techniques for first order differential equations.  As has been mentioned before, it is
 likely that you have seen these techniques before but it is worth your time to blow the
 dust off of your memories and to review what you once knew.  
+
+\begin{problem}
+    Consider the function $y(t) = t^2 + 5t + 7$.  We know that $y'(t) = 2t + 5$ by taking
+    the derivative with the power rule.  If you encountered the differential equation 
+    \[ y' = 2t+5 \]
+    without any prior knowledge of $y(t)$, how would you work backwards to get $y(t)$?
+    Would your answer be unique?
+\end{problem}
 
 \begin{problem}
     For each of the following differential equations use the rules of Calculus find the
@@ -271,10 +336,13 @@ dust off of your memories and to review what you once knew.
     To solve
     \[ \frac{dy}{dt} = f(t) \]
     you can first think of ``multiplying by $dt$'' to get $dy = f(t) dt$.  Then integrate both
-    sides with respect to $t$. Therefore, $y(t) = \int f(t) dt + C = F(t) + C$ where $F(t)$ is
-    the antiderivative of $f(t)$ such that $F'(t) =
-    f(t)$.  Given $y(t_0) = y_0$ we can get $C$ by
-    \[ y_0 = F(t_0) + C \quad \implies \quad C = y_0 - F(t_0) \]
+    sides with respect to $t$. Therefore, 
+    \[ y(t) = \int f(t) dt + C = F(t) + C \]
+    where $F(t)$ is the antiderivative of $f(t)$ such that $F'(t) = f(t)$.  Given  some
+    additional piece of information $y(t_0)
+    = y_0$ we can find the constant $C$ by substituting $t=t_0$ and $y=t_0$ and solving
+    for $C$.  Indeed,
+    \[ y_0 = F(t_0) + C \quad \implies \quad C = y_0 - F(t_0). \]
 \end{technique}
 
 \begin{problem}
@@ -308,7 +376,7 @@ dust off of your memories and to review what you once knew.
 
 \newpage
 \section{Solution Technique: Separation of Variables}
-\begin{problem}
+\begin{problem}\label{prob:separation_1}
     Consider the differential equation 
     \[ \frac{dy}{dt} = y \]
     with the initial condition $y(0) = 1$.
@@ -324,31 +392,69 @@ dust off of your memories and to review what you once knew.
     \end{enumerate}
 \end{problem}
 \solution{
-The solution is clearly $y(t) = e^t$.
+The solution is clearly $y(t) = Ce^t$ for any real constant $C$.
 }
 
 \begin{problem}
     In part (b) of the previous problem I said that I was ``abusing notation''.  What does
     that mean?  What notation is being abused?
 \end{problem}
+\solution{Strictly speaking, the Leibniz notation $dy/dt$ is not a fraction but we are
+    using it as such.  The notation ``$dy/dt$'' is only a notation standing in place of a
+    limit:
+    \[ \frac{dy}{dt} = \lim_{h \to 0} \frac{y(t+h) - y(t)}{h}. \]
+}
 
-\begin{technique}[Separation of Variables]
+\begin{problem}
+    Use the same idea used in problem \ref{prob:separation_1} to solve the differential
+    equation 
+    \[ \frac{dy}{dt} = y\sin(t). \]
+    Once you have your answer take the derivative and verify that the function that you
+    found is indeed a solution to the differential equation.
+\end{problem}
+\solution{
+    \[ \int \frac{dy}{y} = \int \sin(t) dt \quad \implies \quad \ln(y) = -\cos(t) + C
+    \quad \implies \quad y(t) = Ce^{-\cos(t)}. \]
+    To check the answer we differentiate and see that $y'(t) = C\sin(t) e^{-\cos(t)} =
+    y\sin(t)$.
+}
+
+\begin{thm}[Separation of Variables]
     To solve a differential equation of the form
-    \[ \frac{dy}{dx} = f(y)\cdot g(x) \]
+    \[ \frac{dy}{dt} = f(y)\cdot g(t) \]
     Separate and integrate by treating the ``$dy/dt$'' as a fraction\footnote{Technically
         speaking the ``$dy/dt$'' is not a fraction it is a shorthand notation for a
-    limit.  More technically there is some sneaky chain rule happening behind the scenes
-here \ldots can you find it.}
-    \[ \int \frac{dy}{f(y)} = \int g(x) dx \]
+    limit.}
+    \[ \int \frac{dy}{f(y)} = \int g(t) dt \]
     Notice that the right-hand side of the differential equation factors perfectly hence
     separating the variables into the functions $f$ and $g$.
-\end{technique}
+\end{thm}
+\begin{proof}
+Let's examine separation of variables a bit more closely since there is some calculus
+funny business going on.  If $\frac{dy}{dt} = f(y) g(t)$ then  certainly we can rewrite as
+\[ \frac{dy}{dt} = f(y) g(t) \quad \iff \quad \frac{1}{f(y)} \frac{dy}{dt} = g(t). \]
+This is true so long as $f(y)$ is nonzero of course.  Now if we integrate with respect to
+$t$ on both sides we have two valid integrals with in time:
+\[ \int \frac{1}{f(y(t))} \frac{dy}{dt} dt = \int g(t) dt. \]
+From calculus we recall that the quantity $\frac{dy}{dt} dt$ is the differential
+$dy$\footnote{No. We are not cancelling the ``$dt$''.}.  Hence we arrive at the separated
+form
+\[ \int \frac{dy}{f(y)} = \int g(t) dt. \]
+\end{proof}
+
 
 \begin{problem}
     With your partner, write a differential equation that can be solved via separation of
     variables.  Once you have your equation trade with a different group and solve their
     equation.
 \end{problem}
+
+\begin{problem}
+    True or False: Every first order autonomous differential equation is separable. Be
+    able to defend your answer.
+\end{problem}
+\solution{True, but the integration may be horrible!}
+
 
 \begin{problem}
     A drug is eliminated from the body via natural metabolism.  Assume that there is an
@@ -368,9 +474,30 @@ here \ldots can you find it.}
 }
 
 \begin{problem}
+    In problem \ref{prob:sugar_cube_1} we write the differential equation 
+    \[ \frac{dV}{dt} = k S \]
+    to describe the dissolution of a sugar cube.  Here $V$ represents the volume of the
+    sugar cube and $S$ represents the surface area of the sugar cube. The proportionality
+    constant $k$ describes how fast the dissolution takes place and is likely a function
+    of many physical quantities (like what?).  If we let $x$ be
+    the length of a side of the sugar cube recall that the volume and surface area are
+    defined as $V = x^3$ and $S = 6x^2$.  Rewrite the differential equation in terms of
+    volume only (rewriting surface area in terms of volume) and solve the resulting
+    differential equation with separation of variables.
+\end{problem}
+\solution{
+    If $V = x^3$ then $x = V^{1/3}$ and hence $S = 6x^2 = 6V^{2/3}$.  Therefore the
+    differential equation is
+    \[ \frac{dV}{dt} = 6k V^{2/3}. \]
+    Separating variables we get
+    \[ \int\frac{dV}{V^{2/3}} = \int6kdt \quad \implies \quad 3V^{1/3} = 6kt + C \quad \implies
+    \quad V = (2kt+C)^3. \]
+}
+
+\begin{problem}
     In a dog, an intravenous dose of 30 mg of pentobarbital sodium per kilogram of body
     weight will usually produce surgical anesthesia. Also in the dog, pentobarbital has a
-    biological halflife of about 4.5 hours, due almost entirely to metabolism.  You
+    biological half-life of about 4.5 hours, due almost entirely to metabolism.  You
     anesthetize a 14-kg dog with the above dose of pentobarbital. Two hours later the
     anesthesia is obviously beginning to lighten and you want to restore the original
     depth of anesthesia. How many milligrams of pentobarbital sodium should you inject?
@@ -411,13 +538,6 @@ Ce^{-kt} + \frac{5}{k} \]
 
 
 \begin{problem}
-    True or False: Every first order autonomous differential equation is separable. Be
-    able to defend your answer.
-\end{problem}
-\solution{True, but the integration may be horrible!}
-
-
-\begin{problem}
     In the movie Interstellar, ``Plan B'' was for the astronauts to start a colony on a new
     planet.  There was 1 female in the group so she would presumably carry the children.
     Genetic diversity was no problem because of the donor eggs.  The supplies on the colony
@@ -451,22 +571,27 @@ Ce^{-kt} + \frac{5}{k} \]
 
 
 \newpage\section{Solution Technique: Undetermined Coefficients}
-Some folks call this technique the ``four step method'', but in reality this is just one
-of many techniques for solving non-homogeneous differential equations.  Instead of
-thinking of this in ``four steps'' you should really just consider this a bit of
-mathematical detective work.  
+\begin{problem}
+    For each of the following differential equations determine if we can use the method of
+    integration or separation of variables to solve.  
+    \begin{flalign*}
+        y' &= 0.5 t \\
+        y' &= 0.5 y  \\
+        y' &= 0.5 yt \\ 
+        y' &= 0.5 y + 1 \\
+        y' &= 0.5 y + t  
+    \end{flalign*}
+\end{problem}
+\solution{
+    You can use integration for the first one and separation for the next three.  For the
+    last one, on the other hand, you can't use either of these techniques.
+}
 
-\begin{technique}[Solving Non-Homogeneous Differential Equations]
-    The method of {\it undetermined coefficients} is roughly outlined as:
-    \begin{enumerate}
-        \item find a solution for the homogeneous differential equation,
-        \item conjecture a particular solution for the non-homogeneous differential equation, 
-        \item use the initial condition to find a relationship between some of the
-            coefficients, and
-        \item use the particular solution in the differential equation to find the
-            remaining coefficients.
-    \end{enumerate}
-\end{technique}
+We now turn out attention to solving non-homogeneous differential equations.  These
+equations can sometimes be solved by separation of variables (like the fourth differential
+equation in the previous problem), but not always (e.g. the last one in the previous
+problem).  The technique used to solve linear non-homogeneous differential equations is called
+the {\it method of undetermined coefficients} and is outlined in the next problem.
 
 \begin{problem}
     Solve the following first order linear non-homogeneous differential equation by
@@ -500,7 +625,25 @@ mathematical detective work.
     \end{enumerate}
 \end{problem}
 
+Some folks call the technique outlined in the previous problem the ``four step method'',
+but I can never keep the ``four steps'' straight.  In reality this is just one
+of many techniques for solving non-homogeneous differential equations, and this technique
+is just mathematical detective work.
+\begin{technique}[Solving Non-Homogeneous Differential Equations]
+    The method of {\it undetermined coefficients} is roughly outlined as:
+    \begin{enumerate}
+        \item find a solution for the homogeneous differential equation,
+        \item conjecture a particular solution for the non-homogeneous differential equation, 
+        \item use the initial condition to find a relationship between some of the
+            coefficients, and
+        \item use the particular solution in the differential equation to find the
+            remaining coefficients.
+    \end{enumerate}
+\end{technique}
 
+
+More specifically we solve linear non-homogeneous differential equations can be summarized
+as follows.
 \begin{technique}[Undetermined Coefficients]
     To solve a non-homogenous linear differential equation:
     \begin{enumerate}
@@ -568,8 +711,9 @@ mathematical detective work.
 % \begin{problem}
 %     Solve part (d) of problem \ref{prob:undet_coeff} with $y(0) =2$.
 % \end{problem}
-\newpage\section{Solution Technique: Integrating Factor}
-It is likely that the previous two solution techniques are the ones that you recall best
+\newpage\section{Solution Technique: Integrating Factors}
+It is likely that the previous two solution techniques, separation of variables and
+undetermined coefficients (four step method), are the ones that you recall best
 from previous courses.  The trouble, however, is that separation of variables and
 undetermined coefficients can only solve certain types of differential equations.  You'll
 find that the study of differential equations is laced with many different techniques that
@@ -611,51 +755,116 @@ not separable.
 
 In the last part of the previous problem you likely found a differential equation where
 all of your known techniques fail.  In this section we add a rather handy technique to
-your toolbox.  This technique requires that you remember the product rule from calculus:
-\[ \frac{d}{dx}\left[ f(x) \cdot g(x) \right] = f(x) \cdot g'(x) + g(x) \cdot f'(x). \]
+your toolbox.  This technique requires that you remember the product rule from calculus.
 
-Let's get to know this technique through a structured problem.
+\begin{thm}[Product Rule]
+    Let $f(x)$ and $g(x)$ be differentiable functions.  Then the derivative of the product
+    of $f(x)$ and $g(x)$ is 
+    \[ \frac{d}{dx}\left[ f(x) \cdot g(x) \right] = f(x) \cdot g'(x) + g(x) \cdot f'(x). \]
+\end{thm}
+
 \begin{problem}
-    Consider the differential equation 
-    \[ \frac{dy}{dt} + 2ty = 5t \quad \text{with} \quad y(0) = 1. \]
-    Follow these steps to solve the differential equation.  You may notice that with some
-    clever factoring we could solve using separation of variables \ldots let's not do that
-    here \ldots trust me.
+    In each of the linear first order differential equations listed below you can multiply both sides by a
+    function so that the left-hand side can be rewritten as the result of the product
+    rule.  What function do you need in each case?  I'll do the first one for you. (You DO
+    NOT need to solve these differential equations!)
     \begin{enumerate}
-        \item[(a)] This is a linear differential equation in form $y' + P(t) y = Q(t)$.
-            What are $P$ and $Q$?
-            \[ P(t) = \underline{\hspace{1in}} \quad \text{and} \quad Q(t) =
+        \item[(a)] Consider the differential equation
+            \[ \frac{dy}{dt} + 2y = 7. \]
+            {\color{blue} {\bf Solution:} }If we multiply both sides by $e^{2t}$ the left-hand side becomes
+            \[ e^{2t} \frac{dy}{dt} + 2y e^{2t} \]
+            which can be viewed as the derivative of the expression $e^{2t} y$ since 
+            \[ \frac{d}{dt}\left[ e^{2t} y \right] = e^{2t} \frac{dy}{dt} + y \left(
+            e^{2t} \cdot 2
+        \right) \]
+    \item[(b)] Consider the differential equation
+        \[ \frac{dy}{dt} + 2ty = 9. \]
+    \item[(c)] Consider the differential equation 
+        \[ \frac{dy}{dt} + \sin(t) y = e^t \]
+    \end{enumerate}
+\end{problem}
+\solution{
+    Part (b): Multiply by $e^{t^2}$ since 
+    \[ e^{t^2} \frac{dy}{dt} + 2tye^{t^2} = \frac{d}{dt} \left[ e^{t^2} y \right] \]
+    Part (c): Multiply by $e^{-\cos(t)}$ since 
+    \[ e^{-\cos(t)} \frac{dy}{dt} + \sin(t)ye^{-\cos(t)} = \frac{d}{dt} \left[ e^{-\cos(t)} y \right] \]
+}
+
+\begin{problem}
+    Based on the previous problem, if we have a linear first order differential equation
+    of the form
+    \[ \frac{dy}{dt} + P(t) y = Q(t) \]
+    what function should we multiply both sides by so that the left-hand side can be seen
+    as the result of product rule?
+\end{problem}
+\solution{
+    The multiplicative function that does the trick is $e^{\int P(t)dt}$ since 
+    \[ e^{\int P(t) dt} \frac{dy}{dt} + P(t) y e^{\int P(t) dt} = \frac{d}{dt} \left[
+        e^{\int P(t) dt} y
+    \right] \]
+}
+
+% Let's get to know this technique through a structured problem.
+% \begin{problem}
+%     Consider the differential equation 
+%     \[ \frac{dy}{dt} + 2ty = 5t \quad \text{with} \quad y(0) = 1. \]
+%     Follow these steps to solve the differential equation.  
+%     \begin{enumerate}
+%         \item[(a)] This is a linear differential equation in form $y' + P(t) y = Q(t)$.
+%             What are $P$ and $Q$?
+%             \[ P(t) = \underline{\hspace{1in}} \quad \text{and} \quad Q(t) =
+%             \underline{\hspace{1in}} \]
+%             \solution{$P(t) = 2t$ and $Q(t) = 5t$}
+%         \item[(b)] Create the function $\rho(t)$ defined as
+%             \[ \rho(t) = e^{\int P(t) dt} = \text{exp}\left( \int P(t) dt \right) =
+%             \underline{\hspace{1in}} \]
+%             \solution{$\rho(t) = \text{exp}\left( \int 2t dt \right) = e^{t^2}$}
+%         \item[(c)] Multiply both sides of the original differential equation by the
+%             function $\rho(t)$.
+%             \solution{
+%                 \[ e^{t^2} y' + 2t e^{t^2} y = 5t e^{t^2} \]
+%             }
+%         \item[(d)] Write the derivative of the product $\left( \rho(t) y(t) \right)$ using the product
+%             rule.
+%             \[ \frac{d}{dt} \left( \rho(t) y(t) \right) = \underline{\hspace{1in}} \]
+%             \solution{$\frac{d}{dt}(\rho y) = e^{t^2} y' + 2te^{t^2} y$}
+%         \item[(e)] We would like the write the differential equation so that the left-hand
+%             side is the derivative of some product.  Fill in the blanks
+%             \[ \frac{d}{dt}\left( \,\,\underline{\hspace{1.5in}}\right) =
+%         \underline{\hspace{1in}} \]
+%         \solution{
+%             \[ \frac{d}{dt}\left[ e^{t^2} y \right] = 5te^{t^2} \]
+%             }
+%     \item[(f)] Finally, since the left-hand side is written as a derivative we can
+%         integrate both sides and solve for $y(t)$.  Do this now.
+%         \[ y(t) = \underline{\hspace{2in}} \]
+%         \solution{
+%             \[ e^{t^2} y = 5\int te^{t^2} dt \implies e^{t^2} y = \frac{5}{2} \int e^u du
+%             = \frac{5}{2} e^{t^2} + C \]
+%             \[ \implies y(t) = \frac{5}{2} + Ce^{-t^2} \quad \text{and} \quad y(0) = 1
+%             \implies y(t) = \frac{5}{2} - \frac{3}{2} e^{-t^2}\]
+%         }
+%     \end{enumerate}
+% \end{problem}
+
+Now let's solve a differential equation with this idea.
+\begin{problem}
+    Consider the differential equation
+    \[ \frac{dy}{dt} + 2ty = 5t \quad \text{with} \quad y(0) = 1. \]
+    \begin{enumerate}
+        \item[(a)] What do you multiply both sides by so that the left-hand side can be
+            seen as the result of product rule? We will call this function the {\it
+            integrating factor} and use the notation $\rho(t)$.
+            \[ \rho(t) = \underline{\hspace{1in}} \]
+            \solution{ $\rho(t) = e^{t^2}$}
+        \item[(b)] Rewrite the left-hand side as the derivative of a product
+            \[ \rho(t) \frac{dy}{dt} + 2ty\rho(t) =  \frac{d}{dt} \left( \underline{\hspace{1in}}
+            \right). \]
+        \item[(c)] Now use your answer from part (b) to rewrite the differential equation
+            \[ \frac{d}{dt}\left( \underline{\hspace{1in}} \right) =
             \underline{\hspace{1in}} \]
-            \solution{$P(t) = 2t$ and $Q(t) = 5t$}
-        \item[(b)] Create the function $\rho(t)$ defined as
-            \[ \rho(t) = e^{\int P(t) dt} = \text{exp}\left( \int P(t) dt \right) =
-            \underline{\hspace{1in}} \]
-            \solution{$\rho(t) = \text{exp}\left( \int 2t dt \right) = e^{t^2}$}
-        \item[(c)] Multiply both sides of the original differential equation by the
-            function $\rho(t)$.
-            \solution{
-                \[ e^{t^2} y' + 2t e^{t^2} y = 5t e^{t^2} \]
-            }
-        \item[(d)] Write the derivative of the product $\left( \rho(t) y(t) \right)$ using the product
-            rule.
-            \[ \frac{d}{dt} \left( \rho(t) y(t) \right) = \underline{\hspace{1in}} \]
-            \solution{$\frac{d}{dt}(\rho y) = e^{t^2} y' + 2te^{t^2} y$}
-        \item[(e)] We would like the write the differential equation so that the left-hand
-            side is the derivative of some product.  Fill in the blanks
-            \[ \frac{d}{dt}\left( \,\,\underline{\hspace{1.5in}}\right) =
-        \underline{\hspace{1in}} \]
-        \solution{
-            \[ \frac{d}{dt}\left[ e^{t^2} y \right] = 5te^{t^2} \]
-            }
-    \item[(f)] Finally, since the left-hand side is written as a derivative we can
-        integrate both sides and solve for $y(t)$.  Do this now.
-        \[ y(t) = \underline{\hspace{2in}} \]
-        \solution{
-            \[ e^{t^2} y = 5\int te^{t^2} dt \implies e^{t^2} y = \frac{5}{2} \int e^u du
-            = \frac{5}{2} e^{t^2} + C \]
-            \[ \implies y(t) = \frac{5}{2} + Ce^{-t^2} \quad \text{and} \quad y(0) = 1
-            \implies y(t) = \frac{5}{2} - \frac{3}{2} e^{-t^2}\]
-        }
+        \item[(d)] Integrate both sides with respect to $t$.
+        \item[(e)] Solve for $y$ and apply the initial condition.
     \end{enumerate}
 \end{problem}
 
@@ -708,6 +917,14 @@ Let's get to know this technique through a structured problem.
     substitution and integration by parts.
 }   
 
+\begin{problem}
+    Write a differential equation that \underline{cannot} be solved with integrating
+    factors.
+\end{problem}
+\solution{
+One example might be $y' + ty = 3$.  The resulting integration requires that we find an
+anitderivative for $e^{t^2}$ but one does not exist.
+}
 
 \begin{problem}
     Solve each of the following first order differential equations with an appropriate
@@ -790,14 +1007,6 @@ Let's get to know this technique through a structured problem.
     \[ \boxed{y(t) = te^{-t^2} + 3e^{-t^2}.} \]
 \end{example}
 
-\begin{problem}
-    Write a differential equation that \underline{cannot} be solved with integrating
-    factors.
-\end{problem}
-\solution{
-One example might be $y' + ty = 3$.  The resulting integration requires that we find an
-anitderivative for $e^{t^2}$ but one does not exist.
-}
 
 \newpage\section{Mixing Problems}
 A classic differential equations problem is to consider the mixing of a contaminant in a
@@ -824,6 +1033,36 @@ To determine the two rates it is often easiest to consider the units.
     \[ S(t) = -150 e^{-4t/120} + 240 \]
 }
 
+\begin{problem}
+     In the Great Lakes region, rivers flowing into the lakes carry a great deal of
+     pollution in the form of small pieces of plastic averaging 1 millimeter in diameter.
+     In order to understand how the amount of plastic in Lake Michigan is changing,
+     construct and solve a differential equation model for how this type pollution has
+     built up in the lake.  You'll need the following basic facts.  
+
+     Some basic facts about Lake Michigan.
+     \begin{itemize}
+         \item The volume of the lake is $5 \times 10^{12}$ cubic meters.
+         \item Water flows into the lake at a rate of $5 \times 10^{10}$ cubic meters per
+             year.  It flows out of the lake at the same rate.
+         \item Each cubic meter flowing in the lake contains roughly $3 \times 10^{-8}$
+             cubic meters of plastic pollution.
+     \end{itemize}
+
+     Let $P(t)$ denote the amount of pollution in the lake at time $t$ where $P$ is
+     measured in cubic meters and $t$ is measured in years.  For the sake of simplicity
+     assume that $P(0) = 0$.
+\end{problem}
+\solution{
+    The differential equation model is
+    \[ \frac{dP}{dt} = \frac{1}{100} \left( 1.5 \times 10^{5} - P \right) \quad
+    \text{with} P(0) = 0. \]
+    After separating and integrating we find that 
+    \[ P(t) = 1.5 \times 10^5 \left( 1-e^{-t/100} \right). \]
+}   
+
+Now what if the volume of the mixing solution isn't staying constant \ldots this is going
+to be awesome!
 \begin{problem}
     A 120-gallon tank initially contains 90 pounds of salt dissolved in 100 gallons of
     water.  Brine containing 2 pounds per gallon of salt flows into the tank at a rate of
