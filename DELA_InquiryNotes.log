@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 DEC 2017 21:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 DEC 2017 14:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2025,7 +2025,7 @@ LaTeX Font Info:    Try loading font information for OT1+jkptt on input line 19
 (/usr/local/texlive/2016/texmf-dist/tex/latex/kpfonts/ot1jkptt.fd
 File: ot1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for OT1/jkptt.
 )
-<CreativeCommons.png, id=525, 88.33pt x 31.11626pt>
+<CreativeCommons.png, id=533, 88.33pt x 31.11626pt>
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 193.
@@ -2106,77 +2106,77 @@ Overfull \hbox (1.01994pt too wide) detected at line 44
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 45
- []\OT1/jkp/m/n/12 129
+ []\OT1/jkp/m/n/12 123
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 46
- []\OT1/jkp/m/n/12 130
+ []\OT1/jkp/m/n/12 126
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 47
- []\OT1/jkp/m/n/12 133
+ []\OT1/jkp/m/n/12 132
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 48
+ []\OT1/jkp/m/n/12 137
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 49
- []\OT1/jkp/m/n/12 135
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 50
  []\OT1/jkp/m/n/12 140
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 51
- []\OT1/jkp/m/n/12 143
+ []\OT1/jkp/m/n/12 142
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 52
- []\OT1/jkp/m/n/12 146
+ []\OT1/jkp/m/n/12 147
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 53
- []\OT1/jkp/m/n/12 151
+ []\OT1/jkp/m/n/12 150
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 55
+Overfull \hbox (1.01994pt too wide) detected at line 54
  []\OT1/jkp/m/n/12 153
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 56
+Overfull \hbox (1.01994pt too wide) detected at line 55
  []\OT1/jkp/m/n/12 158
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 57
- []\OT1/jkp/m/n/12 161
+ []\OT1/jkp/m/n/12 160
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 58
- []\OT1/jkp/m/n/12 162
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 59
  []\OT1/jkp/m/n/12 165
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 61
- []\OT1/jkp/m/n/12 166
+Overfull \hbox (1.01994pt too wide) detected at line 59
+ []\OT1/jkp/m/n/12 168
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 62
+Overfull \hbox (1.01994pt too wide) detected at line 60
  []\OT1/jkp/m/n/12 169
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 61
+ []\OT1/jkp/m/n/12 172
  []
 
 
@@ -2186,37 +2186,42 @@ Overfull \hbox (1.01994pt too wide) detected at line 63
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 64
- []\OT1/jkp/m/n/12 177
+ []\OT1/jkp/m/n/12 176
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 65
- []\OT1/jkp/m/n/12 179
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 67
  []\OT1/jkp/m/n/12 180
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 68
- []\OT1/jkp/m/n/12 182
+Overfull \hbox (1.01994pt too wide) detected at line 66
+ []\OT1/jkp/m/n/12 184
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 67
+ []\OT1/jkp/m/n/12 186
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 69
- []\OT1/jkp/m/n/12 188
+ []\OT1/jkp/m/n/12 187
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 70
- []\OT1/jkp/m/n/12 190
+ []\OT1/jkp/m/n/12 189
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 71
+ []\OT1/jkp/m/n/12 195
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 72
- []\OT1/jkp/m/n/12 191
+ []\OT1/jkp/m/n/12 197
  []
 
 File: CreativeCommons.png Graphic file (type png)
@@ -2224,83 +2229,78 @@ File: CreativeCommons.png Graphic file (type png)
 Package pdftex.def Info: CreativeCommons.png used on input line 73.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [3]
-Overfull \hbox (1.01994pt too wide) detected at line 73
- []\OT1/jkp/m/n/12 192
- []
-
-
 Overfull \hbox (1.01994pt too wide) detected at line 74
- []\OT1/jkp/m/n/12 194
+ []\OT1/jkp/m/n/12 198
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 75
- []\OT1/jkp/m/n/12 196
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 76
- []\OT1/jkp/m/n/12 196
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 77
  []\OT1/jkp/m/n/12 199
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 78
+Overfull \hbox (1.01994pt too wide) detected at line 76
  []\OT1/jkp/m/n/12 201
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 79
+Overfull \hbox (1.01994pt too wide) detected at line 77
  []\OT1/jkp/m/n/12 203
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 80
- []\OT1/jkp/m/n/12 207
+Overfull \hbox (1.01994pt too wide) detected at line 78
+ []\OT1/jkp/m/n/12 203
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 81
+Overfull \hbox (1.01994pt too wide) detected at line 79
+ []\OT1/jkp/m/n/12 206
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 80
  []\OT1/jkp/m/n/12 208
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 83
- []\OT1/jkp/m/n/12 209
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 84
+Overfull \hbox (1.01994pt too wide) detected at line 81
  []\OT1/jkp/m/n/12 210
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 85
- []\OT1/jkp/m/n/12 211
+Overfull \hbox (1.01994pt too wide) detected at line 82
+ []\OT1/jkp/m/n/12 214
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 86
- []\OT1/jkp/m/n/12 212
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 88
- []\OT1/jkp/m/n/12 213
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 89
+Overfull \hbox (1.01994pt too wide) detected at line 83
  []\OT1/jkp/m/n/12 215
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 90
+Overfull \hbox (1.01994pt too wide) detected at line 85
+ []\OT1/jkp/m/n/12 216
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 86
+ []\OT1/jkp/m/n/12 217
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 87
+ []\OT1/jkp/m/n/12 218
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 88
  []\OT1/jkp/m/n/12 219
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 90
+ []\OT1/jkp/m/n/12 220
  []
 
 
@@ -2309,83 +2309,83 @@ Overfull \hbox (1.01994pt too wide) detected at line 91
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 93
- []\OT1/jkp/m/n/12 223
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 94
- []\OT1/jkp/m/n/12 225
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 95
- []\OT1/jkp/m/n/12 225
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 96
+Overfull \hbox (1.01994pt too wide) detected at line 92
  []\OT1/jkp/m/n/12 226
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 99
- []\OT1/jkp/m/n/12 227
+Overfull \hbox (1.01994pt too wide) detected at line 93
+ []\OT1/jkp/m/n/12 229
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 100
- []\OT1/jkp/m/n/12 229
+Overfull \hbox (1.01994pt too wide) detected at line 95
+ []\OT1/jkp/m/n/12 230
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 96
+ []\OT1/jkp/m/n/12 232
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 97
+ []\OT1/jkp/m/n/12 232
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 98
+ []\OT1/jkp/m/n/12 233
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 101
- []\OT1/jkp/m/n/12 229
+ []\OT1/jkp/m/n/12 234
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 104
- []\OT1/jkp/m/n/12 235
+Overfull \hbox (1.01994pt too wide) detected at line 102
+ []\OT1/jkp/m/n/12 236
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 105
+Overfull \hbox (1.01994pt too wide) detected at line 103
  []\OT1/jkp/m/n/12 236
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 106
- []\OT1/jkp/m/n/12 239
+ []\OT1/jkp/m/n/12 242
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 107
- []\OT1/jkp/m/n/12 240
+ []\OT1/jkp/m/n/12 243
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 108
- []\OT1/jkp/m/n/12 241
+ []\OT1/jkp/m/n/12 246
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 112
- []\OT1/jkp/m/n/12 249
+Overfull \hbox (1.01994pt too wide) detected at line 109
+ []\OT1/jkp/m/n/12 247
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 113
- []\OT1/jkp/m/n/12 251
+Overfull \hbox (1.01994pt too wide) detected at line 110
+ []\OT1/jkp/m/n/12 248
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 114
- []\OT1/jkp/m/n/12 251
+ []\OT1/jkp/m/n/12 256
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 115
- []\OT1/jkp/m/n/12 252
+ []\OT1/jkp/m/n/12 258
  []
 
 File: CreativeCommons.png Graphic file (type png)
@@ -2394,87 +2394,97 @@ Package pdftex.def Info: CreativeCommons.png used on input line 116.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [4]
 Overfull \hbox (1.01994pt too wide) detected at line 116
- []\OT1/jkp/m/n/12 253
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 117
- []\OT1/jkp/m/n/12 253
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 118
- []\OT1/jkp/m/n/12 254
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 119
- []\OT1/jkp/m/n/12 254
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 120
- []\OT1/jkp/m/n/12 255
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 121
- []\OT1/jkp/m/n/12 256
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 123
  []\OT1/jkp/m/n/12 258
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 124
+Overfull \hbox (1.01994pt too wide) detected at line 117
+ []\OT1/jkp/m/n/12 259
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 118
+ []\OT1/jkp/m/n/12 260
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 119
+ []\OT1/jkp/m/n/12 260
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 120
  []\OT1/jkp/m/n/12 261
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 121
+ []\OT1/jkp/m/n/12 261
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 122
+ []\OT1/jkp/m/n/12 262
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 123
+ []\OT1/jkp/m/n/12 263
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 125
- []\OT1/jkp/m/n/12 261
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 126
- []\OT1/jkp/m/n/12 262
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 127
- []\OT1/jkp/m/n/12 262
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 128
- []\OT1/jkp/m/n/12 262
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 129
- []\OT1/jkp/m/n/12 264
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 130
  []\OT1/jkp/m/n/12 265
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 131
- []\OT1/jkp/m/n/12 267
- []
-
-
-Overfull \hbox (1.01994pt too wide) detected at line 132
+Overfull \hbox (1.01994pt too wide) detected at line 126
  []\OT1/jkp/m/n/12 268
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 133
+Overfull \hbox (1.01994pt too wide) detected at line 127
+ []\OT1/jkp/m/n/12 268
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 128
  []\OT1/jkp/m/n/12 269
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 129
+ []\OT1/jkp/m/n/12 269
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 130
+ []\OT1/jkp/m/n/12 269
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 131
+ []\OT1/jkp/m/n/12 271
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 132
+ []\OT1/jkp/m/n/12 272
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 133
+ []\OT1/jkp/m/n/12 274
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 134
+ []\OT1/jkp/m/n/12 275
+ []
+
+
+Overfull \hbox (1.01994pt too wide) detected at line 135
+ []\OT1/jkp/m/n/12 276
  []
 
 )
@@ -3606,77 +3616,114 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 472.
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 549.
+Package pdftex.def Info: CreativeCommons.png used on input line 555.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [117]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 579.
+Package pdftex.def Info: CreativeCommons.png used on input line 611.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [118]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 612.
+(mdframed)              on input line 644.
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 631.
+Package pdftex.def Info: CreativeCommons.png used on input line 663.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [119]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 675.
+Package pdftex.def Info: CreativeCommons.png used on input line 707.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [120]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 688.
+(mdframed)              on input line 720.
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 725.
+Package pdftex.def Info: CreativeCommons.png used on input line 757.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [121]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 745.
+(mdframed)              on input line 777.
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 803.
+Package pdftex.def Info: CreativeCommons.png used on input line 835.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [122]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 804.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 847.
+(mdframed)              on input line 836.
+
+Overfull \hbox (13.8288pt too wide) in paragraph at lines 866--873
+[][]\OT1/jkp/b/n/12 Problem 5.39. []\OT1/jkp/m/n/12 Con-sider the square de-fin
+ed by the set of points $\OML/jkp/m/it/12 S \OT1/jkp/m/n/12 = \OMS/jkp/m/n/12 f
+\OT1/jkp/m/n/12 (0\OML/jkp/m/it/12 ; \OT1/jkp/m/n/12 0) \OML/jkp/m/it/12 ;  \OT
+1/jkp/m/n/12 (1\OML/jkp/m/it/12 ; \OT1/jkp/m/n/12 0) \OML/jkp/m/it/12 ;  \OT1/j
+kp/m/n/12 (1\OML/jkp/m/it/12 ; \OT1/jkp/m/n/12 1) \OML/jkp/m/it/12 ;  \OT1/jkp/
+m/n/12 (0\OML/jkp/m/it/12 ; \OT1/jkp/m/n/12 1)\OMS/jkp/m/n/12 g$\OT1/jkp/m/n/12
+ .
+ []
+
 File: CreativeCommons.png Graphic file (type png)
- <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 887.
+<use CreativeCommons.png>
+Package pdftex.def Info: CreativeCommons.png used on input line 882.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [123]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 914.
+(mdframed)              on input line 929.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 934.
+(mdframed)              on input line 978.
+File: CreativeCommons.png Graphic file (type png)
+ <use CreativeCommons.png>
+Package pdftex.def Info: CreativeCommons.png used on input line 983.
+(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
+ [124]
+Package mdframed Info: Not enough space on this page on input line 983.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 943.
+(mdframed)              on input line 1018.
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 948.
+Package pdftex.def Info: CreativeCommons.png used on input line 1067.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [124]
+ [125]
+File: CreativeCommons.png Graphic file (type png)
+ <use CreativeCommons.png>
+Package pdftex.def Info: CreativeCommons.png used on input line 1099.
+(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
+ [126]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 950.
+(mdframed)              on input line 1111.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1178.
+File: CreativeCommons.png Graphic file (type png)
 
-Overfull \hbox (16.51703pt too wide) detected at line 958
+<use CreativeCommons.png>
+Package pdftex.def Info: CreativeCommons.png used on input line 1196.
+(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
+ [127]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1198.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1207.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1214.
+
+Overfull \hbox (16.51703pt too wide) detected at line 1222
 \OML/jkp/m/it/12 T\OT1/jkp/m/n/12 (\OML/jkp/m/it/12 c[]\OT1/jkp/b/n/12 u \OT1/j
 kp/m/n/12 + \OML/jkp/m/it/12 c[]\OT1/jkp/b/n/12 v\OT1/jkp/m/n/12 ) = \OML/jkp/m
 /it/12 T\OT1/jkp/m/n/12 ((\OML/jkp/m/it/12 c[]u[]; c[]u[]; c[]u[]\OT1/jkp/m/n/1
@@ -3686,88 +3733,130 @@ t/12 T\OT1/jkp/m/n/12 ((\OML/jkp/m/it/12 c[]u[] \OT1/jkp/m/n/12 + \OML/jkp/m/it
 /n/12 + \OML/jkp/m/it/12 c[]v[]\OT1/jkp/m/n/12 ))
  []
 
+File: CreativeCommons.png Graphic file (type png)
+<use CreativeCommons.png>
+Package pdftex.def Info: CreativeCommons.png used on input line 1255.
+(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
+ [128]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 991.
+(mdframed)              on input line 1255.
 
-Underfull \hbox (badness 3536) in paragraph at lines 1000--1001
+Underfull \hbox (badness 3536) in paragraph at lines 1264--1265
 []\OT1/jkp/m/n/12 The ho-mo-ge-neous so-lu-tion is
  []
 
 
-Underfull \hbox (badness 6893) in paragraph at lines 1009--1012
+Underfull \hbox (badness 6893) in paragraph at lines 1273--1276
 []\OT1/jkp/m/n/12 After row re-duc-ing the ho-
  []
 
 
-Underfull \hbox (badness 6792) in paragraph at lines 1009--1012
+Underfull \hbox (badness 6792) in paragraph at lines 1273--1276
 \OT1/jkp/m/n/12 mo-ge-neous so-lu-tion is $\OT1/jkp/b/n/12 x[] \OMS/jkp/m/n/12 
 2
  []
 
-File: CreativeCommons.png Graphic file (type png)
-<use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 1019.
-(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [125]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1023.
+(mdframed)              on input line 1287.
 File: CreativeCommons.png Graphic file (type png)
- <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 1072.
-(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [126]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1090.
-File: CreativeCommons.png Graphic file (type png)
-
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 1132.
-(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [127]
-File: CreativeCommons.png Graphic file (type png)
- <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 1145.
-(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [128]
-File: CreativeCommons.png Graphic file (type png)
-
-<use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 1156.
+Package pdftex.def Info: CreativeCommons.png used on input line 1311.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [129]
-File: CreativeCommons.png Graphic file (type png)
- <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 1223.
-(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [130]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1223.
+(mdframed)              on input line 1354.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 1371.
+File: CreativeCommons.png Graphic file (type png)
+ <use CreativeCommons.png>
+Package pdftex.def Info: CreativeCommons.png used on input line 1371.
+(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
+ [130]
+File: CreativeCommons.png Graphic file (type png)
 
-Overfull \hbox (11.42863pt too wide) in paragraph at lines 1224--1226
-[][]\OT1/jkp/b/n/12 Definition 5.57 \OT1/jkp/m/n/12 (Vol-ume of an $\OML/jkp/m/
+<use CreativeCommons.png>
+Package pdftex.def Info: CreativeCommons.png used on input line 1409.
+(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
+ [131]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1449.
+File: CreativeCommons.png Graphic file (type png)
+ <use CreativeCommons.png>
+Package pdftex.def Info: CreativeCommons.png used on input line 1451.
+(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
+ [132]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1453.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1495.
+File: CreativeCommons.png Graphic file (type png)
+
+<use CreativeCommons.png>
+Package pdftex.def Info: CreativeCommons.png used on input line 1507.
+(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
+ [133]
+File: CreativeCommons.png Graphic file (type png)
+ <use CreativeCommons.png>
+Package pdftex.def Info: CreativeCommons.png used on input line 1558.
+(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
+ [134]
+Overfull \hbox (5.12703pt too wide) in paragraph at lines 1593--1595
+[]\OT1/jkp/m/n/12 Finding an-gles be-tween $2 \OMS/jkp/m/n/12 ^^B \OT1/jkp/m/n/
+12 2$ ma-tri-ces is ge-o-met-ri-cally the same as $[]$. 
+ []
+
+File: CreativeCommons.png Graphic file (type png)
+<use CreativeCommons.png>
+Package pdftex.def Info: CreativeCommons.png used on input line 1614.
+(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
+ [135]
+File: CreativeCommons.png Graphic file (type png)
+ <use CreativeCommons.png>
+Package pdftex.def Info: CreativeCommons.png used on input line 1655.
+(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
+ [136]
+Overfull \hbox (5.80733pt too wide) in paragraph at lines 1655--1655
+[]\OT1/jkp/b/n/17.28 Higher Di-men-sions are Ge-o-met-ri-cally \OT1/jkp/m/it/17
+.28 Weird \OT1/jkp/b/n/17.28 (Op-tional) 
+ []
+
+File: CreativeCommons.png Graphic file (type png)
+<use CreativeCommons.png>
+Package pdftex.def Info: CreativeCommons.png used on input line 1722.
+(pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
+ [137]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1722.
+
+Overfull \hbox (11.42863pt too wide) in paragraph at lines 1723--1725
+[][]\OT1/jkp/b/n/12 Definition 5.75 \OT1/jkp/m/n/12 (Vol-ume of an $\OML/jkp/m/
 it/12 n$\OT1/jkp/m/n/12 -Dimensional Ball)\OT1/jkp/b/n/12 . []\OT1/jkp/m/n/12 F
 or the vol-ume of an $\OML/jkp/m/it/12 n$\OT1/jkp/m/n/12 -dimensional
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1244.
+(mdframed)              on input line 1743.
 File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 1291.
+Package pdftex.def Info: CreativeCommons.png used on input line 1790.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [131]
+ [138]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 1334.
+Package pdftex.def Info: CreativeCommons.png used on input line 1833.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [132]
-Overfull \hbox (4.56563pt too wide) in paragraph at lines 1407--1411
-[][]\OT1/jkp/b/n/12 Problem 5.65. []\OT1/jkp/m/n/12 If $\OML/jkp/m/it/12 A$ \OT
+ [139]
+Overfull \hbox (4.56563pt too wide) in paragraph at lines 1906--1910
+[][]\OT1/jkp/b/n/12 Problem 5.83. []\OT1/jkp/m/n/12 If $\OML/jkp/m/it/12 A$ \OT
 1/jkp/m/n/12 and $\OML/jkp/m/it/12 B$ \OT1/jkp/m/n/12 are ar-bi-trary $\OML/jkp
 /m/it/12 m \OMS/jkp/m/n/12 ^^B \OML/jkp/m/it/12 n$ \OT1/jkp/m/n/12 ma-tri-ces, 
 then the map-ping $[] = [](\OML/jkp/m/it/12 A[]B\OT1/jkp/m/n/12 )$
@@ -3775,20 +3864,20 @@ then the map-ping $[] = [](\OML/jkp/m/it/12 A[]B\OT1/jkp/m/n/12 )$
 
 File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 1437.
+Package pdftex.def Info: CreativeCommons.png used on input line 1936.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [133]) (./Ch06_Eigen.tex
+ [140]) (./Ch06_Eigen.tex
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 1.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
 
-[134]
+[141]
 Chapter 6.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 11.
-[135
+[142
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
@@ -3801,7 +3890,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 110.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [136]
+ [143]
 Overfull \hbox (5.50003pt too wide) in paragraph at lines 131--134
 [][]\OT1/jkp/b/n/12 Problem 6.8. []\OT1/jkp/m/n/12 The ma-trix $\OML/jkp/m/it/1
 2 A \OT1/jkp/m/n/12 = []$ has eigen-value $\OML/jkp/m/it/12 ^^U[] \OT1/jkp/m/n/
@@ -3812,7 +3901,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 197.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [137]
+ [144]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 219.
@@ -3829,13 +3918,13 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 262.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [138]
+ [145]
 Package mdframed Info: Not enough space on this page on input line 262.
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 300.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [139]
+ [146]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 336.
@@ -3847,7 +3936,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 398.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [140]
+ [147]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 433.
@@ -3858,7 +3947,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 485.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [141]
+ [148]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 492.
@@ -3867,7 +3956,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 510.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [142]
+ [149]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 515.
@@ -3878,7 +3967,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 568.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [143]
+ [150]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 620.
@@ -3897,7 +3986,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 629.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [144]
+ [151]
 
 Package mdframed Warning: You got a bad break
 (mdframed)                because the last split box is empty
@@ -3907,18 +3996,18 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 652.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [145]
+ [152]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 725.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [146]
+ [153]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 771.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [147]
+ [154]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 782.
@@ -3944,7 +4033,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 830.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [148]
+ [155]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 835.
@@ -3952,13 +4041,13 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 919.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [149]
+ [156]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 922.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [150]
+ [157]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 998.
@@ -3970,7 +4059,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 1015.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [151]
+ [158]
 Package mdframed Info: Not enough space on this page on input line 1015.
 )
 (./Ch07_SecondOrder.tex
@@ -3978,9 +4067,9 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 1.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [152]
+ [159]
 Chapter 7.
-[153
+[160
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
@@ -3991,7 +4080,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 119.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [154]
+ [161]
 Package mdframed Info: Not enough space on this page on input line 119.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -4003,7 +4092,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 156.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [155]
+ [162]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 220.
@@ -4012,13 +4101,13 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 228.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [156]
+ [163]
 Package mdframed Info: Not enough space on this page on input line 228.
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 260.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [157]
+ [164]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 320.
@@ -4030,7 +4119,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 338.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [158]
+ [165]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -4045,12 +4134,12 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 419.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [159]
+ [166]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 463.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [160]
+ [167]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 507.
@@ -4059,7 +4148,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 615.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [161]
+ [168]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 647.
@@ -4078,7 +4167,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 669.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [162]
+ [169]
 
 Package mdframed Warning: You got a bad break
 (mdframed)                because the last split box is empty
@@ -4091,12 +4180,12 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 749.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [163]
+ [170]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 801.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [164]
+ [171]
 Overfull \hbox (2.86365pt too wide) in paragraph at lines 812--814
 []\OT1/jkp/m/n/12 an up-ward force due to buoy-ancy equal to the weight of the 
 dis-placed wa-ter: $[] \OML/jkp/m/it/12 g$ 
@@ -4107,9 +4196,9 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 1.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [165]
+ [172]
 Chapter 8.
-[166
+[173
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
@@ -4119,12 +4208,12 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 141.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [167]
+ [174]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 243.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [168]
+ [175]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 250.
@@ -4140,19 +4229,19 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 296.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [169]
+ [176]
 Package mdframed Info: Not enough space on this page on input line 296.
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 394.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [170]
+ [177]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 466.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [171]
+ [178]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 488.
@@ -4160,7 +4249,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 538.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [172]
+ [179]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 577.
@@ -4169,7 +4258,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 595.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [173]
+ [180]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 603.
@@ -4183,18 +4272,18 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 641.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [174]
+ [181]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 753.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [175]
+ [182]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 799.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [176]
+ [183]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 817.
@@ -4206,40 +4295,40 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 846.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [177]
+ [184]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 865.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [178])
+ [185])
 (./Ch09_NonlinearSystems.tex
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 1.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [179]
+ [186]
 Chapter 9.
-[180
+[187
 
 ]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 84.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [181]
+ [188]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 180.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [182]
+ [189]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 246.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [183]
+ [190]
 Missing character: There is no ; in font nullfont!
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -4248,7 +4337,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 348.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [184]
+ [191]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 365.
@@ -4257,7 +4346,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 397.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [185]
+ [192]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 410.
@@ -4271,44 +4360,44 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 453.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [186]
+ [193]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 458.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [187]
+ [194]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 558.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [188]
+ [195]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 641.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [189]) (./Ch10_LaplaceTransforms.tex
+ [196]) (./Ch10_LaplaceTransforms.tex
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 1.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [190]
+ [197]
 Chapter 10.
 
 Overfull \hbox (50.14732pt too wide) in paragraph at lines 30--31
  [] 
  []
 
-[191
+[198
 
 ]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 115.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [192]
+ [199]
 Overfull \hbox (21.57552pt too wide) detected at line 148
 []
  []
@@ -4317,7 +4406,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 160.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [193]
+ [200]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 184.
@@ -4325,7 +4414,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 214.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [194]
+ [201]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 233.
@@ -4345,7 +4434,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 278.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [195]
+ [202]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 289.
@@ -4356,18 +4445,18 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 334.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [196]
+ [203]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 359.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [197]
+ [204]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 369.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [198]
+ [205]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 371.
@@ -4386,13 +4475,13 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 446.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [199]
+ [206]
 Package mdframed Info: Not enough space on this page on input line 446.
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 534.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [200]
+ [207]
 NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (
 in y). (see also unbounded coords=jump). 
 NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (
@@ -4401,12 +4490,12 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 606.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [201]
+ [208]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 651.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [202]
+ [209]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 671.
@@ -4421,7 +4510,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 791.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [203]
+ [210]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 803.
@@ -4429,7 +4518,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 814.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [204]
+ [211]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 818.
@@ -4438,64 +4527,64 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 910.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [205]
+ [212]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 951.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [206]
+ [213]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 956.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [207]) (./Ch11_FourierTransforms.tex
+ [214]) (./Ch11_FourierTransforms.tex
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 1.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [208]
+ [215]
 Chapter 11.
-[209
+[216
 
 ]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 9.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [210]
+ [217]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 13.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [211])
+ [218])
 (./Ch12_PowerSeries.tex
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 1.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [212]
+ [219]
 Chapter 12.
-[213
+[220
 
 ]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 156.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [214]
+ [221]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 194.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [215]
+ [222]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 228.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [216]
+ [223]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 235.
@@ -4503,7 +4592,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 293.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [217]
+ [224]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 322.
@@ -4512,7 +4601,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 345.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [218]
+ [225]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 361.
@@ -4523,71 +4612,71 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 420.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [219]
+ [226]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 541.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [220]
+ [227]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 577.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [221])
+ [228])
 (./Ch13_PDEs.tex
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 1.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [222]
+ [229]
 Chapter 13.
-[223
+[230
 
 ]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 75.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [224]
+ [231]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 131.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [225]
+ [232]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 181.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [226]
+ [233]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 230.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [227]
+ [234]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 234.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [228]
+ [235]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 294.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [229]
+ [236]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 350.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [230]
+ [237]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 399.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [231]
+ [238]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 425.
@@ -4596,67 +4685,67 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 443.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [232]
+ [239]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 516.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [233]
+ [240]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 546.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [234]
+ [241]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 596.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [235]
+ [242]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 641.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [236]
+ [243]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 692.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [237]
+ [244]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 715.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [238]
+ [245]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 722.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [239]
+ [246]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 772.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [240]
+ [247]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 774.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [241]
+ [248]
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 778.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [242]) [243
+ [249]) [250
 
 
 ] (./App_PartialFractions.tex
 Appendix A.
-[244
+[251
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
@@ -4669,7 +4758,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 83.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [245]
+ [252]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 85.
@@ -4680,7 +4769,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 111.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [246]
+ [253]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 113.
@@ -4692,13 +4781,13 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 147.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [247]) (./App02_Coding.tex
+ [254]) (./App02_Coding.tex
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 1.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
 
-[248]
+[255]
 Appendix B.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -4716,7 +4805,7 @@ Overfull \hbox (53.49594pt too wide) in paragraph at lines 60--61
 Package mdframed Info: You first box width is to small
  mdframed fixed it
 (mdframed)              on input line 68.
-[249
+[256
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
@@ -4737,7 +4826,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 75.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [250]
+ [257]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 77.
@@ -4757,7 +4846,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 131.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [251]
+ [258]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 133.
@@ -4780,7 +4869,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 174.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [252]
+ [259]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 177.
@@ -4794,7 +4883,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 223.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [253]
+ [260]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 228.
@@ -4812,7 +4901,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 274.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [254]
+ [261]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 277.
@@ -4823,7 +4912,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 320.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [255]
+ [262]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 323.
@@ -4854,13 +4943,13 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 371.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [256]) (./App03_LaTeX.tex
+ [263]) (./App03_LaTeX.tex
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 1.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
 
-[257]
+[264]
 Appendix C.
 
 Overfull \hbox (2.8885pt too wide) in paragraph at lines 7--9
@@ -4871,7 +4960,7 @@ nd nec-es-sary to cross-reference
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 9.
-[258
+[265
 
 ]
 Overfull \hbox (17.53862pt too wide) in paragraph at lines 97--97
@@ -4883,7 +4972,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 104.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [259]
+ [266]
 Overfull \hbox (133.26686pt too wide) in paragraph at lines 104--116
 [] \OT1/jkp/m/n/12 This sec-ond ex-am-ple al-lows you to cross ref-er-ence equa
 -tions like ([][]C.5[][]) us-ing []\OT1/jkptt/m/n/12 (\ref{eqn:sample_equation}
@@ -4920,7 +5009,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 176.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [260]
+ [267]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 189.
@@ -4934,7 +5023,7 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 232.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [261]
+ [268]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 262.
@@ -4943,7 +5032,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 295.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [262]
+ [269]
 Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
@@ -4969,12 +5058,12 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 347.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [263]
+ [270]
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 389.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [264]
+ [271]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 401.
@@ -4994,7 +5083,7 @@ File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 460.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [265]
+ [272]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -5006,32 +5095,32 @@ File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 520.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [266]
+ [273]
 Package mdframed Info: Not enough space on this page on input line 520.
 File: CreativeCommons.png Graphic file (type png)
 
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 558.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [267]
+ [274]
 Overfull \hbox (17.15642pt too wide) in paragraph at lines 564--567
 \OT1/jkp/m/n/12 If you're us-ing an em-bed-ded bib for a stand-alone pa-per the
 n just be-fore the []\OT1/jkptt/m/n/12 \end{document}
  []
 
 
-LaTeX Warning: Citation `lamport94' on page 268 undefined on input line 583.
+LaTeX Warning: Citation `lamport94' on page 275 undefined on input line 583.
 
 File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 586.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [268])
+ [275])
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
 Package pdftex.def Info: CreativeCommons.png used on input line 232.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
- [269]
+ [276]
 Underfull \hbox (badness 10000) in paragraph at lines 237--239
 []\OT1/jkp/m/n/12 T. Jud-son. \OT1/jkp/m/it/12 The Or-di-nary Dif-fer-en-tial E
 qua-tions Project\OT1/jkp/m/n/12 . [][]fac-
@@ -5043,7 +5132,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 241--244
 f8b9735/1/316-
  []
 
-[270
+[277
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
@@ -5052,7 +5141,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 250.
 Package rerunfilecheck Info: File `DELA_InquiryNotes.out' has not changed.
-(rerunfilecheck)             Checksum: 68300A83C0CEE7D6E0881E957E0C188E;9680.
+(rerunfilecheck)             Checksum: 78952EA3D865F7447131D0A8E6E76691;9839.
 
 
 LaTeX Warning: There were undefined references.
@@ -5060,10 +5149,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 250.
  ) 
 Here is how much of TeX's memory you used:
- 44900 strings out of 493014
- 982479 string characters out of 6133351
- 1224954 words of memory out of 5000000
- 46163 multiletter control sequences out of 15000+600000
+ 44979 strings out of 493014
+ 983708 string characters out of 6133351
+ 1225523 words of memory out of 5000000
+ 46208 multiletter control sequences out of 15000+600000
  84211 words of font info for 206 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,19n,100p,10440b,2421s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -5088,10 +5177,10 @@ y.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/kpfonts/jkpsyc.pfb
 fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
-Output written on DELA_InquiryNotes.pdf (271 pages, 908380 bytes).
+Output written on DELA_InquiryNotes.pdf (278 pages, 935153 bytes).
 PDF statistics:
- 3545 PDF objects out of 3580 (max. 8388607)
- 3209 compressed objects within 33 object streams
- 1528 named destinations out of 1728 (max. 500000)
- 1058 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3620 PDF objects out of 4296 (max. 8388607)
+ 3277 compressed objects within 33 object streams
+ 1562 named destinations out of 1728 (max. 500000)
+ 1074 words of extra memory for PDF output out of 10000 (max. 10000000)
 

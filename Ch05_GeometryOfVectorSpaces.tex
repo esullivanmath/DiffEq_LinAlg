@@ -469,7 +469,7 @@ abstract them to generalized vector spaces.  You may have noticed that the dot p
 the basic computation necessary to understand angle in $\mathbb{R}^n$ so we first have to
 provide a generalized version of the dot product.
 
-\begin{definition}[The Inner Product]
+\begin{definition}[The Inner Product]\label{def:inner_product}
     An {\bf inner product} is the abstraction of a dot product to a general vector space.
     If $\bu$, $\bv$, and $\bw$ are vectors in a vector space $\mathcal{V}$ and $c$ is some real
     number then
@@ -506,22 +506,33 @@ provide a generalized version of the dot product.
     \end{enumerate}
 }
 
+
+\begin{problem}
+    An inner product on $\mathcal{P}_2$ (the space of all quadratic polynomials) is 
+    \[ \left< p \,,\, q \right> = p_0 q_0 + p_1 q_1 + p_2 q_2 \]
+    where $p(x) = p_0 + p_1x + p_2 x^2$ and $q(x) = q_0 + q_1 x + q_2 x^2$.  Verify that
+    this needed is a proper inner product on $\mathcal{P}_2$.  If it is then find the
+    inner product of $p(x) = x^2 + 1$ and $q(x) = 2x+x^2$ as well as the angle between
+    $p(x)$ and $q(x)$.
+\end{problem}
+
+
 \begin{problem}
     Consider the vector space of quadratic polynomials on the interval $x \in [0,1]$.
-    \[ \mathbb{P}_2 = \{a_0 + a_1 x + a_2 x^2 \, : \, a_0, a_1, a_2 \in
+    \[ \mathcal{P}_2 = \{a_0 + a_1 x + a_2 x^2 \, : \, a_0, a_1, a_2 \in
         \mathbb{R} \text{ and } x \in [0,1] \} \]
     An inner product on this vector space is
     \[ \left< f,g\right> =
     \int_0^1 f(x) g(x) dx. \] 
     \begin{enumerate}
-        \item[(a)] Verify that this is indeed a proper inner product on $\mathbb{P}_2$
+        \item[(a)] Verify that this is indeed a proper inner product on $\mathcal{P}_2$
         \item[(b)] Find the inner product of $f(x) = x^2+1$ and $g(x) =
-            2x+x^2$ in $\mathbb{P}_2$ under this inner product.
+            2x+x^2$ in $\mathcal{P}_2$ under this inner product.
         \item[(c)] Set up the necessary integrals to find the lengths of $f$ and $g$ in
-            $\mathbb{P}_2$ under this inner product.
+            $\mathcal{P}_2$ under this inner product.
         \item[(d)] Set up the necessary integrals to find the angle between $f$ and $g$ in
-            $\mathbb{P}_2$ under this inner product.
-        \item[(e)] Is this the only inner product on $\mathbb{P}_2$?
+            $\mathcal{P}_2$ under this inner product.
+        \item[(e)] Is this the only inner product on $\mathcal{P}_2$?
     \end{enumerate}
 
 \end{problem}
@@ -542,15 +553,36 @@ provide a generalized version of the dot product.
     Consider the vector space of $2 \times 2$ real matrices 
     \[ \mathcal{V} = \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \, : \,
     a,b,c,d \in \mathbb{R} \right\} \]
-    along with the inner product
-    \[ \left< A \, , \, B \right> = tr(AB^T) \]
+    along with the inner product $\left<A \,,\, B \right> = \text{trace}(AB^T)$.  
     Note: If $M$ is a matrix, the {\it trace} of the matrix, $tr(M)$, is the sum
     of the entries on the main diagonal.
-    
-Find an orthogonal basis for $\mathcal{V}$.  That's right \dots I'm asking you to find
-angles between matrices!! AWESOME!!
+
+    To
+    simplify your computations a bit we'll expand the definition of the inner product.
+    \[ \left<A\,,\,B\right> = \text{trace}(AB^T) = \text{trace}\left( 
+        \begin{pmatrix} a_{11} & a_{12} \\ 
+                        a_{21} & a_{22} \end{pmatrix} 
+        \begin{pmatrix} b_{11} & b_{21} \\
+        b_{12} & b_{22} \end{pmatrix} \right) = \text{trace}\left( 
+        \begin{pmatrix} a_{11} & a_{12} \\ 
+                        a_{21} & a_{22} \end{pmatrix} 
+        \begin{pmatrix} b_{11} & b_{12} \\
+        b_{21} & b_{22} \end{pmatrix}^T \right)\]
+    \[ = \text{trace}\left(
+                    \begin{pmatrix} a_{11}b_{11} + a_{12} b_{12} & a_{11}b_{21} +
+                        a_{12}b_{22} \\ a_{21}b_{11} + a_{22}b_{12} & a_{21} b_{21} +
+                    a_{22} b_{22} \end{pmatrix} \right) \]
+    \[ = \left( a_{11}b_{11} + a_{12} b_{12} \right) + \left(  a_{21} b_{21} + a_{22}
+    b_{22}\right) \]
+    \begin{enumerate}
+        \item[(a)] Why is this a natural choice for the inner product between $2 \times 2$ matrices?
+        \item[(b)] Find an orthogonal basis for $\mathcal{V}$.  That's right \dots I'm asking you to find
+            angles between matrices!! AWESOME!!
+    \end{enumerate}
 \end{problem}
 \solution{
+    This is a natural choice since it is essentially equivalent to the dot product in
+    $\mathbb{R}^4$.
     \[ \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}, 
         \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix},
         \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix},
@@ -803,7 +835,7 @@ have all of the wonderful properties as we had before with the sine functions.
 \newpage\section{Linear Transformations}
 \begin{definition}[Linear Transformation]
     A {\bf linear transformation} $T$ from a vector space $\mathcal{V}$ into a vector
-    space $\mathcal{W}$ is a rule that assignes to each vector $\bv \in \mathcal{V}$ a
+    space $\mathcal{W}$ is a rule that assigns to each vector $\bv \in \mathcal{V}$ a
     unique vector $\bw \in \mathcal{W}$, such that
     \begin{enumerate}
         \item[(a)] $T(\bv_1 + \bv_2) = T(\bv_1) + T(\bv_2)$ for all $\bv_1, \bv_2 \in \mathcal{V}$
@@ -815,14 +847,246 @@ have all of the wonderful properties as we had before with the sine functions.
     for all $\bv_1 ,\bv_2 \in \mathcal{V}$ and for all scalars $c_1$ and $c_2$.
 \end{definition}
 
+
+\subsection{Matrix Transformation}
 \begin{problem}
     Verify that if $A$ is an $n \times n$ matrix then the function $T$ defined as $T(\bx) =
     A\bx$ is indeed a linear transformation.
 \end{problem}
 \solution{
-Yep.  Matrix mulitplication is a linear operation.
+Yep.  Matrix multiplication is a linear operation.
 }
 
+Since matrix multiplication is a linear transformation let's look at some of the common
+matrix transformations.  Matrix transformations commonly used in computer graphics are
+{\it dilation}, {\it shear}, and {\it rotation}.  Notice that the common geometric transformation of
+{\it translation} is not a linear transformation since if we translate then the origin does not
+stay fixed.
+\begin{problem}
+    Consider the square defined by the set of points $S =
+    \{(0,0)\,,\,(1,0)\,,\,(1,1)\,,\,(0,1)\}$. Let $T(\bx)$ be a linear transformation
+    defined as $T(\bx) = A\bx$ where $A$ is a matrix and $\bx \in S$.  Applying the
+    transformation $T$ to the points in $S$ gives a new geometric shape.  Describe the
+    geometric action of each of the following transformations by applying them to the
+    points in $S$.
+    \begin{enumerate}
+        \item[(a)] $T(\bx) = A\bx$ where
+            \[ A = \begin{pmatrix} 1 & 3 \\ 0 & 1 \end{pmatrix} \]
+        \item[(b)] $T(\bx) = A\bx$ where
+            \[ A = \begin{pmatrix} 1 & 0 \\ 3 & 1 \end{pmatrix} \]
+        \item[(c)] $T(\bx) = A\bx$ where
+            \[ A = \begin{pmatrix} 5 & 0 \\ 0 & 5 \end{pmatrix} \]
+        \item[(d)] $T(\bx) = A\bx$ where
+            \[ A = \begin{pmatrix} 0.2 & 0 \\ 0 & 0.2 \end{pmatrix} \]
+        \item[(e)] $T(\bx) = A\bx$ where
+            \[ A = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \]
+        \item[(f)] $T(\bx) = A\bx$ where
+            \[ A = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} \]
+    \end{enumerate}
+\end{problem}
+\solution{
+shear parallel to the $x$, shear parallel to the $y$, dilation, dilation, rotation
+counterclockwise, rotation clockwise
+}
+
+% \begin{problem}
+%     Let $T$ be a linear transformation defined as $T(\bx) = A \bx$ for some $2 \times 2$
+%     matrix $A$.  If 
+%     \[ A \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 1 \\ 0\end{pmatrix} \quad
+%         \text{and} \quad A \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \begin{pmatrix} 3 \\ 1
+%     \end{pmatrix} \]
+%     then what is the matrix $A$ and how would you describe the geometric transformation?
+% \end{problem}
+% \solution{
+%     this is the same shear matrix as in part (a) from the previous problem
+% }
+% 
+% \begin{problem}
+%     Let $T$ be a linear transformation defined as $T(\bx) = A \bx$ for some $2 \times 2$
+%     matrix $A$.  If 
+%     \[ A \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 5 \\ 0\end{pmatrix} \quad
+%         \text{and} \quad A \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \begin{pmatrix} 0 \\ 5
+%     \end{pmatrix} \]
+%     then what is the matrix $A$ and how would you describe the geometric transformation?
+% \end{problem}
+% \solution{
+%     this is the same dilation matrix as in part (b) from the previous problem
+% }
+% 
+% 
+% \begin{problem}
+%     Let $T$ be a linear transformation defined as $T(\bx) = A \bx$ for some $2 \times 2$
+%     matrix $A$.  If 
+%     \[ A \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 0 \\ 1\end{pmatrix} \quad
+%         \text{and} \quad A \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \begin{pmatrix} -1\\ 0
+%     \end{pmatrix} \]
+%     then what is the matrix $A$ and how would you describe the geometric transformation?
+% \end{problem}
+% \solution{
+%     this is the same rotation matrix as in part (c) from the previous problem
+% }
+
+\begin{definition}[Shear Matrices]
+    The 2D linear transformation that geometrically shears parallel to the $x$ axis is
+    defined as
+    \[ T(\bx) = \begin{pmatrix} 1 & \underline{\hspace{0.25in}} \\
+        \underline{\hspace{0.25in}} & 1 \end{pmatrix} \bx \]
+    The 2D linear transformation that geometrically shears parallel to the $y$ axis is
+    defined as
+    \[ T(\bx) = \begin{pmatrix} 1 & \underline{\hspace{0.25in}} \\
+        \underline{\hspace{0.25in}} & 1 \end{pmatrix} \bx \]
+    (fill in the blanks)
+\end{definition}
+
+\begin{problem}
+In Figure \ref{fig:lt_shear} we applied two different shear transformations to the set $S
+= \{(1,0),(0,1),(-1,0),(0,-1)\}$.  Which shear transformations were applied?
+\end{problem}
+\solution{
+    The shear parallel to the $x$ axis is achieved with $A = \begin{pmatrix} 1 & 2 \\ 0 &
+        1 \end{pmatrix}$.  The shear parallel to the $y$ axis is achieved with $A =
+    \begin{pmatrix} 1 & 0 \\ 2 & 1\end{pmatrix}$.
+}
+
+\begin{figure}[ht!]
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[axis equal, axis lines=center, grid, xmin=-2, xmax=2, ymin=-2, ymax=2,
+                title={Shear Parallel to $x$ Axis}]
+                \draw[thick, black] (axis cs:1,0) -- (axis cs:0,1) -- (axis cs:-1,0) --
+                (axis cs:0,-1) -- (axis cs:1,0);
+                \draw[thick, dashed, blue] (axis cs:1,0) -- (axis cs:2,1) -- (axis cs:-1,0) --
+                (axis cs:-2,-1) -- (axis cs:1,0);
+            \end{axis}
+        \end{tikzpicture}
+        \begin{tikzpicture}
+            \begin{axis}[axis equal, axis lines=center, grid, xmin=-2, xmax=2, ymin=-2, ymax=2,
+                title={Shear Parallel to $y$ Axis}]
+                \draw[thick, black] (axis cs:1,0) -- (axis cs:0,1) -- (axis cs:-1,0) --
+                (axis cs:0,-1) -- (axis cs:1,0);
+                \draw[thick, dashed, red] (axis cs:1,2) -- (axis cs:0,1) -- (axis cs:-1,-2) --
+                (axis cs:0,-1) -- (axis cs:1,2);
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+    \caption{Examples of shear transformations. The blue transformation on the left is a
+    shear parallel to the $x$ axis.  The red transformation on the right is a shear
+parallel to the $y$ axis.}
+    \label{fig:lt_shear}
+\end{figure}
+
+\begin{definition}[Dilation Matrices]
+    The 2D linear transformation that geometrically dilates a figures by a factor of $r$ is defined as 
+    \[ T(\bx) = \begin{pmatrix} \underline{\hspace{0.25in}} & 0 \\ 0 &
+        \underline{\hspace{0.25in}} \end{pmatrix} \bx. \]
+    (fill in the blanks)
+\end{definition}
+
+\begin{problem}
+    In Figure \ref{fig:lt_dilation} we applied two different dilation transformations to the set $S =
+    \{(0,0),(1,1),(1,2),(0,1)\}$.  Which dilation transformations were applied?
+\end{problem}
+\solution{
+The left is a dilation by 2 and the right is a dilation by $-0.5$.
+}
+
+\begin{figure}[ht!]
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[axis equal, axis lines=center, grid, xmin=-1, xmax=4, ymin=-1,
+                ymax=4, title={Dilation \#1}]
+                \draw[thick, black] (axis cs:0,0) -- (axis cs:1,1) -- (axis cs:1,2) --
+                (axis cs:0,1) -- (axis cs:0,0);
+                \draw[thick, dashed, blue] (axis cs:0,0) -- (axis cs:2,2) -- (axis cs:2,4) --
+                (axis cs:0,2) -- (axis cs:0,0);
+            \end{axis}
+        \end{tikzpicture}
+        \begin{tikzpicture}
+            \begin{axis}[axis equal, axis lines=center, grid, xmin=-2, xmax=2, ymin=-2, ymax=2,
+                title={Dilation \#2}]
+                \draw[thick, black] (axis cs:0,0) -- (axis cs:1,1) -- (axis cs:1,2) --
+                (axis cs:0,1) -- (axis cs:0,0);
+                \draw[thick, dashed, red] (axis cs:0,0) -- (axis cs:-0.5,-0.5) -- (axis
+                cs:-0.5,-1) -- (axis cs:0,-0.5) -- (axis cs:0,0);
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+    \caption{Examples of dilation transformations.}
+    \label{fig:lt_dilation}
+\end{figure}
+
+\begin{definition}[Rotation Matrices]
+    The 2D linear transformation that geometrically rotates a figure by an angle $\theta$
+    is defined as 
+    \[ T(\bx) = \begin{pmatrix} \cos(\theta) & -\sin(\theta) \\ \sin(\theta) &
+        \cos(\theta) \end{pmatrix}. \]
+\end{definition}
+
+\begin{problem}
+    What matrices yield to the following linear transformation?
+    \begin{enumerate}
+        \item[(a)] A rotation by $90^\circ$ counterclockwise.
+        \item[(b)] A rotation by $90^\circ$ clockwise.
+        \item[(c)] A rotation by $45^\circ$ counterclockwise.
+        \item[(d)] A rotation by $30^\circ$ clockwise.
+    \end{enumerate}
+\end{problem}
+
+
+\begin{figure}[ht!]
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[axis equal, axis lines=center, grid, xmin=-2, xmax=2, ymin=-2, ymax=2,
+                title={Rotation by $30^\circ$ Counterclockwise}]
+                \draw[thick, black] (axis cs:1,0) -- (axis cs:0,1) -- (axis cs:-1,0) --
+                (axis cs:0,-1) -- (axis cs:1,0);
+                \draw[thick, dashed, blue] (axis cs:0.866,0.5) -- (axis cs:-0.5,0.866) --
+                (axis cs:-0.866,-0.5) -- (axis cs:0.5,-0.866) -- (axis cs:0.866,0.5);
+            \end{axis}
+        \end{tikzpicture}
+        \begin{tikzpicture}
+            \begin{axis}[axis equal, axis lines=center, grid, xmin=-3, xmax=2, ymin=-1, ymax=3,
+                title={Rotation by $60^\circ$ Counterclockwise}]
+                \draw[thick, black] (axis cs:0,0) -- (axis cs:1,1) -- (axis cs:1,2) --
+                (axis cs:0,1) -- (axis cs:0,0);
+                \draw[thick, dashed, red] (axis cs:0,0) -- (axis cs:-0.37,1.37)
+                -- (axis cs:-1.23,1.87) -- (axis cs:-0.866,0.5) -- (axis
+                cs:0,0);
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+    \caption{Examples of rotation transformations. The blue transformation on the left is a
+    rotation by $30^\circ$ counterclockwise.  The red transformation on the right is a
+rotation by $60^\circ$ counterclockwise.}
+    \label{fig:lt_rotation}
+\end{figure}
+
+Now that we know the back geometric linear transformations let's see what happens when we
+compose several of them.  
+\begin{problem}
+    Consider the set of points $S = \{(0,0),(1,0),(1,1),(0,1)\}$.  \\(You may want to
+    write code to complete this problem)
+    \begin{enumerate}
+        \item[(a)] Shear the shape generated by $S$ by a factor of 2 parallel to the $x$
+            axis and then dilate the resulting shape by a factor of 3.  Draw the resulting
+            geometric shape and find the matrix that does these transformations as one
+            linear transformation.
+        \item[(b)] Dilate the shape generated by $S$ by a factor of 3 and then shear the
+            resulting shape by a factor of 2 parallel to the $x$
+            axis.  Draw the resulting
+            geometric shape and find the matrix that does these transformations as one
+            linear transformation.
+        \item[(c)] Rotate the shape generated by $S$ by $60^\circ$ counterclockwise, then
+            dilate the resulting shape by a factor of $-1.5$, and finally shear the shape
+            by a factor of 3 parallel to the $y$ axis.  Draw the resulting
+            geometric shape and find the matrix that does these transformations as one
+            linear transformation.
+    \end{enumerate}
+\end{problem}
+
+
+
+\subsection{Linear Transformations in Abstract Vector Spaces}
 \begin{problem}\label{prob:calc_lt}
     In calculus we know of two very important linear transformations.  Let $\mathcal{V}$
     be the vector space of all real-valued functions $f$ on the interval $[a,b]$ that are
@@ -1142,18 +1406,253 @@ conditions.}
 }
 
 
-\newpage\section{Linear Transformations and Change of Basis (INCOMPLETE)}
-\ldots write this section \ldots
+\newpage\section{Isomorphic Vector Spaces}
+What we'll explore in this section is
+the following bold claim.
+\begin{quote}
+    Every vector space of dimension $n$ is {\it geometrically the same} as $\mathbb{R}^n$.
+\end{quote}
+The consequence of this statement is that, in reality, studying any finite dimensional
+vector space is the same as studying the Euclidean spaces $\mathbb{R}^n$.
 
-% \begin{problem}
-%     Consider the vector space $\mathcal{V} = \mathbb{R}^3$ and the vector space
-%     $\mathcal{W} = \mathcal{P}_2$ (polynomials of order 2).  
-%     The standard bases for these two vector spaces are
-%     \[ \mathcal{B}_{\mathcal{V}} = \left\{ \begin{pmatrix} 1\\0\\0\end{pmatrix},
-%     \begin{pmatrix} 0\\1\\0\end{pmatrix}, \begin{pmatrix}0\\0\\1\end{pmatrix} \right\} \]
-% \end{problem}
+To make this clear let's look at a few examples.  Consider the vector space $\mathcal{V} =
+\mathbb{R}^3$ and the vector space $\mathcal{W} = \mathcal{P}_2$ (polynomials of order 2).
+We claim that the set of all polynomials of order 2 is really the same vector space as
+$\mathbb{R}^3$.
 
-\newpage\section{Higher Dimensions are Geometrically {\it Weird}}
+The standard bases for these two vector spaces are
+\[ \mathcal{B}_{\mathcal{V}} = \left\{ \begin{pmatrix} 1\\0\\0\end{pmatrix},
+    \begin{pmatrix} 0\\1\\0\end{pmatrix}, \begin{pmatrix}0\\0\\1\end{pmatrix} \right\}
+    \quad \text{and} \quad \mathcal{B}_{\mathcal{W}} = \left\{ 1,x,x^2 \right\}. \]
+Notice that there is a natural mapping between these two bases:
+\[ \begin{pmatrix} 1\\0\\0\end{pmatrix} \leftrightarrow 1 \qquad
+    \begin{pmatrix}0\\1\\0\end{pmatrix} \leftrightarrow x \qquad
+\begin{pmatrix}0\\0\\1\end{pmatrix} \leftrightarrow x^2. \]
+Hence if we have any polynomial $p(x) \in \mathcal{P}_2$ we can use this natural mapping
+to find the corresponding vector in $\mathbb{R}^3$.  For a specific example, let's take
+the polynomial $p(x) = 3x^2 + 5x - 1$.  Explicitly stating $p(x)$ as a linear combination
+of basis vectors from the set $\{1,x,x^2\}$ we see that 
+\[ p(x) = -1 (1) + 5(x) + 3(x^2), \]
+and hence $p(x)$ maps to
+\[ p(x) \mapsto -1 \begin{pmatrix}1\\0\\0\end{pmatrix} + 5
+\begin{pmatrix}0\\1\\0\end{pmatrix} + 3 \begin{pmatrix}0\\0\\1\end{pmatrix} =
+\begin{pmatrix} -1 \\ 5 \\ 3 \end{pmatrix}. \]
+That is to say that the polynomial $p(x) = 3x^2 + 5x-1$ in $\mathcal{P}_2$ is the {\it same
+vector} as $\begin{pmatrix}-1\\5\\3\end{pmatrix}$ in $\mathbb{R}^3$.
+
+More generally, the polynomial $a_0 + a_1 x + a_2 x^2 \in \mathcal{P}_2$ is the {\it same
+vector} as $\begin{pmatrix}a_0\\a_1\\a_2\end{pmatrix} \in \mathbb{R}^3$.  In this way we
+can say that any vector in $\mathcal{P}_2$ has a geometric copy in $\mathbb{R}^3$.  
+
+The words {\it geometrically the same} are not very mathematical.  Instead a mathematician
+would use the word {\it isomorphic} meaning {\it same form}.  
+\begin{definition}[Isomorphism]
+    An {\bf isomorphism} is an invertible mapping between two sets. 
+\end{definition}
+
+\begin{definition}[Isomorphic Vector Spaces]
+    Two vector spaces are said to be {\bf isomorphic} if there is an isomorphic mapping
+    between their bases.
+\end{definition}
+Since the word {\it isomorphic} means {\it same form} we can loosely describe isomorphic
+vector spaces as having the same geometric form -- whatever geometry makes sense in one
+vector space makes the same sense in the other.
+
+Let's explore another example using our new terminology.  Consider the vector spaces
+$\mathbb{R}^4$ and $M_{2 \times 2}$ (the collection of $2 \times 2$ matrices).  The
+standard bases for these vector spaces are
+\[ \mathcal{B}_{\mathbb{R}^4} = \left\{ \begin{pmatrix}1\\0\\0\\0\end{pmatrix}\,,\,
+    \begin{pmatrix}0\\1\\0\\0\end{pmatrix}\,,\,
+    \begin{pmatrix}0\\0\\1\\0\end{pmatrix}\,,\,
+    \begin{pmatrix}0\\0\\0\\1\end{pmatrix}\right\} \quad \text{and} \quad
+    \mathcal{B}_{M_{2 \times 2}} = \left\{ \begin{pmatrix}1&0\\0&0\end{pmatrix}\,,\,
+    \begin{pmatrix}0&1\\0&0\end{pmatrix}\,,\,
+    \begin{pmatrix}0&0\\1&0\end{pmatrix}\,,\,
+    \begin{pmatrix}0&0\\0&1\end{pmatrix}\right\}
+\]
+and we note that both of these vector spaces are four dimensional.  
+There is a clear natural isomorphism between the two basis sets
+\[ 
+    \begin{pmatrix}1\\0\\0\\0\end{pmatrix} \leftrightarrow
+    \begin{pmatrix}1&0\\0&0\end{pmatrix} \quad
+    \begin{pmatrix}0\\1\\0\\0\end{pmatrix} \leftrightarrow
+    \begin{pmatrix}0&1\\0&0\end{pmatrix} \quad
+    \begin{pmatrix}0\\0\\1\\0\end{pmatrix} \leftrightarrow
+    \begin{pmatrix}0&0\\1&0\end{pmatrix} \quad
+    \begin{pmatrix}0\\0\\0\\1\end{pmatrix} \leftrightarrow
+    \begin{pmatrix}0&0\\0&1\end{pmatrix}.
+\]
+Hence we see that any $2 \times 2$ matrix has an isomorphic copy in $\mathbb{R}^4$ and the
+invertible mapping is
+\[ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \leftrightarrow \begin{pmatrix}
+    a\\b\\c\\d\end{pmatrix}. \]
+More specifically, this means that the matrix $\begin{pmatrix} 2&0\\3&-1\end{pmatrix}$ is
+geometrically equivalent (isomorphic) to the vector
+$\begin{pmatrix}2\\0\\3\\-1\end{pmatrix}$.
+
+
+
+\begin{thm}
+    Any vector space of dimension $n$ is isomorphic to $\mathbb{R}^n$.
+\end{thm}
+\begin{proof}
+    Let $\mathcal{V}$ be an $n$ dimensional vector space.  From the definition of
+    dimension this means that $\mathcal{V}$ has a basis that contains $n$ vectors.  Let
+    the basis $\mathcal{B}_{\mathcal{V}}$ be denoted as 
+    \[ \mathcal{B}_{\mathcal{V}} = \{ \bv_1, \bv_2, \ldots, \bv_n\}. \]
+    The natural isomorphism between the basis for $\mathcal{V}$ and $\mathbb{R}^n$ is
+    therefore
+    \[ \bv_1 \leftrightarrow \begin{pmatrix}1\\0\\0\\\vdots\\0\end{pmatrix}, \quad \bv_2
+    \leftrightarrow \begin{pmatrix}0\\1\\0\\\vdots\\0\end{pmatrix}, \quad \cdots \quad
+\bv_n \leftrightarrow \begin{pmatrix} 0\\0\\\vdots\\0\\1\end{pmatrix}. \]
+\end{proof}
+
+\begin{problem}
+    Show that $\mathcal{P}_3$ (the space of third order polynomials) is isomorphic to
+    $M_{2 \times 2}$.
+\end{problem}
+
+Now for some fun.
+\begin{problem}
+    Let $\mathcal{P}_2$ be the vector space of second order polynomials and let $T$ be a linear
+    transformation $T:\mathcal{P}_2 \to \mathcal{P}_1$ that maps a quadratic polynomial to its
+    derivative (which of course is linear).  For example, $T(3x^2+5x-1) = 6x+5$.
+    \begin{enumerate}
+        \item[(a)] Using the natural isomorphism between $\mathcal{P}_2$ and
+            $\mathbb{R}^3$ map the polynomial $p(x) = 3x^2 + 5x - 1$ to a vector
+            $\bu \in \mathbb{R}^3$. 
+        \item[(b)] Using the natural isomorphism between $\mathcal{P}_1$ and
+            $\mathbb{R}^2$ map the polynomial $q(x) = 6x+5$ to a vector $\bw \in \mathbb{R}^2$.
+        \item[(c)] There is a matrix $A$ such that $A \bu = \bw$.  Find it.
+        \item[(d)] Use your answer to part (c) to take the derivative of $p(x) = ax^2 + bx
+            + c$.  That is: map $p(x)$ to $\mathbb{R}^3$, apply the matrix transformation
+            from part (c), then map your answer from $\mathbb{R}^2$ to $\mathcal{P}_1$.
+        \item[(e)] The linear transformation $T:\mathcal{P}_{n} \to \mathcal{P}_{n-1}$
+            that takes derivatives of $n^{th}$ order polynomials is equivalent to what
+            matrix transformation?
+        \item[(f)] \ldots stop and think about this for a second \ldots you just showed
+            that taking derivatives of a polynomial is really just a matrix operation
+            \ldots mind = blown!
+    \end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+    Come up with a matrix transformation that has the same action as taking an
+    antiderivative.
+\end{problem}
+
+
+\begin{problem}
+    The dot product in $\mathbb{R}^2$ is easy remember, but now that we know that
+    $\mathbb{R}^2$ is isomorphic to the vector space of all linear functions it is natural
+    to ask if there is a natural inner product on $\mathcal{P}_1$ that is analogous to the
+    dot product.  Let $p(x) = p_0 + p_1x$ and $q(x) = q_0 + q_1 x$.  Map both $p$ and $q$
+    to $\mathbb{R}^2$ via the natural isomorphism and take the dot product.  Does the
+    resulting formula give a valid inner product on $\mathcal{P}_1$?  You'll need to check
+    the following (according to Definition \ref{def:inner_product}).
+    \begin{enumerate}
+        \item $\left< p,q\right> = \left<q,p\right>$ for $p,q\in\mathcal{P}_1$?
+        \item $\left< p,q+r\right> = \left<p,q\right> + \left<p,r\right>$ for
+            $p,q,r\in\mathcal{P}_1$?
+        \item $\left<cp,q\right> = c\left<p,q\right>$ for $p,q\in\mathcal{P}_1$ and $c \in \mathbb{R}$?
+        \item $\left<p,p\right> \ge 0$ and $\left<p,p\right>=0$ iff $p=0$ for $p \in
+            \mathcal{P}_1$.
+    \end{enumerate}
+\end{problem}
+
+
+
+\begin{problem}
+    Consider the vector space $M_{2\times2}$ of all $2 \times 2$ matrices along with the
+    inner product 
+    \[ \left<A,B\right> = \text{trace}(AB^T) = \text{trace}\left( 
+        \begin{pmatrix} a_{11} & a_{12} \\ 
+                        a_{21} & a_{22} \end{pmatrix} 
+        \begin{pmatrix} b_{11} & b_{21} \\
+        b_{12} & b_{22} \end{pmatrix} \right) = \text{trace}\left( 
+        \begin{pmatrix} a_{11} & a_{12} \\ 
+                        a_{21} & a_{22} \end{pmatrix} 
+        \begin{pmatrix} b_{11} & b_{12} \\
+        b_{21} & b_{22} \end{pmatrix}^T \right)\]
+    \[ = \text{trace}\left(
+                    \begin{pmatrix} a_{11}b_{11} + a_{12} b_{12} & a_{11}b_{21} +
+                        a_{12}b_{22} \\ a_{21}b_{11} + a_{22}b_{12} & a_{21} b_{21} +
+                    a_{22} b_{22} \end{pmatrix} \right) \]
+    \[ = \left( a_{11}b_{11} + a_{12} b_{12} \right) + \left(  a_{21} b_{21} + a_{22}
+    b_{22}\right) \]
+    \begin{enumerate}
+        \item[(a)] Why is this a natural choice for the inner product between $2 \times 2$ matrices?
+        \item[(b)] Complete these sentences: 
+            \begin{itemize}
+                \item Finding the magnitude of $2 \times 2$ matrices with this inner
+                    product is geometrically the
+                    same as \underline{\hspace{1in}}.
+                \item Projecting a $2 \times 2$ matrix onto another $2 \times 2$ matrix is
+                    geometrically the same as \underline{\hspace{1in}}.
+                \item Finding angles between $2 \times 2$ matrices is geometrically the
+                    same as \underline{\hspace{1in}}.
+            \end{itemize}
+    \end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+    An valid inner product on $\mathcal{P}_1[0,1]$ (the set of all linear functions on the
+    interval $[0,1]$) is 
+    \[ \left<p,q\right> = \int_0^1 p(x) q(x) dx. \]
+    Let $p(x) = p_0 + p_1x$ and $q(x) = q_0 + q_1x$ and observe that 
+    \begin{flalign*}
+        \int_0^1 p(x) q(x) &= \int_0^1 \left( p_0 + p_1 x \right)\left( q_0 + q_1 x
+        \right) dx \\
+        &= \int_0^1 \left( p_0 q_0 + (p_0 q_1 + p_1 q_0)x + p_1 q_1 x^2 \right) dx \\
+        &= \left( p_0 q_0 x + \frac{(p_0 q_1 + p_1 q_0)}{2} x^2 + \frac{p_1 q_1}{3} x^3
+        \right)\Big|_0^1 \\
+        &= p_0 q_0 + \frac{1}{2}\left( p_0 q_1 + p_1 q_0 \right) + \frac{1}{3} \left( p_1
+        q_1
+        \right).
+    \end{flalign*}
+    While this inner product naturally defines a geometry in the space of all linear
+    polynomials it doesn't correspond to our usual Euclidean geometry in the isomorphic
+    space $\mathbb{R}^2$. That is, if $\bu, \bw \in\mathbb{R}^2$ then we can map both
+    vectors to the vector space $\mathcal{P}_1$ via the natural isomorphism and then take
+    the inner product via the integral given above.  Since $\mathbb{R}^2$ and
+    $\mathcal{P}_1$ are isomorphic they are {\it geometrically equivalent}, but which
+    geometry do we get when we use the integral inner product?
+    \begin{enumerate}
+        \item[(a)] What is the angle between $\begin{pmatrix}1\\0\end{pmatrix}$ and
+            $\begin{pmatrix}0\\1\end{pmatrix}$ in this new geometry?  Are these vectors
+            still orthogonal?
+        \item[(b)] What is the length of the vector $\begin{pmatrix} 1\\1\end{pmatrix}$ in
+            this new geometry?
+        \item[(c)] If $\bu \perp \bw$ in Euclidean geometry then what do we know about
+            them in this new geometry?
+        \item[(d)] If $p \perp q$ in $\mathcal{P}_1$ under the integral inner product,
+            what does that mean about their images in $\mathbb{R}^2$ under Euclidean
+            geometry?
+    \end{enumerate}
+\end{problem}
+
+The previous two problems should point out an interesting fact about abstract vector spaces: in
+many cases the natural geometry from Euclidean space carries over perfectly to the
+abstract setting, and sometimes there is more to be gained in the abstract setting an your
+Euclidean intuition doesn't hold.  Remember that abstract vector spaces are not
+abstractions for the sake of abstractions.  Instead, the content in this chapter was a
+revolutionary leap forward in the understanding of mathematics in the 17th century and it
+has allowed us to make many modern mathematical discoveries.  It is no exaggeration to say
+that 
+\begin{quote}
+    much of modern mathematics (and hence modern science) is built upon the idea of an
+    abstract vector space.
+\end{quote}
+
+In this section we have built up the intuition for isomorphic vector spaces by using the
+natural standard bases.  We could have also built up these ideas using any other basis and
+everything that we've said thus far is true.  The down side to using non-standard bases,
+though, is that the notation and subsequent computations becomes more cumbersome.  For a
+more in-depth discussion of these ideas see \cite{Lay}.
+
+\newpage\section{Higher Dimensions are Geometrically {\it Weird} (Optional)}
 At this point you have likely come to the conclusion that linear algebra is beautiful but
 possibly very hard to visualize.  This is especially true in more than three dimensions.
 In this brief section we'll explore a few strange facts about geometry in higher
