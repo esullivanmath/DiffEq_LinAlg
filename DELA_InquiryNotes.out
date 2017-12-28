@@ -104,3 +104,26 @@
 \BOOKMARK [1][-]{section.13.6}{Additional Exercises}{chapter.13}% 104
 \BOOKMARK [0][-]{section*.24}{Appendices}{}% 105
 \BOOKMARK [0][-]{Appendix.a.A}{Partial Fractions}{}% 106
+\BOOKMARK [0][-]{Appendix.a.B}{MATLAB Basics}{}% 107
+\BOOKMARK [1][-]{section.a.B.1}{Vectors and Matrices}{Appendix.a.B}% 108
+\BOOKMARK [1][-]{section.a.B.2}{Looping}{Appendix.a.B}% 109
+\BOOKMARK [2][-]{subsection.a.B.2.1}{For Loops}{section.a.B.2}% 110
+\BOOKMARK [2][-]{subsection.a.B.2.2}{The While Loop}{section.a.B.2}% 111
+\BOOKMARK [1][-]{section.a.B.3}{Conditional Statements}{Appendix.a.B}% 112
+\BOOKMARK [2][-]{subsection.a.B.3.1}{If Statements}{section.a.B.3}% 113
+\BOOKMARK [2][-]{subsection.a.B.3.2}{Case-Switch Statements}{section.a.B.3}% 114
+\BOOKMARK [1][-]{section.a.B.4}{Functions}{Appendix.a.B}% 115
+\BOOKMARK [1][-]{section.a.B.5}{Plotting}{Appendix.a.B}% 116
+\BOOKMARK [1][-]{section.a.B.6}{Animations}{Appendix.a.B}% 117
+\BOOKMARK [0][-]{Appendix.a.C}{LaTeX}{}% 118
+\BOOKMARK [1][-]{section.a.C.1}{Equation Environments and Cross Referencing}{Appendix.a.C}% 119
+\BOOKMARK [1][-]{section.a.C.2}{Tables, Tabular, Figures, Shortcuts, and Other Environments}{Appendix.a.C}% 120
+\BOOKMARK [2][-]{subsection.a.C.2.1}{Tables and Tabular Environments}{section.a.C.2}% 121
+\BOOKMARK [2][-]{subsection.a.C.2.2}{Excel To LaTeX}{section.a.C.2}% 122
+\BOOKMARK [2][-]{subsection.a.C.2.3}{Figures}{section.a.C.2}% 123
+\BOOKMARK [2][-]{subsection.a.C.2.4}{New Commands: Shortcuts are AWESOME!}{section.a.C.2}% 124
+\BOOKMARK [1][-]{section.a.C.3}{Graphics in LaTeX}{Appendix.a.C}% 125
+\BOOKMARK [2][-]{subsection.a.C.3.1}{The Tikz and PGFPlots Packages}{section.a.C.3}% 126
+\BOOKMARK [1][-]{section.a.C.4}{Bibliography Management}{Appendix.a.C}% 127
+\BOOKMARK [2][-]{subsection.a.C.4.1}{Embedded Bibliography}{section.a.C.4}% 128
+\BOOKMARK [2][-]{subsection.a.C.4.2}{Bibliography Database: BibTeX}{section.a.C.4}% 129
