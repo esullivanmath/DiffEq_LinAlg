@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 DEC 2017 21:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 DEC 2017 21:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -4603,13 +4603,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 231.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
 Package rerunfilecheck Info: File `DELA_InquiryNotes.out' has not changed.
-(rerunfilecheck)             Checksum: 3084F093FA2DE250ED8FBFB6D31AE20C;7960.
+(rerunfilecheck)             Checksum: CEED7D14776B3F106A77BF1713C469D8;7959.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
  ) 
 Here is how much of TeX's memory you used:
  44462 strings out of 493014
  975789 string characters out of 6133351
- 1219860 words of memory out of 5000000
+ 1218860 words of memory out of 5000000
  45981 multiletter control sequences out of 15000+600000
  78712 words of font info for 191 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -4634,7 +4634,7 @@ b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
 pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
 m10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
-Output written on DELA_InquiryNotes.pdf (248 pages, 833978 bytes).
+Output written on DELA_InquiryNotes.pdf (248 pages, 834065 bytes).
 PDF statistics:
  3054 PDF objects out of 3580 (max. 8388607)
  2749 compressed objects within 28 object streams

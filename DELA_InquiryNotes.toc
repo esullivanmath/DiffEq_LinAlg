@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {2.4}Additional Exercises}{54}{section.2.4}
 \contentsline {chapter}{\numberline {3}Linear Systems and Matrices}{57}{chapter.3}
 \contentsline {section}{\numberline {3.1}Matrix Operations and Definitions}{57}{section.3.1}
-\contentsline {section}{\numberline {3.2}Gaussian Elimination: Reduced Row Eschelon Form}{59}{section.3.2}
+\contentsline {section}{\numberline {3.2}Gaussian Elimination: Reduced Row Echelon Form}{59}{section.3.2}
 \contentsline {section}{\numberline {3.3}Linear Combinations}{64}{section.3.3}
 \contentsline {section}{\numberline {3.4}Inverses and Determinants}{66}{section.3.4}
 \contentsline {section}{\numberline {3.5}Applications of Linear Systems}{70}{section.3.5}
