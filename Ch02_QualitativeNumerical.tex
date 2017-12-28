@@ -694,56 +694,135 @@ you take this course.
 
 
 
-\newpage\section{Bifurcations (INCOMPLETE)}
+\newpage\section{Bifurcations}
 In this section we will explore the behavior of the equilirium solutions in a differential
 equation to changes in a parameter.  In some instances the change in a parameter might
 cause the behavior of equilibrium points to change from stable to unstable (or possibly
 semi-stable).  It is also possible to {\it spawn} new equilibrium points by changing the
-values of parameters.  Let's start with an example of a logistic model with a harvesting
-term.
+values of parameters. 
 
-\begin{problem}
-    A population of Alaskan Salmon grows according to a logistic model:
-    \[ \frac{dP}{dt} = kP(M-P) \]
-    where $k$ is the growth rate and $M$ is the carrying capacity.  
+It is often the case in real models that parameters are not known with 100\% certainty.
+Sometimes the parameters come from scientific measurements, sometimes they are estimated
+from data, and sometimes they are just a guess.  If you are in any of these cases with a
+first order autonomous differential equation model then you should do a bifurcation
+analysis to see how the equilibrium solutions change due to the natural variability in the
+parameters.  
+
+\begin{problem}[Fish.net]
+    A mathematician at a fish hatchery has been using the differential equation 
+    \[ \frac{dP}{dt} = 0.5P\left( 1- \frac{P}{200} \right) \]
+    as a model for predicting the number of fish that a hatchery can expect to find in
+    their pond.  
+
     \begin{enumerate}
-        \item What are the equilibrium points and discuss their stability.
-        \item Fishermen actively target these fish.  Modify the model to implement a
-            constant harvesting rate (fish per day).
-            \[ \frac{dP}{dt} = kP(M-P) + \underline{\hspace{0.5in}} \]
-        \item Find the equilibrium points in terms of the model parameters.
-        \item When are there 2, 1, or 0 equilibrium points?
-        \item Draw a plot with the parameter $h$ on the horizontal axis and the value of
-            the equilibrium point(s) on the vertical axis. Use $M = 1$ and $k = 1$ for
-            simplicity.
+        \item[(a)] What are the equilibrium points of the mathematician's model.  Discuss their
+            stability.  Show the equilibrium points with a plot of $\frac{dP}{dt}$ vs.
+            $P$, a phase line, and a slope field.  
+        \item[(b)] What does the differential equation predict about the future of the
+            fish population for several different initial populations? 
+        \item[(c)] Recently the hatchery was bought out by \texttt{fish.net} and the new
+            owners are planning to allow the public to catch fish at the hatchery (for a
+            fee of course).  This means that the previous differential equation used to
+            predict future fish populations needs to modified to reflect this new plan.
+            For the sake of simplicity, assume that the managers from \texttt{fish.net}
+            are going to allow a constant annual harvest rate $k$.  Which of the four
+            modified differential equations makes the most sense to you and why?
+            \begin{flalign*}
+                & (i) \qquad \frac{dP}{dt} = 0.5 P\left( 1-\frac{P}{200} \right) - k \\
+                & (ii) \qquad \frac{dP}{dt} = 0.5 P\left( 1-\frac{P}{200} \right) - kP \\
+                & (iii) \qquad \frac{dP}{dt} = 0.5 P\left( 1-\frac{P}{200} \right) - kt\\
+                & (iv) \qquad \frac{dP}{dt} = 0.5 P\left( 1-\frac{P-k}{200} \right) 
+            \end{flalign*}
+        \item[(d)] Using the modified differential equation agreed upon from the previous
+            problem, discuss the implications that various choices of $k$ will have on
+            future fish populations.  In particular, are there choices of $k$ that change
+            the nature or number of the equilibrium points?  Defend your work graphically
+            and analytically.
+%         \item Find the equilibrium points in terms of the model parameters.
+%         \item When are there 2, 1, or 0 equilibrium points?
+%         \item Draw a plot with the parameter $h$ on the horizontal axis and the value of
+%             the equilibrium point(s) on the vertical axis. Use $M = 1$ and $k = 1$ for
+%             simplicity.
     \end{enumerate}
 \end{problem}
-\solution{
-    \[ \frac{dP}{dt} = kP(M-P) \]
-    has equilibria $P=0$ and $P=M$ (unstable and stable resp.)
+% \solution{
+%     \[ \frac{dP}{dt} = kP(M-P) \]
+%     has equilibria $P=0$ and $P=M$ (unstable and stable resp.)
+% 
+%     For a harvesting model:
+%     \[ \frac{dP}{dt} = kP(m-P)-h \]
+%     Therefore,
+%     \[ 0 = kP(M-P)-h \implies -kP^2 _ kMP - h = 0 \implies P = \frac{-kM \pm \sqrt{k^2M^2
+%     - 4kh}}{-2k} \]
+%     Plot this in GeoGebra to show the bifurcation.
+% 
+%     Further analysis: 
+%     \begin{itemize}
+%         \item When $(kM)^2-4kh<0$ there are no equilibrium points.  In other words, 
+%             \[ h>\frac{kM^2}{4} \implies \text{no equilibrium points} \]
+%         \item When $(kM)^2-4kh=0$ there is 1 equilibrium point.  In other words, 
+%             \[ h=\frac{kM^2}{4} \implies \text{1 equilib. point} P_{eq} =
+%             \frac{M}{2} \]
+%         \item When $(kM)^2-4kh>0$ there are 2 equilibrium points.  In other words, 
+%             \[ h<\frac{kM^2}{4} \implies \text{2 equilibrium points} \]
+%     \end{itemize}
+% }
 
-    For a harvesting model:
-    \[ \frac{dP}{dt} = kP(m-P)-h \]
-    Therefore,
-    \[ 0 = kP(M-P)-h \implies -kP^2 _ kMP - h = 0 \implies P = \frac{-kM \pm \sqrt{k^2M^2
-    - 4kh}}{-2k} \]
-    Plot this in GeoGebra to show the bifurcation.
 
-    Further analysis: 
-    \begin{itemize}
-        \item When $(kM)^2-4kh<0$ there are no equilibrium points.  In other words, 
-            \[ h>\frac{kM^2}{4} \implies \text{no equilibrium points} \]
-        \item When $(kM)^2-4kh=0$ there is 1 equilibrium point.  In other words, 
-            \[ h=\frac{kM^2}{4} \implies \text{1 equilib. point} P_{eq} =
-            \frac{M}{2} \]
-        \item When $(kM)^2-4kh>0$ there are 2 equilibrium points.  In other words, 
-            \[ h<\frac{kM^2}{4} \implies \text{2 equilibrium points} \]
-    \end{itemize}
-}
+\begin{problem}\label{prob:generic_bif}
+    For each of the following differential equations demonstrate both graphically and
+    analytically the way(s) in which the solutions change as the value of $r$ changes.
+    Identify the precise value(s) of $r$ for which there is either a change in the number
+    of equilibrium solution(s) or a change in the type of equilibrium solution(s).
+    \begin{flalign}
+        \frac{dy}{dt} &= (y-3)^2 + r \label{eqn:bif_1} \\
+        \frac{dy}{dt} &= y^2 - ry + 1 \label{eqn:bif_2}\\
+        \frac{dy}{dt} &= ry + y^3 \label{eqn:bif_3}\\
+        \frac{dy}{dt} &= y^6 - 2y^4 + r \label{eqn:bif_4}
+    \end{flalign}
+\end{problem}
+
+\begin{problem}
+    Reconsider differential equation \eqref{eqn:bif_1} from Problem \ref{prob:generic_bif}.  Sketch
+    a graph with the value of the equilibrium solution on the vertical axis and the value
+    of $r$ on the horizontal axis.  Such a graph is referred to as a ``bifurcation
+    diagram.''  Connect what you see in the bifurcation diagram to your
+    arguments from Problem \ref{prob:generic_bif}.
+\end{problem}
+
+\begin{problem}
+    Reconsider differential equation \eqref{eqn:bif_2} from Problem
+    \ref{prob:generic_bif}.  Sketch a bifurcation diagram with $r$ on the horizontal axis
+    and the value of the equilibrium point on the vertical axis.  Connect what you see in
+    this plot to the original discussion in Problem \ref{prob:generic_bif}.
+\end{problem}
+
+\begin{problem}
+    Consider the differential equation 
+    \[ \frac{dy}{dt} = y^2 - ry + r \]
+    with unknown parameter $r$.  The bifurcation diagram is shown below.  
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[axis lines=center, xlabel={$r$}, title={Bifurcation Diagram}, xmin=0,
+            xmax=8, ymin=0, ymax=7, grid]
+            \addplot[smooth, very thick, blue, domain=4:8, samples=150] {(1/2)*x-(1/2)*sqrt(x^2-4*x)};
+            \addplot[smooth, very thick, red, domain=4:8, samples=150] {(1/2)*x+(1/2)*sqrt(x^2-4*x)};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+\begin{enumerate}
+    \item[(a)] How many equilibrium solutions are there to the differential equation when
+        $r<4$? When $r=4$? When $r>4$?
+    \item[(b)] Make a plot of $\frac{dy}{dt}$ vs. $y$ assuming that $r > 4$.  Is the blue
+        part of the bifurcation diagram stable, unstable or semi-stable?  What about the
+        red part?
+    \item[(c)] Make a plot of $\frac{dy}{dt}$ vs. $y$ assuming that $r = 4$.  Is the
+        single equilibrium point stable, unstable, or semi-stable?
+\end{enumerate}
+\end{problem}
 
 
 
-\ldots more about bifurcations when I get around to it \ldots
 
 
 \newpage\section{Additional Exercises}
@@ -864,7 +943,6 @@ sensor). See the free body diagram below.
 
 \end{enumerate}
 \end{problem}
-
 
 
 
