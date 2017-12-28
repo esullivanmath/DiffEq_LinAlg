@@ -723,6 +723,10 @@ length $2\pi$ would work just fine.
     \[ f(x) = C_1 \sin(1x) + C_2 \sin(2x) + C_3 \sin(3x) + \cdots = \sum_{k=1}^\infty C_k
     \sin(kx). \]
 \end{thm}
+\begin{proof}
+    Indeed, we have just expanded the periodic function as a linear combination of the
+    basis functions.
+\end{proof}
 
 \begin{problem}
     Go to
@@ -791,7 +795,7 @@ length $2\pi$ would work just fine.
 % subsequently changed the world.  He gave birth to the mathematical field of harmonic
 % analysis and is still used today in digital and analog signal processing.  
 We will return to the idea of Fourier series in Chapter \ref{ch:PDEs} where we'll use Fourier series to
-solve problems in heat conduction and wave propagation. We have also presented a bit of a
+solve problems in heat conduction. We have also presented a bit of a
 limited view in this section in that we have only allowed for Fourier {\it sine} series.
 We can generalize the idea to a general Fourier series,
 \[ f(x) = a_0 + \sum_{k=1}^\infty a_k \cos(kx) + \sum_{k=0}^\infty b_k \sin(kx), \]
@@ -1541,6 +1545,30 @@ Now for some fun.
     Come up with a matrix transformation that has the same action as taking an
     antiderivative.
 \end{problem}
+
+
+
+\begin{problem}
+    True or False: The function $h(t) = 4+3t$ is a linear combination of the functions
+    $f(t) = (1+t)^2$ and $g(t) = 2 - t - 2t^2$.  Answer this question by using the fact
+    that the polynomial spaces are isomorphic to the Euclidean spaces.
+\end{problem}
+\solution{
+True.  $h(t) = 2f(t) + g(t) = 2(1+2t+t^2) + (2-t-2t^2) = 4 + 3t$
+}
+
+% \begin{problem}
+%     \begin{itemize}
+%             \input{ClickerQuestions/LA.00.17.050}
+%     \end{itemize}
+% \end{problem}
+
+\begin{problem}
+    True or False: The function $h(t) = t^2$ is a linear combination of $f(t) = (1-t)^2$
+    and $g(t) = (1+t)^2$. Answer this question by using the fact
+    that the polynomial spaces are isomorphic to the Euclidean spaces.
+\end{problem}
+\solution{False}
 
 
 \begin{problem}

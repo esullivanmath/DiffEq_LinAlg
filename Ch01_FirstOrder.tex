@@ -360,20 +360,6 @@ dust off of your memories and to review what you once knew.
     -\frac{1}{2} e^{-2t} + \frac{3}{2} \]
 }
 
-\begin{problem}
-    A stone is dropped from rest at an initial height $h$ above the surface of the earth.
-    We want to show that the speed with which it strikes the ground is $v = \sqrt{2gh}$.
-    Start by writing an appropriate differential equation and then use the
-    differential equation to very this result. You do not need to include air resistance
-    in your model.
-\end{problem}
-\solution{
-    \[ \frac{dv}{dt} = -g \implies v(t) = -gt + 0 \implies \frac{dy}{dt} = -gt \implies
-    y(t) = -\frac{gt^2}{2} + h \implies t_{ground} =\sqrt{\frac{2h}{g}} \]
-    Therefore,
-    \[ v_{ground} = -g\sqrt{\frac{2h}{g}} = -\sqrt{2gh} \]
-}
-
 \newpage
 \section{Solution Technique: Separation of Variables}
 \begin{problem}\label{prob:separation_1}
@@ -540,60 +526,6 @@ form
 }
 
 
-\begin{problem}
-    In a local pine forest the Pine Beetle is killing the trees at a rate proportional to the
-    number of available trees in the forest.  A conservation group is attempting to curb the
-    problem by planting 5 live trees per week.  Write a differential equation describing
-    this scenario, classify the differential equation, and determine if it can be solved
-    with separation of variables.
-%     Which of the following is a mathematical model
-%     for the number of live trees as a function of time (measured in weeks)?
-%     \begin{enumerate}
-%         \item $T' = -kT + 5$
-%         \item $T' = -kT + 5*t$
-%         \item $T' = -5k*T*t$
-%         \item $T' = -5k*t$
-%     \end{enumerate}
-\end{problem}
-\solution{
-$T' = -kT + 5$.  First order, linear, autonomous, non-homogeneous. Separation is fine
-since is it autonomous.
-\[ \int \frac{dT}{T-5/k} = \int -k dt = -kt+C \implies \ln(T-5/k) = -kt+C \implies T =
-Ce^{-kt} + \frac{5}{k} \]
-}
-
-
-\begin{problem}
-    In the movie Interstellar, ``Plan B'' was for the astronauts to start a colony on a new
-    planet.  There was 1 female in the group so she would presumably carry the children.
-    Genetic diversity was no problem because of the donor eggs.  The supplies on the colony
-    would be limited by local resources as well as what they brought with them
-    (which minimal).  Which of the following models should the astronauts use to plan
-    their future reproduction, and what do the parameters mean?  Explain your choice for the best one.
-    \begin{itemize}
-        \item $P' = kP$
-        \item $P' = kt$
-        \item $P' = -kP\ln(P/N)$
-        \item $P' = kP(1-P/N) $
-    \end{itemize}
-\end{problem}
-\solution{A logistic model is the best choice. Either of the last two choice could work.
-    \[ \int \frac{dP}{P\ln(P/N)} = \int -k dt \implies \int \frac{dP}{P\ln(P/N)} = -kt + C
-    \]
-    \[ \implies (\text{with } u=P/N) \,  \int \frac{1}{u\ln(u)} = -kt+C \implies
-    (\text{with } v=1/u) \, \int \frac{1}{v}dv = -kt + C \]
-    \[ \implies \ln(v) = -kt+c \implies \ln(\ln(P/N))=-kt+C \implies \ln(P/N) = Ce^{-kt}
-    \implies P(t) = N e^{Ce^{-kt}} \]
-
-    For the more standard logistic model:
-    \[ \int \frac{dP}{P(1-P/N)} = -kt+C \implies \int \frac{A}{P} + \frac{B}{1-P/N} dP =
-    -kt + C \implies \int \frac{1}{P} + \frac{(1/N)}{1-P/N} dP = -kt+ C \]
-    \[ \implies \ln(P) - \ln(1-P/N) = -kt+C \implies \ln \left( \frac{P}{1-P/N} \right) =
-    -kt+C\]
-    \[ \implies \frac{P}{1-P/N} = Ce^{-kt} \implies P(t) = \frac{Ce^{-kt}}{1-Ce^{-kt}/N}
-    \]
-
-}
 
 
 \newpage\section{Solution Technique: Undetermined Coefficients}
@@ -1109,47 +1041,6 @@ to be awesome!
 \[ S(0) = 90 \implies 90 = 200 + \frac{C}{100^3} \implies C=(-110)(100^3) \implies C = -1.1 \times 10^8 \]
 }
 
-\begin{problem}
-    Canyon Ferry reservoir has a volume of approximately $V = 2.33 \times 10^9$ m$^3$ and assume that the inflow from the
-    Missouri river in the spring is $R=113$ m$^3$/sec.  Assume further
-    that the dam leading to Hauser reservoir is open so the outflow rate is the same as
-    the inflow rate in Canyon Ferry.  A large gas tank at a marina upstream is 
-    leaking into the river so the contaminated water coming in has a concentration of
-    $c = 0.25$kg/m$^3$.  
-    Write a differential equation for the amount of gas, $G(t)$, in Canyon Ferry lake at
-    time $t$.  Assume for simplicity that the gas is well mixed in the lake.  Once you
-    have your model solve it with an appropriate technique. \\
-    Hint \#1: The rate of change of the amount of gas equals the rate in minus the rate out
-    \[ \frac{dG}{dt} = \text{rate that the gas comes in} - \text{rate that the gas goes
-    out} \]
-    Hint \#2: Do not substitute the values given until you have solved the model.
-%     \begin{enumerate}
-%         \item $\displaystyle \frac{dG}{dt} = 113 \cdot 2.33 \times 10^9 - \frac{113 \cdot
-%             G}{0.25}$
-%         \item $\displaystyle \frac{dG}{dt} = 113 \cdot 0.25 - \frac{113 \cdot G}{2.33 \times 10^9}$
-%         \item $\displaystyle \frac{dG}{dt} = 113 \cdot 0.25 - \frac{2.33 \times 10^9 \cdot
-%             G}{113}$
-%         \item $\displaystyle \frac{dG}{dt} = 0.25 \cdot 2.33 \times 10^9 - \frac{113 \cdot
-%             G}{0.25}$
-%     \end{enumerate}
-\end{problem}
-\solution{
-The correct model is:
-\[ \frac{dG}{dt} = R \cdot c - \frac{R G}{V} \]
-where $R$ is the flow rate, $c$ is the contamination concentration, $V$ is the volume of
-the lake, and $G$ is the amount of gas in the water. Therefore, the correct model is
-\[ \frac{dG}{dt} = 113 \cdot 0.25 - \frac{113 \cdot G}{2.33 \times 10^9} \]
-The solution can be found either with separation, integrating factors, or with
-undetermined coefficients. 
-\[ \frac{dG}{dt} = -\frac{R}{V} \left( G - cV \right) \implies G(t) = Ce^{-Rt/V} + cV \]
-
-Explore with slope fields.
-
-Extension.  What if the rates are not the same and $V = V(t)$? Must use integrating
-factors.
-
-}
-
 
 
 \newpage\section{Existence and Uniqueness of Solutions}
@@ -1502,3 +1393,114 @@ equations.
     both of the differential equations resulting from those models and answer the
     question: which type of ice cube will keep my drink colder longer.
 \end{problem}
+\begin{problem}
+    A stone is dropped from rest at an initial height $h$ above the surface of the earth.
+    We want to show that the speed with which it strikes the ground is $v = \sqrt{2gh}$.
+    Start by writing an appropriate differential equation and then use the
+    differential equation to very this result. You do not need to include air resistance
+    in your model.
+\end{problem}
+\solution{
+    \[ \frac{dv}{dt} = -g \implies v(t) = -gt + 0 \implies \frac{dy}{dt} = -gt \implies
+    y(t) = -\frac{gt^2}{2} + h \implies t_{ground} =\sqrt{\frac{2h}{g}} \]
+    Therefore,
+    \[ v_{ground} = -g\sqrt{\frac{2h}{g}} = -\sqrt{2gh} \]
+}
+
+\begin{problem}
+    In a local pine forest the Pine Beetle is killing the trees at a rate proportional to the
+    number of available trees in the forest.  A conservation group is attempting to curb the
+    problem by planting 5 live trees per week.  Write a differential equation describing
+    this scenario, classify the differential equation, and determine if it can be solved
+    with separation of variables.
+%     Which of the following is a mathematical model
+%     for the number of live trees as a function of time (measured in weeks)?
+%     \begin{enumerate}
+%         \item $T' = -kT + 5$
+%         \item $T' = -kT + 5*t$
+%         \item $T' = -5k*T*t$
+%         \item $T' = -5k*t$
+%     \end{enumerate}
+\end{problem}
+\solution{
+$T' = -kT + 5$.  First order, linear, autonomous, non-homogeneous. Separation is fine
+since is it autonomous.
+\[ \int \frac{dT}{T-5/k} = \int -k dt = -kt+C \implies \ln(T-5/k) = -kt+C \implies T =
+Ce^{-kt} + \frac{5}{k} \]
+}
+
+
+\begin{problem}
+    In the movie Interstellar, ``Plan B'' was for the astronauts to start a colony on a new
+    planet.  There was 1 female in the group so she would presumably carry the children.
+    Genetic diversity was no problem because of the donor eggs.  The supplies on the colony
+    would be limited by local resources as well as what they brought with them
+    (which minimal).  Which of the following models should the astronauts use to plan
+    their future reproduction, and what do the parameters mean?  Explain your choice for the best one.
+    \begin{itemize}
+        \item $P' = kP$
+        \item $P' = kt$
+        \item $P' = -kP\ln(P/N)$
+        \item $P' = kP(1-P/N) $
+    \end{itemize}
+\end{problem}
+\solution{A logistic model is the best choice. Either of the last two choice could work.
+    \[ \int \frac{dP}{P\ln(P/N)} = \int -k dt \implies \int \frac{dP}{P\ln(P/N)} = -kt + C
+    \]
+    \[ \implies (\text{with } u=P/N) \,  \int \frac{1}{u\ln(u)} = -kt+C \implies
+    (\text{with } v=1/u) \, \int \frac{1}{v}dv = -kt + C \]
+    \[ \implies \ln(v) = -kt+c \implies \ln(\ln(P/N))=-kt+C \implies \ln(P/N) = Ce^{-kt}
+    \implies P(t) = N e^{Ce^{-kt}} \]
+
+    For the more standard logistic model:
+    \[ \int \frac{dP}{P(1-P/N)} = -kt+C \implies \int \frac{A}{P} + \frac{B}{1-P/N} dP =
+    -kt + C \implies \int \frac{1}{P} + \frac{(1/N)}{1-P/N} dP = -kt+ C \]
+    \[ \implies \ln(P) - \ln(1-P/N) = -kt+C \implies \ln \left( \frac{P}{1-P/N} \right) =
+    -kt+C\]
+    \[ \implies \frac{P}{1-P/N} = Ce^{-kt} \implies P(t) = \frac{Ce^{-kt}}{1-Ce^{-kt}/N}
+    \]
+
+}
+
+
+\begin{problem}
+    Canyon Ferry reservoir has a volume of approximately $V = 2.33 \times 10^9$ m$^3$ and assume that the inflow from the
+    Missouri river in the spring is $R=113$ m$^3$/sec.  Assume further
+    that the dam leading to Hauser reservoir is open so the outflow rate is the same as
+    the inflow rate in Canyon Ferry.  A large gas tank at a marina upstream is 
+    leaking into the river so the contaminated water coming in has a concentration of
+    $c = 0.25$kg/m$^3$.  
+    Write a differential equation for the amount of gas, $G(t)$, in Canyon Ferry lake at
+    time $t$.  Assume for simplicity that the gas is well mixed in the lake.  Once you
+    have your model solve it with an appropriate technique. \\
+    Hint \#1: The rate of change of the amount of gas equals the rate in minus the rate out
+    \[ \frac{dG}{dt} = \text{rate that the gas comes in} - \text{rate that the gas goes
+    out} \]
+    Hint \#2: Do not substitute the values given until you have solved the model.
+%     \begin{enumerate}
+%         \item $\displaystyle \frac{dG}{dt} = 113 \cdot 2.33 \times 10^9 - \frac{113 \cdot
+%             G}{0.25}$
+%         \item $\displaystyle \frac{dG}{dt} = 113 \cdot 0.25 - \frac{113 \cdot G}{2.33 \times 10^9}$
+%         \item $\displaystyle \frac{dG}{dt} = 113 \cdot 0.25 - \frac{2.33 \times 10^9 \cdot
+%             G}{113}$
+%         \item $\displaystyle \frac{dG}{dt} = 0.25 \cdot 2.33 \times 10^9 - \frac{113 \cdot
+%             G}{0.25}$
+%     \end{enumerate}
+\end{problem}
+\solution{
+The correct model is:
+\[ \frac{dG}{dt} = R \cdot c - \frac{R G}{V} \]
+where $R$ is the flow rate, $c$ is the contamination concentration, $V$ is the volume of
+the lake, and $G$ is the amount of gas in the water. Therefore, the correct model is
+\[ \frac{dG}{dt} = 113 \cdot 0.25 - \frac{113 \cdot G}{2.33 \times 10^9} \]
+The solution can be found either with separation, integrating factors, or with
+undetermined coefficients. 
+\[ \frac{dG}{dt} = -\frac{R}{V} \left( G - cV \right) \implies G(t) = Ce^{-Rt/V} + cV \]
+
+Explore with slope fields.
+
+Extension.  What if the rates are not the same and $V = V(t)$? Must use integrating
+factors.
+
+}
+

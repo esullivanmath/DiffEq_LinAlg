@@ -4,7 +4,7 @@ the appropriate linked text from Section \ref{pref:resources} for any necessary 
 your notes from when you first saw linear algebra.  We will begin here
 with a few of the basic definitions and we will recap some of the basics from systems of
 equations, row reduction, linear combinations, and matrix operations.  I highly suggest
-that you \underline{put your calculator down} and get used to doing all of these techniques by hand.
+that you \underline{{\bf PUT YOUR CALCULATOR DOWN}} and get used to doing all of these techniques by hand.
 There is a time and place for technology and for the most part this chapter is not it.
 
 
@@ -85,21 +85,12 @@ As expected, $AB \ne BA$.
 
 \begin{problem}
     Compute the product $Ab$ for 
-    \[ A = \begin{pmatrix} 2 & 1 \\ 3 & 2 \end{pmatrix} \quad b = \begin{pmatrix} 4 \\ -1
+    \[ A = \begin{pmatrix} 2 & 1 \\ 3 & 2 \end{pmatrix} \quad b = \begin{pmatrix} a \\ b
         \end{pmatrix} \]
 \end{problem}
 \solution{
-    \[ AB = \begin{pmatrix} 7 \\ 10 \end{pmatrix} \]
 }
 
-% \begin{problem}
-%     \begin{itemize}
-%             \input{ClickerQuestions/LA.00.08.050}
-%     \end{itemize}
-% \end{problem}
-% \solution{
-% 4
-% }
 
 \newpage\section{Gaussian Elimination: Reduced Row Echelon Form}
 Solving systems of equations is one of the most essential applications of linear algebra.
@@ -667,10 +658,17 @@ that $AB = I$ and $BA = I$. Where $I$ is the identity matrix which is the multip
 identity for matrices.
 
 \begin{problem}
-    Consider the matrix $A = \begin{pmatrix} 1 & 2 \\ -4 & -6 \end{pmatrix}$.  Find a
-    matrix $B$ such that $AB = I$ and $BA = I$.  \\
-    You may recall some sort of ``shortcut'' from previous classes \dots you are forbidden
-    to use this shortcut!
+    \begin{enumerate}
+        \item[(a)] Consider the matrix $A = \begin{pmatrix}
+                1&2\\-4&-6\end{pmatrix}$ and the vector $\bb = \begin{pmatrix}
+                5\\-16\end{pmatrix}$.
+            Find the vector $\bx$ such that $A\bx = \bb$ by hand using row reduction.  
+        \item[(b)] Consider the matrix $A = \begin{pmatrix} 1 & 2 \\ -4 & -6
+            \end{pmatrix}$.  Find a matrix $B$ such that $AB = I$ and $BA = I$.  Use what
+            you did in part (a) to help set up the problem. \\ (You may recall some sort
+            of ``shortcut'' that involves switching and negating some matrix entries \dots
+            you are forbidden to use this shortcut!)
+    \end{enumerate}
 \end{problem}
 \solution{
 Augment with the identity and row reduce.
@@ -681,10 +679,31 @@ Augment with the identity and row reduce.
 \]
 }
 
+\begin{problem}
+    \begin{enumerate}
+        \item[(a)] True or False: If $AB = I$ and $BA = I$ then $A$ is the inverse of $B$
+            and $B$ is the inverse of $A$. \solution{True}
+        \item[(b)] True or False: If $A\bx = \bb$ and $A$ has an inverse then $\bx =
+            A^{-1} \bb$.\solution{True}
+        \item[(c)] True or False: If $A \bx = \bb$ and $A^{-1}$ exists then to find $\bx$ we can augment $A$
+            with $\bb$ and row reduce.  That is, $\begin{pmatrix} A & | & \bb
+            \end{pmatrix} \to \cdots \to \begin{pmatrix} I & | & \bx
+            \end{pmatrix}$.\solution{True}
+        \item[(c)] True or False: If $A \bx = \bb$ then $A = \bb \bx^{-1}$.
+            \solution{False}
+        \item[(d)] True or False: If $AB = I$ then we can find $B$ by augmenting $A$ with $I$ and row
+            reducing?  That is, $\begin{pmatrix} A & | & I \end{pmatrix} \to \cdots \to
+            \begin{pmatrix} I & | & B \end{pmatrix}$. \solution{True}
+    \end{enumerate}
+\end{problem}
+
 \begin{technique}[Finding Matrix Inverses]
-    If $A$ is a square matrix of size $n \times n$ what is the technique for mechanically
-    find the $A^{-1}$ if it exists? \\
-    Hint: Use what you did in the previous problem to give the appropriate technique.
+    If $A$ is a square matrix of size $n \times n$ then if $A^{-1}$ exists we know that
+    $AA^{-1} = I$.  Therefore, to find $A^{-1}$ we augment $A$ with $I$ and row reduce.
+    That is, $\begin{pmatrix} A & | & I \end{pmatrix} \to \cdots \to \begin{pmatrix} I & |
+        & B \end{pmatrix}$
+
+    If $A^{-1}$ does not exist then we will be unable to row reduce to the identity.
 \end{technique}
 \solution{
     Augment with the identity and row reduce.
@@ -796,6 +815,21 @@ Augment with the identity and row reduce.
 % 2
 % }
 
+\begin{problem}
+The {\it trick} that you might recall for $2\times 2$ inverses is
+\[ \begin{pmatrix} a & b \\ c & d \end{pmatrix}^{-1} = \frac{1}{ad-bc} \begin{pmatrix} d &
+    -b \\ -c & a \end{pmatrix}. \]
+Prove that this {\it trick} works by row reducing the system
+\[ \left( \begin{array}{cc|cc} a & b & 1 & 0 \\ c & d & 0 & 1 \end{array} \right). \]
+\end{problem}
+
+In the demoninator of the equation
+\[ \begin{pmatrix} a & b \\ c & d \end{pmatrix}^{-1} = \frac{1}{ad-bc} \begin{pmatrix} d &
+    -b \\ -c & a \end{pmatrix}. \]
+you find the expression $ad-bd$.  For a $2 \times 2$ matrix this is called the
+determinant.  Clearly from this formula for the inverse of a $2\times 2$ matrix if the
+determinant is zero then the inverse does not exist.  What we'll find is that this is not
+unique to $2\time 2$ matrices.
 
 \begin{definition}[$2\times 2$ Determinant]
     Let $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$.  The determinant of $A$ is 
@@ -860,21 +894,35 @@ Expand along the second column:
 % }
 
 
-\begin{problem}
-    What is the determinant of the $n \times n$ identity matrix?
-\end{problem}
-\solution{
-$\det(I) = 1$
-}
+% \begin{problem}
+%     What is the determinant of the $n \times n$ identity matrix?
+% \end{problem}
+% \solution{
+% $\det(I) = 1$
+% }
+
+The following collection of theorems give several of the primary characterizations of the
+determinant.
+
+\begin{thm}
+    The determinant of the identity matrix is 1.
+\end{thm}
+\begin{proof}
+    (prove this theorem)
+\end{proof}
+
 \begin{thm}[Determinants and Invertibility]
     The $n \times n$ matrix $A$ is invertible if and only if $\det(A) \ne 0$.
 \end{thm}
 
-\begin{thm}{Determinants and the Matrix Transpose}
+\begin{thm}[Determinants and the Matrix Transpose]
     Let $A$ be an $n \times n$ matrix.  The determinant of the transpose of $A$ is the
     same as the determinant of $A$.  In other words,
     \[ \det(A^T) = \det(A). \]
 \end{thm}
+\begin{proof}
+    (prove this theorem)
+\end{proof}
 
 \begin{thm}[Determinants of Matrix Products]
     If $A$ and $B$ are $n \times n$ matrices, then
@@ -883,16 +931,16 @@ $\det(I) = 1$
 
 % 
 
-\begin{problem}
-    Suppose that the determinant of a $2 \times 2$ matrix $A$ is equal to $3$.  What is the
-    determinant of $A^{-1}$?  Be able to defend your claim mathematically.
-\end{problem}
-\solution{
-    $\det(A^{-1}) = 1/3$ since $1 = \det(I) = \det(AA^{-1}) = \det(A)\det(A^{-1})$ so $\det(A^{-1}) =
-    1/\det(A)$.
-}
-
-
+% \begin{problem}
+%     Suppose that the determinant of a $2 \times 2$ matrix $A$ is equal to $3$.  What is the
+%     determinant of $A^{-1}$?  Be able to defend your claim mathematically.
+% \end{problem}
+% \solution{
+%     $\det(A^{-1}) = 1/3$ since $1 = \det(I) = \det(AA^{-1}) = \det(A)\det(A^{-1})$ so $\det(A^{-1}) =
+%     1/\det(A)$.
+% }
+% 
+% 
 % \begin{problem}
 %     \begin{itemize}
 %             \input{ClickerQuestions/LA.00.10.040}
@@ -910,6 +958,9 @@ $\det(I) = 1$
 \solution{
     $\det(A^{-1}) = 1/\det(A)$
 }
+\begin{proof}
+    (prove your claim using the fact that $\det(AB) = \det(A)\det(B)$)
+\end{proof}
 
 \begin{thm}
     If $\lambda$ is some scalar and $A$ is a square matrix of size $n \times n$ then
@@ -918,10 +969,16 @@ $\det(I) = 1$
 
 
 \begin{problem}
-    What is the determinant of $5A$ where $A = \begin{pmatrix} 1 & 3 \\ -7 & 2 \end{pmatrix}?$
+    Consider the matrix $A = \begin{pmatrix} 1 & 3 \\ -7 & 2 \end{pmatrix}$
+    \begin{enumerate}
+        \item[(a)] What is the determinant of $5A$?
+        \item[(b)] What is the determinant of $A^T$?
+        \item[(c)] What is the determinant of $A^{-1}$?
+    \end{enumerate}
 \end{problem}
 \solution{
-$\det(A) = 2 + 21 = 23$ so $\det(5A) = 5^2(23) = 575$.
+    $\det(A) = 2 + 21 = 23$ so $\det(5A) = 5^2(23) = 575$, $\det(A^T) = 23$, and
+    $\det(A^{-1}) = 1/23$
 }
 
 \begin{problem}
