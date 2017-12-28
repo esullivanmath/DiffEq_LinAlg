@@ -474,6 +474,32 @@ form
 }
 
 \begin{problem}
+    A population grows according to the differential equation
+    \[ \frac{dP}{dt} = 2P\left( 1-\frac{P}{10} \right) \]
+    with initial condition $P(0) = 5$.  This differential equation is separable and
+    separating the variables gives
+    \[ \frac{dP}{P(1-P/10)} = 2dt. \]
+    Integrating both sides yields
+    \[ \int \frac{dP}{P(1-P/10)} = \int 2dt. \]
+    The right-hand integral is really easy: $\int 2dt = 2t + C$.  The left-hand integral,
+    on the other hand, takes a bit of work. We will use the method of partial fractions
+    (see Appendix \ref{app:partial_fractions}) to rewrite the fraction on the left-hand
+    side as
+    \[ \frac{1}{P(1-P/10)} = \frac{A}{P} + \frac{B}{1-P/10}. \]
+    Clearing the fractions gives
+    \[ 1 = A(1-P/10) + BP, \]
+    and choosing appropriate values of $P$ gives 
+    \begin{flalign*}
+        A &= 1 \quad \text{(found by taking $P=0$)} \\
+        B &= \frac{1}{10} \quad \text{(found by taking $P=10$)}.
+    \end{flalign*}
+    Therefore the left-hand integral becomes
+    \[ \int \frac{dP}{P(1-P/10)} = \int \frac{1}{P} dP + \frac{1}{10} \int
+        \frac{1}{1-P/10} dP, \]
+        and these are integrals that you can easily do.  Finish this problem.
+\end{problem}
+
+\begin{problem}
     In problem \ref{prob:sugar_cube_1} we write the differential equation 
     \[ \frac{dV}{dt} = k S \]
     to describe the dissolution of a sugar cube.  Here $V$ represents the volume of the
