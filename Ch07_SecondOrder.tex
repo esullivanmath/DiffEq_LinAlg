@@ -9,46 +9,131 @@ primary focus here will be on mechanical vibrations since that is likely a famil
 context for most students.
 
 \section{Intro to Second Order Differential Equations}
+\begin{problem}
+    In Figure \ref{fig:7.8.mass_spring} you see three mass spring systems.  Assume that
+    all three masses have the same density.  You give each of the masses a bump
+    upward at time $t=0$.  Make a plot of the resulting motion for each of the mass-spring
+    systems (time on the horizontal axis and displacement on the vertical axis).  
+\end{problem}
+
+\begin{figure}[ht!]
+    \begin{center}
+\begin{tikzpicture}
+    \draw[ultra thick, black] (-2,0) -- (2,0);
+    \foreach \k in {-2,-1.75, -1.5, -1.25, -1, -0.75, -0.5, -0.25,
+    0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2}{
+        \draw[black] (\k,0) -- (\k-0.25,0.25);
+    }
+\draw[thick,gray,decorate,decoration={coil,aspect=0.7,amplitude=5}] (0,0) -- (0,-2.8);
+\fill (0,0) circle (.2);
+\draw[<-, thick] (1.5,-1) -- (1.5,-2.5);
+\draw[->, thick] (1.5,-3.5) -- (1.5,-5);
+\draw[dashed, black] (0,-3) -- (1,-3) node[anchor=west]{$y=0$};
+\draw[fill=blue!30] (0,-3) circle(0.5cm) node{$m_1$};
+\end{tikzpicture}
+\begin{tikzpicture}
+    \draw[ultra thick, black] (-2,0) -- (2,0);
+    \foreach \k in {-2,-1.75, -1.5, -1.25, -1, -0.75, -0.5, -0.25,
+    0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2}{
+        \draw[black] (\k,0) -- (\k-0.25,0.25);
+    }
+\draw[thick,gray,decorate,decoration={coil,aspect=0.7,amplitude=5}] (0,0) -- (0,-2.8);
+\fill (0,0) circle (.2);
+\draw[<-, thick] (1.5,-1) -- (1.5,-2.5);
+\draw[->, thick] (1.5,-3.5) -- (1.5,-5);
+\draw[dashed, black] (0,-3) -- (1,-3) node[anchor=west]{$y=0$};
+\draw[fill=red!30] (0,-3) circle(0.7cm) node{$m_2$};
+\end{tikzpicture}
+\begin{tikzpicture}
+    \draw[ultra thick, black] (-2,0) -- (2,0);
+    \foreach \k in {-2,-1.75, -1.5, -1.25, -1, -0.75, -0.5, -0.25,
+    0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2}{
+        \draw[black] (\k,0) -- (\k-0.25,0.25);
+    }
+\draw[thick,gray,decorate,decoration={coil,aspect=0.7,amplitude=5}] (0,0) -- (0,-2.8);
+\fill (0,0) circle (.2);
+\draw[<-, thick] (1.5,-1) -- (1.5,-2.5);
+\draw[->, thick] (1.5,-3.5) -- (1.5,-5);
+\draw[dashed, black] (0,-3) -- (1,-3) node[anchor=west]{$y=0$};
+\draw[fill=green!30] (0,-3) circle(0.9cm) node{$m_3$};
+\end{tikzpicture}
+    \end{center}
+    \caption{Three mass and spring oscillating systems.}
+    \label{fig:7.8.mass_spring}
+\end{figure}
 
 \begin{problem}
-    A branch sways back and forth with position $f(t)$.  Studying its motion you find that
-    its acceleration is proportional to its position, so that when it is 8 cm to the
-    right, it will accelerate to the left at a rate of 2 cm/s$^2$.  Which differential
-    equation describes the motion of the branch?
-
-\begin{enumerate}
-    \item[(a)] $\frac{d^2 f}{dt^2} = 8f$
-    \item[(b)] $\frac{d^2 f}{dt^2} = -4f$
-    \item[(c)] $\frac{d^2 f}{dt^2} = -2$
-    \item[(d)] $\frac{d^2 f}{dt^2} = \frac{f}{4}$
-    \item[(e)] $\frac{d^2 f}{dt^2} = -\frac{f}{4}$
-\end{enumerate}
+    On a mass-spring oscillator what are the primary forces controlling the motion.  Use
+    Newton's second law to summarize them.
+    \[ ma = \sum F = \underline{\hspace{2in}} \]
 \end{problem}
-% \begin{problem}
-%     \begin{itemize}
-%             \input{ClickerQuestions/DEQ.00.09.010}
-%     \end{itemize}
-% \end{problem}
-\solution{e}
-
+\solution{
+    \[ \implies F_{damping} + F_{restoring} + F_{external} = m a \]
+}
 
 \begin{problem}
-    Which of the following is not a solution of $y'' + ay = 0$ for some value of $a$?
-
-\begin{enumerate}
-    \item[(a)] $y = 4 \sin 2 t$
-    \item[(b)] $y = 8 \cos 3 t$
-    \item[(c)] $y = 2 e^{2t}$
-    \item[(d)] all are solutions
-\end{enumerate}
+    In the previous problem you likely have two primary forces.  A restoring force due to
+    the spring and a damping force due to friction.  Propose functional forms for each of
+    these forces.
+    \begin{flalign*}
+        F_{restoring} &= \underline{\hspace{2in}} \\
+        F_{damping} &= \underline{\hspace{2in}} 
+    \end{flalign*}
 \end{problem}
-% \begin{problem}
-%     \begin{itemize}
-%             \input{ClickerQuestions/DEQ.00.09.060}
-%     \end{itemize}
-% \end{problem}
-\solution{d}
+\solution{
+    $F_{damping} \propto $ velocity\\
+    $F_{restoring} \propto$ position
+}
 
+\begin{problem}
+    The differential equation modeling a mass spring oscillator is:
+    \[ m y'' + \underline{\hspace{0.5in}} + \underline{\hspace{0.5in}}  = F_{external}
+    \]
+    where $F_{external}$ is any external driving force (like wind, periodic bumps to the
+    spring-mass apparatus, magnetic fields, etc).\\
+    (Fill in the blanks)
+\end{problem}
+\solution{
+    $my'' + by' + ky = F_{ext}$
+}
+
+\begin{problem}
+    Compare the values of the parameters in the model from the previous problem using the
+    mass-spring oscillators depicted in Figure \ref{fig:7.8.mass_spring}.
+\end{problem}
+
+
+
+% \begin{problem}
+%     Which of the following is not a solution of $y'' + ay = 0$ for some value of $a$?
+% 
+% \begin{enumerate}
+%     \item[(a)] $y = 4 \sin 2 t$
+%     \item[(b)] $y = 8 \cos 3 t$
+%     \item[(c)] $y = 2 e^{2t}$
+%     \item[(d)] all are solutions
+% \end{enumerate}
+% \end{problem}
+% % \begin{problem}
+% %     \begin{itemize}
+% %             \input{ClickerQuestions/DEQ.00.09.060}
+% %     \end{itemize}
+% % \end{problem}
+% \solution{d}
+% 
+
+\begin{problem}
+    The motion of an un-damped mass spring oscillator is driven physically by Hooke's law:
+    the restoring force is proportional to the displacement.  This leads to the
+    differential equation $my'' = -ky$.  
+    \begin{enumerate}
+        \item[(a)] Explain the minus sign in the context of the problem.
+        \item[(b)] We know that the solution to the differential equation is a
+            trigonometric function, for example $y(t) = A \sin(\omega t)$.  What is the
+            frequency, $\omega$, of this oscillator in terms of Hooke's law coefficient
+            $k$ and the mass $m$?
+    \end{enumerate}
+\end{problem}
 
 \begin{problem}
     The motion of a mass on a spring follows the equation $m x'' = -k x$ where the
@@ -70,16 +155,16 @@ context for most students.
 \solution{d}
 
 
-\begin{problem}
-    Which of the following is not a solution of $\frac{d^2 y}{dt^2} = - a y$ for some
-    positive value of $a$?
-\begin{enumerate}
-    \item[(a)] $y = 2 \sin 6t$
-    \item[(b)] $y = 4 \cos 5t$
-    \item[(c)] $y = 3 \sin 2t + 8 \cos 2t$
-    \item[(d)] $y = 2 \sin 3t + 2 \cos 5t$
-\end{enumerate}
-\end{problem}
+% \begin{problem}
+%     Which of the following is not a solution of $\frac{d^2 y}{dt^2} = - a y$ for some
+%     positive value of $a$?
+% \begin{enumerate}
+%     \item[(a)] $y = 2 \sin 6t$
+%     \item[(b)] $y = 4 \cos 5t$
+%     \item[(c)] $y = 3 \sin 2t + 8 \cos 2t$
+%     \item[(d)] $y = 2 \sin 3t + 2 \cos 5t$
+% \end{enumerate}
+% \end{problem}
 % \begin{problem}
 %     \begin{itemize}
 %             \input{ClickerQuestions/DEQ.00.09.090}
@@ -105,6 +190,14 @@ context for most students.
 % \end{problem}
 \solution{b}
 
+
+\begin{problem}
+    In a damped spring-mass system we know that the solution cannot simply be exponential.
+    Why?  Conjecture an algebraic form of the solution.
+\end{problem}
+
+Now that we have the basic intuition about mass-spring oscillators let's build up the
+mathematical machinery necessary to actually solve them.
 \begin{technique}[Solving Second Order Linear ODEs]\label{tech:second_order_ode}
     To solve $a y'' + by' + c y = 0$:
     \begin{itemize}
@@ -257,48 +350,18 @@ $y(t) = 2e^{3t} - 5t e^{3t}$
 
 
 
-\newpage\section{Mechanical Vibrations}
+\newpage\section{Types of Mechanical Vibrations}
 One of the principle applications of second order differential equations is to model
 mass-spring oscillators. First we are going change our vantage point so that only one of
 the bodies is oscillating.  We achieve this by finding the {\it reduced mass} $m =
 \frac{m_1 m_2}{m_1 + m_2}$ and then fixing our point of reference so that one of the
 bodies is fixed. Next, Newton's second law states that we should sum the forces on the
-oscillating spring.
-
-\begin{problem}
-    On a mass-spring oscillator what are the primary forces controlling the motion.  Use
-    Newton's secondd law to summarize them.
-    \[ ma = \sum F = \underline{\hspace{2in}} \]
-\end{problem}
-\solution{
-    \[ \implies F_{damping} + F_{restoring} + F_{external} = m a \]
-}
-
-\begin{problem}
-    In the previous problem you likely have two primary forces.  A restoring force due to
-    the spring and a damping force due to friction.  Propose functional forms for each of
-    these forces.
-    \begin{flalign*}
-        F_{restoring} &= \underline{\hspace{2in}} \\
-        F_{damping} &= \underline{\hspace{2in}} 
-    \end{flalign*}
-\end{problem}
-\solution{
-    $F_{damping} \propto $ velocity\\
-    $F_{restoring} \propto$ position
-}
-
-\begin{problem}
-    The differential equation modeling a mass spring oscillator is:
-    \[ m y'' + \underline{\hspace{0.5in}} + \underline{\hspace{0.5in}}  = F_{external}
-    \]
-    where $F_{external}$ is any external driving force (like wind, periodic bumps to the
-    spring-mass apparatus, magnetic fields, etc).\\
-    (Fill in the blanks)
-\end{problem}
-\solution{
-    $my'' + by' + ky = F_{ext}$
-}
+oscillating spring.  The second-order linear differential equations resulting from this
+analysis is 
+\[ my'' + by' + ky = F_{external} \]
+where $my''$ is the ``mass times acceleration'' term of Newton's second law, the $by'$ is
+a damping term driven by drag, and the $ky$ term is Hooke's law driving the resoration of
+toward the equilibrium.  
 
 \begin{problem}
     If we guess that $y(t) = e^{rt}$ in the previous equation (with $F_{ext} = 0$) then
@@ -863,4 +926,25 @@ equations that you should know at this point.
     \frac{4g}{\rho h}} \]
 
 }
+
+\begin{problem}
+    A branch sways back and forth with position $f(t)$.  Studying its motion you find that
+    its acceleration is proportional to its position, so that when it is 8 cm to the
+    right, it will accelerate to the left at a rate of 2 cm/s$^2$.  Write a differential
+    equation that describes the motion of the branch?
+% 
+% \begin{enumerate}
+%     \item[(a)] $\frac{d^2 f}{dt^2} = 8f$
+%     \item[(b)] $\frac{d^2 f}{dt^2} = -4f$
+%     \item[(c)] $\frac{d^2 f}{dt^2} = -2$
+%     \item[(d)] $\frac{d^2 f}{dt^2} = \frac{f}{4}$
+%     \item[(e)] $\frac{d^2 f}{dt^2} = -\frac{f}{4}$
+% \end{enumerate}
+\end{problem}
+% \begin{problem}
+%     \begin{itemize}
+%             \input{ClickerQuestions/DEQ.00.09.010}
+%     \end{itemize}
+% \end{problem}
+\solution{$\frac{d^2 f}{dt^2} = -\frac{f}{4}$}
 

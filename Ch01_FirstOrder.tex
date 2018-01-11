@@ -181,11 +181,47 @@ Show a slope field with $T(0)=0$ and various values of $k$.
 
 \newpage
 \section{Differential Equation Terminology}
-In this chapter we will look at a few techniques for solving first-order differential
-equations.  Before launching into the techniques let's get a little bit of terminology on
-the table.  I am expecting that much of this terminology is familiar to you already from
-previous classes. We are going to cover this very quickly and we will be leaving some of
-the reading and reviewing up to you.
+\begin{problem}\label{prob:ode_classify}
+    Work with your partners to group all of the differential equations by common features.
+    Many of the differential equations could belong to many different groups.
+    \begin{multicols}{2}
+        \begin{flalign}
+            \frac{dy}{dt} &= ty^2 + 5 \\
+            \dot{\theta} - 2\theta &= 0 \\
+            x'(t) &= \frac{1}{x} \\
+            \frac{d^2x}{dt^2} &= -x +\ln(t) \\
+            \ddot{x} + 2\dot{x} + x &= \sin(t) \\
+            y' + t\log(y) &= 5 \\
+            x''' + 4x'' - 8x' + 9x &= 0
+        \end{flalign}
+        \columnbreak
+        \begin{flalign}
+            y''+y &= 0 \\
+            \dot{x} + x^2 &= 0 \\
+            \theta'' + \sin(\theta) &= 0 \\
+            xx' &= 1 \\
+            \left( \frac{dy}{dt} \right)^2 + t^2 y &= t + t^2 \\
+            x' &= \frac{1}{2} x + 5 \\
+            \theta' \theta'' \theta''' &= 0
+        \end{flalign}
+    \end{multicols}
+\end{problem}
+
+\begin{problem}
+    Now return to the differential equations in Problem \ref{prob:ode_classify} and
+    classify them based on the following terms.
+    \begin{enumerate}
+        \item[(a)] linear vs nonlinear
+        \item[(b)] first order, second order, or third order
+        \item[(c)] explicitly dependent on time vs implicitly dependent on time
+        \item[(d)] homogeneous vs non-homogeneous
+    \end{enumerate}
+\end{problem}
+
+
+Now let's get the official definitions on the table.  I am expecting that much of this
+terminology is familiar to you already from previous classes. We are going to cover this
+very quickly and we will be leaving some of the reading and reviewing up to you.
 
 \begin{definition}[First Order Differential Equation]
     A {\bf first order differential equation} is a differential equation of the form 
@@ -209,11 +245,11 @@ definition.  I'll get us started.
         \frac{dP}{dx} &= rP(1-P) + h(x) \\
         y'(t) &= y\sin(t)
     \end{flalign*}
-    Example of differential equations that are \underline{not} first order:
+    Examples of differential equations that are \underline{not} first order:
     \begin{flalign*}
-        y''(t) &= 2yt + 5y' \\
-        \frac{d^7y}{dt^7} &= \cos(y) + y'' \\
-        R^{(4)}(t) &= R'''(t) + R''(t) - R'(t) + 17R(t)
+        y''(t) &= 2yt + 5y' \text{ (second order)} \\
+        \frac{d^7y}{dt^7} &= \cos(y) + y'' \text{ (seventh order)} \\
+        R^{(4)}(t) &= R'''(t) + R''(t) - R'(t) + 17R(t) \text{ (fourth order)}
     \end{flalign*}
 \end{example}
 
@@ -967,6 +1003,34 @@ anitderivative for $e^{t^2}$ but one does not exist.
 
 
 \newpage\section{Mixing Problems}
+\begin{problem}
+     In the Great Lakes region, rivers flowing into the lakes carry a great deal of
+     pollution in the form of small pieces of plastic averaging 1 millimeter in diameter.
+     In order to understand how the amount of plastic in Lake Michigan is changing,
+     \underline{construct and solve} a differential equation model for how this type pollution has
+     built up in the lake.  You'll need the following basic facts.  
+
+     Some basic facts about Lake Michigan.
+     \begin{itemize}
+         \item The volume of the lake is $5 \times 10^{12}$ cubic meters.
+         \item Water flows into the lake at a rate of $5 \times 10^{10}$ cubic meters per
+             year.  It flows out of the lake at the same rate.
+         \item Each cubic meter flowing in the lake contains roughly $3 \times 10^{-8}$
+             cubic meters of plastic pollution.
+     \end{itemize}
+
+     Let $P(t)$ denote the amount of pollution in the lake at time $t$ where $P$ is
+     measured in cubic meters and $t$ is measured in years.  For the sake of simplicity
+     assume that $P(0) = 0$.
+\end{problem}
+\solution{
+    The differential equation model is
+    \[ \frac{dP}{dt} = \frac{1}{100} \left( 1.5 \times 10^{5} - P \right) \quad
+    \text{with} P(0) = 0. \]
+    After separating and integrating we find that 
+    \[ P(t) = 1.5 \times 10^5 \left( 1-e^{-t/100} \right). \]
+}   
+
 A classic differential equations problem is to consider the mixing of a contaminant in a
 tank.  It is important to remember in these problems that you are strictly considering the
 conservation of mass.  Hence, if $C(t)$ is the amount of contaminant in the tank then
@@ -990,34 +1054,6 @@ To determine the two rates it is often easiest to consider the units.
     \[ \frac{dS}{dt} = -\frac{4}{120} \left( S - 8\left( \frac{120}{4} \right) \right) \]
     \[ S(t) = -150 e^{-4t/120} + 240 \]
 }
-
-\begin{problem}
-     In the Great Lakes region, rivers flowing into the lakes carry a great deal of
-     pollution in the form of small pieces of plastic averaging 1 millimeter in diameter.
-     In order to understand how the amount of plastic in Lake Michigan is changing,
-     construct and solve a differential equation model for how this type pollution has
-     built up in the lake.  You'll need the following basic facts.  
-
-     Some basic facts about Lake Michigan.
-     \begin{itemize}
-         \item The volume of the lake is $5 \times 10^{12}$ cubic meters.
-         \item Water flows into the lake at a rate of $5 \times 10^{10}$ cubic meters per
-             year.  It flows out of the lake at the same rate.
-         \item Each cubic meter flowing in the lake contains roughly $3 \times 10^{-8}$
-             cubic meters of plastic pollution.
-     \end{itemize}
-
-     Let $P(t)$ denote the amount of pollution in the lake at time $t$ where $P$ is
-     measured in cubic meters and $t$ is measured in years.  For the sake of simplicity
-     assume that $P(0) = 0$.
-\end{problem}
-\solution{
-    The differential equation model is
-    \[ \frac{dP}{dt} = \frac{1}{100} \left( 1.5 \times 10^{5} - P \right) \quad
-    \text{with} P(0) = 0. \]
-    After separating and integrating we find that 
-    \[ P(t) = 1.5 \times 10^5 \left( 1-e^{-t/100} \right). \]
-}   
 
 Now what if the volume of the mixing solution isn't staying constant \ldots this is going
 to be awesome!
