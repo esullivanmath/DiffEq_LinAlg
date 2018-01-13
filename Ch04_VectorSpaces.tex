@@ -1191,7 +1191,29 @@ All of the above
 
 \newpage\section{Row, Column, and Null Spaces in $\mathbb{R}^n$}
 Now let's restrict our attention to spaces associated with the rows and columns of
-matrices. 
+matrices and let's motivate a few questions about matrices via a traffic flow problem.
+
+
+\begin{problem}
+    Consider the traffic flow problem.  Remember in a traffic flow network you need to
+    conserve cars.   That is, cars cannot be spontaneously created or destroyed and the
+    cars that flow into the network need to flow out.
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[thick, ->] (0,0) node[anchor=east]{800} -- (0.5,0);
+            \draw[thick] (0.5,0) -- (1,0)
+            node[anchor=north west]{$A$} circle(0.05cm);
+            \draw[thick] (1,0) -- (10,0);
+            \draw[thick,->] (1,-1) node[anchor=north]{$700$}-- (1,-0.5);
+            \draw[thick] (1,-0.5) -- (1,0);
+            \draw[thick] (1,0) -- (4,0) -- (8,0) -- (8,2) -- (4,2) -- (1,0) -- (4,0) --
+            (4,2);
+        \end{tikzpicture}
+    \end{center}
+\end{problem}
+
+
+
 \begin{definition}[Row Space]
         Let $A$ be an $m \times n$ matrix. The subspace of $\mathbb{R}^n$ spanned by the
         $m$ rows of $A$ is called the {\bf row space} of $A$
@@ -1974,4 +1996,55 @@ and hence $c_1 = c_2 = c_3 = 0$.
             }
         \end{enumerate}
 
+\end{problem}
+
+
+\begin{problem}
+    Which of the following describes the span of the set $\mathcal{V}$?
+    \[ \mathcal{V} = \left\{ \begin{pmatrix} 1 \\ 2\\ 0 \end{pmatrix} \, , \, \begin{pmatrix}
+        0 \\ 1\\ 2\end{pmatrix} \right\} \]
+    Explain your reasoning.
+\end{problem}
+
+\begin{problem}
+    Consider the set $\mathcal{V} = \left\{ \begin{pmatrix} 1 \\ 2 \\ 0\end{pmatrix} \, , \, \begin{pmatrix}
+        0 \\ 1 \\ 2\end{pmatrix} \right\}$.
+    \begin{enumerate}
+        \item[(a)] Which of the following best describes the span of the set
+            $\mathcal{V}$?
+            \begin{itemize}
+                \item[(i)] A point
+                \item[(ii)] two points
+                \item[(iii)] A line
+                \item[(iv)] two lines
+                \item[(v)] A plane
+                \item[(vi)] A planes
+                \item[(vii)] A 3 dimensional space
+            \end{itemize}
+        \item[(b)] Explain your reasoning from part (a).
+        \item[(c)] Which of the following are in the span of $\mathcal{V}$?
+            \begin{itemize}
+                \item[(i)] $\begin{pmatrix}1 \\ 2 \\ 0\end{pmatrix}$
+                \item[(ii)] $\begin{pmatrix} 1 \\ 2 \end{pmatrix}$
+                \item[(iii)] $\begin{pmatrix} 0 \\ -2 \\ -4\end{pmatrix}$
+                \item[(iv)] $\begin{pmatrix} 1 \\ 0 \\ 0\end{pmatrix}$
+                \item[(v)] $3.1\begin{pmatrix} 1 \\ 2 \\ 0\end{pmatrix} - \frac{4}{5}
+                    \begin{pmatrix} 0 \\ 1 \\ 2 \end{pmatrix}$
+                \item[(vi)] any vector in $\mathbb{R}^3$.
+            \end{itemize}
+        \item[(d)] Explain in general how you can deterine if a given vector is in the
+            span of some other set of vectors.
+    \end{enumerate}
+\end{problem}
+
+\begin{problem}
+    Suppose that $\bv_1$ and $\bv_2$ are in $\mathbb{R}^n$, $c_1$ and $c_2$ are real
+    numbers, and the only solution to the vector equation $c_1 \bv_1 + c_2 \bv_2 =
+    \bo$ is the trivial solutions $c_1 = c_2 = 0$.
+    \begin{enumerate}
+        \item[(a)] The set $\{\bv_1,\bv_2\}$ is (circle one): linearly indepenednet /
+            linearly dependent.
+        \item[(b)] Can $\bv_1$ be a scalar multiple of $\bv_2$?  Explain.
+        \item[(c)] What is the dimension of the span of $\{\bv_1,\bv_2\}$?
+    \end{enumerate}
 \end{problem}
