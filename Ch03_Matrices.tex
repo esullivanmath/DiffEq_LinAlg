@@ -12,6 +12,23 @@ and place for technology and for the most part this chapter is not it.
 
 
 \section{Matrix Operations and Definitions}
+
+\begin{problem}
+    \begin{enumerate}
+        \item[(a)] Give an example of two matrices that are equal and then give several
+            examples of two matrices that are not equal.  
+        \item[(b)] Give an example of two matrices where addition (or subtraction) does
+            not make sense.
+        \item[(c)] Write down a non-zero matrix $A$ and describe what it means to scalar
+            multiply the matrix by 5.
+        \item[(d)] Write down a $3\times 2$ matrix.  If you swap the rows and columns of
+            the matrix, what matrix do you get and what size is it?
+        \item[(e)] Give two matrices, $A$ and $B$, that can be multiplied and find their
+            product.
+        \item[(f)] Give two matrices, $A$ and $B$, that cannot be multiplied.
+    \end{enumerate}
+\end{problem}
+
 \begin{definition}[Size of a Matrix]
     If $A$ is a matrix with $m$ rows and $n$ columns then we say that $A$ has
     size (or
@@ -95,10 +112,47 @@ As expected, $AB \ne BA$.
 }
 
 
+\begin{example}
+    Find the product of $A$ and $B$ where
+    \[ A = \begin{pmatrix} 1 & 4 & 0 \\ 3 & -1 & 2 \end{pmatrix} \quad B = \begin{pmatrix}
+        0 & 1 \\ 2 & 3 \\ -1 & 1 \end{pmatrix} \]
+    {\bf Solution:} \\
+    \begin{flalign*}
+        AB = \begin{pmatrix} 1 & 4 & 0 \\ 3 & -1 & 2 \end{pmatrix} \begin{pmatrix}
+        0 & 1 \\ 2 & 3 \\ -1 & 1 \end{pmatrix}
+    \end{flalign*}
+    The matrices are $2 \times 3$ and $3 \times 2$ so the resulting product will be $2
+    \times 2$.  
+    \begin{itemize}
+        \item To find the entry in row 1 column 1 we find the dot product of row 1 from
+            matrix $A$ and column 1 from matrix $B$.
+            \[ \text{row 1 column 1: } (1)(0) + (4)(2) + (0)(-1) = 8 \]
+        \item To find the entry in row 1 column 2 we find the dot product of row 1 from
+            matrix $A$ and column 2 from matrix $B$.
+            \[ \text{row 1 column 2: } (1)(1) + (4)(3) + (0)(1) = 13 \]
+        \item To find the entry in row 2 column 1 we find the dot product of row 2 from
+            matrix $A$ and column 1 from matrix $B$.
+            \[ \text{row 2 column 1: } (3)(0) + (-1)(2) + (2)(-1) = -4 \]
+        \item To find the entry in row 2 column 2 we find the dot product of row 2 from
+            matrix $A$ and column 2 from matrix $B$.
+            \[ \text{row 2 column 2: } (3)(1) + (-1)(3) + (2)(1) = 2 \]
+    \end{itemize}
+    Therefore the product is
+    \[ AB = \begin{pmatrix} 8 & 13 \\ -4 & 2 \end{pmatrix}. \]
+\end{example}
+
+
 \newpage\section{Gaussian Elimination: Reduced Row Echelon Form}
 Solving systems of equations is one of the most essential applications of linear algebra.
 It is expected that you have experience solving systems with row reduction so as such we
 will cover it quickly in this section.
+
+\begin{problem}[Nickes and Dimes Problem]
+    Solve the following problem using any technique.  Be able to clearly explain your
+    work.\\
+    Mr. Gauss has 20 coins consisting of nickels and imes.  If his nickels were dimes and
+    his dimes were nickels he would have 70 cents more.  How much are his coins worth?
+\end{problem}
 
 \begin{problem}
     Consider the system of equations:
