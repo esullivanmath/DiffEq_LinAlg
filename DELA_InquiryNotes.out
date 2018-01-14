@@ -11,119 +11,122 @@
 \BOOKMARK [1][-]{section.1.6}{Solution Technique: Integrating Factors}{chapter.1}% 11
 \BOOKMARK [1][-]{section.1.7}{Mixing Problems}{chapter.1}% 12
 \BOOKMARK [1][-]{section.1.8}{Existence and Uniqueness of Solutions}{chapter.1}% 13
-\BOOKMARK [1][-]{section.1.9}{Additional Exercises}{chapter.1}% 14
-\BOOKMARK [0][-]{chapter.2}{Qualitative Methods, Numerical Methods, and Bifurcations}{}% 15
-\BOOKMARK [1][-]{section.2.1}{Equilibrium Points and Stability}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.2}{Numerical Methods}{chapter.2}% 17
-\BOOKMARK [2][-]{subsection.2.2.1}{Euler's Method}{section.2.2}% 18
-\BOOKMARK [2][-]{subsection.2.2.2}{Runge-Kutta Method}{section.2.2}% 19
-\BOOKMARK [1][-]{section.2.3}{Bifurcations}{chapter.2}% 20
-\BOOKMARK [1][-]{section.2.4}{Additional Exercises}{chapter.2}% 21
-\BOOKMARK [0][-]{chapter.3}{Linear Systems and Matrices}{}% 22
-\BOOKMARK [1][-]{section.3.1}{Matrix Operations and Definitions}{chapter.3}% 23
-\BOOKMARK [1][-]{section.3.2}{Gaussian Elimination: Reduced Row Echelon Form}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.3}{Linear Combinations}{chapter.3}% 25
-\BOOKMARK [1][-]{section.3.4}{Inverses and Determinants}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.5}{Applications of Linear Systems}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.6}{Additional Exercises}{chapter.3}% 28
-\BOOKMARK [0][-]{chapter.4}{Vector Spaces}{}% 29
-\BOOKMARK [1][-]{section.4.1}{What is a Vector Space}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.2}{Linear Independence and Linear Dependence}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.3}{Span}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.4}{Subspaces}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.5}{Basis}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.6}{Row, Column, and Null Spaces in Rn}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.7}{The Invertible Matrix Theorem}{chapter.4}% 36
-\BOOKMARK [1][-]{section.4.8}{Additional Exercises}{chapter.4}% 37
-\BOOKMARK [0][-]{chapter.5}{Geometry in Vector Spaces}{}% 38
-\BOOKMARK [1][-]{section.5.1}{The Geometry of Rn}{chapter.5}% 39
-\BOOKMARK [2][-]{subsection.5.1.1}{The Dot Product}{section.5.1}% 40
-\BOOKMARK [2][-]{subsection.5.1.2}{Projections}{section.5.1}% 41
-\BOOKMARK [2][-]{subsection.5.1.3}{The Gram-Schmidt Process: Making Orthogonal Sets}{section.5.1}% 42
-\BOOKMARK [1][-]{section.5.2}{Inner Product Spaces}{chapter.5}% 43
-\BOOKMARK [1][-]{section.5.3}{Fourier Series}{chapter.5}% 44
-\BOOKMARK [1][-]{section.5.4}{Linear Transformations}{chapter.5}% 45
-\BOOKMARK [2][-]{subsection.5.4.1}{Matrix Transformation}{section.5.4}% 46
-\BOOKMARK [2][-]{subsection.5.4.2}{Linear Transformations in Abstract Vector Spaces}{section.5.4}% 47
-\BOOKMARK [1][-]{section.5.5}{Isomorphic Vector Spaces}{chapter.5}% 48
-\BOOKMARK [1][-]{section.5.6}{Higher Dimensions are Geometrically Weird \(Optional\)}{chapter.5}% 49
-\BOOKMARK [1][-]{section.5.7}{Additional Exercises}{chapter.5}% 50
-\BOOKMARK [0][-]{chapter.6}{The Eigenvalue Eigenvector Problem}{}% 51
-\BOOKMARK [1][-]{section.6.1}{Introduction To Eigenvalues}{chapter.6}% 52
-\BOOKMARK [1][-]{section.6.2}{Diagonlization of Matrices}{chapter.6}% 53
-\BOOKMARK [1][-]{section.6.3}{Powers of Matrices}{chapter.6}% 54
-\BOOKMARK [1][-]{section.6.4}{The Google Page Rank Algorithm}{chapter.6}% 55
-\BOOKMARK [1][-]{section.6.5}{Additional Exercises}{chapter.6}% 56
-\BOOKMARK [0][-]{chapter.7}{Second Order Differential Equations}{}% 57
-\BOOKMARK [1][-]{section.7.1}{Intro to Second Order Differential Equations}{chapter.7}% 58
-\BOOKMARK [1][-]{section.7.2}{Types of Mechanical Vibrations}{chapter.7}% 59
-\BOOKMARK [1][-]{section.7.3}{Undetermined Coefficients}{chapter.7}% 60
-\BOOKMARK [1][-]{section.7.4}{Resonance and Beats}{chapter.7}% 61
-\BOOKMARK [1][-]{section.7.5}{Additional Exercises}{chapter.7}% 62
-\BOOKMARK [0][-]{chapter.8}{Systems of Differential Equations}{}% 63
-\BOOKMARK [1][-]{section.8.1}{Matrices and Linear Systems}{chapter.8}% 64
-\BOOKMARK [1][-]{section.8.2}{The Eigenvalue Method for Linear Systems}{chapter.8}% 65
-\BOOKMARK [1][-]{section.8.3}{The Matrix Exponential}{chapter.8}% 66
-\BOOKMARK [1][-]{section.8.4}{Complex Eigenvalues for Linear Systems of ODEs}{chapter.8}% 67
-\BOOKMARK [1][-]{section.8.5}{Additional Exercises}{chapter.8}% 68
-\BOOKMARK [0][-]{chapter.9}{Nonlinear Systems of Differential Equations}{}% 69
-\BOOKMARK [1][-]{section.9.1}{Modeling a Nonlinear System}{chapter.9}% 70
-\BOOKMARK [1][-]{section.9.2}{Trace-Determinant Plane}{chapter.9}% 71
-\BOOKMARK [1][-]{section.9.3}{Applied Nonlinear Systems}{chapter.9}% 72
-\BOOKMARK [1][-]{section.9.4}{Additional Exercises}{chapter.9}% 73
-\BOOKMARK [0][-]{chapter.10}{Laplace Transforms}{}% 74
-\BOOKMARK [1][-]{section.10.1}{Where Laplace Transforms Come From}{chapter.10}% 75
-\BOOKMARK [1][-]{section.10.2}{Basic Laplace Transforms and Basic Properties}{chapter.10}% 76
-\BOOKMARK [1][-]{section.10.3}{Important Theorems for Laplace Transforms}{chapter.10}% 77
-\BOOKMARK [1][-]{section.10.4}{Common Laplace Transforms}{chapter.10}% 78
-\BOOKMARK [1][-]{section.10.5}{Solving Differential Equations with Laplace Transforms}{chapter.10}% 79
-\BOOKMARK [1][-]{section.10.6}{The Heaviside Function and Delayed Forcing Terms}{chapter.10}% 80
-\BOOKMARK [1][-]{section.10.7}{Impulses and The Delta Function}{chapter.10}% 81
-\BOOKMARK [1][-]{section.10.8}{Convolutions \(INCOMPLETE\)}{chapter.10}% 82
-\BOOKMARK [1][-]{section.10.9}{Additional Exercises}{chapter.10}% 83
-\BOOKMARK [0][-]{chapter.11}{Fourier Transforms \(INCOMPLETE\)}{}% 84
-\BOOKMARK [1][-]{section.11.1}{Introduction to Fourier Transforms}{chapter.11}% 85
-\BOOKMARK [1][-]{section.11.2}{Fourier Filters}{chapter.11}% 86
-\BOOKMARK [1][-]{section.11.3}{The Fast Fourier Transform}{chapter.11}% 87
-\BOOKMARK [1][-]{section.11.4}{Additional Exercises}{chapter.11}% 88
-\BOOKMARK [0][-]{chapter.12}{Power Series Method: The Ultimate Guess}{}% 89
-\BOOKMARK [1][-]{section.12.1}{Taylor Series Solutions to Diff. Equations}{chapter.12}% 90
-\BOOKMARK [1][-]{section.12.2}{Radius of Convergence for Power Series}{chapter.12}% 91
-\BOOKMARK [1][-]{section.12.3}{Power Series Solutions to Diff. Equations}{chapter.12}% 92
-\BOOKMARK [1][-]{section.12.4}{Additional Exercises}{chapter.12}% 93
-\BOOKMARK [0][-]{chapter.13}{Partial Differential Equations}{}% 94
-\BOOKMARK [1][-]{section.13.1}{Some Reminders from Multivariable Calculus}{chapter.13}% 95
-\BOOKMARK [1][-]{section.13.2}{Where to PDEs Come From?}{chapter.13}% 96
-\BOOKMARK [2][-]{subsection.13.2.1}{Derivation of General Balance Law}{section.13.2}% 97
-\BOOKMARK [2][-]{subsection.13.2.2}{Simplifications of the Local Balance Law}{section.13.2}% 98
-\BOOKMARK [2][-]{subsection.13.2.3}{Laplace's Equation and Poisson's Equation}{section.13.2}% 99
-\BOOKMARK [1][-]{section.13.3}{The 1D Heat Equation}{chapter.13}% 100
-\BOOKMARK [2][-]{subsection.13.3.1}{1D Heat Equation with Zero Temperature Ends}{section.13.3}% 101
-\BOOKMARK [2][-]{subsection.13.3.2}{1D Heat Equation with Insulated Ends}{section.13.3}% 102
-\BOOKMARK [2][-]{subsection.13.3.3}{Heat Equation on a Thin Ring}{section.13.3}% 103
-\BOOKMARK [1][-]{section.13.4}{Additional Exercises}{chapter.13}% 104
-\BOOKMARK [0][-]{section*.30}{Appendices}{}% 105
-\BOOKMARK [0][-]{Appendix.a.A}{Partial Fractions}{}% 106
-\BOOKMARK [0][-]{Appendix.a.B}{MATLAB Basics}{}% 107
-\BOOKMARK [1][-]{section.a.B.1}{Vectors and Matrices}{Appendix.a.B}% 108
-\BOOKMARK [1][-]{section.a.B.2}{Looping}{Appendix.a.B}% 109
-\BOOKMARK [2][-]{subsection.a.B.2.1}{For Loops}{section.a.B.2}% 110
-\BOOKMARK [2][-]{subsection.a.B.2.2}{The While Loop}{section.a.B.2}% 111
-\BOOKMARK [1][-]{section.a.B.3}{Conditional Statements}{Appendix.a.B}% 112
-\BOOKMARK [2][-]{subsection.a.B.3.1}{If Statements}{section.a.B.3}% 113
-\BOOKMARK [2][-]{subsection.a.B.3.2}{Case-Switch Statements}{section.a.B.3}% 114
-\BOOKMARK [1][-]{section.a.B.4}{Functions}{Appendix.a.B}% 115
-\BOOKMARK [1][-]{section.a.B.5}{Plotting}{Appendix.a.B}% 116
-\BOOKMARK [1][-]{section.a.B.6}{Animations}{Appendix.a.B}% 117
-\BOOKMARK [0][-]{Appendix.a.C}{LaTeX}{}% 118
-\BOOKMARK [1][-]{section.a.C.1}{Equation Environments and Cross Referencing}{Appendix.a.C}% 119
-\BOOKMARK [1][-]{section.a.C.2}{Tables, Tabular, Figures, Shortcuts, and Other Environments}{Appendix.a.C}% 120
-\BOOKMARK [2][-]{subsection.a.C.2.1}{Tables and Tabular Environments}{section.a.C.2}% 121
-\BOOKMARK [2][-]{subsection.a.C.2.2}{Excel To LaTeX}{section.a.C.2}% 122
-\BOOKMARK [2][-]{subsection.a.C.2.3}{Figures}{section.a.C.2}% 123
-\BOOKMARK [2][-]{subsection.a.C.2.4}{New Commands: Shortcuts are AWESOME!}{section.a.C.2}% 124
-\BOOKMARK [1][-]{section.a.C.3}{Graphics in LaTeX}{Appendix.a.C}% 125
-\BOOKMARK [2][-]{subsection.a.C.3.1}{The Tikz and PGFPlots Packages}{section.a.C.3}% 126
-\BOOKMARK [1][-]{section.a.C.4}{Bibliography Management}{Appendix.a.C}% 127
-\BOOKMARK [2][-]{subsection.a.C.4.1}{Embedded Bibliography}{section.a.C.4}% 128
-\BOOKMARK [2][-]{subsection.a.C.4.2}{Bibliography Database: BibTeX}{section.a.C.4}% 129
+\BOOKMARK [1][-]{section.1.9}{Software for Differential Equations}{chapter.1}% 14
+\BOOKMARK [2][-]{subsection.1.9.1}{[basicstyle=]|dsolve|}{section.1.9}% 15
+\BOOKMARK [2][-]{subsection.1.9.2}{Slope Fields and Phase Plots}{section.1.9}% 16
+\BOOKMARK [1][-]{section.1.10}{Additional Exercises}{chapter.1}% 17
+\BOOKMARK [0][-]{chapter.2}{Qualitative Methods, Numerical Methods, and Bifurcations}{}% 18
+\BOOKMARK [1][-]{section.2.1}{Equilibrium Points and Stability}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.2}{Numerical Methods}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.2.1}{Euler's Method}{section.2.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.2}{Runge-Kutta Method}{section.2.2}% 22
+\BOOKMARK [1][-]{section.2.3}{Bifurcations}{chapter.2}% 23
+\BOOKMARK [1][-]{section.2.4}{Additional Exercises}{chapter.2}% 24
+\BOOKMARK [0][-]{chapter.3}{Linear Systems and Matrices}{}% 25
+\BOOKMARK [1][-]{section.3.1}{Matrix Operations and Definitions}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.2}{Gaussian Elimination: Reduced Row Echelon Form}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.3}{Linear Combinations}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.4}{Inverses and Determinants}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.5}{Applications of Linear Systems}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.6}{Additional Exercises}{chapter.3}% 31
+\BOOKMARK [0][-]{chapter.4}{Vector Spaces}{}% 32
+\BOOKMARK [1][-]{section.4.1}{What is a Vector Space}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.2}{Linear Independence and Linear Dependence}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.3}{Span}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.4}{Subspaces}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.5}{Basis}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.6}{Row, Column, and Null Spaces in Rn}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.7}{The Invertible Matrix Theorem}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.8}{Additional Exercises}{chapter.4}% 40
+\BOOKMARK [0][-]{chapter.5}{Geometry in Vector Spaces}{}% 41
+\BOOKMARK [1][-]{section.5.1}{The Geometry of Rn}{chapter.5}% 42
+\BOOKMARK [2][-]{subsection.5.1.1}{The Dot Product}{section.5.1}% 43
+\BOOKMARK [2][-]{subsection.5.1.2}{Projections}{section.5.1}% 44
+\BOOKMARK [2][-]{subsection.5.1.3}{The Gram-Schmidt Process: Making Orthogonal Sets}{section.5.1}% 45
+\BOOKMARK [1][-]{section.5.2}{Inner Product Spaces}{chapter.5}% 46
+\BOOKMARK [1][-]{section.5.3}{Fourier Series}{chapter.5}% 47
+\BOOKMARK [1][-]{section.5.4}{Linear Transformations}{chapter.5}% 48
+\BOOKMARK [2][-]{subsection.5.4.1}{Matrix Transformation}{section.5.4}% 49
+\BOOKMARK [2][-]{subsection.5.4.2}{Linear Transformations in Abstract Vector Spaces}{section.5.4}% 50
+\BOOKMARK [1][-]{section.5.5}{Isomorphic Vector Spaces}{chapter.5}% 51
+\BOOKMARK [1][-]{section.5.6}{Higher Dimensions are Geometrically Weird \(Optional\)}{chapter.5}% 52
+\BOOKMARK [1][-]{section.5.7}{Additional Exercises}{chapter.5}% 53
+\BOOKMARK [0][-]{chapter.6}{The Eigenvalue Eigenvector Problem}{}% 54
+\BOOKMARK [1][-]{section.6.1}{Introduction To Eigenvalues}{chapter.6}% 55
+\BOOKMARK [1][-]{section.6.2}{Diagonlization of Matrices}{chapter.6}% 56
+\BOOKMARK [1][-]{section.6.3}{Powers of Matrices}{chapter.6}% 57
+\BOOKMARK [1][-]{section.6.4}{The Google Page Rank Algorithm}{chapter.6}% 58
+\BOOKMARK [1][-]{section.6.5}{Additional Exercises}{chapter.6}% 59
+\BOOKMARK [0][-]{chapter.7}{Second Order Differential Equations}{}% 60
+\BOOKMARK [1][-]{section.7.1}{Intro to Second Order Differential Equations}{chapter.7}% 61
+\BOOKMARK [1][-]{section.7.2}{Types of Mechanical Vibrations}{chapter.7}% 62
+\BOOKMARK [1][-]{section.7.3}{Undetermined Coefficients}{chapter.7}% 63
+\BOOKMARK [1][-]{section.7.4}{Resonance and Beats}{chapter.7}% 64
+\BOOKMARK [1][-]{section.7.5}{Additional Exercises}{chapter.7}% 65
+\BOOKMARK [0][-]{chapter.8}{Systems of Differential Equations}{}% 66
+\BOOKMARK [1][-]{section.8.1}{Matrices and Linear Systems}{chapter.8}% 67
+\BOOKMARK [1][-]{section.8.2}{The Eigenvalue Method for Linear Systems}{chapter.8}% 68
+\BOOKMARK [1][-]{section.8.3}{The Matrix Exponential}{chapter.8}% 69
+\BOOKMARK [1][-]{section.8.4}{Complex Eigenvalues for Linear Systems of ODEs}{chapter.8}% 70
+\BOOKMARK [1][-]{section.8.5}{Additional Exercises}{chapter.8}% 71
+\BOOKMARK [0][-]{chapter.9}{Nonlinear Systems of Differential Equations}{}% 72
+\BOOKMARK [1][-]{section.9.1}{Modeling a Nonlinear System}{chapter.9}% 73
+\BOOKMARK [1][-]{section.9.2}{Trace-Determinant Plane}{chapter.9}% 74
+\BOOKMARK [1][-]{section.9.3}{Applied Nonlinear Systems}{chapter.9}% 75
+\BOOKMARK [1][-]{section.9.4}{Additional Exercises}{chapter.9}% 76
+\BOOKMARK [0][-]{chapter.10}{Laplace Transforms}{}% 77
+\BOOKMARK [1][-]{section.10.1}{Where Laplace Transforms Come From}{chapter.10}% 78
+\BOOKMARK [1][-]{section.10.2}{Basic Laplace Transforms and Basic Properties}{chapter.10}% 79
+\BOOKMARK [1][-]{section.10.3}{Important Theorems for Laplace Transforms}{chapter.10}% 80
+\BOOKMARK [1][-]{section.10.4}{Common Laplace Transforms}{chapter.10}% 81
+\BOOKMARK [1][-]{section.10.5}{Solving Differential Equations with Laplace Transforms}{chapter.10}% 82
+\BOOKMARK [1][-]{section.10.6}{The Heaviside Function and Delayed Forcing Terms}{chapter.10}% 83
+\BOOKMARK [1][-]{section.10.7}{Impulses and The Delta Function}{chapter.10}% 84
+\BOOKMARK [1][-]{section.10.8}{Convolutions \(INCOMPLETE\)}{chapter.10}% 85
+\BOOKMARK [1][-]{section.10.9}{Additional Exercises}{chapter.10}% 86
+\BOOKMARK [0][-]{chapter.11}{Fourier Transforms \(INCOMPLETE\)}{}% 87
+\BOOKMARK [1][-]{section.11.1}{Introduction to Fourier Transforms}{chapter.11}% 88
+\BOOKMARK [1][-]{section.11.2}{Fourier Filters}{chapter.11}% 89
+\BOOKMARK [1][-]{section.11.3}{The Fast Fourier Transform}{chapter.11}% 90
+\BOOKMARK [1][-]{section.11.4}{Additional Exercises}{chapter.11}% 91
+\BOOKMARK [0][-]{chapter.12}{Power Series Method: The Ultimate Guess}{}% 92
+\BOOKMARK [1][-]{section.12.1}{Taylor Series Solutions to Diff. Equations}{chapter.12}% 93
+\BOOKMARK [1][-]{section.12.2}{Radius of Convergence for Power Series}{chapter.12}% 94
+\BOOKMARK [1][-]{section.12.3}{Power Series Solutions to Diff. Equations}{chapter.12}% 95
+\BOOKMARK [1][-]{section.12.4}{Additional Exercises}{chapter.12}% 96
+\BOOKMARK [0][-]{chapter.13}{Partial Differential Equations}{}% 97
+\BOOKMARK [1][-]{section.13.1}{Some Reminders from Multivariable Calculus}{chapter.13}% 98
+\BOOKMARK [1][-]{section.13.2}{Where to PDEs Come From?}{chapter.13}% 99
+\BOOKMARK [2][-]{subsection.13.2.1}{Derivation of General Balance Law}{section.13.2}% 100
+\BOOKMARK [2][-]{subsection.13.2.2}{Simplifications of the Local Balance Law}{section.13.2}% 101
+\BOOKMARK [2][-]{subsection.13.2.3}{Laplace's Equation and Poisson's Equation}{section.13.2}% 102
+\BOOKMARK [1][-]{section.13.3}{The 1D Heat Equation}{chapter.13}% 103
+\BOOKMARK [2][-]{subsection.13.3.1}{1D Heat Equation with Zero Temperature Ends}{section.13.3}% 104
+\BOOKMARK [2][-]{subsection.13.3.2}{1D Heat Equation with Insulated Ends}{section.13.3}% 105
+\BOOKMARK [2][-]{subsection.13.3.3}{Heat Equation on a Thin Ring}{section.13.3}% 106
+\BOOKMARK [1][-]{section.13.4}{Additional Exercises}{chapter.13}% 107
+\BOOKMARK [0][-]{section*.30}{Appendices}{}% 108
+\BOOKMARK [0][-]{Appendix.a.A}{Partial Fractions}{}% 109
+\BOOKMARK [0][-]{Appendix.a.B}{MATLAB Basics}{}% 110
+\BOOKMARK [1][-]{section.a.B.1}{Vectors and Matrices}{Appendix.a.B}% 111
+\BOOKMARK [1][-]{section.a.B.2}{Looping}{Appendix.a.B}% 112
+\BOOKMARK [2][-]{subsection.a.B.2.1}{For Loops}{section.a.B.2}% 113
+\BOOKMARK [2][-]{subsection.a.B.2.2}{The While Loop}{section.a.B.2}% 114
+\BOOKMARK [1][-]{section.a.B.3}{Conditional Statements}{Appendix.a.B}% 115
+\BOOKMARK [2][-]{subsection.a.B.3.1}{If Statements}{section.a.B.3}% 116
+\BOOKMARK [2][-]{subsection.a.B.3.2}{Case-Switch Statements}{section.a.B.3}% 117
+\BOOKMARK [1][-]{section.a.B.4}{Functions}{Appendix.a.B}% 118
+\BOOKMARK [1][-]{section.a.B.5}{Plotting}{Appendix.a.B}% 119
+\BOOKMARK [1][-]{section.a.B.6}{Animations}{Appendix.a.B}% 120
+\BOOKMARK [0][-]{Appendix.a.C}{LaTeX}{}% 121
+\BOOKMARK [1][-]{section.a.C.1}{Equation Environments and Cross Referencing}{Appendix.a.C}% 122
+\BOOKMARK [1][-]{section.a.C.2}{Tables, Tabular, Figures, Shortcuts, and Other Environments}{Appendix.a.C}% 123
+\BOOKMARK [2][-]{subsection.a.C.2.1}{Tables and Tabular Environments}{section.a.C.2}% 124
+\BOOKMARK [2][-]{subsection.a.C.2.2}{Excel To LaTeX}{section.a.C.2}% 125
+\BOOKMARK [2][-]{subsection.a.C.2.3}{Figures}{section.a.C.2}% 126
+\BOOKMARK [2][-]{subsection.a.C.2.4}{New Commands: Shortcuts are AWESOME!}{section.a.C.2}% 127
+\BOOKMARK [1][-]{section.a.C.3}{Graphics in LaTeX}{Appendix.a.C}% 128
+\BOOKMARK [2][-]{subsection.a.C.3.1}{The Tikz and PGFPlots Packages}{section.a.C.3}% 129
+\BOOKMARK [1][-]{section.a.C.4}{Bibliography Management}{Appendix.a.C}% 130
+\BOOKMARK [2][-]{subsection.a.C.4.1}{Embedded Bibliography}{section.a.C.4}% 131
+\BOOKMARK [2][-]{subsection.a.C.4.2}{Bibliography Database: BibTeX}{section.a.C.4}% 132

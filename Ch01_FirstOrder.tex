@@ -1161,6 +1161,172 @@ Can't tell since the solution isn't guaranteed to exist when $h=0$
 \solution{No.  If so it would violate uniqueness}
 
 
+\newpage\section{Software for Differential Equations}
+In this section we'll discuss how the software platform MATLAB can be used to find
+solutions for and help us explore first order differential equations.
+
+\subsection{\mcode{dsolve}}
+We'll start by exploring some of the tools that \texttt{MATLAB} has for differential
+equations.  \texttt{MATLAB} has both symbolic and numerical capabilities for solving
+differential equations.
+
+We can use \texttt{MATLAB}'s \mcode{dsolve} command to solve differential
+        equations symbolically. There are several very powerful ways to use the
+        \mcode{dsolve} command.  Let's look at them via an example:
+        
+        To solve the first order differential equation $y'=-\frac{t}{y}$ without initial
+        conditions we could use the following code
+\begin{lstlisting}
+MySolution = dsolve( 'Dy=-t/y' )
+\end{lstlisting}
+        or we could use the code (notice that there are two equal signs!)
+\begin{lstlisting}
+syms y(t)
+MySolution = dsolve( diff(y) == -t/y )
+\end{lstlisting}
+        The main advantage to the second use of \mcode{dsolve} is that you  can easily
+        pass parameters \dots we'll get to that in a second. First is another example.
+        To solve the second order equation $y'' + y=0$ we would use the code
+\begin{lstlisting}
+MySolution = dsolve( 'D2y + y = 0' )
+\end{lstlisting}
+or
+\begin{lstlisting}
+syms y(t)
+Dy=diff(y);
+D2y=diff(Dy);
+MySolution = dsolve(D2y+y == 0)
+\end{lstlisting}
+
+
+        In order to add initial conditions, say for $y'=-t/y$ with $y(0)=4$ we simply add
+        another equation to the \mcode{dsolve} command.
+\begin{lstlisting}
+MySolution = dsolve( 'Dy=-t/y' , 'y(0)=4' )
+\end{lstlisting}
+        In the previous line of code the ``4'' is fixed in place an cannot be controlled
+        by other parts of your MATLAB code.  This causes huge troubles when this is a
+        parameter which you want to control.  The next block of code is significantly
+        better for controlling parameters, but it solves the same differential equation.
+\begin{lstlisting}
+syms y(t)
+IC = 4;
+MySolution = dsolve(diff(y) == -t/y , y(0) == IC)
+\end{lstlisting}
+
+        Even more interesting is adding a loop around this code along with a plot showing
+        what occurs with different initial conditions.
+\begin{lstlisting}
+syms y(t)
+for IC = 1:6;
+    MySolution = dsolve(diff(y) == -t/y , y(0) == IC);
+    ezplot(MySolution,[0,10]), hold on, grid on
+end
+\end{lstlisting}
+        
+\begin{problem}
+        Use \mcode{dsolve} to solve the differential equations 
+                \begin{flalign}
+                    &y' = \frac{t}{1-y} \quad \text{with} \quad y(0) = 4 \\
+                    &y''+2y'+y=e^t \quad \text{with} \quad y'(0)=0 \text{ and } y(0)=1
+                \end{flalign}
+                For each of the equations you should include 
+                \begin{enumerate}
+                    \item[(a)] the equation that you're
+                solving, 
+            \item[(b)] the \texttt{MATLAB} code you used to solve the equation, 
+            \item[(c)]
+                the solutions that \texttt{MATLAB} gives you formatted in a
+                mathematically appropriate and readable way, 
+            \item[(d)] a sentence describing
+                the valid domain for the solution \texttt{MATLAB} gives us, and (e) a
+                symbolic plot showing the solution on an appropriate domain.
+        \end{enumerate}
+            \end{problem}
+
+            \begin{problem}
+                \texttt{MATLAB} does not always provide us with an analytical solution using
+                elementary functions.  For instance, consider the differential equation
+                $y'=y^2+t$.  \texttt{MATLAB} can solve this equation. Solve it, make a plot on
+                an appropriate domain.  The result is somewhat cryptic!  What is going on
+                here?
+            \end{problem}
+
+            \noindent The moral of the story: \\
+            \texttt{MATLAB}'s \mcode{dsolve} command is a powerful tool for solving
+            differential equations, but we still need to be able to interpret the results
+            in order for the solution to be of any use to us. In the next subsection we'll
+            explore two qualitative techniques that can be used, with the aid of software,
+            to explore differential equations where it may not be possible to find an
+            analytic solution.
+
+\subsection{Slope Fields and Phase Plots}
+        Analytical solutions are the {\it gold standard} for differential equations, but are
+    incredibly (and perhaps surprisingly) rare! We can use qualitative analysis (or
+    graphical analysis) to help us learn about the behavior of differential equations that
+    may be difficult to solve. One of our primary MATLAB tools for this sort of analysis
+    will be the java-based program \texttt{dfield}.  Find the program linked from the
+    Moodle page and download it to your computer.
+
+    \begin{problem}
+        Use the \texttt{dfield} software to create a slope field for each of the first
+        order differential equations that we've played with thus far:
+        \[ y' = \frac{t}{1-y} \quad \text{and} \quad y'=y^2+t. \]
+        Use the mouse to select several initial conditions and use screen shots to get
+        pictures of your final plots.  If the solver appears to ``freeze'', press the
+        \texttt{stop} button on the java applet to tell it to stop trying to solve the
+        differential equation. Discuss the behavior of solutions to both differential
+        equations.  In particular, address each of the following questions:
+        \begin{itemize}
+            \item Does the solution oscillate?
+            \item Do trajectories converge along a curve?
+            \item Do trajectories grow without bound?
+            \item Do trajectories change directions?
+            \item What happens in the long term with these models?
+        \end{itemize}
+    \end{problem}
+
+%     \item We can also use some basic analytic techniques to help us determine what the
+%         long-term behavior is.  For first order equations of the form $y' = f(t,y)$ we can
+%         see if there exists some value $t_s$ such that for any $t>t_s$ either $f(t,y)>0$
+%         or $f(t,y)<0$.  In other words, there is some point in time after which all
+%         solutions are increasing or all solutions are decreasing.
+% 
+%         For our equation $y' = y^2 + t$, is there such a value of $t$? (no plots required
+%         here \dots this is a by-hand computation).  What does this tell us about the
+%         long-term behavior of solutions?
+
+    When we have {\it autonomous equations} (i.e. an equation for which all terms in
+        the equation contain only the dependent variable $y$ or its derivatives (no
+        $t$'s)), we can also perform equilibrium analysis in addition to the techniques in
+        the previous problem. Recall that an equilibrium solution is a solution that does
+        not change over time; hence $y'=0$ at the equilibrium point. 
+        
+        An equilibrium solution is stable if solutions near it tend toward it as
+        $t\to\infty$, unstable if solutions near it tend away from it as $t\to\infty$, and
+        semi-stable if it is stable on one side and unstable on the other.
+
+        \begin{problem}
+            Use \texttt{dfield} as well as available analytic techniques to analyze the
+            stability of the equilibrium points for the differential equation
+            \[ y' = 10 y \left( 1-\frac{y}{5} \right) \left( \frac{y}{10}-1 \right)^2. \]
+            Provide a detailed analysis in your solution.  Part of the analysis should be
+            a plot with $y'$ on the vertical axis and $y$ on the horizontal axis (called a
+            {\it phase plot}).  This plot can help to reveal the stability of the
+            equilibrium points.  If you aren't sure how to interpret this plot then now is
+            a time for a discussion with your group mate and neighboring groups.  You can
+            also look ahead in these notes to Section 2.1.
+        \end{problem}
+
+%         \begin{problem}
+% Come up with a first order autonomous
+%             differential equation with two stable equilibria, one unstable equilibrium, and
+%             one semi-stable equilibrium.  Verify that your differential equation has these features by using \texttt{dfield} to plot several solutions.  If you find yourself guessing on this problem then go back to the previous problem and really have the discussion that I reccomended.
+% 
+%         \end{problem}
+
+
+
 \newpage\section{Additional Exercises}
 
 \begin{problem}[The Oil Slick Problem]%www.simiode.org Problem 1-5-T-OilSlick
