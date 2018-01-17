@@ -29,6 +29,20 @@ differential equations can sometimes be quite complicated.
     equations.  Explicitly state the goal in solving these equations.  (You do not
     actually need to solve the equations)
 \end{problem}
+\solution{
+    Algebraic equations:
+    \begin{flalign*}
+        x+7 &= 9 \\
+        x^2 + \sin(x) &= \tan(x) \\
+        2x+4 &= 7x-\ln(x)
+    \end{flalign*}
+    Differential Equations:
+    \begin{flalign*}
+        y' &= -\frac{1}{2} y + 4 \\
+        y'' + y' + y &= 0 \\
+        \frac{dy}{dt} &= \frac{yt}{t^2  + 1}
+    \end{flalign*}
+}
 
 
 \begin{definition}[Differential Equation]
@@ -83,6 +97,15 @@ consult your notes from your previous course on differential equations.
     Once you have a physically reasonable choice from the list above write the associated
     differential equation in terms of volume.  
 \end{problem}
+\solution{
+    Choice (b) is sensible since the dissolution is occuring on the surface and changing
+    the volume. 
+    \[ \frac{dV}{dt} = k S \]
+    We know that $S = 6x^2$ and $V = x^3$ so $x = V^{1/3}$.  Therefore $S = 6V^{2/3}$ and
+    the differential equation becomes 
+    \[ \frac{dV}{dt} = 6k V^{2/3}. \]
+}
+
 
 \begin{problem}\label{prob:ice_balls}
     Did you know that you could make spherical ice cubes \ldots wait, that name seems
@@ -224,6 +247,13 @@ Show a slope field with $T(0)=0$ and various values of $k$.
         \item[(d)] homogeneous vs non-homogeneous
     \end{enumerate}
 \end{problem}
+\solution{
+    Linear: 1.2, 1.4, 1.5, 1.7, 1.8, 1.12, 1.13 \\
+    First Order: 1.1, 1.2, 1.3, 1.6, 1.9, 1.11, 1.13 \\
+    Second Order: 1.4, 1.5, 1.8, 1.10, 1.12 \\
+    Explicitly dependend on time: 1.1, 1.4, 1.5, 1.6, 1.12 \\
+    Homogeneous: 1.2, 1.3, 1.7, 1.8, 1.9, 1.10, 1.11, 1.13, 1.14 
+}
 
 
 Now let's get the official definitions on the table.  I am expecting that much of this
