@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 JAN 2018 13:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 JAN 2018 07:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2556,7 +2556,7 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 48.
 File: CreativeCommons.png Graphic file (type png)
  <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png used on input line 111.
+Package pdftex.def Info: CreativeCommons.png used on input line 99.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [11]
 Overfull \hbox (21.42474pt too wide) in paragraph at lines 118--120
@@ -5357,7 +5357,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 250.
 Here is how much of TeX's memory you used:
  43677 strings out of 493089
  949294 string characters out of 6134842
- 1189313 words of memory out of 5000000
+ 1189312 words of memory out of 5000000
  44725 multiletter control sequences out of 15000+600000
  85158 words of font info for 210 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -5384,7 +5384,7 @@ fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
-Output written on DELA_InquiryNotes.pdf (297 pages, 1000293 bytes).
+Output written on DELA_InquiryNotes.pdf (297 pages, 1000298 bytes).
 PDF statistics:
  3852 PDF objects out of 4296 (max. 8388607)
  3487 compressed objects within 35 object streams
