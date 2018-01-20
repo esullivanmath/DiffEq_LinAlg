@@ -2104,3 +2104,74 @@ and hence $c_1 = c_2 = c_3 = 0$.
         \item[(c)] What is the dimension of the span of $\{\bv_1,\bv_2\}$?
     \end{enumerate}
 \end{problem}
+
+\begin{problem}
+    Consider the set of vectors 
+    \[ \mathcal{W} = \left\{ \begin{pmatrix}1 \\ -2 \\ 3\end{pmatrix},
+        \begin{pmatrix}4\\-1\\0\end{pmatrix},
+        \begin{pmatrix}3\\1\\-3\end{pmatrix},\begin{pmatrix}6\\-5\\7\end{pmatrix}
+    \right\}. \]
+    To detetermine whether the set is linearly independent or dependent, a student did
+    the following correct row reduction:
+    \[ \left(\begin{array}{cccc|c} 1&4&3&6&0\\-2&-1&1&-5&0\\3&0&-3&7&0\end{array} \right)
+        \to \cdots \to \left( \begin{array}{cccc|c} 1&0&-1&0&0 \\ 0&1&1&0&0 \\
+        0&0&0&1&0\end{array} \right) \]
+    \begin{enumerate}
+        \item[(a)] Is the set of vectors $\mathcal{W}$ linearly independent or linearly
+            dependent?
+        \item[(b)] Explain what it is about the row reduction matrix that tells you
+            whether or not the set $\mathcal{W}$ is linearly independent or dependent.
+    \end{enumerate}
+\end{problem}
+
+
+
+\begin{problem}
+    The result of $\begin{pmatrix} 1&0&3\\2&1&0\end{pmatrix}
+    \begin{pmatrix}-1\\2\\0\end{pmatrix}$ is (circle all that apply)
+    \begin{itemize}
+        \item a vector in $\mathbb{R}^2$
+        \item a vector in $\mathbb{R}^3$
+        \item a matrix with 2 rows and 3 columns
+        \item a linear combination of vectors in $\mathbb{R}^2$
+        \item a linear combination of vectors in $\mathbb{R}^3$
+    \end{itemize}
+\end{problem}
+
+
+\begin{problem}
+    The three equation below correspond to three planes in $\mathbb{R}^3$.
+    \begin{flalign*}
+        x+y-z&=1 \\
+        x-y+z&=1 \\
+        3x+y-z &= 3
+    \end{flalign*}
+    \begin{enumerate}
+        \item[(a)] Determine if $(1,1,1)$ is a solution to the system of linear equations
+            and explain how you know.
+        \item[(b)] The following is the correct row reduction of the augmented matrix
+            corresponding to the given system of equations:
+            \[ \left( \begin{array}{ccc|c} 1&1&-1&1 \\ 1&-1&1&1 \\ 3&1&-1&3 \end{array}
+                \right) \to \cdots \to \left( \begin{array}{ccc|c} 1&0&0&1 \\ 0&1&01&0 \\
+                0&0&0&0 \end{array} \right). \]
+            Describe all solutions to this system of equations.
+        \item[(c)] Which best describes the intersection of these planes? (circle one and
+            explain)
+            \begin{itemize}
+                \item no intersection
+                \item a point
+                \item a line
+                \item a plane
+                \item other: \underline{\hspace{2in}}
+            \end{itemize}
+    \end{enumerate}
+\end{problem}
+
+
+
+
+\begin{problem}
+   Suppose $B$ is a square matrix and the only solution to $B \bx = \bo$ is $\bx = \bo$.
+   Is this enough information to determine whether or not $B$ is invertible?  Why or why
+   not?
+\end{problem}

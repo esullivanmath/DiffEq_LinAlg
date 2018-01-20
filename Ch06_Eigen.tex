@@ -688,8 +688,10 @@ When you type a query into Google the following two steps take place:
 
 This section focuses on the Linear Algebra behind the Ranking Module developed by the
 founders of Google: Sergey Brin and Larry Page.  Their algorithm is called the
-\emph{PageRank algorithm}, and you use it every single time you use Google's search
-engine.
+\emph{PageRank algorithm}. The PageRank algorithm was
+the {\it state of the art} in internet search up until about 2010.  More modern methods
+build upon this method but also use more advanced statistical techniques and machine
+learning.
 
 
 In simple terms: {\it A webpage is important if it is pointed to by other important
@@ -1053,3 +1055,36 @@ answer.
 % \end{problem}
 
 
+
+\begin{problem}
+    Is $\lambda = 2$ an eigenvalue of $\begin{pmatrix}3&2\\1&2\end{pmatrix}$?  Why or why
+    not?
+\end{problem}
+
+
+\begin{problem}
+    Suppose that the vector {\color{blue} $\bx$} is a real-valued eigenvector of the matrix $M$ and that
+    the entries of $M$ are also real valued.
+    \begin{enumerate}
+        \item[(a)] Considering the vectors plotted below, what could be the result of the
+            product $M\bx$?  Circle all that apply.
+            \begin{center}
+                \begin{tikzpicture}
+                    \draw[very thick, blue, ->] (0,0) -- (-2,1) node[anchor=south east]{$\bx$};
+                    \draw[very thick, red, ->] (0,0) -- (0,2) node[anchor=south]{$\bu$};
+                    \draw[very thick, green!50!black, ->] (0,0) -- (1.5,1.5) node[anchor=south west]{$\bv$};
+                    \draw[very thick, cyan, ->] (0,0) -- (2,-1) node[anchor=north west]{$\bw$};
+                    \draw[fill=black] (0,0) circle(0.05cm) node[anchor=north east]{$\bo$};
+                \end{tikzpicture}
+            \end{center}
+            \begin{itemize}
+                \item[(i)] $M{\color{blue} \bx}$ could be {\color{red} $\bu$}.
+                \item[(ii)] $M{\color{blue} \bx}$ could be {\color{green!50!black} $\bv$}.
+                \item[(iii)] $M{\color{blue} \bx}$ could be {\color{cyan} $\bw$}.
+                \item[(iv)] $M{\color{blue} \bx}$ could be {\color{black} $\bo$}.
+                \item[(v)] $M{\color{blue} \bx}$ could be {\color{blue} $\bx$}.
+                \item[(vi)] None of the above
+            \end{itemize}
+        \item[(b)] Explain your reasoning for your choice(s) in part (a).
+    \end{enumerate}
+\end{problem}
