@@ -64,14 +64,18 @@ find and analyze equilibrium points for autonomous first order differential equa
     \begin{itemize}
         \item[(a)] Why is this called an equilibrium point?
         \item[(b)] Find the equilibrium for the first order autonomous differential equation
-            \[ y' = -0.2y^2 + 3 \]
+            \[ y' = -0.5y^2 + 8 \]
         \item[(c)] Make a plot with $y'$ on the vertical axis on $y$ on the horizontal axis for
             the previous differential equation.  Use this plot to determine whether the
             equilibrium point is stable or unstable.
-        \item[(d)] Now consider the slightly different differential equation $y' = 0.2 y^2
-            + 3$.  Make a plot with $y'$ on the vertical axis and $y$ on the horizontal
+        \item[(d)] Use the \texttt{dfield} software to make a slope field for this
+            differential equation.  Tie your findings from parts (b) and (c) to what you
+            see in the slope field.
+        \item[(e)] Now consider the slightly different differential equation $y' = 0.5 y^2
+            + 8$.  Make a plot with $y'$ on the vertical axis and $y$ on the horizontal
             axis.  Use this plot to determine whether the equilibrium is stable or
-            unstable.
+            unstable.  Then use \texttt{dfield} to verify your classifications of the
+            equilibria.
     \end{itemize}
 \end{problem}
 \solution{
@@ -369,7 +373,7 @@ After some rearrangement and relabeling we get the difference equation
 \[ y_{n+1} = y_n + \Delta t f(t_n,y_n). \]
 
 \begin{technique}[Euler's Method]
-    To approximate $y' = f(t,y)$ first choose $\Delta t$ and then implmenet the difference
+    To approximate $y' = f(t,y)$ first choose $\Delta t$ and then implement the difference
     equation
     \[ y_{n+1} = y_n + \Delta t f(t_n,y_n) \]
     using appropriate computer software. 
