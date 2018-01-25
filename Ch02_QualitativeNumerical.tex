@@ -356,7 +356,7 @@ any programming language.  The fact that they are general purpose, however, mean
 can get better performance out of other methods on problems of specific types. To learn
 more I encourage you to take a course on numerical analysis.
 
-\subsection{Euler's Method}
+\subsection{Euler's Method}\label{sec:Euler}
 Euler's method is the simplest numerical method for solving the first-order differential equation
 $y'=f(t,y)$, and hence it is the best place to start!  You should be familiar with Euler's
 method from pre-requisite courses, but this time we are not going to be using Excel (since
@@ -830,6 +830,47 @@ parameters.
 
 
 \newpage\section{Additional Exercises}
+
+\begin{problem}
+    Explain how Euler's method works in clear mathematical language.
+\end{problem}
+
+\begin{problem}
+    It is tempting once you have written computer code for something like Euler's method
+    to forget what is actually going on under the hood and just let it act as a {\it black
+    box} computational tool.  In this problem you will simply
+    take several steps of an Euler solution by hand and graphically so you can mentally
+    unpack what Euler's method is doing. Now would be a good time to go back and read the
+    section on Euler's Method (Section \ref{sec:Euler}).
+
+    Consider the differential equation $\frac{dy}{dt} = -\frac{ty}{2} + t^2$ with
+    initial condition $y(0) = 1$.  We would like to build an Euler approximation on the
+    interval $t \in [0,1]$ with a time step of $\Delta t = 0.2$. Use Euler's method to
+    give approximations starting at $t=0$ and ending at $t=1$.  Plot your approximate
+    solution on the given coordinate plane.  After you've done this by hand use your code
+    to get a better approximation using Euler's method with a smaller $\Delta t$.  Compare
+    your answers.
+
+    \begin{center}
+        \begin{tabular}{|c|c|}
+            \hline
+            $t$ & Approximation of $y(t)$ \\ \hline \hline
+            0 & 1 \\ \hline
+            & \\ \hline
+            & \\ \hline
+            & \\ \hline
+            & \\ \hline
+            1 & \\ \hline
+        \end{tabular}
+    \end{center}
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[axis lines=center, grid, xmin=-0.1, xmax=1.1, ymin=0, ymax=2]
+                \draw[fill=red] (axis cs:0,1) circle(0.07cm);
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+\end{problem}
 
 \begin{problem}
     Write a differential equation that has four equilibrium points: 2 unstable,
