@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  24 JAN 2018 13:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  25 JAN 2018 12:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -5373,7 +5373,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 250.
 Here is how much of TeX's memory you used:
  43686 strings out of 493089
  949412 string characters out of 6134842
- 1189313 words of memory out of 5000000
+ 1190313 words of memory out of 5000000
  44726 multiletter control sequences out of 15000+600000
  85158 words of font info for 210 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -5400,7 +5400,7 @@ fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
-Output written on DELA_InquiryNotes.pdf (298 pages, 1005559 bytes).
+Output written on DELA_InquiryNotes.pdf (298 pages, 1006019 bytes).
 PDF statistics:
  3866 PDF objects out of 4296 (max. 8388607)
  3500 compressed objects within 35 object streams
