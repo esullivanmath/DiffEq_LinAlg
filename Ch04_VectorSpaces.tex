@@ -49,9 +49,11 @@ are going to turn them into abstract objects that have mathematical properties.
     \begin{flalign*}
         \mathbb{R}^2&= \{ (x,y) \, : \, x,y \in \mathbb{R} \} \\
         \mathbb{R}^3&= \{ (x,y,z) \, : \, x,y,z \in \mathbb{R} \} \\
-        \mathbb{R}^n&= \{ (x_1,x_2,x_3,x_4) \, : \, x_j \in \mathbb{R} \} \\
+        \mathbb{R}^4&= \{ (x_1,x_2,x_3,x_4) \, : \, x_j \in \mathbb{R} \quad \text{for}
+        \quad j \in \{1,2,3,4\} \} \\
         \vdots\\
-        \mathbb{R}^n&= \{ (x_1,x_2,\ldots,x_n) \, : \, x_j \in \mathbb{R} \} 
+        \mathbb{R}^n&= \{ (x_1,x_2,\ldots,x_n) \, : \, x_j \in \mathbb{R}  \quad \text{for}
+        \quad j \in \{1,2,\ldots,n\}\} 
     \end{flalign*}
 \end{definition}
 \begin{problem}
@@ -191,9 +193,8 @@ you read the following formal definition.
 
 \begin{problem}
     Consider the vector space $\mathcal{V} = \{ f(x) \, : \, f'(x) \text{ exists } \}$.
-    Find three linearly independent vectors in this vector space and are also a solution
+    Find three linearly independent vectors in this vector space that are also a solution
     to the differential equation $y' = -2y + 3t + 5$.
-%     Find three linearly dependent vectors in this vector space.
 \end{problem}
 \solution{
     \[ \{ e^{2t}, t, 1 \} \]
@@ -366,11 +367,11 @@ The following sequence of problems is modified from \cite{carpet}.
     carpet.  Your parents inform you that both the hover board and the magic carpet have
     restrictions in how they operate:
     \begin{itemize}
-        \item If you traveled ``forward'' on the hover board for one hour it wold move along a
+        \item If you traveled ``forward'' on the hover board for one hour it would move along a
             diagonal path that would result in a displacement of 3 miles East and 1 mile
             North of the starting location.  Mathematically, the hover board's motion is
             restricted to the vector $\bv_1 = \begin{pmatrix} 3\\1\end{pmatrix}$
-        \item If you traveled ``forward'' on the magic carpet for one hour it wold move along a
+        \item If you traveled ``forward'' on the magic carpet for one hour it would move along a
             diagonal path that would result in a displacement of 1 mile East and 2 miles
             North of the starting location.  Mathematically, the magic carpet's motion is
             restricted to the vector $\bv_1 = \begin{pmatrix} 1\\2\end{pmatrix}$
@@ -410,7 +411,7 @@ The following sequence of problems is modified from \cite{carpet}.
     You are allowed to use each mode of transportation {\bf EXACTLY ONCE} (in the forward or
     backward direction) for a fixed amount of time ($c_1$ on $\bv_1$, $c_2$ on $\bv_2$,
     and $c_3$ on $\bv_3$).  Find the amounts of time on each mode of transportation ($c_1,
-    c_2,$ and $c_3$ respectively) need t to go on a journey that starts and ends at home
+    c_2,$ and $c_3$ respectively) needed to go on a journey that starts and ends at home
     $(0,0,0)$ OR explain why it is not possible to do so.
 \end{problem}
 \solution{
