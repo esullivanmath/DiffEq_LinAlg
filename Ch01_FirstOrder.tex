@@ -961,26 +961,26 @@ as follows.
             carefully so we can switch to matrices and solve using Gaussian Elimination
             easily.
             \begin{flalign*}
-                1 C_0 + 1 C_1 + 0 C_2 &= 0 \\
+                1 C_0 + 1 C_1 + 0 C_2 &= 1 \\
                 0 C_0 + 1 C_1 + \frac{1}{3} C_2 &= 0 \\
                 0 C_0 + \frac{1}{3} C_1 - 1 C_2 &= -1
             \end{flalign*}
             Switching to matrix notation we have the augmented system and resulting row reduction
             \[ \left( \begin{array}{ccc|c} 
-                    1 & 1 & 0 & 0 \\ 
+                    1 & 1 & 0 & 1 \\ 
                     0 & 1 & 1/3 & 0 \\ 
                     0 & 1/3 & -1 & -1 \end{array} \right) \to 
                 \left( \begin{array}{ccc|c}  
-                    1 & 0 & -1/3 & 0 \\ 
+                    1 & 0 & -1/3 & 1 \\ 
                     0 & 1 & 1/3 & 0 \\ 
                     0 & 0 & -10/9 & -1 \end{array} \right) \to 
                 \left( \begin{array}{ccc|c}  
-                    1 & 0 & 0 & 3/10 \\ 
+                    1 & 0 & 0 & 13/10 \\ 
                     0 & 1 & 0 & -3/10 \\ 
                     0 & 0 & 1 & 9/10 \end{array} \right).
             \]
         \item The analytic solution is
-            \[ \frac{3}{10} e^{t/3} - \frac{3}{10} \cos(t) + \frac{9}{10} \sin(t). \]
+            \[ y(t) = \frac{13}{10} e^{t/3} - \frac{3}{10} \cos(t) + \frac{9}{10} \sin(t). \]
     \end{enumerate}
 \end{example}
 
