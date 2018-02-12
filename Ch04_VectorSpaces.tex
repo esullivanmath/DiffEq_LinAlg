@@ -1652,7 +1652,43 @@ c
 
 \newpage
 \section{The Invertible Matrix Theorem}
-All of the discussion in the previous sections now leads us to a fundamental theorem of matrices.
+\begin{problem}
+    Let $A$ be an $n \times n$ square matrix and assume that $A$ is invertible.  Mark each
+    of the following statements about the matrix $A$ as either true or false. If a
+    statement is true then prove it.  If a statement is false then provide a
+    counterexample.
+    \begin{enumerate}
+        \item[(a)] $\det(A) \ne 0$ \vfill
+        \item[(b)] $A$ can be row reduced to the $n \times n$ identity matrix \vfill
+        \item[(c)] $A$ has $n$ pivot positions \vfill
+        \item[(d)] The equation $A \bx = \bo$ has only the trivial solution \vfill
+        \item[(e)] The columns of $A$ form a linearly independent set \vfill
+        \item[(f)] The equation $A \bx = \bb$ has at least one solution for each $\bb \in
+            \mathbb{R}^n$ \vfill
+        \item[(g)] The columns of $A$ span $\mathbb{R}^n$ \vfill
+        \item[(h)] There is an $n \times n$ matrix $C$ such that $CA = I$ \vfill
+        \item[(i)] There is an $n \times n$ matrix $D$ such that $AD = I$ \vfill
+        \item[(j)] $A^T$ is invertible \vfill
+        \item[(k)] The columns of $A$ form a basis for $\mathbb{R}^n$ \vfill
+        \item[(l)] $\text{Col}(A) = \mathbb{R}^n$ \vfill
+        \item[(m)] $\text{dim}(\text{Col}(A)) = n$ \vfill
+        \item[(n)] $\text{rank}(A) = n$ \vfill
+        \item[(o)] $\text{Null}(A) = \{ \bo \}$ \vfill
+        \item[(p)] $\text{dim}(\text{Null}(A)) = 0$ \vfill
+    \end{enumerate}
+\end{problem}
+
+\begin{problem}
+    If we assume that $A$ is \underline{not} invertible in the previous problem then which
+    statements would be true and which would be false? Be able to defend your answers.
+\end{problem}
+
+\newpage
+
+
+As you undoubtedly found in the previous problem, all of the statements are true under the
+assumption that $A$ was invertible.  We can
+actually morph this into a more powerful theorem about matrices.  
 \begin{thm}[Invertible Matrix Theorem]
     Let $A$ be an $n \times n$ square matrix.  Then the following statements are
     equivalent.  That is, for a given matrix $A$, \\
@@ -1676,6 +1712,7 @@ All of the discussion in the previous sections now leads us to a fundamental the
         \item[(n)] $\text{rank}(A) = n$
         \item[(o)] $\text{Null}(A) = \{ \bo \}$
         \item[(p)] $\text{dim}(\text{Null}(A)) = 0$
+        \item[(q)] $\det(A) \ne 0$
     \end{enumerate}
 \end{thm}
 
