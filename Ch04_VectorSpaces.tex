@@ -1725,7 +1725,7 @@ actually morph this into a more powerful theorem about matrices.
             $\mathbb{R}^3$. \solution{False, they belong to $\mathbb{R}^4$}
         \item[(c)] If $A$ is an $n \times n$ matrix and $A \bx = \bo$ has only the trivial
             solution, then the dimension of the null space of $A$ is 0. \solution{True}
-        \item[(d)] If $S$ is a set of three vectors, each of this is in $\mathbb{R}^2$,
+        \item[(d)] If $S$ is a set of three vectors, each of these is in $\mathbb{R}^2$,
             then $S$ spans $\mathbb{R}^2$. \solution{False, they could form a
                 1-dimensional subspaces of $\mathbb{R}^2$}
         \item[(e)] If $A$ is an $n\times n$ matrix and the dimension of the null space is
@@ -1765,6 +1765,37 @@ All of them are true.
 }
 
 \newpage\section{Additional Exercises}
+
+\begin{problem}
+    For each True/False question be able to give a proof or counterexample to support your
+    answer.
+    \begin{enumerate}
+        \item[(a)] True or False: If an $n \times n$ matrix has a determinant of zero then
+            its columns are linearly independent. \solution{False}
+        \item[(b)] True or False: If $A$ is a $2 \times 3$ matrix then the zero vector $\bo =
+            \begin{pmatrix}0\\0\end{pmatrix}$ is in the column space of $A$.
+            \solution{True}
+        \item[(c)] True or False: If $A$ is a $2 \times 3$ matrix then the zero vector $\bo =
+            \begin{pmatrix}0\\0\end{pmatrix}$ is in the row space of $A$.
+            \solution{False but the zero vector $\bo = (0,0,0)^T$ is in the row space}
+        \item[(d)] True or False: A set of 5 vectors in $\mathbb{R}^4$ spans all of
+            $\mathbb{R}^3$. \solution{false}
+        \item[(e)] True or False: If $A$ is an $n \times n$ matrix and $A$ is invertible
+            then the sum of the dimensions of the row and null spaces of $A$ is equal to
+            $n$. \solution{True}
+        \item[(f)] True or False: The span of a set of vectors is a subspace of some vector
+            space.  \solution{True}
+        \item[(g)] True or False: the matrix $A = \begin{pmatrix} 1 & 0 & 2 \\ 0 & 3 & -2
+                \\ 0 & 0 & 4\end{pmatrix}$ is invertible. \solution{True, the determinant
+            is $\det(A) = 1 \cdot 3 \cdot 4 \ne 0$} 
+        \item[(h)] True or False: If $A^{-1}$ does not exist then the null space contains
+            only the zero vector. \solution{False}
+        \item[(i)] If $A$ is an $n \times n$ square matrix and $A^T$ is invertible then
+            $A\bx = \bo$ has infinitely many solutions. \solution{False.  IF $A^T$ is
+                invertible then $A$ is invertible so $A\bx = \bo$ has only the trivial
+            solution.}
+    \end{enumerate}
+\end{problem}
 
 \begin{problem}
     Which set of vectors is linearly independent?
