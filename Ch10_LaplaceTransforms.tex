@@ -967,4 +967,87 @@ of this expression is
     \right) \]
 \end{problem}
 
+\begin{problem}
+    Solve the differential equation
+    \[ y'' +4y' + 13y = \delta_3(t)  \quad \text{with} \quad y(0)=1 \quad \text{and} \quad
+    y'(0) =0. \]
+    Before solving the differential equation sketch a graph of what the homogeneous
+    solution looks like and then modify it to account for the delta function.
+\end{problem}
+
+
+
+\begin{problem}\label{prob:laplace_drug}
+    An oral drug is given in periodic doses with the first dose being 2mg.  The person's
+        metabolism is such that half of the drug is left in the body after 5 hours.  At every 5
+        hour mark another dose of the drug is given.  
+        \begin{enumerate}
+            \item[(a)] Fill in the blanks for the differential equation where $D$ is the dose (in mg)
+                and $t$ is the time (in hours).
+                \[ \frac{dD}{dt} = -k_1 \underline{\hspace{0.75in}} + k_2 \underline{\hspace{0.75in}}
+                + k_3 \underline{\hspace{0.75in}} + k_4 \underline{\hspace{0.75in}} + \cdots. \]
+                The first blank correponds to the way that the drug is removed from the
+                system, the second blank
+                corresponds to the dose at 5 hours, the third blank corresponds to the
+                dose at 10 hours, etc.
+            \item[(b)] Use Laplace Transforms to solve your differential equation.
+            \item[(c)] Find the constant $k_1$ from the initial information.  
+            \item[(d)] Find the constants $k_2, k_3, \dots$ by assuming that right after each
+                dose the amount in the patient's system jumps back to 2.
+        \end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+    In Problem \ref{prob:laplace_drug} we build a differential equation for a drug dosing
+    problem.  The trouble with the model built in that problem is that it doesn't account
+    for the time that it takes for the drug to go from the stomach to the blood stream.
+    Instead, consider the following system of differential equations.
+    \begin{flalign*}
+        \frac{dS}{dt} &= -C S + k_2 \delta(t-5) + k_3 \delta(t-10) + k_4 \delta(t-15) +
+        \cdots \\
+        \frac{dB}{dt} &= CS - k_1 B
+    \end{flalign*}
+    where $S(t)$ is the amount of drug in the stomach and $B(t)$ is the amount of drug in
+    the blood stream at time $t$.  
+    \begin{enumerate}
+        \item[(a)] Explain each term in the model.  Notice that the sum of the two models
+            gives us exactly the same model that we had in Problem
+            \ref{prob:laplace_drug}.
+        \item[(b)] We will now analyze this system of differential equations numerically
+            since we don't have all of the tools to solve a system with Laplace
+            transforms (\dots so much math but only finite time \dots).  We will use the
+            same values of $k_1, k_2, \dots$ for this problem.  We need a constant for $C$
+            (the rate at which the drug moves from the stomach to the blood stream) so at
+            first pass let's just use $C = 0.1$.
+
+            Complete the following block of code to build an Euler solver for the system
+            of differential equations.  When the code is complete, run it to verify that
+            what you see has the correct qualitative solution based on your understanding
+            of basic biology.  What is wrong with the new model?  What is better aboud the
+            new model? How would we improve the downsides to this model?
+    \end{enumerate}
+\end{problem}
+
+\begin{lstlisting}
+clear; clc;
+k1 =  % fill in this line with the value of k1 from the prev. problem
+C = 0.1;
+dt = 0.01;
+t = 0:dt:40;
+Stomach = zeros(length(t),1);
+Blood = zeros(length(t),1);
+Stomach(1) = 2; % initial condition
+Blood(1) = 0; % initial condition
+for n=1:length(t)-1
+    if mod(t(n),5) == 0 && t(n)>0
+        Stomach(n+1) = Stomach(n) + dt*(-C*Stomach(n)) + 1; % what does this do
+    else
+        Stomach(n+1) = Stomach(n) + dt*( ... ) % finish the Euler solver
+    end
+    Blood(n+1) = Blood(n) + dt*( ...  ) % finish the Euler solver
+end
+plot(t,Stomach,'b',t,Blood,'r')
+\end{lstlisting}
+
 
