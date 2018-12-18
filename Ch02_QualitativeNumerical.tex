@@ -37,6 +37,8 @@ wealth of information about the differential equation.
     and as such cannot change with time.
 \end{definition}
 
+\subsection{Classifying Equilibrium Points}
+
 \begin{definition}[Stability]
     An equilibrium point $y=p$ of a differential equation can be classified as either {\bf
     stable}, {\bf unstable}, or {\bf semi-stable}.  
@@ -162,6 +164,9 @@ $y' = (y-1)(y-2)(y-3)$ will be unstable at $y=1$ and $y=3$ but stable at $y=2$.
 }
 
 \newpage
+
+
+\subsection{Phase Line and Slope Field Analysis}
 
 \begin{technique}[Phase Line Analysis]
     It is often very helpful to draw a {\it phase diagram} (sometimes called a phase line)
@@ -327,6 +332,166 @@ $y' = (y-1)(y-2)(y-3)$ will be unstable at $y=1$ and $y=3$ but stable at $y=2$.
     previous example.  For this problem the vertical axis should be $y$ and the horizontal
     axis should be $t$.
 \end{problem}
+
+
+Another tool that we have for creating qualitative solutions for differential equations is
+the {\bf slope field}.  For every point in the $y-t$ plane we can determine the slope of
+the solution to the differential equation by simply putting the $t$ and $y$ into the
+right-hand side of the differential equation.  At the point we can then draw a small line
+segment with that slope.  If we repeat this process on the differential equation
+$\frac{dy}{dt} = -\frac{1}{2} (y-4)$ we get the image in Figure \ref{fig:slope_field_1}.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{images/SlopeField_1}
+    \caption{A slope field for the differential equation $\frac{dy}{dt} =
+    -\frac{1}{2}(y-4)$. }
+    \label{fig:slope_field_1}
+\end{figure}
+
+\begin{problem}
+    In Figure \ref{fig:slope_field_1} you see a slope field for the differential equation
+    $\frac{dy}{dt} = -\frac{1}{2} (y-4)$.  
+    \begin{enumerate}
+        \item[(a)] If you pick an initial condition and draw a
+            curve that is tangent to the slope field lines as you draw, then you will end up with
+            a rough sketch of a solution to the differential equation.  Draw solutions curves for
+            this differential equation using $y(0) = 0, 1, 2, 3, 3.5, 4, 4.5, 5,$ and $6$. 
+        \item[(b)] Based on the slope field in Figure \ref{fig:slope_field_1}, your solution plots
+            from part (a), and the phase plot in Figure \ref{fig:7.3.phase}, why are we
+            classifying the equilibrium at $y=4$ as ``stable''?
+    \end{enumerate}
+%     Note: It would help to have a printout or a projection of the plot in Figure
+%     \ref{fig:slope_field_1} so you can draw directly on it.
+\end{problem}
+
+% \begin{example}
+%     Consider the differential equation $\frac{dy}{dt} = \frac{1}{2}(y-4)$.  If we set the
+%     change to zero then we find that 
+%     \[ 0 = \frac{1}{2}(y_{eq} - 4) \quad \implies \quad y_{eq} = 4. \]
+%     The equilibrium is at $y=4$.  Furthermore, if we have a $y$ value a bit less than 4 we
+%     see that $dy/dt$ is negative so $y$ will be going down.  Also, if we have a $y$ value
+%     that is a bit more than 4 then $dy/dt$ is positive so $y$ will be going up (see
+%     Figure \ref{fig:7.3.phase}).  We call this type of equilibrium point {\bf unstable}. A
+%     slope field for this differential equation can be seen in Figure
+%     \ref{fig:slope_field_2}.
+% \end{example}
+% 
+\begin{figure}[ht!]
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[axis lines=center, xmin=-0.6, xmax=6, ymin=-2.5, ymax=2.5, xlabel={$y$},
+                ylabel={$\frac{dy}{dt}$}, domain=-0.6:6, grid]
+                \addplot[blue, very thick, smooth] {-0.5*(x-4)};
+                \draw[fill=red] (axis cs:4,0) circle(0.1cm);
+                \draw (axis cs:1,0.5) node{$\frac{dy}{dt}>0$};
+                \draw (axis cs:5,-1.5) node{$\frac{dy}{dt}<0$};
+                \draw[thick, red, ->] (axis cs:4.5,1)
+                node[anchor=south]{$\frac{dy}{dt}=0$} -- (axis cs:4.1,0.1);
+        \end{axis}
+    \end{tikzpicture}\\\vspace{0.1cm}
+    \begin{tikzpicture}
+        \draw[very thick, black, <->] (-1,0) -- (6,0) node[anchor=west]{$y$};
+        \foreach \j in {0,1,2,3,4,5}{
+            \draw (\j,0.1)--(\j,-0.1) node[anchor=north]{$\j$};
+        }
+        \draw[fill=red, color=red] (4,0) circle(0.1cm);
+        \foreach \k in {-0.5,0,0.5,1,1.5,2,2.5,3,3.5}{    
+            \draw[ultra thick, blue,->] (\k,0)--(\k+0.2,0);
+        }
+        \foreach \k in {4.5,5,5.5}{    
+            \draw[ultra thick, blue,->] (\k,0)--(\k-0.2,0);
+        }
+        \draw (4,0) node[anchor=south]{eq. pt.};
+    \end{tikzpicture}
+\end{center}
+\caption{A plot of $\frac{dy}{dt}$ vs $y$ (top) and a phase line diagram (bottom) for
+$\frac{dy}{dt}=-\frac{1}{2}(y-4)$}
+\label{fig:7.3.phase}
+\end{figure}
+
+% \begin{figure}[ht!]
+%     \centering
+%     \includegraphics[width=0.7\columnwidth]{images/SlopeField_2}
+%     \caption{A slope field for the differential equation $\frac{dy}{dt} =
+%     \frac{1}{2}(y-4)$. Several solution curves are shown with different initial conditions. }
+%     \label{fig:slope_field_2}
+% \end{figure}
+% 
+
+\begin{problem}
+    We have introduced three big ideas in the past couple of pages.  Let's synthesize some
+    of our thinking.  Don't be afraid to look back to the previous examples for
+    inspiration.
+    \begin{enumerate}
+        \item[(a)] To find the equilibrium for a differential equation,
+            set the {\it change} to \underline{\hspace{1in}}.  Explain your answer.
+        \item[(b)] When you make a graph of $dy/dt$ vs $y$ (called a phase plot), the
+            equilibrium (or equilibria) of the differential equation can be found where
+            the curve \underline{\hspace{2in}}. Explain your answer.
+        \item[(c)] On a phase line plot you can determine the direction of the arrows by
+            looking at the \underline{\hspace{1in}} of the derivative at that value of
+            $y$.  Explain your answer.
+        \item[(d)] To get the arrows on a slope field, pick a point in the $y-t$ plane and
+            \underline{\hspace{2in}}.  
+        \item[(e)] To get a solution curve on a slope field, pick an initial condition and
+            \underline{\hspace{2in}}.  
+    \end{enumerate}
+\end{problem}
+
+
+
+\begin{problem}[Crowd Sourced Qualitative Analysis]
+    Supplies Needed:
+    \begin{itemize}
+        \item toothpicks
+        \item yarn
+        \item a large table (or the floor)
+        \item tape
+        \item scissors
+        \item sticky notes
+    \end{itemize}
+
+    Making slope fields by hand is rather cumbersome, but only ever relying on technology can
+    detract from what you are actually doing in a slope field.  In this problem you will
+    work with a team of four to build slope fields, phase plots, and solution plots using
+    toothpicks and yarn.  
+    \begin{enumerate}
+        \item[(a)] Start by setting up two coordinate planes.  The first one will be $y$
+            vs $t$.  The second one will be $dy/dt$ vs $y$.  In each case we're only
+            interested in the first quadrant.  Use your yarn to mark the axes and then
+            tape them in place. (Make these coordinate planes a few feet by a few feet)
+        \item[(b)] We'll start with the differential equation 
+            \[ \frac{dy}{dt} = \frac{1}{2} y \left( 3-y \right). \]
+            With your team do the following tasks on this DE.  Divide the tasks among your
+            group members.
+            \begin{enumerate}
+                \item[(i)] Use the toothpicks to mark the slopes in the slope field (on
+                    the $y$ vs $t$ plot) for every integer unit of $t$ (from $0$ to $4$)
+                    and every integer value of $y$ (from $0$ to $5$). (that should be 30
+                    toothpicks!)
+                \item[(ii)] Use the yarn to show solution curves with initial conditions
+                    $y(0) = 0$, $y(0) = 0.1$, $y(0) = 1$, $y(0) = 2$, $y(0)=3$, $y(0) =
+                    4$, and $y(0) = 5$.  Feel free to cut the yarn.
+                \item[(iii)] In the $dy/dt$ vs $y$ plot use the yarn to create the phase
+                    plot.  
+                \item[(iv)] Indicate the location and stability of the equilibrium points
+                    with the sticky notes on both plots.
+                \item[(v)] Take a picture of both of your plots when they're complete.
+                    Your instructor will tell you where to upload the photos.
+            \end{enumerate}
+        \item[(c)] Create a differential equation that has 1 stable equilibrium, 1
+            unstable equilibrium, and 1 semi-stable equilibrium.  Then work with your
+            group to repeat part (b) of this problem with your new differential equation.
+    \end{enumerate}
+
+    Keep in mind that a positive slope points up and to the right, while a negative slope
+    points down and to the right.  Also, a slope with an absolute value of 1 has an angle
+    of $45^\circ$, a slope with an absolute value less than 1 is more shallow, and a slope
+    with an absolute value greater than 1 is more steep.
+
+\end{problem}
+
 
 
 \newpage
@@ -771,7 +936,7 @@ your work with sufficient mathematics, appropriate plots, and thorough expositio
         \item[(b)] Having two parameters in the model is a bit annoying so the following
             is a great mathematical tool called {\it non-dimensionalization} wherein we
             choose a change of variables that allows us to effectively eliminate one
-            variable.  In this case, let $R$ be a new variable defined as the radius of
+            parameter.  In this case, let $R$ be a new variable defined as the radius of
             the flame, $r$, divided by the non-zero equilibrium of the differential
             equation.  That is,
             \[ R = \frac{r}{r_{eq}} = \frac{r}{(\alpha / \beta)} = \frac{r \beta}{\alpha}.
@@ -794,6 +959,8 @@ your work with sufficient mathematics, appropriate plots, and thorough expositio
             the steady state radius so values such as $R(0) = 10^{-1}, 10^{-2}, 10^{-3},$
             etc make sense.  Be sure to clearly label your plots and to use sufficient
             total time to see the interesting dynamics.
+        \item[(d)] Clearly explain how what you're seeing in the plots relates to what is
+            happening physically.  
     \end{enumerate}
 \end{problem}
 
