@@ -2,7 +2,6 @@
 
 \def\ShowSoln{0}
 
-
 \usepackage[toc,page]{appendix}
 \usepackage{marginnote}
 \newcommand{\ds}{\displaystyle}
@@ -51,8 +50,9 @@
 \usepackage[table]{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{arrows,automata,positioning}
-\usetikzlibrary{patterns,snakes}
+\usetikzlibrary{patterns,decorations}
 \usepackage{pgfplots}
+\pgfplotsset{compat=1.12}
 \usepackage{rotating}
 \usepackage[notextcomp]{kpfonts} 
 \usepackage{graphicx}
@@ -64,22 +64,22 @@
 \usepackage{stmaryrd}
 \usepackage{wasysym}
 \usepackage{amsthm}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=1in, headheight=120pt]{geometry}
 \usepackage[hang,flushmargin,symbol*]{footmisc}
 \usepackage{color}
 \definecolor{darkblue}{rgb}{0, 0, .6}
 \definecolor{grey}{rgb}{.7, .7, .7}
-\usepackage[breaklinks]{hyperref}
+\usepackage{hyperref}
 \usepackage[framed,numbered]{mcode}
 \hypersetup{
-	colorlinks=true,
+    colorlinks=true,
 	linkcolor=darkblue,
 	anchorcolor=darkblue,
 	citecolor=darkblue,
-	pagecolor=darkblue,
-	urlcolor=darkblue,
-	pdftitle={},
-	pdfauthor={}
+% 	pagecolor=darkblue,
+	urlcolor=darkblue
+% 	pdftitle={},
+% 	pdfauthor={}
 }
 
 \usepackage{fancyhdr}
@@ -123,6 +123,9 @@
 \newenvironment{challenge}{\begin{chal}}{\hfill$\blacktriangle$\end{chal}}
 
 \usepackage{mdframed}
+\usepackage{silence}
+\WarningFilter{mdframed}{You got a bad break}
+\WarningFilter{hyperref}{Token not allowed in a PDF string (PDFDocEncoding): removing `math shift'}
 \newtheorem{defn}[theorem]{Definition}
 \newenvironment{definition}
 {\begin{mdframed}[backgroundcolor=blue!15]\begin{defn}}

@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {1.7}Mixing Problems}{37}{section.1.7}
 \contentsline {section}{\numberline {1.8}Existence and Uniqueness of Solutions}{40}{section.1.8}
 \contentsline {section}{\numberline {1.9}Software for Differential Equations}{42}{section.1.9}
-\contentsline {subsection}{\numberline {1.9.1}\lstinline [basicstyle=\fontfamily {pcr}\selectfont \relax \fontsize {10}{12}\selectfont \abovedisplayskip 10\p@ plus2\p@ minus5\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6\p@ plus3\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip ]|dsolve|}{42}{subsection.1.9.1}
+\contentsline {subsection}{\numberline {1.9.1}MATLAB's dsolve command}{42}{subsection.1.9.1}
 \contentsline {subsection}{\numberline {1.9.2}Slope Fields and Phase Plots}{44}{subsection.1.9.2}
 \contentsline {section}{\numberline {1.10}Additional Exercises}{45}{section.1.10}
 \contentsline {chapter}{\numberline {2}Qualitative Methods, Numerical Methods, and Bifurcations}{50}{chapter.2}
@@ -35,11 +35,11 @@
 \contentsline {section}{\numberline {4.3}Span}{102}{section.4.3}
 \contentsline {section}{\numberline {4.4}Subspaces}{106}{section.4.4}
 \contentsline {section}{\numberline {4.5}Basis}{112}{section.4.5}
-\contentsline {section}{\numberline {4.6}Row, Column, and Null Spaces in $\mathbb {R}^n$}{116}{section.4.6}
+\contentsline {section}{\numberline {4.6}Row, Column, and Null Spaces in Euclidean Space}{116}{section.4.6}
 \contentsline {section}{\numberline {4.7}The Invertible Matrix Theorem}{124}{section.4.7}
 \contentsline {section}{\numberline {4.8}Additional Exercises}{127}{section.4.8}
 \contentsline {chapter}{\numberline {5}Geometry in Vector Spaces}{134}{chapter.5}
-\contentsline {section}{\numberline {5.1}The Geometry of $\mathbb {R}^n$}{134}{section.5.1}
+\contentsline {section}{\numberline {5.1}The Geometry of Euclidean Space}{134}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}The Dot Product}{135}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Projections}{137}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}The Gram-Schmidt Process: Making Orthogonal Sets}{139}{subsection.5.1.3}
@@ -49,7 +49,7 @@
 \contentsline {subsection}{\numberline {5.4.1}Matrix Transformation}{149}{subsection.5.4.1}
 \contentsline {subsection}{\numberline {5.4.2}Linear Transformations in Abstract Vector Spaces}{152}{subsection.5.4.2}
 \contentsline {section}{\numberline {5.5}Isomorphic Vector Spaces}{158}{section.5.5}
-\contentsline {section}{\numberline {5.6}Higher Dimensions are Geometrically {\it Weird} (Optional)}{163}{section.5.6}
+\contentsline {section}{\numberline {5.6}Higher Dimensions are Geometrically Weird (Optional)}{163}{section.5.6}
 \contentsline {section}{\numberline {5.7}Additional Exercises}{166}{section.5.7}
 \contentsline {chapter}{\numberline {6}The Eigenvalue Eigenvector Problem}{168}{chapter.6}
 \contentsline {section}{\numberline {6.1}Introduction To Eigenvalues}{168}{section.6.1}
@@ -72,65 +72,65 @@
 \contentsline {chapter}{\numberline {9}Nonlinear Systems of Differential Equations}{212}{chapter.9}
 \contentsline {section}{\numberline {9.1}Modeling a Nonlinear System}{212}{section.9.1}
 \contentsline {section}{\numberline {9.2}Trace-Determinant Plane}{214}{section.9.2}
-\contentsline {section}{\numberline {9.3}Applied Nonlinear Systems}{220}{section.9.3}
-\contentsline {section}{\numberline {9.4}Additional Exercises}{222}{section.9.4}
-\contentsline {chapter}{\numberline {10}Laplace Transforms}{223}{chapter.10}
-\contentsline {section}{\numberline {10.1}Where Laplace Transforms Come From}{224}{section.10.1}
-\contentsline {section}{\numberline {10.2}Basic Laplace Transforms and Basic Properties}{226}{section.10.2}
-\contentsline {section}{\numberline {10.3}Important Theorems for Laplace Transforms}{228}{section.10.3}
-\contentsline {section}{\numberline {10.4}Common Laplace Transforms}{229}{section.10.4}
-\contentsline {section}{\numberline {10.5}Solving Differential Equations with Laplace Transforms}{231}{section.10.5}
-\contentsline {section}{\numberline {10.6}The Heaviside Function and Delayed Forcing Terms}{233}{section.10.6}
-\contentsline {section}{\numberline {10.7}Impulses and The Delta Function}{235}{section.10.7}
-\contentsline {section}{\numberline {10.8}Convolutions (INCOMPLETE)}{239}{section.10.8}
-\contentsline {section}{\numberline {10.9}Additional Exercises}{240}{section.10.9}
-\contentsline {chapter}{\numberline {11}Fourier Transforms (INCOMPLETE)}{242}{chapter.11}
-\contentsline {section}{\numberline {11.1}Introduction to Fourier Transforms}{242}{section.11.1}
-\contentsline {section}{\numberline {11.2}Fourier Filters}{243}{section.11.2}
-\contentsline {section}{\numberline {11.3}The Fast Fourier Transform}{244}{section.11.3}
-\contentsline {section}{\numberline {11.4}Additional Exercises}{245}{section.11.4}
-\contentsline {chapter}{\numberline {12}Power Series Method: The Ultimate Guess}{246}{chapter.12}
-\contentsline {section}{\numberline {12.1}Taylor Series Solutions to Diff. Equations}{246}{section.12.1}
-\contentsline {section}{\numberline {12.2}Radius of Convergence for Power Series}{248}{section.12.2}
-\contentsline {section}{\numberline {12.3}Power Series Solutions to Diff. Equations}{252}{section.12.3}
-\contentsline {section}{\numberline {12.4}Additional Exercises}{255}{section.12.4}
-\contentsline {chapter}{\numberline {13}Partial Differential Equations}{256}{chapter.13}
-\contentsline {section}{\numberline {13.1}Some Reminders from Multivariable Calculus}{256}{section.13.1}
-\contentsline {section}{\numberline {13.2}Where to PDEs Come From?}{258}{section.13.2}
-\contentsline {subsection}{\numberline {13.2.1}Derivation of General Balance Law}{258}{subsection.13.2.1}
-\contentsline {subsection}{\numberline {13.2.2}Simplifications of the Local Balance Law}{259}{subsection.13.2.2}
-\contentsline {subsubsection}{Mass Balance}{259}{section*.21}
-\contentsline {subsubsection}{Energy Balance}{259}{section*.22}
-\contentsline {subsection}{\numberline {13.2.3}Laplace's Equation and Poisson's Equation}{260}{subsection.13.2.3}
-\contentsline {section}{\numberline {13.3}The 1D Heat Equation}{262}{section.13.3}
-\contentsline {subsection}{\numberline {13.3.1}1D Heat Equation with Zero Temperature Ends}{262}{subsection.13.3.1}
-\contentsline {subsubsection}{Separation of Variables}{263}{section*.25}
-\contentsline {subsubsection}{Summary of Separation of Variables}{266}{section*.27}
-\contentsline {subsection}{\numberline {13.3.2}1D Heat Equation with Insulated Ends}{268}{subsection.13.3.2}
-\contentsline {subsection}{\numberline {13.3.3}Heat Equation on a Thin Ring}{269}{subsection.13.3.3}
-\contentsline {section}{\numberline {13.4}Additional Exercises}{272}{section.13.4}
-\contentsline {chapter}{Appendices}{274}{section*.30}
-\contentsline {chapter}{\numberline {A}Partial Fractions}{275}{Appendix.a.A}
-\contentsline {chapter}{\numberline {B}MATLAB Basics}{280}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}Vectors and Matrices}{280}{section.a.B.1}
-\contentsline {section}{\numberline {B.2}Looping}{282}{section.a.B.2}
-\contentsline {subsection}{\numberline {B.2.1}For Loops}{282}{subsection.a.B.2.1}
-\contentsline {subsection}{\numberline {B.2.2}The While Loop}{283}{subsection.a.B.2.2}
-\contentsline {section}{\numberline {B.3}Conditional Statements}{284}{section.a.B.3}
-\contentsline {subsection}{\numberline {B.3.1}If Statements}{284}{subsection.a.B.3.1}
-\contentsline {subsection}{\numberline {B.3.2}Case-Switch Statements}{285}{subsection.a.B.3.2}
-\contentsline {section}{\numberline {B.4}Functions}{285}{section.a.B.4}
-\contentsline {section}{\numberline {B.5}Plotting}{286}{section.a.B.5}
-\contentsline {section}{\numberline {B.6}Animations}{287}{section.a.B.6}
-\contentsline {chapter}{\numberline {C}\LaTeX }{289}{Appendix.a.C}
-\contentsline {section}{\numberline {C.1}Equation Environments and Cross Referencing}{289}{section.a.C.1}
-\contentsline {section}{\numberline {C.2}Tables, Tabular, Figures, Shortcuts, and Other Environments}{292}{section.a.C.2}
-\contentsline {subsection}{\numberline {C.2.1}Tables and Tabular Environments}{292}{subsection.a.C.2.1}
-\contentsline {subsection}{\numberline {C.2.2}Excel To \LaTeX }{293}{subsection.a.C.2.2}
-\contentsline {subsection}{\numberline {C.2.3}Figures}{293}{subsection.a.C.2.3}
-\contentsline {subsection}{\numberline {C.2.4}New Commands: Shortcuts are AWESOME!}{293}{subsection.a.C.2.4}
-\contentsline {section}{\numberline {C.3}Graphics in \LaTeX }{295}{section.a.C.3}
-\contentsline {subsection}{\numberline {C.3.1}The Tikz and PGFPlots Packages}{296}{subsection.a.C.3.1}
-\contentsline {section}{\numberline {C.4}Bibliography Management}{298}{section.a.C.4}
-\contentsline {subsection}{\numberline {C.4.1}Embedded Bibliography}{299}{subsection.a.C.4.1}
-\contentsline {subsection}{\numberline {C.4.2}Bibliography Database: BibTeX}{300}{subsection.a.C.4.2}
+\contentsline {section}{\numberline {9.3}Applied Nonlinear Systems}{219}{section.9.3}
+\contentsline {section}{\numberline {9.4}Additional Exercises}{221}{section.9.4}
+\contentsline {chapter}{\numberline {10}Laplace Transforms}{222}{chapter.10}
+\contentsline {section}{\numberline {10.1}Where Laplace Transforms Come From}{223}{section.10.1}
+\contentsline {section}{\numberline {10.2}Basic Laplace Transforms and Basic Properties}{225}{section.10.2}
+\contentsline {section}{\numberline {10.3}Important Theorems for Laplace Transforms}{227}{section.10.3}
+\contentsline {section}{\numberline {10.4}Common Laplace Transforms}{228}{section.10.4}
+\contentsline {section}{\numberline {10.5}Solving Differential Equations with Laplace Transforms}{230}{section.10.5}
+\contentsline {section}{\numberline {10.6}The Heaviside Function and Delayed Forcing Terms}{232}{section.10.6}
+\contentsline {section}{\numberline {10.7}Impulses and The Delta Function}{234}{section.10.7}
+\contentsline {section}{\numberline {10.8}Convolutions (INCOMPLETE)}{238}{section.10.8}
+\contentsline {section}{\numberline {10.9}Additional Exercises}{239}{section.10.9}
+\contentsline {chapter}{\numberline {11}Fourier Transforms (INCOMPLETE)}{241}{chapter.11}
+\contentsline {section}{\numberline {11.1}Introduction to Fourier Transforms}{241}{section.11.1}
+\contentsline {section}{\numberline {11.2}Fourier Filters}{242}{section.11.2}
+\contentsline {section}{\numberline {11.3}The Fast Fourier Transform}{243}{section.11.3}
+\contentsline {section}{\numberline {11.4}Additional Exercises}{244}{section.11.4}
+\contentsline {chapter}{\numberline {12}Power Series Method: The Ultimate Guess}{245}{chapter.12}
+\contentsline {section}{\numberline {12.1}Taylor Series Solutions to Diff. Equations}{245}{section.12.1}
+\contentsline {section}{\numberline {12.2}Radius of Convergence for Power Series}{247}{section.12.2}
+\contentsline {section}{\numberline {12.3}Power Series Solutions to Diff. Equations}{251}{section.12.3}
+\contentsline {section}{\numberline {12.4}Additional Exercises}{254}{section.12.4}
+\contentsline {chapter}{\numberline {13}Partial Differential Equations}{255}{chapter.13}
+\contentsline {section}{\numberline {13.1}Some Reminders from Multivariable Calculus}{255}{section.13.1}
+\contentsline {section}{\numberline {13.2}Where to PDEs Come From?}{257}{section.13.2}
+\contentsline {subsection}{\numberline {13.2.1}Derivation of General Balance Law}{257}{subsection.13.2.1}
+\contentsline {subsection}{\numberline {13.2.2}Simplifications of the Local Balance Law}{258}{subsection.13.2.2}
+\contentsline {subsubsection}{Mass Balance}{258}{section*.21}
+\contentsline {subsubsection}{Energy Balance}{258}{section*.22}
+\contentsline {subsection}{\numberline {13.2.3}Laplace's Equation and Poisson's Equation}{259}{subsection.13.2.3}
+\contentsline {section}{\numberline {13.3}The 1D Heat Equation}{261}{section.13.3}
+\contentsline {subsection}{\numberline {13.3.1}1D Heat Equation with Zero Temperature Ends}{261}{subsection.13.3.1}
+\contentsline {subsubsection}{Separation of Variables}{262}{section*.25}
+\contentsline {subsubsection}{Summary of Separation of Variables}{265}{section*.27}
+\contentsline {subsection}{\numberline {13.3.2}1D Heat Equation with Insulated Ends}{267}{subsection.13.3.2}
+\contentsline {subsection}{\numberline {13.3.3}Heat Equation on a Thin Ring}{268}{subsection.13.3.3}
+\contentsline {section}{\numberline {13.4}Additional Exercises}{271}{section.13.4}
+\contentsline {chapter}{Appendices}{273}{section*.30}
+\contentsline {chapter}{\numberline {A}Partial Fractions}{274}{Appendix.a.A}
+\contentsline {chapter}{\numberline {B}MATLAB Basics}{279}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}Vectors and Matrices}{279}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Looping}{281}{section.a.B.2}
+\contentsline {subsection}{\numberline {B.2.1}For Loops}{281}{subsection.a.B.2.1}
+\contentsline {subsection}{\numberline {B.2.2}The While Loop}{282}{subsection.a.B.2.2}
+\contentsline {section}{\numberline {B.3}Conditional Statements}{283}{section.a.B.3}
+\contentsline {subsection}{\numberline {B.3.1}If Statements}{283}{subsection.a.B.3.1}
+\contentsline {subsection}{\numberline {B.3.2}Case-Switch Statements}{284}{subsection.a.B.3.2}
+\contentsline {section}{\numberline {B.4}Functions}{284}{section.a.B.4}
+\contentsline {section}{\numberline {B.5}Plotting}{285}{section.a.B.5}
+\contentsline {section}{\numberline {B.6}Animations}{286}{section.a.B.6}
+\contentsline {chapter}{\numberline {C}\LaTeX }{288}{Appendix.a.C}
+\contentsline {section}{\numberline {C.1}Equation Environments and Cross Referencing}{288}{section.a.C.1}
+\contentsline {section}{\numberline {C.2}Tables, Tabular, Figures, Shortcuts, and Other Environments}{291}{section.a.C.2}
+\contentsline {subsection}{\numberline {C.2.1}Tables and Tabular Environments}{291}{subsection.a.C.2.1}
+\contentsline {subsection}{\numberline {C.2.2}Excel To \LaTeX }{292}{subsection.a.C.2.2}
+\contentsline {subsection}{\numberline {C.2.3}Figures}{292}{subsection.a.C.2.3}
+\contentsline {subsection}{\numberline {C.2.4}New Commands: Shortcuts are AWESOME!}{292}{subsection.a.C.2.4}
+\contentsline {section}{\numberline {C.3}Graphics in \LaTeX }{294}{section.a.C.3}
+\contentsline {subsection}{\numberline {C.3.1}The Tikz and PGFPlots Packages}{295}{subsection.a.C.3.1}
+\contentsline {section}{\numberline {C.4}Bibliography Management}{297}{section.a.C.4}
+\contentsline {subsection}{\numberline {C.4.1}Embedded Bibliography}{298}{subsection.a.C.4.1}
+\contentsline {subsection}{\numberline {C.4.2}Bibliography Database: BibTeX}{299}{subsection.a.C.4.2}

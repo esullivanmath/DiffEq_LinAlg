@@ -160,16 +160,20 @@
                 {$M_1$};
                 \node [draw,minimum width=0.5cm,minimum height=0.5cm] (massG) at (7,0)
                 {$M_2$};
-                \draw [
-                    snake=coil,
-                    segment amplitude=5pt,
-                    segment length=5pt
-                ] (wall1.east) -- (massF); 
-                \draw [
-                    snake=coil,
-                    segment amplitude=5pt,
-                    segment length=5pt
-                ] (massF.east) -- (massG.west); 
+                \draw[decoration={aspect=0.3, segment length=3mm,
+                amplitude=3mm,coil},decorate] (wall1.east) -- (massF);
+                \draw[decoration={aspect=0.3, segment length=3mm,
+                amplitude=3mm,coil},decorate] (massF.east) -- (massG.west);
+%                 \draw [
+%                     snake=coil,
+%                     segment amplitude=5pt,
+%                     segment length=5pt
+%                 ] (wall1.east) -- (massF); 
+%                 \draw [
+%                     snake=coil,
+%                     segment amplitude=5pt,
+%                     segment length=5pt
+%                 ] (massF.east) -- (massG.west); 
                 \draw [
                     thick,
                     decoration={
@@ -691,21 +695,27 @@ solve applied systems of differential equations problems.  Have fun!!
                 \node (rightend) at (8,0) [sky,minimum height=2cm] {};
                 \draw (rightend.south west) -- (rightend.north west);
                 \node (fix) at (0,0) {};
-                \draw [
-                    snake=coil,
-                    segment amplitude=5pt,
-                    segment length=5pt
-                ] (wall1.east) -- (massF); 
-                \draw [
-                    snake=coil,
-                    segment amplitude=5pt,
-                    segment length=5pt
-                ] (massF.east) -- (massG.west); 
-                \draw [
-                    snake=coil,
-                    segment amplitude=5pt,
-                    segment length=5pt
-                ] (massG.east) -- (rightend.west); 
+                \draw[decoration={aspect=0.3, segment length=3mm,
+                amplitude=3mm,coil},decorate] (wall1.east) -- (massF);
+                \draw[decoration={aspect=0.3, segment length=3mm,
+                amplitude=3mm,coil},decorate] (massF.east) -- (massG.west);
+                \draw[decoration={aspect=0.3, segment length=3mm,
+                amplitude=3mm,coil},decorate] (massG.east) -- (rightend.west);
+%                 \draw [
+%                     snake=coil,
+%                     segment amplitude=5pt,
+%                     segment length=5pt
+%                 ] (wall1.east) -- (massF); 
+%                 \draw [
+%                     snake=coil,
+%                     segment amplitude=5pt,
+%                     segment length=5pt
+%                 ] (massF.east) -- (massG.west); 
+%                 \draw [
+%                     snake=coil,
+%                     segment amplitude=5pt,
+%                     segment length=5pt
+%                 ] (massG.east) -- (rightend.west); 
                 \draw [
                     thick,
                     decoration={
