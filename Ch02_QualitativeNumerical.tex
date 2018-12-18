@@ -696,6 +696,108 @@ extensively in a numerical analysis course.  If you're interested I highly recom
 you take this course.
 
 
+\subsection{Numerical Explorations}
+In the following two problems you need to use your numerical codes to solve the
+differential equations and answer the associated questions.  Be sure to support all of
+your work with sufficient mathematics, appropriate plots, and thorough exposition.
+
+\begin{problem}[The Combustion Problem]
+    Let $T$ be the temperature of a combustible material (e.g. oily rags, dry hay, etc.).
+    The conservation of energy equation states that 
+    \[ \rho c_p \frac{dT}{dt} = A_1 e^{-B/(T-T_0)} - h\left( T - T_a \right) \]
+    where 
+    \begin{itemize}
+        \item $T$ is temperature in Kelvin,
+        \item $T_0$ is a reference temperature above which the fuel starts oxidizing,
+        \item $T_a$ is the ambient temperature of the surrounding air,
+        \item $\rho$ is the density of the fuel,
+        \item $c_p$ is the specific heat of the fuel source, 
+        \item $h$ is a measure of the power per volume per degree Kelvin,
+        \item $A_1$ is a measure of the power per unit volume, and
+        \item $B$ is a rate constant measured in degrees Kelvin.
+    \end{itemize}
+    If we divide both sides of the differential equation by $\rho c_p$ we arrive at the
+    first order non-homogeneous differential equation
+    \[ \frac{dT}{dt} = A e^{-B/(T-T_0)} - C \left( T - T_a \right). \]  
+    Assume that $A, B,$ and $C$ are all positive coefficients.
+    \\{\bf Your Tasks:}
+    \begin{enumerate}
+        \item[(a)] Why must $T > T_0$ in order for the equation to make sense physically?
+        \item[(b)] Let's suppose that $T_a = 300^\circ K$ and that $T_0$ is also at the
+            ambient temperature.  Let $A = 20$, $B = 600$, and $C = 0.01$.  Analyze the
+            differential equation graphically plotting the phase portrait, identifying
+            equilibrium points, and discussing stability of each point.
+        \item[(c)] Discuss the physical interpretation of each equilibrium point.
+        \item[(d)] Use a numerical solver to get a graphical solution to the differential
+            equation under the conditions listed in part (b).
+        \item[(e)] Suppose we don't know what $A$, $B$, and $C$ are, but we do know from
+            experiments that the three fixed points are $T_1 = T_a = 300^\circ K$, $T_2 =
+            670^\circ K$, and $T_3 = 1200^\circ K$.  What can you say about the
+            coefficients $A$, $B$, and $C$?
+    \end{enumerate}
+\end{problem}
+\solution{
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[axis lines=center, grid, xmin=0, xmax=2000, ymin=-3, ymax=3,
+                domain=300:2000]
+                \addplot[smooth, very thick, blue, samples=100] {20*exp(-600/(x-300)) - 0.01*(x-300)};
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+    The fixed points are $T_1 = 300^\circ K$, $T_2 \approx 636.8^\circ K$, and $T_3
+    \approx 1526^\circ K$.  $T_1$ is stable from the right, $T_2$ is unstable (above which
+    a combustion occurs), and $T_3$ is stable (stable combustion).
+}
+
+
+\begin{problem}[The Spherical Flame]
+    In low gravity a candle flame does not take on the same shape as we see here on earth.
+    While on earth there is a buoyancy effect that causes the shape of a flame to
+    elongate.  In low gravity the flame takes on a spherical shape (google it \ldots the
+    pictures are awesome!).  
+
+    Oxygen, which fuels the flame, enters the sphere at a rate proportional to the surface
+    area.  Combustion consumes the oxygen at a rate proportional to the volume.  Therefore
+    the differential equation modeling the radius of the spherical flame is
+    \[ \frac{dr}{dt} = \alpha r^2 - \beta r^3 \]
+    where $\alpha$ and $\beta$ are the proportionality constants controlling the rate at
+    which oxygen enters and is consumed respectively.
+    \begin{enumerate}
+        \item[(a)] What are the units of $\alpha$ and $\beta$, what are the equilibrium
+            points of the differential equation, and discuss the stability of the
+            equilibrium points. Clearly show your work and support your discussion of
+            stability with an appropriate plot.
+        \item[(b)] Having two parameters in the model is a bit annoying so the following
+            is a great mathematical tool called {\it non-dimensionalization} wherein we
+            choose a change of variables that allows us to effectively eliminate one
+            variable.  In this case, let $R$ be a new variable defined as the radius of
+            the flame, $r$, divided by the non-zero equilibrium of the differential
+            equation.  That is,
+            \[ R = \frac{r}{r_{eq}} = \frac{r}{(\alpha / \beta)} = \frac{r \beta}{\alpha}.
+            \]
+            This re-scaling is done so that $R = 1$ assumes the role of the equilibrium
+            point (and hence $0 < R < 1$ for all flames).  What are the units of $R$?
+            
+            Furthermore, show all of the necessary calculations to prove that $R$
+            satisfies the differential equation
+            \[ \frac{dR}{dt} = \frac{\alpha^2}{\beta} \left( R^2 - R^3 \right). \]
+            Finally, since the ratio $\alpha^2/\beta$ only appears once we can rename it
+            an hence only have one parameter in the model.  Therefore, the differential
+            equation of interest is
+            \[ \frac{dR}{dt} = \gamma \left( R^2 - R^3 \right). \]
+        \item[(c)] Use an appropriate numerical differential equation solver to produce
+            plots showing several solutions with different values of $\gamma$ and
+            different initial conditions.  Notice that $\gamma$ has units of
+            $1/\text{time}$ so values such as $\gamma=1$, $\gamma=10^{-1}$,
+            $\gamma=10^{-2}$, etc make sense.  The initial conditions are the fraction of
+            the steady state radius so values such as $R(0) = 10^{-1}, 10^{-2}, 10^{-3},$
+            etc make sense.  Be sure to clearly label your plots and to use sufficient
+            total time to see the interesting dynamics.
+    \end{enumerate}
+\end{problem}
+
+
 
 
 \newpage\section{Bifurcations}
@@ -824,9 +926,6 @@ parameters.
         single equilibrium point stable, unstable, or semi-stable?
 \end{enumerate}
 \end{problem}
-
-
-
 
 
 \newpage\section{Additional Exercises}
@@ -990,55 +1089,6 @@ sensor). See the free body diagram below.
 \end{problem}
 
 
-
-\begin{problem}[The Combustion Problem]
-    Let $T$ be the temperature of a combustible material (e.g. oily rags, dry hay, etc.).
-    The conservation of energy equation states that 
-    \[ \rho c_p \frac{dT}{dt} = A_1 e^{-B/(T-T_0)} - h\left( T - T_a \right) \]
-    where 
-    \begin{itemize}
-        \item $T$ is temperature in Kelvin,
-        \item $T_0$ is a reference temperature above which the fuel starts oxidizing,
-        \item $T_a$ is the ambient temperature of the surrounding air,
-        \item $\rho$ is the density of the fuel,
-        \item $c_p$ is the specific heat of the fuel source, 
-        \item $h$ is a measure of the power per volume per degree Kelvin,
-        \item $A_1$ is a measure of the power per unit volume, and
-        \item $B$ is a rate constant measured in degrees Kelvin.
-    \end{itemize}
-    If we divide both sides of the differential equation by $\rho c_p$ we arrive at the
-    first order non-homogeneous differential equation
-    \[ \frac{dT}{dt} = A e^{-B/(T-T_0)} - C \left( T - T_a \right). \]  
-    Assume that $A, B,$ and $C$ are all positive coefficients.
-    \\{\bf Your Tasks:}
-    \begin{enumerate}
-        \item[(a)] Why must $T > T_0$ in order for the equation to make sense physically?
-        \item[(b)] Let's suppose that $T_a = 300^\circ K$ and that $T_0$ is also at the
-            ambient temperature.  Let $A = 20$, $B = 600$, and $C = 0.01$.  Analyze the
-            differential equation graphically plotting the phase portrait, identifying
-            equilibrium points, and discussing stability of each point.
-        \item[(c)] Discuss the physical interpretation of each equilibrium point.
-        \item[(d)] Use a numerical solver to get a graphical solution to the differential
-            equation under the conditions listed in part (b).
-        \item[(e)] Suppose we don't know what $A$, $B$, and $C$ are, but we do know from
-            experiments that the three fixed points are $T_1 = T_a = 300^\circ K$, $T_2 =
-            670^\circ K$, and $T_3 = 1200^\circ K$.  What can you say about the
-            coefficients $A$, $B$, and $C$?
-    \end{enumerate}
-\end{problem}
-\solution{
-    \begin{center}
-        \begin{tikzpicture}
-            \begin{axis}[axis lines=center, grid, xmin=0, xmax=2000, ymin=-3, ymax=3,
-                domain=300:2000]
-                \addplot[smooth, very thick, blue, samples=100] {20*exp(-600/(x-300)) - 0.01*(x-300)};
-            \end{axis}
-        \end{tikzpicture}
-    \end{center}
-    The fixed points are $T_1 = 300^\circ K$, $T_2 \approx 636.8^\circ K$, and $T_3
-    \approx 1526^\circ K$.  $T_1$ is stable from the right, $T_2$ is unstable (above which
-    a combustion occurs), and $T_3$ is stable (stable combustion).
-}
 
 
 
