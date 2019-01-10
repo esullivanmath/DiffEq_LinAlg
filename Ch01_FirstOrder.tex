@@ -316,7 +316,7 @@ definition.  I'll get us started.
 \end{definition}
 \begin{problem}
     Write three examples of linear first order differential equations and three
-    examples of nonlinear first order differential equations.  In each case identify the
+    examples of nonlinear first order differential equations.  In the linear case identify the
     ``$P$'' and the ``$Q$'' functions.
 \end{problem}
 
@@ -368,7 +368,7 @@ definition.  I'll get us started.
         \item The differential equation $y' = -0.2y + 3$ is first order non-homogeneous.
         \item The differential equation $y'' + 3y' - 5y = 0$ is second order homogeneous.
         \item The differential equation $y'' + 3y' - 5y = 2$ is second order non-homogeneous.
-        \item The differential equation $v' = g - c v^2$ is second order non-homogeneous (and
+        \item The differential equation $v' = g - c v^2$ is first order non-homogeneous (and
             nonlinear).
     \end{itemize}
 \end{example}
@@ -413,7 +413,7 @@ dust off of your memories and to review what you once knew.
     \[ y(t) = \int f(t) dt + C = F(t) + C \]
     where $F(t)$ is the antiderivative of $f(t)$ such that $F'(t) = f(t)$.  Given  some
     additional piece of information $y(t_0)
-    = y_0$ we can find the constant $C$ by substituting $t=t_0$ and $y=t_0$ and solving
+    = y_0$ we can find the constant $C$ by substituting $t=t_0$ and $y=y_0$ and solving
     for $C$.  Indeed,
     \[ y_0 = F(t_0) + C \quad \implies \quad C = y_0 - F(t_0). \]
 \end{technique}
@@ -459,7 +459,7 @@ dust off of your memories and to review what you once knew.
             If you multiply both sides by $dt$ and divide both sides by $y$ we end up with
             \[ \frac{dy}{y} = dt. \]
             Integrate both sides and solve for $y$.
-        \item[(c)] Compare your answers to parts (b) and (c).
+        \item[(c)] Compare your answers to parts (a) and (b).
     \end{enumerate}
 \end{problem}
 \solution{
@@ -505,12 +505,14 @@ Let's examine separation of variables a bit more closely since there is some cal
 funny business going on.  If $\frac{dy}{dt} = f(y) g(t)$ then  certainly we can rewrite as
 \[ \frac{dy}{dt} = f(y) g(t) \quad \iff \quad \frac{1}{f(y)} \frac{dy}{dt} = g(t). \]
 This is true so long as $f(y)$ is nonzero of course.  Now if we integrate with respect to
-$t$ on both sides we have two valid integrals with in time:
+$t$ on both sides we have two valid integrals with respect to time:
 \[ \int \frac{1}{f(y(t))} \frac{dy}{dt} dt = \int g(t) dt. \]
 From calculus we recall that the quantity $\frac{dy}{dt} dt$ is the differential
 $dy$\footnote{No. We are not cancelling the ``$dt$''.}.  Hence we arrive at the separated
 form
-\[ \int \frac{dy}{f(y)} = \int g(t) dt. \]
+\[ \int \frac{dy}{f(y)} = \int g(t) dt \]
+and this ends the proof that separation of variables is a valid technique for solving
+differential equations of the form $y' = f(y) g(t)$.
 \end{proof}
 
 
