@@ -1537,9 +1537,15 @@ just jump right in with an example.
     Say we want to solve the differential equation 
     \[ \frac{dy}{dt}= -\frac{t}{y} \]
     with the initial condition $y(0) = 4$.  You may notice that this differential equation
-    is separable but it is actually impossible to solve explicitly for the solution $y(t)$
-    algebraically (\ldots don't just trust me, do the separation \ldots).  Let's see what
-    MATLAB can do.
+    is separable so take a few moments to carefully solve this equation by hand.  You
+    might recognize the implicit form of the solution (before you solve for $y(t)$) from your experience with geometry.
+    Finish off the by-hand work by solving your implicit solution for $y(t)$. Be extra
+    careful with the sign on the square root \ldots remember your ``$\pm$'' in your
+    algebra and think carefully how to deal with it.  
+    
+    That was fun, but not all differential equations lend themselves to such nice by-hand
+    analysis.  Let's see what
+    MATLAB can do on a problem such as this.
 \begin{lstlisting}
 syms y(t) % first define a symbolic function y(t)
 dy(t) = diff(y(t) , t); % then define the derivative symbolically
