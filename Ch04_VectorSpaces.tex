@@ -111,6 +111,16 @@ the same size, the collection of all polynomials, \dots
 }
 
 \begin{problem}
+    Is $\mathcal{V} = \left\{ \begin{pmatrix} x\\y\\z \end{pmatrix} \, : \, x=y=z=0
+    \right\}$ a vector space over the real numbers?  Why or why not?
+\end{problem}
+\solution{
+    Yes.  The only thing in this vector space is the zero vector so adding it to itself
+    and scaling it by anything will still result in just the zero vector.  Admittedly this
+    is a pretty un-interesting vector space since there is only one thing in it.
+}
+
+\begin{problem}
     Is $\mathcal{V} = \left\{ \begin{pmatrix} x \\ y \end{pmatrix} \, : \, x y\ge 0 \right\}$ a vector space?  Why or why not?
 \end{problem}
 \solution{
@@ -128,6 +138,18 @@ the same size, the collection of all polynomials, \dots
 yes
 }
 
+\begin{problem}
+    Is $\mathcal{V} = \left\{ f(x) \, : \, f(x) \text{ is continuous on the interval
+    $[a,b]$ and } f(a) = f(b) \right\}$ a vector space? 
+\end{problem}
+\solution{
+    It would be helpful to draw a few functions that have these properties.  \ldots I'll
+    wait.  
+
+    If you add two functions that have these properties then all of the properties hold.
+    If we scale a function that has these properties then all of the properties of the set
+    hold.  The rest of the rules for vectors spaces follow from these two observations.
+}
 
 \begin{problem}
     Is the collection $\mathcal{V} = \{ f(x) \, : \, f'(x) \text{ exists }\}$ a vector
@@ -136,6 +158,15 @@ yes
 \solution{
 yes
 }
+
+
+% \begin{problem}
+%     Is $\mathcal{V} = \left\{ A \in \mathbb{R}^{3\times 3} \, : \, \det(A) \neq 0
+%     \right\}$ a vector space?
+% \end{problem}
+% \solution{
+%     Yes.  This is the collection all invertible $3\times 3$ matrices.  
+% }
 
 
 \begin{definition}[The Trace of a Matrix]
