@@ -160,13 +160,19 @@ yes
 }
 
 
-% \begin{problem}
-%     Is $\mathcal{V} = \left\{ A \in \mathbb{R}^{3\times 3} \, : \, \det(A) \neq 0
-%     \right\}$ a vector space?
-% \end{problem}
-% \solution{
-%     Yes.  This is the collection all invertible $3\times 3$ matrices.  
-% }
+\begin{problem}
+    Is $\mathcal{V} = \left\{ A \in \mathbb{R}^{2\times 2} \, : \, \det(A) \neq 0
+    \right\}$ a vector space?
+\end{problem}
+\solution{
+    No!.  Consider the matrices
+    \[ A = \begin{pmatrix} a & 0 \\ 0 & 1 \end{pmatrix} \quad \text{and} \quad
+    B = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}  \]
+    If we add $A$ and $B$ then observe that 
+    \[ A + B = \begin{pmatrix} 2 & 0 \\ 0 & 0 \end{pmatrix} \]
+    and this resulting matrix is not invertible.  Therefore $\mathcal{V}$ is not closed
+    under addition.
+}
 
 
 \begin{definition}[The Trace of a Matrix]
