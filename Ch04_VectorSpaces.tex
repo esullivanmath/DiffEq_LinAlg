@@ -787,7 +787,7 @@ $(1,0,0)^T$
 
 \begin{problem}
 What subspace of $\mathbb{R}^3$ is spanned by the solution space of the equations
-    \[ \left\{ \begin{array}{rl} 3x_1 + 2x_2 + x_2 &= 0 \\
+    \[ \left\{ \begin{array}{rl} 3x_1 + 2x_2 + x_3 &= 0 \\
             2x_1 +5x_2 - 3x_3 &= 0 \\
         5x_1-4x_2 +9x_3 &= 0 \end{array} \right. \]
 \end{problem}
@@ -946,6 +946,66 @@ combination of $\bv_1$ and $\bv_2$ for $\bw = 3 \bv_1 + 2 \bv_2$ and no other wa
 %         \input{ClickerQuestions/LA.00.15.280}
 %     \end{itemize}
 % \end{problem}
+
+
+\begin{example}
+    Let $\mathcal{V}$ be the set of all functions defined on a single real number.  Let $S
+    = \{ f(x) \in \mathcal{V} \, : \, f'(x) \text{ exists} \}$.  It is clear that $S$ is a subset of
+    $\mathcal{V}$.  Prove that $S$ is a subspace of the vector space $\mathcal{V}$.
+
+    \noindent {\bf Proof:}\\
+    Let $f(x)$ and $g(x)$ be functions in $S$.  That is to say that both $f'(x)$ and
+    $g'(x)$ must exist.  Observe that $h(x) = f(x) + g(x)$ also has a derivative since
+    $h'(x) = f'(x) + g'(x)$ due to the linearity of the derivative operator.  Similarly,
+    if $c \in \mathbb{R}$ then if we define $k(x) = cf(x)$ then $k'(x) = cf'(x)$ again due
+    to the linearity of the derivative operator.  Therefore the set $S$ is a subspace of
+    the space of all functions.
+
+    That is to say: If you add or scale a differentiable function then you will get a
+    differentiable function in return. This should be familiar from calculus.
+\end{example}
+
+\begin{example}
+    Let the set $S$ be defined as
+    \[ S = \left\{ \begin{pmatrix} a & b \\ 0 & 1 \end{pmatrix} \, : \, a,b \in \mathbb{R}
+    \right\}. \]
+    Is $S$ a subspace of the vector space that contains all two-by-two matrices?
+
+    \noindent {\bf Solution:} \\
+    No.  Observe that the zero vector in the space of $2 \times 2$ matrices is
+    $\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}$.  Observe that this zero matrix
+    is not in the set $S$ and therefore $S$ cannot be a subspace of $\mathbb{R}^{2 \times
+    2}$.
+\end{example}
+
+\begin{example}
+    Consider the following true or false questions.
+    \begin{enumerate}
+        \item[(a)] True or False: $\mathbb{R}^2$ is a subspace of $\mathbb{R}^3$.
+        \item[(b)] True or False: The $xy$ plane is a subspace of $\mathbb{R}^3$.
+        \item[(c)] True or False: The $xy$ plane in $\mathbb{R}^3$ is equal to
+            $\mathbb{R}^2$.
+    \end{enumerate}
+
+    \noindent {\bf Solution:} 
+    \begin{enumerate}
+        \item[(a)] False.  The vectors in the space $\mathbb{R}^2$ {\it look like}
+            $\begin{pmatrix} x \\ y \end{pmatrix}$ and the vectors in the space
+            $\mathbb{R}^3$ {\it look like} $\begin{pmatrix} x\\y\\z\end{pmatrix}$.  There
+            is no way we can reach into the space $\mathbb{R}^3$ and pull out something
+            that is missing a third component.  Note that even if the third component is
+            zero there is a still a third component and that doesn't mean that your vector
+            is in $\mathbb{R}^2$.
+        \item[(b)] True. If we take a vector in the $xy$ plane inside $\mathbb{R}^3$ then
+            that vector must look like $\begin{pmatrix} x \\ y \\ 0 \end{pmatrix}$.  If we
+            add or scalar multiply vectors that look like this then we end up with another
+            vector that looks like this.  
+        \item[(c)] False.  The things in the $xy$ plane inside $\mathbb{R}^3$ are all
+            vectors with three components.  The things in $\mathbb{R}^2$ are all things
+            with two components.  There clearly are not the same thing.
+    \end{enumerate}
+\end{example}
+
 
 
 \newpage\section{Basis}
