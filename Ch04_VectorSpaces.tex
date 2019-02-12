@@ -1334,18 +1334,189 @@ rows and columns of matrices via an applied problem.
         \end{tikzpicture}
     \end{center}
     \begin{enumerate}
-        \item[(a)] Write a system of 5 equations with 6 unknowns.  Each equation should
-            correspond to a node in the traffic graph and each unknown corresponds to the
-            flow of traffic along a road.
-        \item[(b)] Solve the system of equations using software.
-        \item[(c)] You should notice that the system of equations has infinitely many
-            solutions.  Write the parametric form of the solution.
-        \item[(d)] What does each vector in the parametric form tell us about the traffic
-            graph?
+        \item[(a)] We can write a system of 5 equations with 6 unknowns to model the flow
+            of the traffic through the network.  Each equation should correspond to a node
+            in the traffic graph and each unknown corresponds to the flow of traffic along
+            a road.  To save a bit of time, the system is given below:
+            \begin{flalign*}
+                &\quad \text{Flow In = Flow Out} \\
+                \text{Node A: } &\quad 800 + x_3 = 700 + x_4 \\
+                \text{Node B: } &\quad x_4 + x_6 = 600 + x_5 \\
+                \text{Node C: } &\quad x_5 + 800 = 700 + x_1 \\
+                \text{Node D: } &\quad x_1 + 400 = 700 + x_2 \\
+                \text{Node E: } &\quad x_2 + 700 = x_3 + x_6
+            \end{flalign*}
+
+        \item[(b)] Fill in the remainder of the augmented system below:
+            \[ \left( \begin{array}{cccccc|c} 0 & 0 & 1 & -1 & 0 & 0 & -100 \\
+                                              0 & 0 & 0 & 1 & -1 & 1 & 600 \\
+                                              -1 & 0 & 0 & 0 & 1 & 0 & -100 \\
+                                              \underline{\hspace{0.2in}} &
+                                          \underline{\hspace{0.2in}}
+                                      &\underline{\hspace{0.2in}}
+                                  &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}}
+                              &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}} \\
+                                              \underline{\hspace{0.2in}} &
+                                          \underline{\hspace{0.2in}}
+                                      &\underline{\hspace{0.2in}}
+                                  &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}}
+                              &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}}
+                      \end{array} \right)
+                          \]
+
+        \newpage
+
+        \item[(c)] Solve the system of equations using software.  You should notice that
+            the system of equations has infinitely many solutions.  Write the row reduced
+            form of the system here:
+            
+            \[ \left( \begin{array}{cccccc|c} \underline{\hspace{0.2in}} &
+                                          \underline{\hspace{0.2in}}
+                                      &\underline{\hspace{0.2in}}
+                                  &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}}
+                              &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}} \\
+                                              \underline{\hspace{0.2in}} &
+                                          \underline{\hspace{0.2in}}
+                                      &\underline{\hspace{0.2in}}
+                                  &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}}
+                              &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}} \\
+                              \underline{\hspace{0.2in}} &
+                                          \underline{\hspace{0.2in}}
+                                      &\underline{\hspace{0.2in}}
+                                  &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}}
+                              &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}} \\
+                                              \underline{\hspace{0.2in}} &
+                                          \underline{\hspace{0.2in}}
+                                      &\underline{\hspace{0.2in}}
+                                  &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}}
+                              &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}}\\
+                              \underline{\hspace{0.2in}} &
+                                          \underline{\hspace{0.2in}}
+                                      &\underline{\hspace{0.2in}}
+                                  &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}}
+                              &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}} \\
+                                              \underline{\hspace{0.2in}} &
+                                          \underline{\hspace{0.2in}}
+                                      &\underline{\hspace{0.2in}}
+                                  &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}}
+                              &\underline{\hspace{0.2in}} &\underline{\hspace{0.2in}}
+                      \end{array} \right)
+                          \]
+            Now write the parametric form of the solution. 
+            \[ \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \end{pmatrix} =
+                \begin{pmatrix} \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+                    \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+                \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \end{pmatrix} + \begin{pmatrix} \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+                    \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+                \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \end{pmatrix} t + \begin{pmatrix} \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+                    \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+                \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \end{pmatrix} s
+                \qquad \text{ where }  s,t \in \mathbb{R}
+            \]
+        \item[(d)] In the previous problem you should have found that $x_5$ and $x_6$ are
+            {\it free variables} (meaning that you can choose them freely).  In reality,
+            though, you can't just choose any value for each one since we can't run the
+            roads backward.  If you choose $x_5 = 200$ and $x_6 = 0$ we get one feasible
+            solution for the traffic flow.  
+
+            \[ x_1 = \underline{\hspace{0.5in}}, \quad x_2 = \underline{\hspace{0.5in}},
+                \quad x_3 = \underline{\hspace{0.5in}}, \quad x_4 =
+                \underline{\hspace{0.5in}}, \quad x_5 = \underline{\hspace{0.5in}}, \quad
+            x_6 = \underline{\hspace{0.5in}} \]
+
+%     \begin{center}
+%         \begin{tikzpicture}
+%             \draw[thick, ->] (0,0) node[anchor=east]{800} -- (0.5,0);
+%             \draw[thick] (0.5,0) -- (1,0);
+%             \draw[thick] (1,0) -- (8,0);
+%             \draw[thick,->] (1,0) -- (1,-1) node[anchor=north]{$700$};
+%             \draw[thick] (1,-0.5) -- (1,0);
+%             \draw[thick] (1,0) -- (4,0) -- (8,0) -- (8,2) -- (4,2) -- (1,0) -- (4,0) --
+%             (4,2);
+%             \draw[fill=black] (1,0) node[anchor=south east]{$A$} circle(0.05cm);
+%             \draw[fill=black] (4,0) node[anchor=south east]{$B$} circle(0.05cm);
+%             \draw[fill=black] (8,0) node[anchor=north west]{$C$} circle(0.05cm);
+%             \draw[fill=black] (8,2) node[anchor=south east]{$D$} circle(0.05cm);
+%             \draw[fill=black] (4,2) node[anchor=south east]{$E$} circle(0.05cm);
+%             \draw[thick, ->] (4,0) -- (4,-1) node[anchor=north]{600};
+%             \draw[thick,->] (8,-1) node[anchor=north]{800} -- (8,-0.5);
+%             \draw[thick] (8,-0.5) -- (8,0);
+%             \draw[thick,->] (8,0) -- (9,0) node[anchor=west]{700};
+%             \draw[thick,->] (9,2)  node[anchor=west]{400} -- (8.5,2);
+%             \draw[thick] (8.5,2) -- (8,2);
+%             \draw[thick,->] (8,2) -- (8,3)  node[anchor=south]{700};
+%             \draw[thick,->] (4,3)  node[anchor=south]{700} -- (4,2.5);
+%             \draw[thick] (4,2.5) -- (4,2);
+%             \draw[thick, ->] (2,-0.25) -- (3,-0.25) node[midway, below]{$x_4$};
+%             \draw[thick, ->] (5.5,-0.25) -- (6.5,-0.25) node[midway, below]{$x_5$};
+%             \draw[thick, ->] (8.25,0.5) -- (8.25,1.5) node[midway, right]{$x_1$};
+%             \draw[thick, ->] (6.5,1.75) -- (5.5,1.75) node[midway, below]{$x_2$};
+%             \draw[thick, ->] (4.25,1.5) -- (4.25,0.5) node[midway, right]{$x_6$};
+%             \draw[thick, ->] (3,1.15) -- (2,0.5) node[midway, right]{$x_3$};
+%         \end{tikzpicture}
+%     \end{center}
+% 
+\item[(e)] Since $x_6$ is another free variable you can make a choice for the amount to
+    flow through $x_6$ to obtain another feasible solution.  Let's still make $x_5 = 200$.
+    How much can you push through road $x_6$ without causing a traffic jam?
+
+% \newpage
+
+\item[(f)] Now let's consider the case of a closed system where no cars
+    flow in or out.  What is the solution to this homogenous system of equations?
+
+            \[ \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \end{pmatrix} =
+               \begin{pmatrix} \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+                    \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+                \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \end{pmatrix} t + \begin{pmatrix} \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+                    \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+                \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \end{pmatrix} s
+                \qquad \text{ where }  s,t \in \mathbb{R}
+            \]
+
+
     \end{enumerate}
 \end{problem}
 
+\newpage
 
+OK.  That was fun.  Now let's get some terminology and associate it with the traffic
+problem.
+
+
+\begin{definition}[Column Space]
+        Let $A$ be an $m \times n$ matrix. The subspace of $\mathbb{R}^m$ spanned by the
+        $n$ column vectors is called the {\bf column space} of $A$.
+\end{definition}
+\begin{problem}
+    What is the column space of the traffic problem depicted in Problem
+    \ref{prob:traffic}?  Which roads are these columns associated with?  The values of the
+    traffic flow on these roads are dependent on the values of the other {\it free} roads.
+    \[ \text{ Column Space of the Traffic Matrix = } \text{span} \left\{ \begin{pmatrix}
+        \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+\end{pmatrix} \, , \,  \begin{pmatrix}
+        \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+\end{pmatrix} \, , \, \begin{pmatrix}
+        \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+\end{pmatrix} \, , \, \begin{pmatrix}
+        \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+\end{pmatrix} \right\} \]
+\end{problem}
+
+\begin{definition}[Column Rank of a Matrix]
+    The dimension of the column space a matrix $A$ is called the (column) {\bf rank} of $A$.
+\end{definition}
+
+
+\begin{problem}
+    What is the column rank of the traffic problem matrix from Problem \ref{prob:traffic}?
+\end{problem}
+
+% \newpage
 
 \begin{definition}[Row Space]
         Let $A$ be an $m \times n$ matrix. The subspace of $\mathbb{R}^n$ spanned by the
@@ -1353,8 +1524,20 @@ rows and columns of matrices via an applied problem.
 \end{definition}
 
 \begin{problem}
-    What is the row space of the traffic problem matrix from Problem \ref{prob:traffic}
-    and what does it have to do with the context of traffic flow?
+    What is the row space of the traffic problem matrix from Problem \ref{prob:traffic}?
+    \[ \text{Row Space of the Traffic Matrix = } \text{span} \left\{ \begin{pmatrix}
+        \underline{\hspace{0.2in}} \\\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+\end{pmatrix} \, , \,  \begin{pmatrix}
+        \underline{\hspace{0.2in}} \\\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+\end{pmatrix} \, , \, \begin{pmatrix}
+        \underline{\hspace{0.2in}} \\\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+\end{pmatrix} \, , \, \begin{pmatrix}
+        \underline{\hspace{0.2in}} \\\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+\end{pmatrix} \right\} \]
 \end{problem}
 
 \begin{definition}[Row Rank of a Matrix]
@@ -1363,22 +1546,6 @@ rows and columns of matrices via an applied problem.
 
 \begin{problem}
     What is the row rank of the traffic problem matrix from Problem \ref{prob:traffic}?
-\end{problem}
-
-\begin{definition}[Column Space]
-        Let $A$ be an $m \times n$ matrix. The subspace of $\mathbb{R}^m$ spanned by the
-        $n$ column vectors is called the {\bf column space} of $A$.
-\end{definition}
-\begin{problem}
-    What is the column space of the traffic problem depicted in Problem \ref{prob:traffic}
-    and what does it have to do with the context of traffic flow?
-\end{problem}
-
-\begin{definition}[Column Rank of a Matrix]
-    The dimension of the column space a matrix $A$ is called the (column) {\bf rank} of $A$.
-\end{definition}
-\begin{problem}
-    What is the column rank of the traffic problem matrix from Problem \ref{prob:traffic}?
 \end{problem}
 
 \begin{definition}[Null Space (Kernel)]
@@ -1394,6 +1561,13 @@ rows and columns of matrices via an applied problem.
     and what does it have to do with the context of traffic flow?  Pay particular
     attention here to the situation where only the roads indicated in the null space are
     turned on.  What do you see in the traffic pattern?  
+    \[ \text{Null Space of the Traffic Matrix = span} \left\{ \begin{pmatrix}
+        \underline{\hspace{0.2in}} \\\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+\end{pmatrix} \, , \, \begin{pmatrix}
+        \underline{\hspace{0.2in}} \\\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\
+\underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}} \\ \underline{\hspace{0.2in}}
+\end{pmatrix} \right\} \]
 \end{problem}
 
 \begin{definition}[Nullity of a Matrix]
@@ -1402,6 +1576,29 @@ rows and columns of matrices via an applied problem.
 \begin{problem}
     What is the nullity of the traffic problem matrix from Problem \ref{prob:traffic}?
 \end{problem}
+
+\begin{problem}
+    Finally we'll make a few observations: 
+    \begin{enumerate}
+        \item[(a)] Will the row and column ranks always be the same?  Why / Why not?
+        \item[(b)] If you add the dimension of the column space to the dimension of the
+            null space, what do you get and how does that relate to the original system?
+    \end{enumerate}
+\end{problem}
+
+\begin{thm}
+    The row rank is always (equal to / greater than / less than / unrelated to) the column
+    rank of a matrix. \\ Circle the correct response.
+\end{thm}
+
+
+\begin{thm}[Rank-Nullity Theorem]
+    Let $A$ be an $m \times n$ matrix.  The sum of the rank and the nullity of $A$ is the
+    number of columns of $A$.
+    \[ \text{dimension}(\text{Null}(A)) + \text{dimension}(\text{Col}(A)) =
+    \underline{\hspace{1in}} \]
+\end{thm}
+
 
 \begin{thm}
     In the previous definitions we explicitly stated that each of the spaces are indeed
@@ -1742,11 +1939,6 @@ c
 
 
 
-\begin{thm}[Rank-Nullity Theorem]
-    Let $A$ be an $m \times n$ matrix.  The sum of the rank and the nullity of $A$ is the
-    number of columns of $A$.
-    \[ \text{dimension}(\text{Null}(A)) + \text{dimension}(\text{Col}(A)) = n \]
-\end{thm}
 
 \newpage
 \section{The Invertible Matrix Theorem}
