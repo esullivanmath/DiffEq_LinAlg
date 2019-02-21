@@ -746,6 +746,116 @@ length $2\pi$ would work just fine.
 \end{problem}
 
 
+\begin{thm}[Fourier Sine Series Coefficients]
+    If $f(x)$ is a $2\pi$ periodic function with $f(0) =0$ then we can expand $f(x)$ as
+    the series 
+    \[ f(x) = \sum_{k=1}^\infty C_k \sin(kx) \]
+    where 
+    \[ C_k = \left< f(x) \, , \, \sin(kx) \right> = \frac{1}{\pi} \int_0^{2\pi} f(x)
+    \sin(kx) dx. \]
+\end{thm}
+\begin{proof}
+    This theorem is a special case of Theorem \ref{thm:orthogonal_basis}.
+\end{proof}
+
+\begin{center}
+    {\bf Now for some fun!}
+\end{center}
+\begin{problem}
+    Let's build a sound signal with some noise and then use the mathematics that we just
+    discussed to work some magic. 
+    \begin{enumerate}
+        \item[(a)] We'll start by building a clean signal.
+
+\begin{lstlisting}
+clear; clc;
+dt = 0.001; % set up a time step
+t = 0:dt:2*pi % set up time from 0 to 2pi
+
+% Now we'll buid a signal (like a dial tone)
+% out of several sine waves with different amplitudes and 
+% different frequencies (make up your own)
+signal = 2*sin(240*t) + 5*sin(380*t) + 2.5*sin(700*t); 
+soundsc(signal) % play the sound (turn up the volume a bit)
+\end{lstlisting}
+
+        \item[(b)] Now let's add some noise to the signal
+
+\begin{lstlisting}
+clear; clc;
+dt = 0.001; % set up a time step
+t = 0:dt:2*pi % set up time from 0 to 2pi
+
+NoiseLevel = 10;
+signal = 2*sin(240*t) + 5*sin(380*t) + 2.5*sin(700*t) + ... 
+            NoiseLevel*rand(size(t)) - NoiseLevel/2; 
+soundsc(signal) % play the sound (turn up the volume a bit)
+\end{lstlisting}
+
+\item[(c)] Now we'll pull the dominant frequencies out of the signal.  We do this by
+    taking advatnage of the orthogonal basis for the vector space of periodic functions.
+    Read the code below carefully and be sure you know exactly what it happening. \\
+    Note: the \mcode{trapz} function does the trapezoidal rule to approximate the integral
+    (yeah MATLAB!!).
+\begin{lstlisting}
+frequences = 1:1000; % list the frequencies we will try
+for n=frequencies % try every frequency
+    c(n) = (1/pi)*trapz(signal .* sin(n*t))*dt; % integrate
+end
+\end{lstlisting}
+
+\newpage
+
+\item[(d)] Let's see which frequencies it found.
+\begin{lstlisting}
+DominantFrequencies = frequencies( c > 1 )
+\end{lstlisting}
+
+\item[(e)] Let's make a plot of the signal and the Fourier weights.
+\begin{lstlisting}
+subplot(1,3,1)
+plot(t,signal) % plot noisy signal
+xlabel('time'), ylabel('intensity'), title('Noisy Signal')
+axis([0,0.1,-NoiseLevel , NoiseLevel])
+
+subplot(1,3,2)
+plot(frequences, c, 'r')
+xlabel('frequency'), ylabel('intensity'), 
+title('Fourier Transform of Signal')
+\end{lstlisting}
+
+\item[(f)] And finally for the coolest part!!  Let's trim out the noise!!  We know what
+    the dominant frequencies are, so we can build a signal directly from them.  This is
+    EXACTLY how digital signal processing works!!
+\begin{lstlisting}
+CleanSignal = zeros(size(t)); % set up space for the clean signal
+for n=DominantFrequencies
+    CleanSignal = CleanSignal + c(n) * sin(n*t);
+end
+pause(2) % let matlab finish playing the old sound
+soundsc(CleanSignal)
+
+subplot(1,3,3)
+plot(t,CleanSignal)
+axis([0,0.1,-NoiseLevel,NoiseLevel])
+
+\end{lstlisting}
+
+\item[(g)] Now go have some fun!  Some explorations to consider:
+    \begin{itemize}
+        \item How much noise can you add and still reasonably recover the original signal?
+        \item How complex can you make the signal and still recover it?
+        \item Can you (audibly) hide a single note but recover it perfectly?
+        \item \ldots
+    \end{itemize}
+
+\end{enumerate}
+
+\end{problem}
+
+
+\newpage
+
 \begin{problem}
     Consider the function 
     \[ f(x) = \left\{ \begin{array}{cl} 1 & \text{ if } 0 < x < \pi \\ -1 & \text{ if }
@@ -779,17 +889,6 @@ length $2\pi$ would work just fine.
     for $x \in [0,2\pi]$ and extended periodically outside the domain.
 \end{problem}
 
-\begin{thm}[Fourier Sine Series Coefficients]
-    If $f(x)$ is a $2\pi$ periodic function with $f(0) =0$ then we can expand $f(x)$ as
-    the series 
-    \[ f(x) = \sum_{k=1}^\infty C_k \sin(kx) \]
-    where 
-    \[ C_k = \left< f(x) \, , \, \sin(kx) \right> = \frac{1}{\pi} \int_0^{2\pi} f(x)
-    \sin(kx) dx. \]
-\end{thm}
-\begin{proof}
-    This theorem is a special case of Theorem \ref{thm:orthogonal_basis}.
-\end{proof}
 
 % The notion of
 % expanding periodic functions in terms of an infinite series of sines and cosines
