@@ -792,13 +792,15 @@ What subspace of $\mathbb{R}^3$ is spanned by the solution space of the equation
         5x_1-4x_2 +9x_3 &= 0 \end{array} \right. \]
 \end{problem}
    \solution{
-       \[ \left( \begin{array}{ccc|c} 1 & 0 & 1 & 0 \\ 0 & 1 & -1 & 0 \\ 0 & 0 & 0 & 0
+       We can augment and row reduce
+       \[ \left( \begin{array}{ccc|c} 3 & 2 & 1 & 0 \\ 2 & 5 & -3 & 0 \\ 5 & -4 & 9 & 0
+           \end{array} \right) \to \cdots \to \left( \begin{array}{ccc|c} 1 & 0 & 1 & 0 \\ 0 & 1 & -1 & 0 \\ 0 & 0 & 0 & 0
            \end{array} \right) \]
         Therefore,
         \[ \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = t \begin{pmatrix}-1 \\ 1 \\
-                0\end{pmatrix} \]
+                1\end{pmatrix} \]
         so the subspace spanned by the solutions to the homogeneous system are
-        \[ S = \text{span}\left( \begin{pmatrix} -1\\1\\0\end{pmatrix} \right) \]
+        \[ S = \text{span}\left( \begin{pmatrix} -1\\1\\1\end{pmatrix} \right) \]
    }
 
 
@@ -1598,6 +1600,18 @@ problem.
     \[ \text{dimension}(\text{Null}(A)) + \text{dimension}(\text{Col}(A)) =
     \underline{\hspace{1in}} \]
 \end{thm}
+\solution{
+The rank of a matrix plus the nullity of a matrix must be the number of columns in the
+matrix.  \\
+{\it Proof:}
+\begin{itemize}
+    \item The rank is the number of linearly independent vectors.
+    \item The nullity is the number of free variables.
+    \item After row reducing, the columns either indicate an independent vectors or are
+        free variables (no other options), so the theorem follows.
+\end{itemize}
+\qed
+}
 
 
 \begin{thm}
@@ -2423,6 +2437,9 @@ and hence $c_1 = c_2 = c_3 = 0$.
         0 \\ 1\\ 2\end{pmatrix} \right\} \]
     Explain your reasoning.
 \end{problem}
+\solution{
+    This is a plane in $\mathbb{R}^3$.
+}
 
 \begin{problem}
     Consider the set $\mathcal{V} = \left\{ \begin{pmatrix} 1 \\ 2 \\ 0\end{pmatrix} \, , \, \begin{pmatrix}
@@ -2454,18 +2471,39 @@ and hence $c_1 = c_2 = c_3 = 0$.
             span of some other set of vectors.
     \end{enumerate}
 \end{problem}
+\solution{
+    \begin{enumerate}
+        \item[(a)] A plane since there are two linearly independent vectors in $\mathbb{R}^3$.
+        \item[(b)] see above
+        \item[(c)] (i) since it is the first vector, (iii) since it is $-2$ times the
+            second vector, (v) since it is written as a linear combination of the two
+            vectors.  It should be clear that (ii) is not in the span (wrong vector space
+            all together), and for (iv) it is easiest if we just augment and row reduce to
+            see that (iv) cannot be written as a linear combination of the two vectors.
+    \end{enumerate}
+}
 
 \begin{problem}
     Suppose that $\bv_1$ and $\bv_2$ are in $\mathbb{R}^n$, $c_1$ and $c_2$ are real
     numbers, and the only solution to the vector equation $c_1 \bv_1 + c_2 \bv_2 =
     \bo$ is the trivial solutions $c_1 = c_2 = 0$.
     \begin{enumerate}
-        \item[(a)] The set $\{\bv_1,\bv_2\}$ is (circle one): linearly indepenednet /
+        \item[(a)] The set $\{\bv_1,\bv_2\}$ is (circle one): linearly independent /
             linearly dependent.
         \item[(b)] Can $\bv_1$ be a scalar multiple of $\bv_2$?  Explain.
         \item[(c)] What is the dimension of the span of $\{\bv_1,\bv_2\}$?
     \end{enumerate}
 \end{problem}
+\solution{
+    \begin{enumerate}
+        \item[(a)] Linearly independent
+        \item[(b)] Nope.  The vectors are linearly independent.  More mathematically,
+            since $c_1 \bv_1 + c_2 \bv_2 = \bo$ only has the trivial solution we cannot
+            solve for $\bv_1$ since $\bv_1 = \frac{-c_2}{c_1} \bv_2$ but this requires
+            division by zero. So, nope.
+        \item[(c)] 2.  There are two linearly indpendent vectors.
+    \end{enumerate}
+}
 
 \begin{problem}
     Consider the set of vectors 
@@ -2485,6 +2523,15 @@ and hence $c_1 = c_2 = c_3 = 0$.
             whether or not the set $\mathcal{W}$ is linearly independent or dependent.
     \end{enumerate}
 \end{problem}
+\solution{
+    \begin{enumerate}
+        \item[(a)] There are four vectors in $\mathbb{R}^3$ so there is no way that these
+            vectors could be linearly independent.  We can see that in the row reduced
+            form since there are three pivot positions (ones from the identity) and one
+            free variable.
+        \item[(b)] There are four columns and only three pivots.
+    \end{enumerate}
+}
 
 
 
@@ -2499,6 +2546,12 @@ and hence $c_1 = c_2 = c_3 = 0$.
         \item a linear combination of vectors in $\mathbb{R}^3$
     \end{itemize}
 \end{problem}
+\solution{
+    This is a vector in $\mathbb{R}^2$ since the dimensions are $2 \times 3$ and $3\times
+    1$.  This is also a linear combination of vectors in $\mathbb{R}^2$ since we are
+    taking $-1$ of the first column of the left matrix, $2$ of the second column, and $0$
+    of the third column.
+}
 
 
 \begin{problem}
@@ -2514,7 +2567,7 @@ and hence $c_1 = c_2 = c_3 = 0$.
         \item[(b)] The following is the correct row reduction of the augmented matrix
             corresponding to the given system of equations:
             \[ \left( \begin{array}{ccc|c} 1&1&-1&1 \\ 1&-1&1&1 \\ 3&1&-1&3 \end{array}
-                \right) \to \cdots \to \left( \begin{array}{ccc|c} 1&0&0&1 \\ 0&1&01&0 \\
+                \right) \to \cdots \to \left( \begin{array}{ccc|c} 1&0&0&1 \\ 0&1&-1&0 \\
                 0&0&0&0 \end{array} \right). \]
             Describe all solutions to this system of equations.
         \item[(c)] Which best describes the intersection of these planes? (circle one and
@@ -2528,7 +2581,16 @@ and hence $c_1 = c_2 = c_3 = 0$.
             \end{itemize}
     \end{enumerate}
 \end{problem}
-
+\solution{
+    \begin{enumerate}
+        \item[(a)] Yep.  Just put the vector into each equation.
+        \item[(b)] $x = 1$ and $y=z$.  This can be summarized as
+            \[ \begin{pmatrix} x\\y\\z\end{pmatrix} = \begin{pmatrix} 1 \\ 0 \\ 0
+                \end{pmatrix} + \begin{pmatrix} 0 \\ 1 \\ 1\end{pmatrix} t \quad
+            \text{for} \quad t \in \mathbb{R}. \]
+        \item[(c)] A line.
+    \end{enumerate}
+}
 
 
 
@@ -2537,3 +2599,9 @@ and hence $c_1 = c_2 = c_3 = 0$.
    Is this enough information to determine whether or not $B$ is invertible?  Why or why
    not?
 \end{problem}
+\solution{
+Yep.  The matrix-vector product $B \bx$ is really a linear combination of the columns of
+$B$, and since $\bx = \bo$ is the only solution, then the only linear combination of the
+columns of $B$ to make the zero vector is the trial combination.  Hence, the columns are
+linearly independent.
+}
