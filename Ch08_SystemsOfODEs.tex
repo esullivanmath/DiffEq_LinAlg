@@ -1,6 +1,89 @@
 \chapter{Systems of Differential Equations}
 
 \section{Matrices and Linear Systems}
+
+
+\begin{problem}
+    Consider the differential equation
+    \[ x'' + 3x' + 2x = 0. \]
+    \begin{enumerate}
+        \item[(a)] What is the characteristic polynomial for this differential equation?
+        \item[(b)] What are the roots of the characteristic polynomial?
+        \item[(c)] Based on the roots of the characteristic polynomial, how would you
+            classify this differential equation? (undamped, underdamped, overdamped, or
+            critically damped)
+        \item[(d)] What is the basis for the solution space of this differential equation?
+        \item[(e)] What is the general form of the solution to the differential equation?
+    \end{enumerate}
+\end{problem}
+\solution{
+    The characteristic polynomial is $r^2 + 3r + 2$ which factors nicely to $(r+1)(r+2)$.
+    Therefore the roots are $r_1=-1$ and $r_2=-2$.  The basis for the solution space is
+    $\mathcal{B} = \left\{ e^{-t} , e^{-2t} \right\}$.  This is an overdamped system with
+    general solution
+    \[ y(t) = C_1 e^{-t} + C_2 e^{-2t}. \]
+}
+
+\begin{problem}
+    Let's consider the same differential equation
+    \[ x'' + 3x' + 2x = 0, \]
+    but this time we're going to do a little clever substitution to transform the problem
+    into a different form.
+    \begin{enumerate}
+        \item[(a)] Let $y = x'$.  Taking the derivative of both sides of this substitution
+            gives $y' = \underline{\hspace{1in}}$.
+        \item[(b)] What is the physical meaning of $y$ in the context of this problem?
+            (recall that $x$ is the displacement in a mass-spring oscillator)
+        \item[(c)] What is the physical meaning of $y'$ in the context of this problem?
+            (again recall that $x$ is the displacement in a mass-spring oscillator)
+        \item[(d)] Rewrite the original differential equation using the substitutions from
+            part (a): 
+            $y=x'$ and $y'=x''$.
+        \item[(e)] You should now have two differential equations.  The primary advantage
+            you should find here is that both of the differential equations are first
+            order (why is this an advantage?).  You should also notice that both
+            differential equations are linear.
+            \begin{flalign*}
+                x' &= \underline{\hspace{1in}} \\
+                y' &= \underline{\hspace{1in}}
+            \end{flalign*}
+        \item[(f)] Now let's leverage the language of linear algebra to rewrite this
+            system of equations.
+            \[ \begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix}
+                    \underline{\hspace{0.5in}} & \underline{\hspace{0.5in}} \\
+                \underline{\hspace{0.5in}} & \underline{\hspace{0.5in}} \end{pmatrix}
+            \begin{pmatrix} x \\ y \end{pmatrix} \]
+        \item[(g)] Find the characteristic polynomial for the matrix in part (f).  What do
+            you notice?  What do you wonder?
+        \item[(h)] What are the eigenvalues of the matrix in part (f)?  What do you
+            notice?
+    \end{enumerate}
+\end{problem}
+\solution{
+    \begin{enumerate}
+        \item[(a)] $y' = x''$
+        \item[(b)] $y$ is the velocity of the moving mass.
+        \item[(c)] $y'$ is the acceleration of the moving mass.
+        \item[(d)] If $y = x'$ then $y' = x''$ and the differential equation becomes $y' +
+            3y + 2x = 0$.  This can be rearranged to $y' = -2x - 3y$.
+        \item[(e)] The differential equations are
+            \begin{flalign*}
+                x' &= y \\
+                y' &= -2x - 3y
+            \end{flalign*}
+            There are several advantages here.  First of all we have now collapsed the
+            second order differential equation to a first order differential equation.
+            Furthermore, since these are linear differential equations we can use linear
+            algebra to express the DE's in a more compact form (which is obviously not the
+            only reason this is cool, but it certainly isn't a bad thing).
+        \item[(f)] $\begin{pmatrix} x' \\ y\ \end{pmatrix} = \begin{pmatrix} 0 & 1 \\ -2 &
+            -3 \end{pmatrix} \begin{pmatrix} x\\y\end{pmatrix}$.
+        \item[(g)] The characteristic polynomial is the same as before: $r^2 + 3r + 2$.
+        \item[(h)] The eigenvalues are the same as before: $r = -1,-2$.
+    \end{enumerate}
+}
+
+
 \begin{problem}
    Consider the second order differential equation 
     \[ x'' + bx' + c x = 0 \]
@@ -16,12 +99,31 @@
 }
 
 
+\begin{thm}
+    If we transform the second order differential equation $x'' + bx' + cx =0$ into the
+    first order matrix equation $\begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix}
+        0 & 1 \\ -c & -b \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix}$ by making the
+            substitution $y = x'$ then the roots of the characteristic polynomial $p(r) = r^2 +
+            br + c$ are the same as the eigenvalues of the matrix in the first-order
+            system.
+\end{thm}
+\begin{proof}
+    (Prove this theorem)
+%     Let $A = \begin{pmatrix} 0 & 1 \\ -c & -b \end{pmatrix}$ and observe that $\det(A
+%         -\lambda I) = \lambda^2 + \lambda b + c$.  The result follows.  \\ (The reader
+%         should fill in all of the details of this proof.) 
+\end{proof}
+
+
+
 
 \begin{problem}   
     If 
     \[ \left\{ \begin{array}{cl} x' &= y \\ y' &= -5x-2y \end{array} \right. \]
-    Then what was the mass spring system associated with the system?  Draw a picture of
-    the solutions to $x$ and $y$.
+    then what was the mass-spring differential equation associated with the system?  Based
+    on the eigenvalues of the associated matrix, is the mass-spring system undamped,
+    underdamped, overdamped, or critically damped? Investigate the system using a tool
+    like PPlane. Investigate the system using a tool like PPlane.
 \end{problem}
 \solution{
     \begin{flalign*}
@@ -30,6 +132,7 @@
     Observe that $b^2-4mk = 4-4(5) < 0$ so the system is underdamped and will
     oscilalte.  Show in PPlane.
 }
+
 
 \begin{problem}
     In the previous problem you likely arrived at the second order differential equation
@@ -65,20 +168,6 @@
             behavior of the system.
     \end{enumerate}
 \end{problem}
-
-\begin{thm}
-    If we transform the second order differential equation $x'' + bx' + cx =0$ into the
-    first order matrix equation $\begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix}
-        0 & 1 \\ -c & -b \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix}$ by making the
-            substitution $y = x'$ then the roots of the characteristic polynomial $p(r) = r^2 +
-            br + c$ are the same as the eigenvalues of the matrix in the first-order
-            system.
-\end{thm}
-\begin{proof}
-    Let $A = \begin{pmatrix} 0 & 1 \\ -c & -b \end{pmatrix}$ and observe that $\det(A
-        -\lambda I) = \lambda^2 + \lambda b + c$.  The result follows.  \\ (The reader
-        should fill in all of the details of this proof.) 
-\end{proof}
 
 
 \begin{problem}
@@ -250,6 +339,45 @@ we already know, the eigenvalues and eigenvectors of a matrix $A$ tell us the un
 structure of the matrix.  In some sense they are the DNA of the matrix.  In the cases that
 we investigate here the eigen-structure of $A$ will tell us about the solution curves of
 the linear first order differential equation.
+
+\begin{problem}
+    Let's return to the second order differential equation $x'' + 3x' + 2x = 0$.  Here is
+    what we learned in the last section 
+    \begin{itemize}
+        \item we can rewrite this equation as the matrix equation
+            \[ \begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} 0 & 1 \\ -2 & -3
+            \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix}. \]
+        \item the characteristic polynomial of the coefficient matrix is $p(\lambda) =
+            \lambda^2 + 3\lambda + 2$ with roots $\lambda_1 = -1$ and $\lambda_2 = -2$.  
+        \item the eigenvalues are the same as the roots to the characteristic polynomial
+            $p(r)= r^2 + 3r + 2$ found by guessing that $x(t) = e^{rt}$ is a solution to
+            the differential equation
+    \end{itemize}
+    Now let's take this a bit further:\\
+    The eigen-pairs of the coefficient matrix are
+    \[ \lambda_1 = -1 \text{ with } \bv_1 = \begin{pmatrix} -1 \\ 1 \end{pmatrix} \]
+    \[ \lambda_2 = -2 \text{ with } \bv_1 = \begin{pmatrix} -1 \\ 2 \end{pmatrix} \]
+    \begin{enumerate}
+        \item[(a)] Verify that the the vector $e^{-1 t} \begin{pmatrix} -1 \\
+                1\end{pmatrix}$
+            is a solution to the matrix form of the differential equation by substituting
+            it into both sides.
+        \item[(b)] Verify that the the vector $e^{-2 t} \begin{pmatrix} -1 \\
+                2\end{pmatrix}$
+            is a solution to the matrix form of the differential equation by substituting
+            it into both sides.
+        \item[(c)] What do you notice from the answers to parts (a) and (b)?
+        \item[(d)] Since this is a linear differential equation and we have two linearly
+            independent solution vectors, we can write the general solution to this
+            differential equation as
+            \[ \begin{pmatrix} x\\y\end{pmatrix} = C_1 e^{\underline{\hspace{0.25in}} t}
+                \begin{pmatrix} \underline{\hspace{0.25in}} \\ \underline{\hspace{0.25in}}
+                \end{pmatrix} + C_2 e^{\underline{\hspace{0.25in}} t}
+                \begin{pmatrix} \underline{\hspace{0.25in}} \\ \underline{\hspace{0.25in}}
+            \end{pmatrix} \]
+    \end{enumerate}
+
+\end{problem}
 
 \begin{thm}\label{thm:eigen_ode}
     Let $\lambda$ be an eigenvalue of the matrix $A$ for the first
