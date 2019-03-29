@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.11)  26 MAR 2019 13:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.11)  29 MAR 2019 10:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -4639,56 +4639,56 @@ Chapter 9.
 ]
 File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png  used on input line 84.
+Package pdftex.def Info: CreativeCommons.png  used on input line 129.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [224]
 File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png  used on input line 180.
+Package pdftex.def Info: CreativeCommons.png  used on input line 225.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [225]
 File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png  used on input line 246.
+Package pdftex.def Info: CreativeCommons.png  used on input line 291.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [226]
 Missing character: There is no ; in font nullfont!
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 340.
+(mdframed)              on input line 385.
 File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png  used on input line 348.
+Package pdftex.def Info: CreativeCommons.png  used on input line 393.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [227]
-Package mdframed Info: Not enough space on this page on input line 348.
+Package mdframed Info: Not enough space on this page on input line 393.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 365.
+(mdframed)              on input line 410.
 File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png  used on input line 401.
+Package pdftex.def Info: CreativeCommons.png  used on input line 446.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [228]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 410.
+(mdframed)              on input line 455.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 427.
+(mdframed)              on input line 472.
 File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png  used on input line 458.
+Package pdftex.def Info: CreativeCommons.png  used on input line 503.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [229]
 File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png  used on input line 558.
+Package pdftex.def Info: CreativeCommons.png  used on input line 603.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [230]
 File: CreativeCommons.png Graphic file (type png)
 <use CreativeCommons.png>
-Package pdftex.def Info: CreativeCommons.png  used on input line 641.
+Package pdftex.def Info: CreativeCommons.png  used on input line 686.
 (pdftex.def)             Requested size: 42.67912pt x 15.03485pt.
  [231])
 (./Ch10_LaplaceTransforms.tex
@@ -5425,10 +5425,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 253.
  ) 
 Here is how much of TeX's memory you used:
- 48458 strings out of 492639
- 1044154 string characters out of 6129301
+ 48482 strings out of 492639
+ 1044487 string characters out of 6129301
  1316510 words of memory out of 5000000
- 49797 multiletter control sequences out of 15000+600000
+ 49802 multiletter control sequences out of 15000+600000
  611139 words of font info for 213 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,19n,100p,952b,2495s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -5453,10 +5453,10 @@ y.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/kpfonts/jkpsyc.pfb
 fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
-Output written on DELA_InquiryNotes.pdf (312 pages, 1076006 bytes).
+Output written on DELA_InquiryNotes.pdf (312 pages, 1077304 bytes).
 PDF statistics:
- 4079 PDF objects out of 4296 (max. 8388607)
- 3693 compressed objects within 37 object streams
- 1804 named destinations out of 2073 (max. 500000)
+ 4102 PDF objects out of 4296 (max. 8388607)
+ 3715 compressed objects within 38 object streams
+ 1823 named destinations out of 2073 (max. 500000)
  1119 words of extra memory for PDF output out of 10000 (max. 10000000)
 

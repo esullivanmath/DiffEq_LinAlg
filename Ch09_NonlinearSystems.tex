@@ -9,27 +9,27 @@ chapter it will be helpful to have MATLAB up so you can plot phase planes and an
 equilibria graphically.
 
 \section{Modeling a Nonlinear System}
-\begin{problem}
-    We're going to try a social experiment.  
-    \begin{enumerate}
-        \item[(a)] Everyone in the class get a random number between 1 and 5. 
-        \item[(b)] I'm sorry, but if your random number is ``1'' then you just got infected
-            with the horribly contagious disease ODEbola.  Raise your hand if you are
-            infected.
-        \item[(c)] For the next 15 seconds everyone needs to walk aimlessly around the
-            classroom (move the tables out of the way and don't be afraid to bump into
-            each other).  This step is supposed to simulate {\it homogeneous mixing} so
-            \ldots mix homogeneously!
-        \item[(d)] At the end of the 15 seconds stop and stand still.  Reach your arms
-            out.  If someone within arm's reach is infected with ODEbola then you now are
-            too!  Raise your hand if you are infected.
-        \item[(e)] Repeat steps (c) and (d) again. At the end of every step 10\% of the
-            infected people that are infected will recover and are removed from the
-            experiment.  Keep track of the number of
-            people that are infected and recovered at each step.  Run the experiment for
-            several iterations
-    \end{enumerate}
-\end{problem}
+% \begin{problem}
+%     We're going to try a social experiment.  
+%     \begin{enumerate}
+%         \item[(a)] Everyone in the class get a random number between 1 and 5. 
+%         \item[(b)] I'm sorry, but if your random number is ``1'' then you just got infected
+%             with the horribly contagious disease ODEbola.  Raise your hand if you are
+%             infected.
+%         \item[(c)] For the next 15 seconds everyone needs to walk aimlessly around the
+%             classroom (move the tables out of the way and don't be afraid to bump into
+%             each other).  This step is supposed to simulate {\it homogeneous mixing} so
+%             \ldots mix homogeneously!
+%         \item[(d)] At the end of the 15 seconds stop and stand still.  Reach your arms
+%             out.  If someone within arm's reach is infected with ODEbola then you now are
+%             too!  Raise your hand if you are infected.
+%         \item[(e)] Repeat steps (c) and (d) again. At the end of every step 10\% of the
+%             infected people that are infected will recover and are removed from the
+%             experiment.  Keep track of the number of
+%             people that are infected and recovered at each step.  Run the experiment for
+%             several iterations
+%     \end{enumerate}
+% \end{problem}
 
 \begin{problem}\label{prob:SIR_outbreak_simulation}
     Watch the video \href{https://youtu.be/NSNWDUXN2p4}{https://youtu.be/NSNWDUXN2p4} to
@@ -39,7 +39,7 @@ equilibria graphically.
 \end{problem}
 
 \begin{challenge}
-    Write computer code to produce a simulation similar to what you see in Problem
+    (Optional) Write computer code to produce a simulation similar to what you see in Problem
     \ref{prob:SIR_outbreak_simulation}.
 \end{challenge}
 
@@ -79,6 +79,51 @@ equilibria graphically.
         \item[(b)] What is the expected long-term behavior of this system?  Why?
     \end{enumerate}
 \end{problem}
+
+
+\begin{problem}
+    In the SIR model from the previous problems, one model that captures this behavior is
+    as follows:
+    \begin{flalign*}
+        S' &= -\alpha SI \\
+        I' &= \alpha SI - \beta I \\
+        R' &= \beta I
+    \end{flalign*}
+    where $\alpha$ is a parameter related to the likelihood that someone will get infected
+    (subject to the homogeneous mixing) and $\beta$ is the recovery rate.  Let's take
+    $\alpha = 0.1$ and $\beta = 0.4$ and create a numerical simulation for this problem.
+    We'll use Euler's method to approximate the derivatives as follows:
+    \begin{flalign*}
+    S_{n+1} &= S_n + \Delta t \left( -\alpha S_n I_n \right) \\
+    I_{n+1} &= I_n + \Delta t \left( \alpha S_n I_n  - \beta I_n \right) \\
+    R_{n+1} &=  R_n + \Delta t \left( \beta I_n \right)
+    \end{flalign*}
+    Some partially complete MATLAB code to get you started is given below. Play with the
+    values of $\alpha$ and $\beta$ in your model.  Be able to defend the meaning of these
+    parameters in the context of the problem.  Lastly, propose modifications to the model
+    and test these modifications to see how the system behaves.
+\end{problem}
+
+\begin{lstlisting}
+clear; clc; clf; 
+dt = 0.01;
+tmax = 5;
+alpha = 0.1;
+beta = 0.4;
+t = 0:dt:tmax;
+S = zeros(size(t));
+I = zeros(size(t));
+R = zeros(size(t));
+S(1) = 99;
+I(1) = 1;
+R(1) = 0;
+for n=1:length(t)-1
+    S(n+1) = 
+    I(n+1) = 
+    R(n+1) = 
+end
+plot(t,S,'bo',t,I,'r*',t,R,'kp')
+\end{lstlisting}
 
 
 \newpage\section{Trace-Determinant Plane}
