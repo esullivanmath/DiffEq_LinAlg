@@ -59,15 +59,14 @@ equilibria graphically.
     \end{flalign*}
 \end{problem}
 \solution{
-    The system should be a standard SIR model where the recovered people can also get
-    infected.
+    The system should be a standard SIR model.
     \begin{flalign*}
         S' &= -\alpha SI \\
         I' &= \alpha SI - \beta I \\
         R' &= \beta I
     \end{flalign*}
     where $\alpha$ is a parameter related to the likelihood that someone will get infected
-    (subject to the homogeneous mixing) and $\beta = 0.1$ is the recovery rate.
+    (subject to the homogeneous mixing) and $\beta $ is the recovery rate.
 }
 
 
@@ -104,6 +103,7 @@ equilibria graphically.
     and test these modifications to see how the system behaves.
 \end{problem}
 
+\newpage
 \begin{lstlisting}
 clear; clc; clf; 
 dt = 0.01;
@@ -118,13 +118,98 @@ S(1) = 99;
 I(1) = 1;
 R(1) = 0;
 for n=1:length(t)-1
-    S(n+1) = 
-    I(n+1) = 
-    R(n+1) = 
+  S(n+1) = S(n) + dt*( );
+  I(n+1) = I(n) + dt*( );
+  R(n+1) = R(n) + dt*( );
 end
-plot(t,S,'bo',t,I,'r*',t,R,'kp')
+subplot(2,2,1)
+plot(t,S,'bo',t,I,'r*',t,R,'kp'), grid on
+xlabel('time'), ylabel('population')
+subplot(2,2,2)
+plot(S,I,'k*'), grid on
+xlabel('Susceptible'), ylabel('Infected')
+subplot(2,2,3)
+plot(S,R,'k.'), grid on
+xlabel('Susceptible'), ylabel('Recovered')
+subplot(2,2,4)
+plot(I,R,'kp'), grid on
+xlabel('Infected'), ylabel('Recovered')
+figure
+plot3(S,I,R,'k.-')
+box on
+grid on
+xlabel('Susceptible'), ylabel('Infected'), zlabel('Recovered')
 \end{lstlisting}
 
+\newpage
+
+Now let's look at another nonlinear model: the pendulum!  This may seem simple, but the
+physics actually lends itself to a nonlinear differential equation in the case where the
+angle is potentially {\it large}.
+\begin{problem}
+    Consider a pendulum of length $L$ with mass $m$ and angle $\theta$ as shown in Figure
+    \ref{fig:pendulum}.  If we balance the forces on the pendulum and model the angle as
+    the pendulum moves we get
+    \[ m \theta''(t) = -\frac{mg}{L}\sin(\theta(t)) - b \theta'(t) \]
+    which can be rearranged to the nonlinear differential equation 
+    \[ \theta'' + b\theta' + \frac{g}{L} \sin \theta = 0 \]
+    where $b$ is a (linear) drag coefficient acting to slow the pendulum over time.
+    \begin{enumerate}
+        \item[(a)] Turn the nonlinear pendulum equation into a system of first order
+            differential equations by making the substitution $\omega = \theta'$.
+            \begin{flalign}
+                \theta' &= \underline{\hspace{2in}} \\
+                \omega' &= \underline{\hspace{2in}}
+            \end{flalign}
+
+        \item[(b)] If gravity is $9.8$m/s$^2$, $L$ is $1$m, and $b$ is $0.5$kg$\cdot$m/s
+            then build a numerical approximation to the system of differential equations.
+        \item[(c)] Demonstrate qualitatively that there is a slight difference in the
+            behavior of the nonlinear pendulum modeled above and the linear pendulum often
+            used in physics where we use the {\it small angle approximation of sine}
+            $\sin\theta \approx \theta$.
+    \end{enumerate}
+\end{problem}
+
+
+\begin{figure}[ht!]
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[thick, black, dashed] (0,5) -- (0,0);
+            \draw[very thick, blue, fill=blue] (0,3) -- (1.5,1.5) circle(0.1cm) node[anchor=west]{$m$};
+            \draw (0.75,2.5) node[anchor=west]{$L$};
+            \draw (0.25,2.25) node{$\theta$};
+            \draw[thick, black, ->] (3,4) -- (3,3) node[anchor=north]{$g$}; 
+        \end{tikzpicture}
+    \end{center}
+    \caption{A pendulum}
+    \label{fig:pendulum}
+\end{figure}
+
+
+\begin{lstlisting}
+clear; clc; clf; 
+dt = 0.01;
+tmax = 25;
+g=9.8;
+L = 1;
+b = 0.5;
+t = 0:dt:tmax;
+theta = zeros(size(t));
+omega = zeros(size(t));
+theta(1) = pi/4;
+omega(1) = 0;
+for n=1:length(t)-1
+  theta(n+1) = theta(n) + dt*( );
+  omega(n+1) = omega(n) + dt*( );
+end
+subplot(1,2,1)
+plot(t,theta,'b--')
+xlabel('time'), ylabel('angle')
+subplot(1,2,2)
+plot(theta,omega,'k.-')
+xlabel('theta'), ylabel('omega')
+\end{lstlisting}
 
 \newpage\section{Trace-Determinant Plane}
 In this section we will briefly examine a technique for quickly determining
