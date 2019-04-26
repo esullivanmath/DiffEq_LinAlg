@@ -969,12 +969,49 @@ of this expression is
 
 \begin{problem}
     Solve the differential equation
-    \[ y'' +4y' + 13y = \delta_3(t)  \quad \text{with} \quad y(0)=1 \quad \text{and} \quad
-    y'(0) =0. \]
-    Before solving the differential equation sketch a graph of what the homogeneous
-    solution looks like and then modify it to account for the delta function.
+    \[ x'' +4x' + 13x = \delta_3(t)  \quad \text{with} \quad x(0)=1 \quad \text{and} \quad
+    x'(0) =0. \]
+%     Before solving the differential equation sketch a graph of what the homogeneous
+%     solution looks like and then modify it to account for the delta function.
 \end{problem}
 
+
+\begin{problem}
+    (Modified from \cite{Noonburg}) \\
+    A harmonic oscillator with natural frequency $\omega_0 = 2$, initially at rest, is
+    forced by the {\it ramp function} $f(t)$ defined as
+    \[ f(t) = t(1 - u_1(t)). \]
+    Prove that the position $x$ as a function of time $t$ is 
+    \[ x(t) = \left\{ \begin{array}{ll} \frac{1}{4} t - \frac{1}{8} \sin(2t), & 0 < t < 1 \\
+                -\frac{1}{8} \sin(2t) + \frac{1}{8} \sin(2(t-1)) + \frac{1}{4}
+                \cos(2(t-1)), & t > 1
+    \end{array}  \right. \]
+    (Suggestion: Draw a picture of what the {\it ramp function} looks like before you
+    start)
+\end{problem}
+
+
+\begin{problem}
+    (Modified from \cite{Noonburg}) \\
+    A 25-gallon tank is initially filled with water containing one pound of salt dissolved
+    in it.  It is desired to increase the salt concentration from $1/25=0.04$ pounds per gallon
+    to $0.20$ pounds per gallong.  With $x(t)$ equal to the pounds of salt in the tank at
+    time $t$, this would require that $x(t)$ be 5 pounds for the desired concentration.  
+
+    For five minutes, a solution containing $0.5$ pounds of alt per gallon is allowed to
+    run into the tank at a rate of one gallon per minute, and the solution in the tank is
+    allowed to drain out at the same rate.  This seems to be taking too long, so the
+    operators decide to dump 5 pounds of salt into the input water, and this well-stirred
+    solution is all fed in over the next minute.  At the end of the 6 minutes, the
+    concentration is too high, so pure water is run in to lower it.  Find the time at
+    which the concentration is back to 0.2 pounds per gallon.
+
+    The function $H(t)$ defined below might be helpful:
+    \[ H(t) = \frac{1}{2} + 4.5 u_5(t) - 5u_6(t). \]
+    Draw a picture of this function and discuss what role it plays in this model.  Once
+    you know what $H(t)$ does, draw a picture of what you think the function $x(t)$ will
+    look like.
+\end{problem}
 
 
 \begin{problem}\label{prob:laplace_drug}
