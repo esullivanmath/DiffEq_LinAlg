@@ -714,17 +714,22 @@ thing:  find matrix $B$ such
 that $AB = I$ and $BA = I$. Where $I$ is the identity matrix which is the multiplicative
 identity for matrices.
 
+\subsection{Inverses of Square Matrices}
 \begin{problem}
     \begin{enumerate}
         \item[(a)] Consider the matrix $A = \begin{pmatrix}
                 1&2\\-4&-6\end{pmatrix}$ and the vector $\bb = \begin{pmatrix}
-                5\\-16\end{pmatrix}$.
+                1\\0\end{pmatrix}$.
             Find the vector $\bx$ such that $A\bx = \bb$ by hand using row reduction.  
-        \item[(b)] Consider the matrix $A = \begin{pmatrix} 1 & 2 \\ -4 & -6
-            \end{pmatrix}$.  Find a matrix $B$ such that $AB = I$ and $BA = I$.  Use what
-            you did in part (a) to help set up the problem. \\ (You may recall some sort
+        \item[(b)] Again consider the matrix $A = \begin{pmatrix}
+                1&2\\-4&-6\end{pmatrix}$ and the vector $\bb = \begin{pmatrix}
+                0\\1\end{pmatrix}$.
+            Find the vector $\bx$ such that $A\bx = \bb$ by hand using row reduction.  
+        \item[(c)] Consider the matrix $A = \begin{pmatrix} 1 & 2 \\ -4 & -6
+            \end{pmatrix}$ one more time.  Find a matrix $B$ such that $AB = I$ and $BA = I$.  Use what
+            you did in parts (a) and (b) to help set up the problem. \\ (You may recall some sort
             of ``shortcut'' that involves switching and negating some matrix entries \dots
-            you are forbidden to use this shortcut!)
+            you are forbidden to use this shortcut here!)
     \end{enumerate}
 \end{problem}
 \solution{
@@ -874,13 +879,15 @@ Augment with the identity and row reduce.
 % }
 
 \begin{problem}
-The {\it trick} that you might recall for $2\times 2$ inverses is
+The {\it trick} that you might recall from a previous class for calculating $2\times 2$ inverses is
 \[ \begin{pmatrix} a & b \\ c & d \end{pmatrix}^{-1} = \frac{1}{ad-bc} \begin{pmatrix} d &
     -b \\ -c & a \end{pmatrix}. \]
 Prove that this {\it trick} works by row reducing the system
 \[ \left( \begin{array}{cc|cc} a & b & 1 & 0 \\ c & d & 0 & 1 \end{array} \right). \]
 \end{problem}
 
+
+\subsection{Determinants}
 In the demoninator of the equation
 \[ \begin{pmatrix} a & b \\ c & d \end{pmatrix}^{-1} = \frac{1}{ad-bc} \begin{pmatrix} d &
     -b \\ -c & a \end{pmatrix}. \]
@@ -1163,7 +1170,7 @@ place to look for the key results about determinants.
 \end{problem}
 \solution{False.  Row reduction often leads swapping and scaling rows}
 
-
+\subsection{The Geometry of Determinants}
 The last statement of Theorem \ref{thm:determinant_summary} give a bit of a deeper insight
 to the geometry of determinants and why invertible matrices must have a non-zero
 determinant.  Think about a $2 \times 2$ matrix with non-zero determinant.  Under matrix
@@ -1254,8 +1261,9 @@ $A$ must not exist.
 \end{figure}
 
 
-\newpage\section{Applications of Linear Systems}
-% 
+
+\newpage\section{Additional Exercises}
+
 \begin{problem}
     Use linear algebra to find a cubic polynomial of the form 
     \[ f(x) = A + Bx + Cx^2 + Dx^3 \]
@@ -1381,9 +1389,6 @@ there are 6 data points and 6 unknowns.
     \end{flalign*}
     Solving this system we get $T_0=100, T_1 = 90, T_2 = 80, T_3 = 70, \cdots, T_10 = 0$.
 }
-
-
-\newpage\section{Additional Exercises}
 
 
 \begin{problem}

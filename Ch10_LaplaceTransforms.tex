@@ -1,13 +1,13 @@
 \chapter{Laplace Transforms}
 
-% \section{Introduction to Laplace Transforms}
+\section{Introduction to Laplace Transforms}
 Let's face it.  Solving differential equations can be hard.  Sometimes it is really hard,
 and sometimes it is downright impossible.  Generally speaking it is much easier to solve
 algebraic equations like the ones you were introduced to in high school mathematics.  The
 goal of the Laplace Transform Method for solving differential equations is to turn a
 linear differential equation into an algebraic equation, solve it, then turn the answer
 back into a solution to the differential equation.  The process is depicted below.  Once
-you get used to this technique you'll never want to use our old techniques again!
+you get used to this technique you'll (almost) never want to use our old techniques again!
 
 \begin{center}
     \begin{tikzpicture}[node distance=3cm]
@@ -30,126 +30,23 @@ you get used to this technique you'll never want to use our old techniques again
     \end{tikzpicture}
 \end{center}
 
-\newpage\section{Where Laplace Transforms Come From}
-You may have run into Taylor Series in past courses.  The idea is to represent a function
-$f(x)$ near the point $x=0$ as an infinite series of power functions:
-\begin{flalign}
-    f(x) &= \frac{f(0)}{0!}x^0 + \frac{f'(0)}{1!}x^1 + \frac{f''(0)}{2!}x^2 +
-    \frac{f^{(3)}(0)}{3!}x^3 + \frac{f^{(4)}(0)}{4!}x^4 +\cdots.
-    \label{eqn:TaylorExpanded}
-\end{flalign}
-More compactly, we can write the Taylor Series as
-\begin{flalign}
-    f(x) &= \sum_{j=0}^\infty \frac{f^{(n)}(0)}{n!}x^n.
-    \label{eqn:TaylorSummation}
-\end{flalign}
-
-\begin{problem}
-Find the Taylor Series representations for the functions $f(x) = e^x$, $g(x) =
-\frac{1}{1-x}$ (for $|x|<1$), and $h(x) = \sin(x)$ all centered at $x=0$.
-\begin{flalign*}
-    e^x &= \underline{\hspace{3in}} \\
-    \frac{1}{1-x} &= \underline{\hspace{3in}} \\
-    \sin(x) &= \underline{\hspace{3in}} \\
-\end{flalign*}
-\end{problem}
-\solution{
-    \begin{flalign*}
-        e^x &= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots \\
-        \frac{1}{1-x} &= 1 + x + x^2 + x^3 + x^4 + \cdots \\
-        \sin(x) &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots
-    \end{flalign*}
-}
-
-
-The Taylor Series does something else amazing!  In a sense, the coefficients of the Taylor
-Series are the DNA of the function.  That is to say: If you know the Taylor coefficients
-you know the function and visa versa.
-
-\begin{problem}
-    Using problem 1, which function has the following sequence of Taylor coefficients?
-    \begin{flalign*}
-        &a(n) = \{ 1, 1, 1, 1, 1, \ldots \} \quad \text{corresponds to} \quad
-        f(x) = \underline{\hspace{1in}}\\
-        &a(n) = \{ 1, 1, \frac{1}{2!}, \frac{1}{3!}, \frac{1}{4!},  \ldots \} \quad \text{corresponds
-        to} \quad f(x) = \underline{\hspace{1in}}\\
-        &a(n) = \{ 0, 1, 0, -\frac{1}{3!}, 0, \frac{1}{5!}, \ldots \} \quad \text{corresponds
-        to} \quad f(x) = \underline{\hspace{1in}}
-    \end{flalign*}
-\end{problem}
-\solution{
-\begin{flalign*}
-    &\{ 1, 1, 1, 1, 1, \ldots \} \quad \text{corresponds to} \quad
-    f(x) = \frac{1}{1-x}\\
-    &\{ 1, 1, \frac{1}{2!}, \frac{1}{3!}, \frac{1}{4!},  \ldots \} \quad \text{corresponds
-    to} \quad f(x) = e^x\\
-    &\{ 0, 1, 0, -\frac{1}{3!}, 0, \frac{1}{5!}, \ldots \} \quad \text{corresponds
-    to} \quad f(x) = \sin(x)
-\end{flalign*}
-}
-
-Hence, if we have a sequence $a(n)$ (and the sequence has some basic
-properties\footnote{See any standard Calculus text if you don't recall the necessary
-conditions for a Taylor Series to converge.}) then we can associate the sequence with a
-function $f(x)$ via the Taylor Series
-\[ a(n) \rightsquigarrow f(x) \quad \text{since} \quad \sum_{n=0}^\infty a(n) x^n = f(x). \]
-
-\begin{problem}
-    You might be asking yourself ``So what!  Why do I need another way to represent a
-    function?''  To answer this question discuss with your partner how you think the
-    Taylor sequence ``DNA'' of a function might be a useful tool in this modern age of
-    computers (hint).
-\end{problem}
-\solution{
-There are many ways to for a computer to store and understand a transcendental function
-line the trigonometric functions and the exponential function.  Your calculator and many
-computer programming languages only know these functions by storing their Taylor sequence.
-That requires very little computer storage and allows the computer program to calculate
-these functions to arbitrary precision.  
-}
-
-\subsection*{The Laplace Transform}
-Now we're ready to create the Laplace Transform.  The Laplace Transform is the continuous
-analog of what we just discussed: If we have a function $a(n)$ we can find a function $f(x)$
-such that we replace the sum in the Taylor series with an integral:
-\begin{flalign}
-    \int_0^\infty a(n) x^n dn = f(x)
-    \label{eqn:Laplace_Almost}
-\end{flalign}
-There are some notational conventions that we have to adjust for:
-\begin{enumerate}
-    \item We don't typically use $n$ as a continuous variable so we're going to switch it
-        to $t$.
-    \item We typically don't use the letter ``$a$'' for functions of a continuous variable
-        so we'll switch it to $f$.  Then we'll make the right-hand side ``$F$'' so we can
-        keep them straight.  The integral now becomes
-        \[ \int_0^\infty f(t) x^t dt = F(x) \]
-    \item The exponential function $x^t$ is really inconvenient when integrating with
-        respect to $t$ so we'll switch it to 
-        \[ x^t = e^{\ln(x)t} \quad \implies \quad \int_0^\infty f(t) e^{\ln(x)t} dt = F(x) \]
-        (convince yourself that this is the same thing algebraically)
-    \item Now the left-hand side will be a function of $\ln(x)$ and the right-hand side
-        will be a function of $x$.  This is rather inconvenient so let's make a change of
-        variables: replace $\ln(x)$ with $-s$ (the negative sign gives positive
-        values when $0<x<1$ and negative values otherwise).  Therefore, the Laplace
-        transform is:
-        \begin{flalign}
-            \boxed{\int_0^\infty e^{-st} f(t) dt = F(s)}
-            \label{eqn:LaplaceTransform}
-        \end{flalign}
-\end{enumerate}
-
-The Laplace transform  associates a function $f(t)$ with a
-function $F(s)$ just like the Taylor Series associates a sequence of numbers $a(n)$
-with a function $f(x)$:
-\[ \boxed{\underbrace{a(n) \rightsquigarrow f(x)}_{\text{Taylor Series}} \quad \text{via} \quad \sum_{n=0}^\infty a(n) x^n = f(x) \qquad \text{and} \qquad
-    \underbrace{f(t) \rightsquigarrow F(s)}_{\text{Laplace Transform}} \quad \text{via}
-    \quad \int_0^\infty
-    e^{-st} f(t) dt = F(s).} \]
-
-Notationally we write the Laplace Transform of $f(t)$ as $\lap{f(t)} = F(s).$  
 
 \newpage\section{Basic Laplace Transforms and Basic Properties}
+
+Let's start the discussion with the definition of the Laplace Transform.  This linear
+transformation is actually defined as an integral as follows: 
+
+\begin{definition}[The Laplace Transform]
+    Let $f(t)$ be a function of a single real variable.  The {\bf Laplace Transform} of
+    $f(t)$ is 
+    \[ \lap{f(t)} = \int_0^\infty f(t) e^{-st} dt. \]
+\end{definition}
+
+Our ultimate goal in this chapter is to use the Laplace transform to solve differential
+equations.  In order to get there, we need to first understand how to simply {\it take} a
+Laplace transform of a function \ldots the application to differential equations will come
+later.
+
 Now let's do a few Laplace Transforms.  This exercise (as well as a few others) will be
 essential before we can start using Laplace transforms for differential equations.
 
@@ -947,9 +844,6 @@ of this expression is
     Any linear differential equation that contains heaviside or delta functions will work.
 }   
 
-
-\newpage\section{Convolutions (INCOMPLETE)}
-\ldots in this section we talk about convolutions \ldots later
 
 
 

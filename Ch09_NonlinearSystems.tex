@@ -1,14 +1,15 @@
-\chapter{Nonlinear Systems of Differential Equations}
+% \chapter{Nonlinear Systems of Differential Equations}
+\section{Building ODE Models for Nonlinear Systems}
 The world is non-linear!  Well shoot. It might seem that this means that for {\it real}
 problems we can't use anything that we've done so far.   Wrong!  There are plenty of
 things that we can do with nonlinear problems.  For the most part we will rely on a basic
 premise from Calculus: up close, a nonlinear function looks linear. You did this back in
 calculus when you found tangent lines and tangent planes but now we're going to do the
-same for matrices and nonlinear differential equations.  For most of the problems in this
+same for matrices and nonlinear differential equations.  For most of the problems in the
+remainder of this 
 chapter it will be helpful to have MATLAB up so you can plot phase planes and analyze
 equilibria graphically.
 
-\section{Modeling a Nonlinear System}
 % \begin{problem}
 %     We're going to try a social experiment.  
 %     \begin{enumerate}
@@ -36,15 +37,10 @@ equilibria graphically.
     see a simulation where a 150 person population has an outbreak and the virus is spread
     via close proximity contact.  Notice, in particular,
     the homogeneous mixing.
-\end{problem}
-
-\begin{challenge}
-    (Optional) Write computer code to produce a simulation similar to what you see in Problem
-    \ref{prob:SIR_outbreak_simulation}.
-\end{challenge}
-
-\begin{problem}
-    In the previous problems there were three distinct populations: Susceptible ($S$),
+    \begin{enumerate}
+        \item[(a)] (Optional Challenge) Write computer code to produce a simulation similar to what you see in Problem
+        \item[(b)] 
+    There are three distinct populations in this problem: Susceptible ($S$),
     Infected ($I$), and Recovered ($R$).  Write a system of differential equations for the
     experiment that we ran and remember to keep in mind that we were homogeneously mixing
     the population the entire time. Think very carefully about how a susceptible person is
@@ -57,6 +53,7 @@ equilibria graphically.
         \frac{dR}{dt}&= \underline{\hspace{2in}}  \quad \text{with} \quad R(0) = 
         \underline{\hspace{1in}} \\
     \end{flalign*}
+    \end{enumerate}
 \end{problem}
 \solution{
     The system should be a standard SIR model.
@@ -145,7 +142,9 @@ xlabel('Susceptible'), ylabel('Infected'), zlabel('Recovered')
 
 Now let's look at another nonlinear model: the pendulum!  This may seem simple, but the
 physics actually lends itself to a nonlinear differential equation in the case where the
-angle is potentially {\it large}.
+angle is potentially {\it large}.  A really cool video by Three Blue One Brown that
+talks directly about this problem can be
+found here: \href{https://youtu.be/p_di4Zn4wz4}{https://youtu.be/p\_di4Zn4wz4}.
 \begin{problem}
     Consider a pendulum of length $L$ with mass $m$ and angle $\theta$ as shown in Figure
     \ref{fig:pendulum}.  If we balance the forces on the pendulum and model the angle as
@@ -211,225 +210,11 @@ plot(theta,omega,'k.-')
 xlabel('theta'), ylabel('omega')
 \end{lstlisting}
 
-\newpage\section{Trace-Determinant Plane}
-In this section we will briefly examine a technique for quickly determining
-the behavior of 2D linear systems.  This will play a major role in our nonlinear systems
-since each nonlinear system will eventually be linearized as we will see in a bit.  
-
-
-Recall that if $\bv_1$ and $\bv_2$ are the eigenvectors of $A$ with eigenvalues
-$\lambda_1$ and $\lambda_2$ then the solution to the first order linear system of
-equations $\bx' = A \bx$ is
-\[ \bx = c_1 e^{\lambda_1 t} \bv_1 + c_2 e^{\lambda_2 t} \bv_2 \]
-where $\bx_0 = c_1 \bv_1 + c_2 \bv_2$.  Furthermore we observe that $\bx = \bo$ is an
-equilibrium point of the system of differential equations.  Use these ideas to answer the
-following questions.
-\begin{problem}
-    Consider the $2\times 2$ linear system of differential equations $\bx'=A\bx$.  In each
-    of the following cases what is the expected behavior of the solution? The choices are:
-    spirals in to the origin, spirals out from the origin, decays in to the origin,
-    diverges out from the origin, decays toward the origin but then diverges out, or
-    circles the origin.
-            \begin{enumerate}
-                \item If $\lambda_1 \le \lambda_2 < 0$ then near the origin the
-                    solution \underline{\hspace{1in}}
-                    \solution{decays in}
-                \item If $\lambda_1 < 0 < \lambda_2$ then near the origin the
-                    solution \underline{\hspace{1in}}
-                    \solution{decays toward the origin but then divers out}
-                \item If $\lambda_1 \ge \lambda_2 > 0$ then near the origin the
-                    solution \underline{\hspace{1in}}
-                    \solution{diverges out from the origin}
-                \item If $\lambda_1, \lambda_2 = \alpha \pm \beta i \, (\alpha<0)$ then
-                    near the origin the solution \underline{\hspace{1in}}
-                    \solution{spirals in toward the origin}
-                \item If $\lambda_1, \lambda_2 = \alpha \pm \beta i \, (\alpha>0)$ then
-                    near the origin the solution \underline{\hspace{1in}}
-                    \solution{spirals out from the origin}
-                \item If $\lambda_1, \lambda_2 = \pm \beta i$ then near the origin
-                    the solution \underline{\hspace{1in}}
-                    \solution{circles the origin}
-            \end{enumerate}
-\end{problem}
-
-\begin{problem}
-    In the following plots the two eigenvectors for a matrix $A$ are plotted and the
-    eigenvalues are given.  Sketch the trajectory of the solution in the $xy$-plane
-    starting at the given points (use your answers from the previous problem to help).
-    \begin{center}
-        \begin{tikzpicture}
-            \draw[very thick, <->, black] (-3,0) -- (3,0);
-            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
-            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
-            west]{$\lambda_1 = -2$}; 
-            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
-            east]{$\lambda_2 = -0.25$}; 
-            \draw[fill=black] (1.0,1.0) circle(0.075cm);
-            \draw[fill=black] (-1,-1) circle(0.075cm);
-            \draw[fill=black] (-1,1) circle(0.075cm);
-            \draw[fill=black] (1,-1) circle(0.075cm);
-        \end{tikzpicture}\hspace{0.4in}
-        \begin{tikzpicture}
-            \draw[very thick, <->, black] (-3,0) -- (3,0);
-            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
-            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
-            west]{$\lambda_1 = 2$}; 
-            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
-            east]{$\lambda_2 = -0.25$}; 
-            \draw[fill=black] (1.0,1.0) circle(0.075cm);
-            \draw[fill=black] (-1,-1) circle(0.075cm);
-            \draw[fill=black] (-1,1) circle(0.075cm);
-            \draw[fill=black] (1,-1) circle(0.075cm);
-        \end{tikzpicture}
-    \end{center}
-    \begin{center}
-        \begin{tikzpicture}
-            \draw[very thick, <->, black] (-3,0) -- (3,0);
-            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
-            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
-            west]{$\lambda_1 = 2$}; 
-            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
-            east]{$\lambda_2 = 0.25$}; 
-            \draw[fill=black] (1.0,1.0) circle(0.075cm);
-            \draw[fill=black] (-1,-1) circle(0.075cm);
-            \draw[fill=black] (-1,1) circle(0.075cm);
-            \draw[fill=black] (1,-1) circle(0.075cm);
-        \end{tikzpicture}\hspace{0.4in}
-        \begin{tikzpicture}
-            \draw[very thick, <->, black] (-3,0) -- (3,0);
-            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
-            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
-            west]{$\lambda_1 = -2+i$}; 
-            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
-            east]{$\lambda_2 = -2-i$}; 
-            \draw[fill=black] (1.0,1.0) circle(0.075cm);
-            \draw[fill=black] (-1,-1) circle(0.075cm);
-            \draw[fill=black] (-1,1) circle(0.075cm);
-            \draw[fill=black] (1,-1) circle(0.075cm);
-        \end{tikzpicture}
-    \end{center}
-    \begin{center}
-        \begin{tikzpicture}
-            \draw[very thick, <->, black] (-3,0) -- (3,0);
-            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
-            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
-            west]{$\lambda_1 = 2+i$}; 
-            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
-            east]{$\lambda_2 = 2-i$}; 
-            \draw[fill=black] (1.0,1.0) circle(0.075cm);
-            \draw[fill=black] (-1,-1) circle(0.075cm);
-            \draw[fill=black] (-1,1) circle(0.075cm);
-            \draw[fill=black] (1,-1) circle(0.075cm);
-        \end{tikzpicture}\hspace{0.4in}
-        \begin{tikzpicture}
-            \draw[very thick, <->, black] (-3,0) -- (3,0);
-            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
-            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
-            west]{$\lambda_1 = i$}; 
-            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
-            east]{$\lambda_2 = -i$}; 
-            \draw[fill=black] (1.0,1.0) circle(0.075cm);
-            \draw[fill=black] (-1,-1) circle(0.075cm);
-            \draw[fill=black] (-1,1) circle(0.075cm);
-            \draw[fill=black] (1,-1) circle(0.075cm);
-        \end{tikzpicture}
-    \end{center}
-\end{problem}
-
-Now that we know the general behavior of all $2 \times 2$ systems based on the
-eigen-structure let's get a faster way to make the determination.  That is, if we can
-avoid actually finding the eigenvalues that might save some time.
-\begin{problem}
-    Let the $2 \times 2$ linear system $\bx' = A \bx$ be written as
-    \[ \begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} a & b \\ c & d
-        \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} \]
-    Your Tasks:
-    \begin{enumerate}
-        \item What is the equilibrium of this system presuming that $A^{-1}$ exists?
-        \item Find the characteristic polynomial of the coefficient matrix
-        \item Simplify the characteristic polynomial to fill in the blanks:
-            \[ \lambda^2 + \underline{\hspace{0.5in}} \lambda + \underline{\hspace{0.5in}}
-                = 0
-                \]
-            The blanks should be familiar features of the matrix.
-    \end{enumerate}
-\end{problem}
-\solution{
-    The solution to the system is $\bx = \bo$ since we solve $\bo = A
-    \bx$ to find the equilibrium and if $A^{-1}$ exists then $\bx = \bo$.  
-
-    The characteristic polynomial is:
-$p(\lambda) = \lambda^2 - tr(A) \lambda + \det(A) $
-}
-
-
-
-\begin{problem}
-    In the previous problems you found that the characteristic polynomial for a 2D linear
-    system is $p(\lambda) = \lambda^2 - T \lambda + D$ where $T = \text{tr}(A)$ and $D=
-    \det(A)$.  Solving for $\lambda$ we see that
-    \[ \lambda = \frac{T \pm \sqrt{T^2 - 4 D}}{2}. \]
-    Clearly the behavior of the eigenvalues depends on the quantity $T^2 - 4D$.  To
-    visualize this we create the {\it trace-determinant} plane as seen in the figure
-    immediately below.  Fill in the question marks in the figure with the type of behavior
-    you expect to see for each region of the {\it trace-determinant} plane?
-
-    To illustrate what we mean condsider the furthest right question mark.  In that
-    question mark the determinant, $D$, is greater than zero, the trace, $T$, is greater
-    than zero and $D < T^2 / 4$.  Hence $T^2 - 4D>0$ so we expect the behavior of the
-    system to be a nodal source since both eigenvalues will be real and positive.
-
-    Use the following words to fill in the question marks: nodal source, nodal sink,
-    spiral source, spiral sink, center, and saddle.
-\end{problem}
-    \vspace{-0.1in}
-        \begin{center}
-            \begin{tikzpicture}
-                \begin{axis}[xlabel={$T=tr(A)$},ylabel={$D=\det(A)$}, ymin=-0.5,
-                        ymax=0.5, xmin=-2, xmax=2, xtick=\empty, ytick=\empty, legend pos=outer
-                    north east]
-                    \addplot[smooth,blue, very thick, domain=-2:2] {(1/4)*x^2};
-                    \addlegendentry{$D = T^2/4$};
-                    \addplot[smooth, black, thick] {0*x};
-                    \draw[black,thick] (axis cs:0,-0.5) -- (axis cs:0,0.5);
-                    \node at (axis cs:1.5,0.1) {?};
-                    \node at (axis cs:-1.5,0.1) {?};
-                    \node at (axis cs:-.5,0.25) {?};
-                    \node at (axis cs:.5,0.25) {?};
-                    \node at (axis cs:0,0.3) {?};
-                    \node at (axis cs:0.5,-0.25) {?};
-                    \node at (axis cs:-0.5,-0.25) {?};
-                \end{axis}
-            \end{tikzpicture}
-        \end{center}
-
-\solution{
-        \begin{center}
-            \begin{tikzpicture}
-                \begin{axis}[xlabel={$T=tr(A)$},ylabel={$D=\det(A)$}, ymin=-0.5,
-                        ymax=0.5, xmin=-2, xmax=2, xtick=\empty, ytick=\empty, legend pos=outer
-                    north east]
-                    \addplot[smooth,blue, very thick, domain=-2:2] {(1/4)*x^2};
-                    \addlegendentry{$D = T^2/4$};
-                    \addplot[smooth, black, thick] {0*x};
-                    \draw[black,thick] (axis cs:0,-0.5) -- (axis cs:0,0.5);
-                    \node at (axis cs:1.5,0.1) {\tiny{nodal source}};
-                    \node at (axis cs:-1.5,0.1) {\tiny{nodal sink}};
-                    \node at (axis cs:-.5,0.25) {\tiny{spiral sink}};
-                    \node at (axis cs:.5,0.25) {\tiny{spiral source}};
-                    \node at (axis cs:0,0.3) {\tiny{center}};
-                    \node at (axis cs:0.5,-0.25) {\tiny{saddle}};
-                    \node at (axis cs:-0.5,-0.25) {\tiny{saddle}};
-                \end{axis}
-            \end{tikzpicture}
-        \end{center}
-    }
 
 % \begin{problem}
 %     Modeling a bungee jumper is much like modeling a 1-dimensional spring mass system
-%     except for the fact that
-%     the air resistance plays a major role.  According to Newton's second law as well as
-%     Hooke's law
+%     except for the fact that the air resistance plays a major role.  According to Newton's
+%     second law as well as Hooke's law
 %     \[ m x'' = -kx + F_{drag} \quad \text{where} \quad F_{drag} = -a x' \]
 %     Hence, the model for the motion of the bungee jumper is
 %     \[ mx'' + ax' + kx = 0 \]
@@ -449,7 +234,12 @@ $p(\lambda) = \lambda^2 - tr(A) \lambda + \det(A) $
 % 
 % }
 
-Now we'll finally look at some nonlinear systems.
+
+\newpage\section{Equilibria and Linearization of Nonlinear Systems}
+Let's finally put some of our tools together.  In this section we'll consider nonlinear
+systems but we will use the primary tool of calculus, linearization, and our tools from
+earlier in the chapter to understand what happens locally near an equilibrium point.  
+
 \begin{problem}\label{prob:competin_species}
     Suppose that $x$ and $y$ are the population of two distinct species that compete for the
     same resources. For example, two species of fish may compete for the same food in a
@@ -459,9 +249,30 @@ Now we'll finally look at some nonlinear systems.
         x' &= 2x\left( 1-\frac{x}{2} \right) - xy \\
         y' &= 3y\left( 1-\frac{y}{3} \right) - 2xy.
     \end{flalign*}
-    It is reasonably easy to show that the four equilibrium solutions are $(0,0)$,
-    $(0,3)$, $(2,0)$, and $(1,1)$.  Use the \texttt{pplane} software (linked from Moodle)
-    to analyze what happens near the equilibrium $(1,1)$.
+    \begin{enumerate}
+        \item[(a)] Write an Euler solver to numerically approximate the solutions to this
+            system of differential equations.  Plot your numerical solutions for several
+            different initial conditions and verify (qualitatively) that this system of
+            differential equations exhibits the behaviour you would expect from a
+            competing species model.
+        \item[(b)] To find the equilibria for a system of first order differential equations we set
+            the derivatives to zero.  In this case we end up with the following nonlinear
+            system of algebraic equations 
+            \begin{flalign*}
+                2x \left( 1-\frac{x}{2} \right) - xy &= 0 \\
+                3y \left( 1-\frac{y}{3} \right) - 2xy &= 0.
+            \end{flalign*}
+            There are four solutions to this algebraic system.  Do the algebra to find
+            them.
+        \item[(c)] Use your Euler solver from part (a) and your equilibrium points from
+            part (b) to classify each equilibrium as either a source, sink, spiral in,
+            spiral out, saddle, or orbit.  \\
+            Hint: Pick several initial conditions which are {\it near} the equilibrium and
+            plot the solution in the $xy$ plane.
+    \end{enumerate}
+%     It is reasonably easy to show that the four equilibrium solutions are $(0,0)$,
+%     $(0,3)$, $(2,0)$, and $(1,1)$.  Use the \texttt{pplane} software (linked from Moodle)
+%     to analyze what happens near the equilibrium $(1,1)$.
 \end{problem}
 
 

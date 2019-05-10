@@ -1,6 +1,51 @@
-\chapter{Systems of Differential Equations}
+\chapter{Linear and Nonlinear Systems of ODEs}
+In this chapter we will consider qualitative and quantitative techniques for solving and
+understanding systems of differential equations.  Systems arise naturally in many
+settings, but let's set the stage with a motivating example.  In this example we will
+built two differential equations that rely on each other.
 
-\section{Matrices and Linear Systems}
+\begin{example}\label{ex:upper_lower}
+    A stream carries water at a rate of 50 gallons per minute first into the Upper Lake,
+    then flows at this rate out of the Upper Lake and into the Lower Lake, then flows at
+    this rate out of the Lower Lake. The Upper Lake is initially filled with 25,000
+    gallons of pure water, and the Lower Lake is initially filled with 50,000 gallons of
+    pure water. A chemical pollutant suddenly appears into the stream flowing into the
+    Upper Lake with a concentration of 2.5 milligrams per gallon. Let $U(t)$ be the amount
+    of the pollutant in the upper lake, and $L(t)$ be the amount of the pollutant in the
+    lower lake.  Create a system of differential equations with initial conditions to
+    model this scenario.\\
+    {\bf Solution:} \\
+    In each of the lakes we build a differential equation that models the conservation of
+    mass of the pollutant.  The equations are all written in the form
+    \[ \text{Rate of change of mass of pollutant} = \text{rate in} - \text{rate out}. \]
+    By carefully tracking the units in the problem we arrive at the differential equations
+    \begin{flalign*}
+        \frac{dU}{dt} &= \left( 2.5 \frac{mg}{gal} \right) \left( 50 \frac{gal}{min}
+        \right) - \left( \frac{U}{25000} \frac{mg}{gal} \right) \left( 50
+        \frac{gal}{min} \right) \\
+        \frac{dL}{dt} &= \left( \frac{U}{25000} \frac{mg}{gal} \right) \left( 50
+        \frac{gal}{min}
+        \right) - \left( \frac{L}{50000} \frac{mg}{gal} \right) \left( 50
+        \frac{gal}{min} \right)
+    \end{flalign*}
+    with initial conditions $U(0) = 0$ milligrams and $L(0) = 0$ milligrams.
+\end{example}
+
+Notice in this example that the equation for the upper lake only involves the variable
+$U$, but the equation for the lower lake depends on both $U$ and $L$.  In other words, to
+be able to solve for both $U$ and $L$ we need to look at the interplay between the two
+lakes.  In this case you may notice that we could just solve the $U$ equation on its own
+(using separation of variables perhaps)
+and then substitute the answer into the $L$ equation and solve what results (using
+undetermined coefficients or integrating factors perhaps).  As we'll see, we won't be able to do this in
+every system.
+
+In this chapter we will build, analyze, solve, and explore similar systems of
+differential equations.  Let's start with a familiar type of ODE: a second order
+mass-spring oscillator.
+
+
+\section{From Second Order ODE's to Systems}  
 
 
 \begin{problem}
@@ -169,6 +214,7 @@
     \end{enumerate}
 \end{problem}
 
+\newpage\section{Matrices and Linear Systems}
 
 \begin{problem}
     Consider a two-tank system where brine is transferred between them according to the
@@ -664,6 +710,11 @@ which can be rewritten as
     \end{pmatrix} \]
 }
 
+\begin{problem}
+    Return to the ``Upper and Lower Lake'' Example \ref{ex:upper_lower} and solve the
+    system of equations with the tools discussed in this section.
+\end{problem}
+
 
 
 
@@ -1000,24 +1051,266 @@ cosine and sine terms in the solution.
 \end{figure}
 
 
-\newpage\section{Additional Exercises}
+
+
+\newpage\section{Trace-Determinant Plane}
+In this section we will examine a technique for quickly determining
+the behavior of 2D linear systems.  This will play a major role in our nonlinear systems
+since each nonlinear system will eventually be linearized as we will see in a bit.  
+
+
+Recall that if $\bv_1$ and $\bv_2$ are the eigenvectors of $A$ with eigenvalues
+$\lambda_1$ and $\lambda_2$ then the solution to the first order linear system of
+equations $\bx' = A \bx$ is
+\[ \bx = c_1 e^{\lambda_1 t} \bv_1 + c_2 e^{\lambda_2 t} \bv_2 \]
+where $\bx_0 = c_1 \bv_1 + c_2 \bv_2$.  Furthermore we observe that $\bx = \bo$ is an
+equilibrium point of the system of differential equations.  Use these ideas to answer the
+following questions.
 \begin{problem}
-    Write code for 2D and 3D versions of Euler's method and the Runge-Kutta 4 method.
-    Test them on problems where you know the analytic solution.
+    Consider the $2\times 2$ linear system of differential equations $\bx'=A\bx$.  In each
+    of the following cases what is the expected behavior of the solution? The choices are:
+    spirals in to the origin, spirals out from the origin, decays in to the origin,
+    diverges out from the origin, decays toward the origin but then diverges out, or
+    circles the origin.
+            \begin{enumerate}
+                \item If $\lambda_1 \le \lambda_2 < 0$ then near the origin the
+                    solution \underline{\hspace{1in}}
+                    \solution{decays in}
+                \item If $\lambda_1 < 0 < \lambda_2$ then near the origin the
+                    solution \underline{\hspace{1in}}
+                    \solution{decays toward the origin but then divers out}
+                \item If $\lambda_1 \ge \lambda_2 > 0$ then near the origin the
+                    solution \underline{\hspace{1in}}
+                    \solution{diverges out from the origin}
+                \item If $\lambda_1, \lambda_2 = \alpha \pm \beta i \, (\alpha<0)$ then
+                    near the origin the solution \underline{\hspace{1in}}
+                    \solution{spirals in toward the origin}
+                \item If $\lambda_1, \lambda_2 = \alpha \pm \beta i \, (\alpha>0)$ then
+                    near the origin the solution \underline{\hspace{1in}}
+                    \solution{spirals out from the origin}
+                \item If $\lambda_1, \lambda_2 = \pm \beta i$ then near the origin
+                    the solution \underline{\hspace{1in}}
+                    \solution{circles the origin}
+            \end{enumerate}
 \end{problem}
 
 \begin{problem}
-    One day it started snowing at a constant rate. Three identical snowplows started at
-    noon, 1pm, and 2pm from the same place, and began plowing down a long straight road.
-    All three plows collided at the same time. Assuming that plowing rates are always
-    inversely proportional to the snow depth, show that the snow started falling at 11:30.
+    In the following plots the two eigenvectors for a matrix $A$ are plotted and the
+    eigenvalues are given.  Sketch the trajectory of the solution in the $xy$-plane
+    starting at the given points (use your answers from the previous problem to help).
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[very thick, <->, black] (-3,0) -- (3,0);
+            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
+            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
+            west]{$\lambda_1 = -2$}; 
+            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
+            east]{$\lambda_2 = -0.25$}; 
+            \draw[fill=black] (1.0,1.0) circle(0.075cm);
+            \draw[fill=black] (-1,-1) circle(0.075cm);
+            \draw[fill=black] (-1,1) circle(0.075cm);
+            \draw[fill=black] (1,-1) circle(0.075cm);
+        \end{tikzpicture}\hspace{0.4in}
+        \begin{tikzpicture}
+            \draw[very thick, <->, black] (-3,0) -- (3,0);
+            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
+            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
+            west]{$\lambda_1 = 2$}; 
+            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
+            east]{$\lambda_2 = -0.25$}; 
+            \draw[fill=black] (1.0,1.0) circle(0.075cm);
+            \draw[fill=black] (-1,-1) circle(0.075cm);
+            \draw[fill=black] (-1,1) circle(0.075cm);
+            \draw[fill=black] (1,-1) circle(0.075cm);
+        \end{tikzpicture}
+    \end{center}
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[very thick, <->, black] (-3,0) -- (3,0);
+            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
+            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
+            west]{$\lambda_1 = 2$}; 
+            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
+            east]{$\lambda_2 = 0.25$}; 
+            \draw[fill=black] (1.0,1.0) circle(0.075cm);
+            \draw[fill=black] (-1,-1) circle(0.075cm);
+            \draw[fill=black] (-1,1) circle(0.075cm);
+            \draw[fill=black] (1,-1) circle(0.075cm);
+        \end{tikzpicture}\hspace{0.4in}
+        \begin{tikzpicture}
+            \draw[very thick, <->, black] (-3,0) -- (3,0);
+            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
+            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
+            west]{$\lambda_1 = -2+i$}; 
+            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
+            east]{$\lambda_2 = -2-i$}; 
+            \draw[fill=black] (1.0,1.0) circle(0.075cm);
+            \draw[fill=black] (-1,-1) circle(0.075cm);
+            \draw[fill=black] (-1,1) circle(0.075cm);
+            \draw[fill=black] (1,-1) circle(0.075cm);
+        \end{tikzpicture}
+    \end{center}
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[very thick, <->, black] (-3,0) -- (3,0);
+            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
+            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
+            west]{$\lambda_1 = 2+i$}; 
+            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
+            east]{$\lambda_2 = 2-i$}; 
+            \draw[fill=black] (1.0,1.0) circle(0.075cm);
+            \draw[fill=black] (-1,-1) circle(0.075cm);
+            \draw[fill=black] (-1,1) circle(0.075cm);
+            \draw[fill=black] (1,-1) circle(0.075cm);
+        \end{tikzpicture}\hspace{0.4in}
+        \begin{tikzpicture}
+            \draw[very thick, <->, black] (-3,0) -- (3,0);
+            \draw[very thick, <->, black] (0,-2.5) -- (0,2.5);
+            \draw[very thick, red, ->, dashed] (0,0) -- (1,2) node[anchor=south
+            west]{$\lambda_1 = i$}; 
+            \draw[very thick, blue, ->, dotted] (0,0) -- (-2,-1) node[anchor=north
+            east]{$\lambda_2 = -i$}; 
+            \draw[fill=black] (1.0,1.0) circle(0.075cm);
+            \draw[fill=black] (-1,-1) circle(0.075cm);
+            \draw[fill=black] (-1,1) circle(0.075cm);
+            \draw[fill=black] (1,-1) circle(0.075cm);
+        \end{tikzpicture}
+    \end{center}
+\end{problem}
+
+Now that we know the general behavior of all $2 \times 2$ systems based on the
+eigen-structure let's get a faster way to make the determination.  That is, if we can
+avoid actually finding the eigenvalues that might save some time.
+\begin{problem}
+    Let the $2 \times 2$ linear system $\bx' = A \bx$ be written as
+    \[ \begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} a & b \\ c & d
+        \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} \]
+    Your Tasks:
     \begin{enumerate}
-        \item[(a)] Why does it make sense to say that the plow rates are inversely
-            proportional to the snow depth?
-        \item[(b)] Which will be easier: writing differential equations in terms of the
-            position of the plows as functions of time; or writing differential equations
-            in terms of the time each plow has traveled as functions of position?  Why?
-        \item[(c)] Write the differential equations for the model you chose in part (b)
-            and solve the model.  Verify that the collision occurs at 11:30.
+        \item What is the equilibrium of this system presuming that $A^{-1}$ exists?
+        \item Find the characteristic polynomial of the coefficient matrix
+        \item Simplify the characteristic polynomial to fill in the blanks:
+            \[ \lambda^2 + \underline{\hspace{0.5in}} \lambda + \underline{\hspace{0.5in}}
+                = 0
+                \]
+            The blanks should be familiar features of the matrix.
     \end{enumerate}
 \end{problem}
+\solution{
+    The solution to the system is $\bx = \bo$ since we solve $\bo = A
+    \bx$ to find the equilibrium and if $A^{-1}$ exists then $\bx = \bo$.  
+
+    The characteristic polynomial is:
+$p(\lambda) = \lambda^2 - tr(A) \lambda + \det(A) $
+}
+
+
+
+\begin{problem}
+    In the previous problems you found that the characteristic polynomial for a 2D linear
+    system is $p(\lambda) = \lambda^2 - T \lambda + D$ where $T = \text{tr}(A)$ and $D=
+    \det(A)$.  Solving for $\lambda$ we see that
+    \[ \lambda = \frac{T \pm \sqrt{T^2 - 4 D}}{2}. \]
+    Clearly the behavior of the eigenvalues depends on the quantity $T^2 - 4D$.  To
+    visualize this we create the {\it trace-determinant} plane as seen in the figure
+    immediately below.  Fill in the question marks in the figure with the type of behavior
+    you expect to see for each region of the {\it trace-determinant} plane?
+
+    To illustrate what we mean condsider the furthest right question mark.  In that
+    question mark the determinant, $D$, is greater than zero, the trace, $T$, is greater
+    than zero and $D < T^2 / 4$.  Hence $T^2 - 4D>0$ so we expect the behavior of the
+    system to be a nodal source since both eigenvalues will be real and positive.
+
+    Use the following words to fill in the question marks: nodal source, nodal sink,
+    spiral source, spiral sink, center, and saddle.
+\end{problem}
+    \vspace{-0.1in}
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[xlabel={$T=tr(A)$},ylabel={$D=\det(A)$}, ymin=-0.5,
+                        ymax=0.5, xmin=-2, xmax=2, xtick=\empty, ytick=\empty, legend pos=outer
+                    north east]
+                    \addplot[smooth,blue, very thick, domain=-2:2] {(1/4)*x^2};
+                    \addlegendentry{$D = T^2/4$};
+                    \addplot[smooth, black, thick] {0*x};
+                    \draw[black,thick] (axis cs:0,-0.5) -- (axis cs:0,0.5);
+                    \node at (axis cs:1.5,0.1) {?};
+                    \node at (axis cs:-1.5,0.1) {?};
+                    \node at (axis cs:-.5,0.25) {?};
+                    \node at (axis cs:.5,0.25) {?};
+                    \node at (axis cs:0,0.3) {?};
+                    \node at (axis cs:0.5,-0.25) {?};
+                    \node at (axis cs:-0.5,-0.25) {?};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+
+\solution{
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[xlabel={$T=tr(A)$},ylabel={$D=\det(A)$}, ymin=-0.5,
+                        ymax=0.5, xmin=-2, xmax=2, xtick=\empty, ytick=\empty, legend pos=outer
+                    north east]
+                    \addplot[smooth,blue, very thick, domain=-2:2] {(1/4)*x^2};
+                    \addlegendentry{$D = T^2/4$};
+                    \addplot[smooth, black, thick] {0*x};
+                    \draw[black,thick] (axis cs:0,-0.5) -- (axis cs:0,0.5);
+                    \node at (axis cs:1.5,0.1) {\tiny{nodal source}};
+                    \node at (axis cs:-1.5,0.1) {\tiny{nodal sink}};
+                    \node at (axis cs:-.5,0.25) {\tiny{spiral sink}};
+                    \node at (axis cs:.5,0.25) {\tiny{spiral source}};
+                    \node at (axis cs:0,0.3) {\tiny{center}};
+                    \node at (axis cs:0.5,-0.25) {\tiny{saddle}};
+                    \node at (axis cs:-0.5,-0.25) {\tiny{saddle}};
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}
+    }
+
+
+\begin{problem}
+    In a 2D linear system of differential equations $\bx' = A \bx$ we know that the origin
+    is the only equilibrium if the matrix $A$ is invertible (you should pause and prove
+    this).  For each of the following systems, describe the behaviour of the solution
+    curves near the origin.  Use the Trace-Determinant Plane to find your answers, and
+    then justify your conclusions by actually finding the eigenvalues using the
+    characteristic polynomial equation $\lambda^2 - T \lambda + D=0$.
+    \begin{enumerate}
+        \item[(a)] $\bx' = A \bx$ with $\text{trace}(A) = 1$ and $\det(A) = 9$
+            \solution{$D>T^2/4^$, $D>0$, and $T>0$ so we must have a spiral source}
+        \item[(b)] $\bx' = A \bx$ with $\text{trace}(A) = 9$ and $\det(A) = 1$
+            \solution{$D<T^2/4^$, $D>0$, and $T>0$ so we must have a source}
+        \item[(c)] $\bx' = A \bx$ with $\text{trace}(A) = -9$ and $\det(A) = 1$
+            \solution{$D<T^2/4^$, $D>0$, and $T<0$ so we must have a sink}
+        \item[(d)] $\bx' = A \bx$ with $\text{trace}(A) = -1$ and $\det(A) = 9$
+            \solution{$D>T^2/4^$, $D>0$, and $T<0$ so we must have a spiral sink}
+        \item[(e)] $\bx' = A \bx$ with $\text{trace}(A) = -1$ and $\det(A) = -9$
+            \solution{Since $D<0$ we must have a saddle}
+        \item[(f)] $\bx' = A \bx$ with $\text{trace}(A) = 1$ and $\det(A) = -9$
+            \solution{Since $D<0$ we must have a saddle}
+    \end{enumerate}
+\end{problem}
+
+
+
+% \newpage\section{Additional Exercises}
+% \begin{problem}
+%     Write code for 2D and 3D versions of Euler's method and the Runge-Kutta 4 method.
+%     Test them on problems where you know the analytic solution.
+% \end{problem}
+% 
+% \begin{problem}
+%     One day it started snowing at a constant rate. Three identical snowplows started at
+%     noon, 1pm, and 2pm from the same place, and began plowing down a long straight road.
+%     All three plows collided at the same time. Assuming that plowing rates are always
+%     inversely proportional to the snow depth, show that the snow started falling at 11:30.
+%     \begin{enumerate}
+%         \item[(a)] Why does it make sense to say that the plow rates are inversely
+%             proportional to the snow depth?
+%         \item[(b)] Which will be easier: writing differential equations in terms of the
+%             position of the plows as functions of time; or writing differential equations
+%             in terms of the time each plow has traveled as functions of position?  Why?
+%         \item[(c)] Write the differential equations for the model you chose in part (b)
+%             and solve the model.  Verify that the collision occurs at 11:30.
+%     \end{enumerate}
+% \end{problem}
