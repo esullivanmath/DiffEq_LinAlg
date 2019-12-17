@@ -716,6 +716,44 @@ which can be rewritten as
 \end{problem}
 
 
+\begin{problem}
+    Four ants are initially on the grid points $(0,0)$, $(1,0)$, $(1,1)$, and $(0,1)$.
+    All four ants follow the strange behavior where their current velocity vector is
+    always proportional to the vector that 
+    points at the ant $90^\circ$ to their right.   For example, if the ant starting at $(0,0)$ is
+    called ``ant 1'' and has position $(x_1,y_1)$ then it's velocity vector is given as 
+    \[ \left( \frac{dx_1}{dt} \, , \, \frac{dy_1}{dt} \right) = k \left[ \left( x_2 \, , \, y_2
+    \right) - \left( x_1 \, , \, y_1 \right) \right] \]
+    where $(x_2, y_2)$ is the current location of the ant that started at $(1,0)$ and $k$
+    is the proportionality constant that dictates the speed of the ant.
+    Therefore there are two differential equations for the first ant:
+    \begin{flalign*}
+        \frac{dx_1}{dt} &= k(x_2 - x_1) \\
+        \frac{dy_1}{dt} &= k(y_2 - y_1)
+    \end{flalign*}
+    \begin{enumerate}
+        \item[(a)] Complete the system of differential equations by writing two equations
+            for each additional ant.
+        \item[(b)] Write the system of 8 differential equations as a matrix equation.
+        \item[(c)] Before solving this system you should stop and sketch what the
+            expected solution should look like.  You should have four expected
+            trajectories -- one for each ant.  Do you expect there to be a steady state?
+            Do you expect there to be a point where the ants converge or do you expect the
+            ants to diverge from each other?  
+        \item[(d)] Write code to get an approximate solution using Euler's method.
+        \item[(e)] Find the eigenvectors and eigenvalues of the coefficient matrix and use
+            them to write the full solution to the system of equations.  (note that it is
+            entirely possible that some of the eigenvectors and eigenvalues are complex
+            \ldots what does this mean in this context?)
+        \item[(f)] Write code to build an animated solution to the system of equations.
+        \item[(g)] Now for the fun part.  Extend your system from part (b) and your code
+            from part (d) or part (f) to allow for $n$ ants who's starting positions are uniformly
+            distributed along the circumference of a unit circle.  Animate your solution
+            with several different values of $n$.
+    \end{enumerate}
+\end{problem}
+
+
 
 
 \newpage\section{The Matrix Exponential}
