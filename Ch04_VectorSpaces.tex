@@ -19,33 +19,89 @@ Why?
     \item Linear Algebra is {\bf far} more than just {\it matrices}.
 \end{itemize}
 
+Before talking about vectors and vector spaces let's briefly talk about how you learned about functions.  First you were told to think of
+a function as a ``rule'' that accepted an input and gave a single output (high school
+algebra).  Then you got used to the notion that you could add, subtract, multiply, and
+divide functions to get new functions (pre-calculus).  When you took calculus you started
+to think of functions as {\it objects} themselves and started discussing ways to get
+properties of those objects (e.g. concavity, boundedness).  The process that you've gone through with functions is
+called ``objectification'' of a mathematical idea: you have turned functions into objects
+in your mind's eye.  Our goal in this chapter is to ``objectify'' the idea of vectors.  We
+are going to turn them into abstract objects that have mathematical properties.
+
+
 \section{What is a Vector Space}
+
 
 To get properly in to Linear Algebra we first need to establish some of the common
 notation.  You are familiar with 2D and 3D Vectors but using the spatial notion of
 ``dimension'' limits how you will think about vectors in linear algebra.  Instead of
 thinking of the spatial dimensions that we live in you should be thinking of vectors as
 abstract objects with mathematical properties.  Your intuitive notion of ``arrows'' is
-limiting and ultimately incorrect for many purposes.  This chapter starts us in the direction of abstract
-vector spaces, but don't be worried that we will be doing abstract mathematics.  We are
-not abstracting a familiar notion for no good reason.  It was this very abstraction that
-has allowed mathematics to advance over the past several centuries.
+limiting and ultimately incorrect for many purposes.  This chapter starts us in the
+direction of abstract vector spaces, but don't be worried that we will be doing abstract
+mathematics.  We are not abstracting a familiar notion for no good reason.  It was this
+very abstraction that has allowed mathematics to advance over the past several centuries.
 
-Let's briefly talk about how you learned about functions.  First you were told to think of
-a function as a ``rule'' that accepted an input and gave a single output (high school
-algebra).  Then you got used to the notion that you could add, subtract, multiply, and
-divide functions to get new functions (pre-calculus).  When you took calculus you started
-to think of functions as {\it objects} themselves and started discussing ways to get
-properties of those objects.  The process that you've gone through with functions is
-called ``objectification'' of a mathematical idea: you have turned functions into objects
-in your mind's eye.  Our goal in this chapter is to ``objectify'' the idea of vectors.  We
-are going to turn them into abstract objects that have mathematical properties.
+\begin{definition}[Set]
+    A {\bf set} is an unordered collection of objects.  Typically we use curly braces to
+    indicate the things in the set.  For example, 
+    \begin{itemize}
+        \item The set $S$ defined as $S = \{ a,b,c\}$
+            contains three objects: the letter $a$, the letter $b$, and the letter $c$.
+        \item The set $S = \{ f(x) \, :\, f'(x) \text{exists} \}$ is the set of all
+            functions $f(x)$ such that the first derivative of that function exists.
+            There are infinitely many things in this set!
+        \item The set $S = \{ A \, : \, A^{-1} \text{exists} \}$ is the set of all
+            matrices that have an inverse.  There are infinitely many matrices in
+            this set.
+    \end{itemize}
+    \label{def:set}
+\end{definition}
+
+\begin{definition}[Element of a Set]
+    An object $x$ is an {\bf element of a set} if $x$ can be found somewhere in the set.
+    We use the symbol ``$\in$'' to represent that an element is ``in'' (or ``belongs to'')
+    a set.  For example
+    \begin{itemize}
+        \item $3 \in \{ 1,2,3,4,5,6,7\}$ since 3 is in the set on the right.
+        \item $\sin(x) \in \{ f(x) \, : \, f'(x) \text{exists} \}$ since the function
+            $f(x) = \sin(x)$ is a function who's first derivative exists.
+        \item $-5 \not\in \{1,3,5,7,9,\ldots\}$ since $-5$ is not in the set of posivite
+            odd numbers.
+    \end{itemize}
+    \label{def:element}
+\end{definition}
+
+
+\begin{definition}[Subset]
+    A set $R$ is called a {\bf subset} of a set $S$ if all of the elements of $R$ can be
+    found inside the set $S$.  We use the symbol $\subset$ or $\subseteq$ for subsets.
+    The choice of symbol is supposed to remind you of the ``less than'' ($<$)  and ``less
+    than or equal to'' ($\leq$) symbols for comparing numbers.  For example
+    \begin{itemize}
+        \item $\{1,2,3\} \subset \{1,2,3,4,5\}$ since the elements $1, 2$, and $3$ all
+            fall within the set $\{1,2,3,4,5\}$
+        \item $\{1,2,3,4,\ldots\} \subset \{a/b \, : \, a,b \in \{1,2,3,4,\ldots\}\}$.
+            This one says that the counting numbers ($1, 2, 3, 4,$ etc) are contained
+            within the set of all positive fractions.  This is certainly true since we
+            could take the denominator $b$ to be $1$.
+        \item $\{p \, : \, p \text{ is prime } \} \not\subset \{1,3,5,7,9,\ldots\}$.  This
+            says that the set of all prime numbers is not a subset of the odd numbers.
+            This is true since $2$ is in the set of all primes but it is not in the set of
+            all odds.
+    \end{itemize}
+    \label{def:subset}
+\end{definition}
 
 
 
-\begin{definition}[The Spaces $\mathbb{R}^n$]
-    Some common vector spaces (and common mathematical notation)
+
+\begin{definition}[Common Sets of Numbers]
+
+    {\bf The Euclidean Sets of Real Numbers:}
     \begin{flalign*}
+        \mathbb{R} &= \text{the set of all real numbers (integers, fractions, and irrationals)} \\
         \mathbb{R}^2&= \{ (x,y) \, : \, x,y \in \mathbb{R} \} \\
         \mathbb{R}^3&= \{ (x,y,z) \, : \, x,y,z \in \mathbb{R} \} \\
         \mathbb{R}^4&= \{ (x_1,x_2,x_3,x_4) \, : \, x_j \in \mathbb{R} \quad \text{for}
@@ -54,7 +110,24 @@ are going to turn them into abstract objects that have mathematical properties.
         \mathbb{R}^n&= \{ (x_1,x_2,\ldots,x_n) \, : \, x_j \in \mathbb{R}  \quad \text{for}
         \quad j \in \{1,2,\ldots,n\}\} 
     \end{flalign*}
+    {\bf The Natural Numbers, Integers, and the Rational Numbers:}
+    \begin{flalign*}
+        \mathbb{N} &= \{1, 2, 3, \ldots \} \\
+        \mathbb{Z} &= \{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots \} \\
+        \mathbb{Q} &= \left\{ \frac{a}{b} \, :\, a,b \in \mathbb{Z} \right\}
+    \end{flalign*}
 \end{definition}
+
+\vspace{0.1in}\hrule\vspace{0.1in}
+
+Now let's to the business at hand.  From your past experiences with vectors you probably
+have a working definition such as: 
+\begin{quote}
+    {\it a vector is an arrow that has a magnitude and direction.} 
+\end{quote}
+This is a very useful definition when you are talking about forces in physics or
+engineering.
+
 \begin{problem}
         ($<5$ minutes): Make a list of all of the things that you can do to vectors in $\mathbb{R}^2$ and
         $\mathbb{R}^3$ and give examples of how you do them.
