@@ -266,6 +266,26 @@ yes
 
 
 \newpage\section{Linear Independence and Linear Dependence}
+
+\begin{problem}
+    Organize the following sets into two groups.
+    \begin{flalign*}
+        S_1 &= \left\{ \begin{pmatrix} 1 \\ 2 \end{pmatrix} \, , \, \begin{pmatrix} 2\\
+        4\end{pmatrix} \right\} \\
+        S_2 &= \left\{ \begin{pmatrix} 1 \\ 2 \end{pmatrix} \, , \, \begin{pmatrix} 2\\
+        5\end{pmatrix} \right\} \\
+        S_3 &= \{ 3 - 5x \, , \, -6 + 10x \} \\
+        S_4 &= \{ 3-5x \, , \, 2 + 5x \} \\
+        S_5 &= \left\{ \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \, , \,
+        \begin{pmatrix} 2 & 4 \\ 6 & 8 \end{pmatrix} \right\} \\
+        S_6 &= \left\{ \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \, , \,
+        \begin{pmatrix} 2 & -1 \\ 6 & 8 \end{pmatrix} \right\} \\
+        S_7 &= \left\{ e^{-3t} \, , \, te^{-3t} \right\} \\
+        S_8 &= \left\{ e^{-3t} \, , \, 8e^{-3t} \right\}
+    \end{flalign*}
+\end{problem}
+
+
 When studying vector spaces it is useful to think about how to {\it build} the vector
 space out of the simplest possible components.  In order to understand that we first need
 an important idea in linear algebra: {\it linear independence}.  Roughly
@@ -1225,7 +1245,8 @@ basis vectors
 }
 
 \begin{thm}\label{thm:basis_number_of_vectors}
-    Let $\mathcal{B}$ be a basis for a vector space $\mathcal{V}$.  If any set $S$ contains more
+    Let $\mathcal{B}$ be a basis for a vector space $\mathcal{V}$.  If any set $S \subset
+    \mathcal{V}$ contains more
     vectors than $\mathcal{B}$ then the vectors in $S$ must be \underline{\hspace{1in}}.
     \\ (Fill in the blank and then prove it)
 \end{thm}
@@ -1624,7 +1645,7 @@ problem.
 \end{problem}
 
 \begin{definition}[Null Space (Kernel)]
-        Let $A$ be an $m \times n$ matrix.  The {\bf null space} is a matrix $A$ is the
+        Let $A$ be an $m \times n$ matrix.  The {\bf null space} of a matrix $A$ is the
         solution space of the homogeneous system $A \bx = \bo$ 
         \[ Null(A) = \{ \bx \, : \,
         A\bx = \bo \} \]
